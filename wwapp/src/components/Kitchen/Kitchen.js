@@ -1,6 +1,6 @@
 import saladRice from './saladRice.jpeg';
 import './Kitchen.css'
-import {recipeData} from './recipeData'
+import recipeData from './recipeData'
 
 function Kitchen() {
 
@@ -20,7 +20,8 @@ function Kitchen() {
                 <button className="SpanClass">S</button>
                 <button className="SpanClass">S</button>
             </div>
-        {/* <p>{recipeData[0].Instructions}</p> */}
+            <h2>{recipeData[0].RecipeName}</h2>
+        <p>{recipeData[0].Instructions}</p>
         </div>
     )}
 
