@@ -1,7 +1,6 @@
 import React from "react";
 import "./Wallet.css";
-
-
+// import dummyData from "./data.json"
 
 // write a funciton that renders the Wallet page
 // Must include:
@@ -20,7 +19,6 @@ import "./Wallet.css";
 // + image element to make it look nice
 
 // make the data from the data.json file available to the wallet function as a variable
-
 
 function Wallet() {
   return (
