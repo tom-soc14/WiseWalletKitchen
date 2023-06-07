@@ -2,6 +2,7 @@ import React from "react";
 import "./Wallet.css";
 
 
+
 // write a funciton that renders the Wallet page
 // Must include:
 // Variable to take the user data to diplay on the page
@@ -17,6 +18,9 @@ import "./Wallet.css";
 // + Body: Graph element - contains data of how much user is saving over the year
 // Lower body
 // + image element to make it look nice
+
+// make the data from the data.json file available to the wallet function as a variable
+
 
 function Wallet() {
   return (
