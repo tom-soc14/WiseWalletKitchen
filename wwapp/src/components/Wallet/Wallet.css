@@ -1,0 +1,27 @@
+.userPageTitle {
+  background-color: 494900;
+  background-color: 494900;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+.userPageInfoBox {
+  /* create a flexbox to contain to equally sized elements with the background colour orange */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffa500;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
+.userPageInfoContents {
+  /* style this child to be two equally sized elements in the userPageinfoBox with a backgorund colour of EBEBD3 */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ebebd3;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
