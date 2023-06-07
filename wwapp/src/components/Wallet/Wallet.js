@@ -1,6 +1,6 @@
 import React from "react";
 import "./Wallet.css";
-// import dummyData from "./data.json"
+import Graph from "./graph.js";
 
 // write a funciton that renders the Wallet page
 // Must include:
@@ -35,15 +35,21 @@ function Wallet() {
           this positive momentum, you are well on your way to achieving even
           greater savings and financial stability in the future. Keep up the
           excellent work!
+          {/* {dummyData[0].Item} */}
         </p>
-        <img
+        {/* <img
           src="https://www.merriam-webster.com/assets/mw/images/source-original/2021-03-03_12-19-53---31b3b37cbe2e2c66c02dd4c5dbfd2069.png"
           alt="stonksGraph"
           className="userPageInfoContents"
-        />
+        /> */}
+        <p className="userPageInfoContents">
+          <Graph className="userPageGraph" />
+        </p>
       </div>
     </body>
   );
 }
 
 export default Wallet;
+
+// 

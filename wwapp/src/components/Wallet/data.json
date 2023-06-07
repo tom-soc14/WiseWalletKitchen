@@ -2,27 +2,27 @@
   {
     "Item": "Vegetable oil",
     "units": "1000ml",
-    "Price": "258"
+    "Price": 258
   },
   {
     "Item": "Chips",
     "units": "1500g",
-    "Price": "137"
+    "Price": 137
   },
   {
     "Item": "Milk",
     "units": "2272ml (4 pints)",
-    "Price": "152"
+    "Price": 152
   },
   {
     "Item": "Chicken breast",
     "units": "600g",
-    "Price": "363"
+    "Price": 363
   },
   {
     "Item": "Tea",
     "units": "125g",
-    "Price": "97"
+    "Price": 97
   },
   {
     "Item": "Instant coffee",
