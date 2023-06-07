@@ -1,11 +1,14 @@
+
+/* styling the title page */
 .userPageTitle {
-  color: FD862F;
+  color: #ffa500;
   background-color: #494900;
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
 }
 
+/* styling the entire box containing both savings and graph */
 .userPageInfoBox {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -15,30 +18,37 @@
   margin: 20px;
 }
 
+/* styling the savings part */
 .userPageInfoContents {
   font-size: small;
   display: flex;
-  /* display in column */
+ 
   flex-direction: column;
-  grid-template-columns: 1fr 1fr;
+  
   background-color: #ebebd3;
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
 }
+
+/* styling the userSavings text */
 .userPageSavings {
   font-size: large;
 }
+
+/* styling the userSavingsNumber text */
 .userPageSavingsNumber {
-  font-size: x-large;
   font-weight: bold;
 }
 
-.userPageGraph {
-  /* grid-column: span 1; */
+/* styling the placement of the graph */
+.userPageInfoGraph {
+  display: grid;
+  grid-column: span 1;
   margin: 10px;
 }
 
+/* styling of the footer picture */
 .userPageImg {
   /* Set the image as the footer of the entire screen */
   position: fixed;

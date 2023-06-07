@@ -5,6 +5,8 @@ import "./Wallet.css";
 
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
+const userSavings = 20.05
+
 class Graph extends React.Component {
   render() {
     const options = {
@@ -22,7 +24,7 @@ class Graph extends React.Component {
           dataPoints: [
             { label: "Average weekly spend", y: 107.5 },
             { label: "Weekly Plan", y: 87.45 },
-            { label: "Monday Saved", y: 20.05 },
+            { label: "Monday Saved", y: userSavings },
           ],
         },
       ],

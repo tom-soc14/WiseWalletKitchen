@@ -21,6 +21,20 @@ import fruitPicture from "./fruitPicture.jpg";
 
 // make the data from the data.json file available to the wallet function as a variable
 
+
+// dummy data
+const averageWeeklySpend = 107.5;
+const weeklyPlanCost = 87.45;
+
+
+// calculate the user savings
+function calculateSavings() {
+  let userSavings = averageWeeklySpend - weeklyPlanCost;
+  let userSavingDecimal = Math.round(userSavings*100)/100;
+  return userSavingDecimal;
+}
+
+// render the Wallet page
 function Wallet() {
   return (
     <body>
@@ -28,7 +42,7 @@ function Wallet() {
       <div className="userPageInfoBox">
         <p className="userPageInfoContents">
           <p classname="userPageSavings">This week you saved:</p>
-          <p classname="userPageSavingsNumber">£20.05</p>
+          <p classname="userPageSavingsNumber">£{calculateSavings()}</p>
           Congratulations on your successful month of saving! This month, you
           have managed to diligently track your expenses and make conscious
           decisions to prioritize your financial goals. By adhering to a budget
@@ -38,15 +52,12 @@ function Wallet() {
           this positive momentum, you are well on your way to achieving even
           greater savings and financial stability in the future. Keep up the
           excellent work!
-          {/* {dummyData[0].Item} */}
+        
         </p>
-        {/* <img
-          src="https://www.merriam-webster.com/assets/mw/images/source-original/2021-03-03_12-19-53---31b3b37cbe2e2c66c02dd4c5dbfd2069.png"
-          alt="stonksGraph"
-          className="userPageInfoContents"
-        /> */}
-        <p className="userPageInfoContents">
-          <Graph className="userPageGraph" />
+
+ {/* display graph component */}
+        <p className="userPageInfoGraph">
+          <Graph />
         </p>
       </div>
       <img src={fruitPicture} alt="fruit" className="userPageImg" />
@@ -56,4 +67,8 @@ function Wallet() {
 
 export default Wallet;
 
-//
+
+
+
+
+
