@@ -2,7 +2,7 @@
 import './App.css';
 
 import HomePage from '../HomePage/HomePage.js'; 
-import Kitchen from '../Kitchen/Kitchen';
+//import Kitchen from '../Kitchen/Kitchen';
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
       <HomePage />
 
-      <Kitchen />
+      
 
     </div>
   );
