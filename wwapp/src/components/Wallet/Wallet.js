@@ -1,6 +1,7 @@
 import React from "react";
 import "./Wallet.css";
 import Graph from "./graph.js";
+import fruitPicture from "./fruitPicture.jpg";
 
 // write a funciton that renders the Wallet page
 // Must include:
@@ -26,6 +27,8 @@ function Wallet() {
       <h1 className="userPageTitle">Savings</h1>
       <div className="userPageInfoBox">
         <p className="userPageInfoContents">
+          <p classname="userPageSavings">This week you saved:</p>
+          <p classname="userPageSavingsNumber">£20.05</p>
           Congratulations on your successful month of saving! This month, you
           have managed to diligently track your expenses and make conscious
           decisions to prioritize your financial goals. By adhering to a budget
@@ -46,10 +49,11 @@ function Wallet() {
           <Graph className="userPageGraph" />
         </p>
       </div>
+      <img src={fruitPicture} alt="fruit" className="userPageImg" />
     </body>
   );
 }
 
 export default Wallet;
 
-// 
+//

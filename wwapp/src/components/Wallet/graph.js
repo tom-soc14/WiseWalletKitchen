@@ -9,18 +9,20 @@ class Graph extends React.Component {
   render() {
     const options = {
       title: {
-        text: "Basic Column Chart in React",
+        text: "Weekly Savings Chart",
+      },
+
+      axisY: {
+        minimum: 0,
+        //   maximum: 90
       },
       data: [
         {
           type: "column",
           dataPoints: [
-            { label: dummyData[0].Item, y: dummyData[0].Price },
-            { label: dummyData[1].Item, y: dummyData[1].Price },
-            { label: dummyData[2].Item, y: dummyData[2].Price },
-            { label: dummyData[3].Item, y: dummyData[3].Price },
-            { label: dummyData[4].Item, y: dummyData[4].Price },
-      
+            { label: "Average weekly spend", y: 107.5 },
+            { label: "Weekly Plan", y: 87.45 },
+            { label: "Monday Saved", y: 20.05 },
           ],
         },
       ],
