@@ -21,11 +21,20 @@
 }
 
 .foodImage {
-    width: 250px;
-    height: 250px;
+    width:50vh;
+    height: 50vh;
 }
 
 
 .recipeRender {
-    display: flexbox;
+    display: flex;
+    margin: 2% auto 2% auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipeContent {
+    background-color: #EBEBD3;
+    width:50vh;
+    height: 50vh;
 }

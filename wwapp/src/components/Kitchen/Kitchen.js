@@ -12,7 +12,7 @@ import { useState } from 'react';
 */
 
 function Kitchen() {
-const [recipe, setRecipe] = useState(recipeData);
+const [recipe, setRecipe] = useState(recipeData[0]);
 
 
 
@@ -37,9 +37,15 @@ function updateDayRecipe(event) {
                 <button data-id="6" onClick={updateDayRecipe} className="SpanClass">S</button>
             </div>
             <div className="recipeRender">
-            <h2>{recipe.RecipeName}</h2>
-            <p>{recipe.Instructions}</p>
-            <img className="foodImage" src ={recipe.Photo} alt = {recipe.PhotoAlt}></img>
+                <div className="recipeContent">
+                    <h2>{recipe.RecipeName}</h2>
+                    {recipe.Instructions.map((instruction, index) => {
+                        return <p key={index}>{instruction}</p>
+                    })}
+                    
+                    <h2>Price: {recipe.Price}</h2>
+                </div>
+                <img className="foodImage" src ={recipe.Photo} alt = {recipe.PhotoAlt}></img>
             </div>
         </div>
     )}
