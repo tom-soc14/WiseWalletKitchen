@@ -1,4 +1,4 @@
-import saladRice from './saladRice.jpeg';
+import saladRice from './img/saladRice.jpeg';
 import './Kitchen.css'
 import recipeData from './recipeData';
 import { useState } from 'react';
@@ -13,18 +13,18 @@ import { useState } from 'react';
 
 function Kitchen() {
 const [recipe, setRecipe] = useState(recipeData);
-console.log(recipe);
+
+
 
 function updateDayRecipe(event) {
-    console.log(event.target.dataset.id);
-    console.log(recipeData[event.target.dataset.id])
+
     setRecipe(recipeData[event.target.dataset.id])
-    
 }
+
 
     return (
         <div>
-        <h1>Your Recipes</h1>
+        <h1 className="titleHeader">Recipes</h1>
         <img src ={saladRice} alt="salad-rice"></img>
             <div className="Orange">
                 <p>Your week</p>
@@ -33,11 +33,14 @@ function updateDayRecipe(event) {
                 <button data-id="2" onClick={updateDayRecipe} className="SpanClass">W</button>
                 <button data-id="3" onClick={updateDayRecipe} className="SpanClass">T</button>
                 <button data-id="4" onClick={updateDayRecipe} className="SpanClass">F</button>
-                <button className="SpanClass">S</button>
-                <button className="SpanClass">S</button>
+                <button data-id="5" onClick={updateDayRecipe} className="SpanClass">S</button>
+                <button data-id="6" onClick={updateDayRecipe} className="SpanClass">S</button>
             </div>
+            <div className="recipeRender">
             <h2>{recipe.RecipeName}</h2>
-        <p>{recipe.Instructions}</p>
+            <p>{recipe.Instructions}</p>
+            <img className="foodImage" src ={recipe.Photo} alt = {recipe.PhotoAlt}></img>
+            </div>
         </div>
     )}
 

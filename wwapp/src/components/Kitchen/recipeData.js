@@ -1,3 +1,12 @@
+import chickenRice from './img/chicken_rice.jpeg';
+import spaghettiBol from './img/Spaghetti_Bolognese.jpeg'
+import salmonSauce from './img/Salmon_Sauce.jpeg';
+import vegetableStir from './img/Vegetable_Stir_Fry.jpeg';
+import mangoSalsa from './img/mango_salsa.jpeg';
+import beanRice from './img/beanRiceBurrito.jpeg';
+import tunaPasta from './img/Tuna_Pasta.jpeg';
+
+
 let recipeData = [
   {
     "RecipeName": "Chicken and rice",
@@ -7,7 +16,7 @@ let recipeData = [
     "PrepTime": "10 minutes",
     "CookingTime": "45 minutes",
     "Price": "£3.50",
-    "Photo": "PHOTOURL",
+    "Photo": chickenRice,
     "PhotoAlt": "Description of PHOTOURL",
     "Vegetarian": "False",
     "GlutenFree": "True",
@@ -36,7 +45,7 @@ let recipeData = [
       "PrepTime": "15 minutes",
       "CookingTime": "30 minutes",
       "Price": "£5.00",
-      "Photo": "PHOTOURL",
+      "Photo": spaghettiBol,
       "PhotoAlt": "Description of PHOTOURL",
       "Vegetarian": "False",
       "GlutenFree": "False",
@@ -82,7 +91,7 @@ let recipeData = [
       "PrepTime": "10 minutes",
       "CookingTime": "15 minutes",
       "Price": "£4.50",
-      "Photo": "PHOTOURL",
+      "Photo": vegetableStir,
       "PhotoAlt": "Description of PHOTOURL",
       "Vegetarian": "True",
       "GlutenFree": "True",
@@ -127,7 +136,7 @@ let recipeData = [
       "PrepTime": "5 minutes",
       "CookingTime": "15 minutes",
       "Price": "£8.00",
-      "Photo": "PHOTOURL",
+      "Photo": salmonSauce,
       "PhotoAlt": "Description of PHOTOURL",
       "Vegetarian": "False",
       "GlutenFree": "True",
@@ -174,7 +183,7 @@ let recipeData = [
       "PrepTime": "15 minutes",
       "CookingTime": "0 minutes",
       "Price": "£3.00",
-      "Photo": "PHOTOURL",
+      "Photo": mangoSalsa,
       "PhotoAlt": "Description of PHOTOURL",
       "Vegetarian": "True",
       "GlutenFree": "True",
@@ -210,6 +219,135 @@ let recipeData = [
         "2. Chop cilantro and squeeze lime juice.",
         "3. Mix all ingredients in a bowl and refrigerate for 30 minutes.",
         "4. Serve as a refreshing salsa with tortilla chips or as a topping for grilled meats."
+      ]
+    },
+    {
+      "RecipeName": "Tuna Pasta Salad",
+      "RecipeID": "24681",
+      "RecipeType": "Budget",
+      "HouseholdNo": "4",
+      "PrepTime": "10 minutes",
+      "CookingTime": "15 minutes",
+      "Price": "£4.50",
+      "Photo": tunaPasta,
+      "PhotoAlt": "Description of PHOTOURL",
+      "Vegetarian": "False",
+      "GlutenFree": "False",
+      "Ingredients": [
+        {
+          "Name": "Pasta",
+          "IngredientId": "23",
+          "Amount": "250g"
+        },
+        {
+          "Name": "Canned tuna",
+          "IngredientId": "24",
+          "Amount": "1 can"
+        },
+        {
+          "Name": "Cherry tomatoes",
+          "IngredientId": "25",
+          "Amount": "1 cup"
+        },
+        {
+          "Name": "Cucumber",
+          "IngredientId": "26",
+          "Amount": "1"
+        },
+        {
+          "Name": "Red onion",
+          "IngredientId": "27",
+          "Amount": "1/4"
+        },
+        {
+          "Name": "Mayonnaise",
+          "IngredientId": "28",
+          "Amount": "3 tablespoons"
+        },
+        {
+          "Name": "Lemon juice",
+          "IngredientId": "29",
+          "Amount": "1 tablespoon"
+        },
+        {
+          "Name": "Salt",
+          "IngredientId": "30",
+          "Amount": "1/2 teaspoon"
+        },
+        {
+          "Name": "Black pepper",
+          "IngredientId": "31",
+          "Amount": "1/4 teaspoon"
+        }
+      ],
+      "Instructions": [
+        "1. Cook pasta according to package instructions. Drain and let cool.",
+        "2. In a large bowl, combine cooked pasta, canned tuna, cherry tomatoes (halved), diced cucumber, and finely chopped red onion.",
+        "3. In a separate small bowl, mix mayonnaise, lemon juice, salt, and black pepper to make the dressing.",
+        "4. Pour the dressing over the pasta mixture and toss to coat evenly.",
+        "5. Chill in the refrigerator for at least 30 minutes before serving."
+      ]
+    },
+    {
+      "RecipeName": "Bean and Rice Burritos",
+      "RecipeID": "97532",
+      "RecipeType": "Budget",
+      "HouseholdNo": "4",
+      "PrepTime": "10 minutes",
+      "CookingTime": "15 minutes",
+      "Price": "£3.00",
+      "Photo": beanRice,
+      "PhotoAlt": "Description of PHOTOURL",
+      "Vegetarian": "True",
+      "GlutenFree": "True",
+      "Ingredients": [
+        {
+          "Name": "Cooked rice",
+          "IngredientId": "32",
+          "Amount": "2 cups"
+        },
+        {
+          "Name": "Canned black beans",
+          "IngredientId": "33",
+          "Amount": "1 can"
+        },
+        {
+          "Name": "Tortillas",
+          "IngredientId": "34",
+          "Amount": "4"
+        },
+        {
+          "Name": "Avocado",
+          "IngredientId": "35",
+          "Amount": "1"
+        },
+        {
+          "Name": "Lime juice",
+          "IngredientId": "36",
+          "Amount": "2 tablespoons"
+        },
+        {
+          "Name": "Cilantro",
+          "IngredientId": "37",
+          "Amount": "1/4 cup"
+        },
+        {
+          "Name": "Salt",
+          "IngredientId": "38",
+          "Amount": "1/2 teaspoon"
+        },
+        {
+          "Name": "Black pepper",
+          "IngredientId": "39",
+          "Amount": "1/4 teaspoon"
+        }
+      ],
+      "Instructions": [
+        "1. In a bowl, mash the avocado with lime juice, chopped cilantro, salt, and black pepper to make the guacamole.",
+        "2. Warm the tortillas in a skillet or microwave.",
+        "3. Heat the canned black beans in a saucepan until warmed through.",
+        "4. Spread guacamole on each tortilla, then layer with cooked rice and heated black beans.",
+        "5. Roll up the tortillas tightly to form burritos. Serve warm."
       ]
     }
   ];
