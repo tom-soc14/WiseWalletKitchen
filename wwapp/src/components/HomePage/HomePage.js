@@ -1,5 +1,7 @@
 import React from 'react';
 import './HomePage.css';
+import kitchenExample from "./kitchen.jpeg";
+import walletExample from "./wallet.jpeg"
 
 function HomePage() {
 
@@ -19,9 +21,18 @@ function HomePage() {
         By making a few small adjustments in what you’re purchasing, you can keep all the items in your cart, 
         including the cheesecake, and still have enough to throw in a cheeky sweet for yourself. 
         Victory! Welcome Wise Wallet Kitchen. </p>
-        <img alt="mother and daughter preparing food in kitchen" src="https://images.pexels.com/photos/4259707/pexels-photo-4259707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+        <img  className="intro-image" alt="mother and daughter preparing food in kitchen" src="https://images.pexels.com/photos/4259707/pexels-photo-4259707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         <br/>
-        <button className="HomePage-button-sign-up">Sign Up/Login</button>
+        <p className="app-information">App Information</p>
+        <div className="app-examples">
+        <div className="wallet-example">
+            <img className="example-images" alt="Wallet page example" src={walletExample}></img>
+        </div>
+        <div className="kitchen-example">
+        <img className="example-images" alt="Kitchen page example" src={kitchenExample}></img>
+        </div>
+        </div>
+        <button className="HomePage-button-sign-up">Sign Up or Login now</button>
         <br/>
         </div> )
 
