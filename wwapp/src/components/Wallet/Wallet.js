@@ -69,7 +69,7 @@ function Wallet() {
       <h1 className="userPageTitle">Savings</h1>
       <div className="userPageInfoBox">
         <p className="userPageInfoContents">
-          <p classname="userPageSavings">This week you saved:</p>
+        <p classname="userPageSavings">This week you saved:</p>
           <p classname="userPageSavingsNumber">£{calculateSavings()}</p>
           Congratulations on your successful month of saving! This month, you
           have managed to diligently track your expenses and make conscious
