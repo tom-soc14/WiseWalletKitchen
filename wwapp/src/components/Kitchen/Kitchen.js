@@ -31,7 +31,9 @@ function Kitchen() {
     setRecipe(recipeDataV2[event.target.dataset.id]);
   }
   function updateRecipePrice(event) {
-    setRecipePrice(recipeDataV2[event.target.dataset.id].Price);
+    setRecipePrice(recipe.Price[event.target.dataset.id]);
+    console.log(event.target.dataset.id);
+    console.log("clicked");
   }
 
   //PLAN weeklyPrice function
@@ -84,7 +86,7 @@ function Kitchen() {
       + Create a function with a switch statement that updates the rendered price based on the drop down option selected
       */}
       <label>Number in Household:</label>
-      <select>
+      <select onChange={updateRecipePrice}>
         <option data-id="0">1</option>
         <option data-id="1">2</option>
         <option data-id="2">3</option>
@@ -98,7 +100,7 @@ function Kitchen() {
             return <p key={index}>{instruction}</p>;
           })}
 
-          <h2>Price: £{recipe.Price[0]}</h2>
+          <h2>Price: £{recipePrice}</h2>
         </div>
         <img
           className="foodImage"
