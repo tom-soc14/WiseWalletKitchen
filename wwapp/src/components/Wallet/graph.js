@@ -4,12 +4,13 @@ import "./Wallet.css";
 
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
+const weeklySpend = [50, 70, 90, 40]; 
 class Graph extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showLineGraph: false,
-      showBarGraph: false,
+      showBarGraph: true, // Set showBarGraph to true initially
       userSavings: 20.05,
     };
   }
@@ -38,7 +39,7 @@ class Graph extends React.Component {
           dataPoints: [
             { label: "Average weekly spend", y: 107.5 },
             { label: "Weekly Plan", y: 87.45 },
-            { label: "Monday Saved", y: userSavings },
+            { label: "Money Saved", y: userSavings },
           ],
         },
       ],
@@ -55,13 +56,11 @@ class Graph extends React.Component {
         {
           type: "line",
           dataPoints: [
-            // Hardcoded data for 30 days of savings
-            { label: "Week 1", y: 50 },
-            { label: "Week 2", y: 70 },
-            { label: "Week 3", y: 100 },
-            // Add more data points for the remaining days
-            // ...
-            { label: "Day 30", y: 200 },
+            // Dynamically generate data for monthly savings
+            { label: "Week 1", y: weeklySpend[0] },
+            { label: "Week 2", y: weeklySpend[1] },
+            { label: "Week 3", y: weeklySpend[2] },
+            { label: "Week 4", y: weeklySpend[3] },
           ],
         },
       ],
@@ -69,8 +68,8 @@ class Graph extends React.Component {
 
     return (
       <div>
-        <button onClick={this.handleWeeklySavingsClick}>Weekly Savings</button>
-        <button onClick={this.handleMonthlySavingsClick}>Monthly Savings</button>
+        <button className='graphSavingsButton' onClick={this.handleWeeklySavingsClick}>Weekly Savings</button>
+        <button className='graphSavingsButton' onClick={this.handleMonthlySavingsClick}>Monthly Savings</button>
         {showBarGraph && (
           <CanvasJSChart
             options={weeklySavingsOptions}
