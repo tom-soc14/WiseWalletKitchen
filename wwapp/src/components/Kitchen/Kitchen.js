@@ -1,6 +1,7 @@
 import saladRice from './img/saladRice.jpeg';
 import './Kitchen.css'
 import recipeData from './recipeData';
+import recipeDataV2 from './recipeDataV2';
 import { useState } from 'react';
 
 /* Plan
@@ -10,6 +11,8 @@ import { useState } from 'react';
 - each button needs an id to be able to pass to that function
 - we render the instruction variable from useState underneath 
 */
+
+console.log(recipeDataV2);
 
 function Kitchen() {
 const [recipe, setRecipe] = useState(recipeData[0]);

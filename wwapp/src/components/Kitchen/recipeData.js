@@ -9,6 +9,7 @@ import tunaPasta from "./img/Tuna_Pasta.jpeg";
 //DATA PLAN
 // Get more data with the following credientials:
 // Establish 3 different Recipe Types: Saver, Classic, Premium
+// Min - Max: Saver: (£3-£5), Classic:
 // + 7 days of each Recipe plan
 // + set a minimum and maximum cost per day for each plan
 
@@ -21,7 +22,7 @@ let recipeData = [
   {
     RecipeName: "Chicken and rice",
     RecipeID: "12345",
-    RecipeType: "Budget",
+    RecipeType: "Saver",
     HouseholdNo: "4",
     PrepTime: "10 minutes",
     CookingTime: "45 minutes",
@@ -50,7 +51,7 @@ let recipeData = [
   {
     RecipeName: "Spaghetti Bolognese",
     RecipeID: "67890",
-    RecipeType: "Classic",
+    RecipeType: "Saver",
     HouseholdNo: "4",
     PrepTime: "15 minutes",
     CookingTime: "30 minutes",
@@ -96,7 +97,7 @@ let recipeData = [
   {
     RecipeName: "Vegetable Stir-Fry",
     RecipeID: "13579",
-    RecipeType: "Budget",
+    RecipeType: "Saver",
     HouseholdNo: "2",
     PrepTime: "10 minutes",
     CookingTime: "15 minutes",
@@ -141,7 +142,7 @@ let recipeData = [
   {
     RecipeName: "Salmon with Lemon Butter Sauce",
     RecipeID: "24680",
-    RecipeType: "Budget",
+    RecipeType: "Saver",
     HouseholdNo: "2",
     PrepTime: "5 minutes",
     CookingTime: "15 minutes",
@@ -188,7 +189,7 @@ let recipeData = [
   {
     RecipeName: "Mango Salsa",
     RecipeID: "97531",
-    RecipeType: "Appetizer",
+    RecipeType: "Saver",
     HouseholdNo: "4",
     PrepTime: "15 minutes",
     CookingTime: "0 minutes",
@@ -234,7 +235,7 @@ let recipeData = [
   {
     RecipeName: "Tuna Pasta Salad",
     RecipeID: "24681",
-    RecipeType: "Budget",
+    RecipeType: "Saver",
     HouseholdNo: "4",
     PrepTime: "10 minutes",
     CookingTime: "15 minutes",
@@ -301,7 +302,7 @@ let recipeData = [
   {
     RecipeName: "Bean and Rice Burritos",
     RecipeID: "97532",
-    RecipeType: "Budget",
+    RecipeType: "Saver",
     HouseholdNo: "4",
     PrepTime: "10 minutes",
     CookingTime: "15 minutes",
@@ -363,3 +364,4 @@ let recipeData = [
 ];
 
 export default recipeData;
+
