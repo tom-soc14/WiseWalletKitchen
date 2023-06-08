@@ -21,13 +21,30 @@ function updateDayRecipe(event) {
     setRecipe(recipeData[event.target.dataset.id])
 }
 
+//PLAN weeklyPrice function
+//Take in recipe array
+//Loop through recipeData and sum each items price with [i]
+//This function will have to be updated eventually for the user Selection.
+
+function weeklyPrice() {
+    let totalPriceNum = 0;
+for (let i = 0; i<recipeData.length; i++) {
+    totalPriceNum = totalPriceNum + recipeData[i].Price;
+}
+
+let totalPrice = Math.round(totalPriceNum*100)/100;
+  return ("£" + totalPrice);
+}
+
+
+
 
     return (
         <div>
         <h1 className="titleHeader">Recipes</h1>
         <img src ={saladRice} alt="salad-rice"></img>
             <div className="Orange">
-                <p>Your week</p>
+                <p>Your week</p>   
                 <button data-id="0" onClick={updateDayRecipe} className="SpanClass">M</button>
                 <button data-id="1" onClick={updateDayRecipe} className="SpanClass">T</button>
                 <button data-id="2" onClick={updateDayRecipe} className="SpanClass">W</button>
@@ -35,6 +52,7 @@ function updateDayRecipe(event) {
                 <button data-id="4" onClick={updateDayRecipe} className="SpanClass">F</button>
                 <button data-id="5" onClick={updateDayRecipe} className="SpanClass">S</button>
                 <button data-id="6" onClick={updateDayRecipe} className="SpanClass">S</button>
+                <p>Total Weekly Price: {weeklyPrice()}</p>
             </div>
             <div className="recipeRender">
                 <div className="recipeContent">
@@ -43,7 +61,7 @@ function updateDayRecipe(event) {
                         return <p key={index}>{instruction}</p>
                     })}
                     
-                    <h2>Price: {recipe.Price}</h2>
+                    <h2>Price: £{recipe.Price}</h2>
                 </div>
                 <img className="foodImage" src ={recipe.Photo} alt = {recipe.PhotoAlt}></img>
             </div>
