@@ -21,7 +21,6 @@ import fruitPicture from "./fruitPicture.jpg";
 
 // make the data from the data.json file available to the wallet function as a variable
 
-
 // dummy data
 // const averageWeeklySpend = 107.5;
 // const weeklyPlanCost = 87.45;
@@ -29,7 +28,6 @@ import fruitPicture from "./fruitPicture.jpg";
 // const week2 = 70;
 // const week3 = 90;
 // const week4 = 40;
-
 
 // // calculate the user savings
 // function calculateSavings() {
@@ -41,14 +39,13 @@ import fruitPicture from "./fruitPicture.jpg";
 const averageWeeklySpend = 107.5 * 4;
 const weeklySpend = [50, 70, 90, 40]; // Array to store weekly spend values
 
-
 // calculate the user savings
 function calculateSavings() {
   let totalSpend = 0;
   for (let i = 0; i < weeklySpend.length; i++) {
     totalSpend += weeklySpend[i];
   }
-  let userSavings = (averageWeeklySpend - totalSpend);
+  let userSavings = averageWeeklySpend - totalSpend;
   let userSavingDecimal = Math.round(userSavings * 100) / 100;
   return userSavingDecimal;
 }
@@ -60,17 +57,15 @@ function calculateSavings() {
 //   return monthlySavings;
 // }
 
-
-
 // render the Wallet page
 function Wallet() {
   return (
-    <body>
+    <div>
       <h1 className="userPageTitle">Savings</h1>
       <div className="userPageInfoBox">
-        <p className="userPageInfoContents">
-        <p classname="userPageSavings">This week you saved:</p>
-          <p classname="userPageSavingsNumber">£{calculateSavings()}</p>
+        <div className="userPageInfoContents">
+          <p className="userPageSavings">This week you saved:</p>
+          <p className="userPageSavingsNumber">£{calculateSavings()}</p>
           Congratulations on your successful month of saving! This month, you
           have managed to diligently track your expenses and make conscious
           decisions to prioritize your financial goals. By adhering to a budget
@@ -80,23 +75,16 @@ function Wallet() {
           this positive momentum, you are well on your way to achieving even
           greater savings and financial stability in the future. Keep up the
           excellent work!
-        
-        </p>
+        </div>
 
- {/* display graph component */}
-        <p className="userPageInfoGraph">
+        {/* display graph component */}
+        <div className="userPageInfoGraph">
           <Graph />
-        </p>
+        </div>
       </div>
       <img src={fruitPicture} alt="fruit" className="userPageImg" />
-    </body>
+    </div>
   );
 }
 
 export default Wallet;
-
-
-
-
-
-

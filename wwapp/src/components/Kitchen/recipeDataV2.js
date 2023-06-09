@@ -1,10 +1,10 @@
-import chickenRice from "./img/chicken_rice.jpeg";
 import spaghettiBol from "./img/Spaghetti_Bolognese.jpeg";
-import salmonSauce from "./img/Salmon_Sauce.jpeg";
 import vegetableStir from "./img/Vegetable_Stir_Fry.jpeg";
-import mangoSalsa from "./img/mango_salsa.jpeg";
-import beanRice from "./img/beanRiceBurrito.jpeg";
 import tunaPasta from "./img/Tuna_Pasta.jpeg";
+// import salmonSauce from "./img/Salmon_Sauce.jpeg";
+// import mangoSalsa from "./img/mango_salsa.jpeg";
+// import beanRice from "./img/beanRiceBurrito.jpeg";
+// import chickenRice from "./img/chicken_rice.jpeg";
 
 //DATA PLAN
 // Get more data with the following credientials:
