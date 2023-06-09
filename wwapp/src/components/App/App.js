@@ -19,9 +19,11 @@ function App() {
       <h1>Wise Wallet Kitchen</h1>
 
 
+
       <Wallet />
 
      {/* <Login /> */}
+
 
 
     </div>
