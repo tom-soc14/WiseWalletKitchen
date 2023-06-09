@@ -1,8 +1,8 @@
 
 import saladRice from "./img/saladRice.jpeg";
 import "./Kitchen.css";
-import recipeData from "./recipeData";
-import recipeDataV2 from "./recipeDataV2";
+
+import recipeDataV2 from "./recipeDataV2.js";
 import { useState } from "react";
 
 // To Do - 08/09/2023
