@@ -1,3 +1,4 @@
+
 import saladRice from "./img/saladRice.jpeg";
 import "./Kitchen.css";
 import recipeData from "./recipeData";
@@ -22,6 +23,7 @@ import { useState } from "react";
 - we render the instruction variable from useState underneath 
 */
 console.log(recipeDataV2);
+
 
 function Kitchen() {
   const [recipe, setRecipe] = useState(recipeDataV2[0]);
