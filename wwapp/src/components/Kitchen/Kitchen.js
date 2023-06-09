@@ -30,10 +30,36 @@ function Kitchen() {
   function updateDayRecipe(event) {
     setRecipe(recipeDataV2[event.target.dataset.id]);
   }
+
+/*
+The code below is looking at the event.target.value which corresponds to 
+The Number in Household options 1,2,3,4. However because we are dealing
+with an array we cannot use those numbers directly as arrays start counting
+at 0. Because of this we use a switch statement below to change each value
+down one e.g 1 to 0, 2 to 1 etc, that way the position in the array for the 
+Price is correct.
+*/
+
   function updateRecipePrice(event) {
-    setRecipePrice(recipe.Price[event.target.dataset.id]);
-    console.log(event.target.dataset.id);
-    console.log("clicked");
+
+    let selectedValue;
+    switch (event.target.value) {
+        case "1":
+            selectedValue = 0;
+            break;
+        case "2":
+            selectedValue = 1;
+            break;
+        case "3":
+            selectedValue = 2;
+            break;
+        case "4":
+            selectedValue = 3;
+            break;
+        default:
+        break;  
+    }
+    setRecipePrice(recipe.Price[selectedValue]);
   }
 
   //PLAN weeklyPrice function
@@ -85,12 +111,14 @@ function Kitchen() {
       + Each option needs to change the Price being rendered at the bottom of the recipe
       + Create a function with a switch statement that updates the rendered price based on the drop down option selected
       */}
+
+      
       <label>Number in Household:</label>
       <select onChange={updateRecipePrice}>
-        <option data-id="0">1</option>
-        <option data-id="1">2</option>
-        <option data-id="2">3</option>
-        <option data-id="3">4</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
       </select>
 
       <div className="recipeRender">
