@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <h1>Wise Wallet Kitchen</h1>
 
-     
-      <Login />
+     <Login />
+  
 
       
 
