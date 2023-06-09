@@ -1,10 +1,16 @@
+import "./App.css";
+
+
+import HomePage from "../HomePage/HomePage.js";
+import Kitchen from "../Kitchen/Kitchen.js";
+import Wallet from "../Wallet/Wallet.js";
 
 import './App.css';
 
 
 import Login from '../Login/Login.js'
-import HomePage from '../HomePage/HomePage.js'; 
-import Kitchen from '../Kitchen/Kitchen.js';
+
+
 
 
 function App() {
@@ -12,14 +18,17 @@ function App() {
     <div className="App">
       <h1>Wise Wallet Kitchen</h1>
 
-     <Login />
+
+      <Wallet />
+
+//      <Login />
   
 
       
 
+
     </div>
   );
 }
-
 
 export default App;
