@@ -2,7 +2,7 @@ import "./App.css";
 
 
 // import HomePage from "../HomePage/HomePage.js";
-// import Kitchen from "../Kitchen/Kitchen.js";
+import Kitchen from "../Kitchen/Kitchen.js";
 // import Login from '../Login/Login.js'
 import Wallet from "../Wallet/Wallet.js";
 
@@ -19,7 +19,7 @@ function App() {
       <h1>Wise Wallet Kitchen</h1>
 
 
-      <Wallet />
+      <Kitchen />
 
      {/* <Login /> */}
 
