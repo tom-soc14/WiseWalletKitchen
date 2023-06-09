@@ -1,6 +1,6 @@
 import saladRice from './saladRice.jpeg';
 import './Kitchen.css'
-import recipeData from './recipeData'
+import recipeData from './recipeData.js'
 
 function Kitchen() {
 

@@ -1,7 +1,6 @@
 {
   "name": "wwapp",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "dependencies": {
     "@supabase/auth-ui-react": "^0.4.2",
