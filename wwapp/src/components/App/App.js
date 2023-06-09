@@ -1,11 +1,31 @@
+import "./App.css";
+
+
+// import HomePage from "../HomePage/HomePage.js";
+// import Kitchen from "../Kitchen/Kitchen.js";
+// import Login from '../Login/Login.js'
+import Wallet from "../Wallet/Wallet.js";
 
 import './App.css';
+
+
+
+
+
 
 function App() {
   return (
     <div className="App">
       <h1>Wise Wallet Kitchen</h1>
-      <img src='https://media.tenor.com/LjhaLjAdrQgAAAAM/winnie-the-pooh-hungry.gif' alt='hungry pooh' />
+
+
+
+      <Wallet />
+
+     {/* <Login /> */}
+
+
+
     </div>
   );
 }

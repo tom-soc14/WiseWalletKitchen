@@ -1,0 +1,35 @@
+.app-examples {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    /* height: auto;
+    width: 100%; */
+}
+
+.HomePage-button-sign-up {
+    background-color: #E57300;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+}
+
+.HomePage {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2%;
+}
+
+.example-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;   
+}
