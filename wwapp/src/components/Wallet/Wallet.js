@@ -36,19 +36,6 @@ import fruitPicture from "./fruitPicture.jpg";
 //   return userSavingDecimal;
 // }
 
-const averageWeeklySpend = 107.5 * 4;
-const weeklySpend = [50, 70, 90, 40]; // Array to store weekly spend values
-
-// calculate the user savings
-function calculateSavings() {
-  let totalSpend = 0;
-  for (let i = 0; i < weeklySpend.length; i++) {
-    totalSpend += weeklySpend[i];
-  }
-  let userSavings = averageWeeklySpend - totalSpend;
-  let userSavingDecimal = Math.round(userSavings * 100) / 100;
-  return userSavingDecimal;
-}
 
 // calculate the monthly savings
 // function calculateMonthlySavings() {
@@ -58,7 +45,25 @@ function calculateSavings() {
 // }
 
 // render the Wallet page
-function Wallet() {
+function Wallet(props) {
+
+  const averageWeeklySpend = 107.5 * 4;
+  const weeklySpend = [50, 70, 90, 40]; // Array to store weekly spend values
+  
+
+  // calculate the user savings
+  function calculateSavings() {
+    let totalSpend = 0;
+    for (let i = 0; i < weeklySpend.length; i++) {
+      totalSpend += weeklySpend[i];
+    }
+    let userSavings = averageWeeklySpend - totalSpend;
+    let userSavingDecimal = Math.round(userSavings * 100) / 100;
+    return userSavingDecimal;
+  }
+  
+  console.log(props.weeklyPrice +' WALLET');
+
   return (
     <div>
       <h1 className="userPageTitle">Savings</h1>
@@ -88,3 +93,4 @@ function Wallet() {
 }
 
 export default Wallet;
+

@@ -25,13 +25,12 @@ import { useState } from "react";
 console.log(recipeDataV2);
 
 
-function Kitchen() {
+function Kitchen({ weeklyPriceChange }) {
   const [recipe, setRecipe] = useState(recipeDataV2[0]);
   const [recipePrice, setRecipePrice] = useState(recipeDataV2[0].Price[0]);
+  const [selectedValue, setSelectedValue] = useState([0])
 
-  function updateDayRecipe(event) {
-    setRecipe(recipeDataV2[event.target.dataset.id]);
-  }
+
 
 /*
 The code below is looking at the event.target.value which corresponds to 
@@ -42,27 +41,17 @@ down one e.g 1 to 0, 2 to 1 etc, that way the position in the array for the
 Price is correct.
 */
 
-  function updateRecipePrice(event) {
+function updateRecipePrice(event) {
+  const selectedValue = parseInt(event.target.value) -1;
+  setSelectedValue(selectedValue);
+  setRecipePrice(recipe.Price[selectedValue]);
+}
 
-    let selectedValue;
-    switch (event.target.value) {
-        case "1":
-            selectedValue = 0;
-            break;
-        case "2":
-            selectedValue = 1;
-            break;
-        case "3":
-            selectedValue = 2;
-            break;
-        case "4":
-            selectedValue = 3;
-            break;
-        default:
-        break;  
-    }
-    setRecipePrice(recipe.Price[selectedValue]);
-  }
+function updateDayRecipe(event) {
+  const recipeIndex = parseInt(event.target.dataset.id);
+  setRecipe(recipeDataV2[recipeIndex]);
+  setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
+}
 
   //PLAN weeklyPrice function
   //Take in recipe array ✅
@@ -72,9 +61,10 @@ Price is correct.
     let totalPriceNum = 0;
     for (let i = 0; i < 6; i++) {
       // For loop only goes to 6, not whole array
-      totalPriceNum = totalPriceNum + recipeDataV2[i].Price;
+      totalPriceNum = totalPriceNum + recipeDataV2[i].Price[0];
     }
     let totalPrice = Math.round(totalPriceNum * 100) / 100;
+    weeklyPriceChange(totalPrice);
     return "£" + totalPrice;
   }
 
