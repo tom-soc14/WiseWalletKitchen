@@ -5,11 +5,14 @@ import HomePage from "../HomePage/HomePage.js";
 import Kitchen from "../Kitchen/Kitchen.js";
 import Login from '../Login/Login.js';
 import Wallet from "../Wallet/Wallet.js";
+import API from "../API/API.js";
 
 import './App.css';
 
 
 function App() {
+
+  
   return (
     <BrowserRouter>
       <Routes>
@@ -17,6 +20,7 @@ function App() {
         <Route path="/kitchen" element={<Kitchen />} /> 
         <Route path="/login" element={<Login />} />
         <Route path="/wallet" element={<Wallet />} />
+        <Route path="/API" element={<API />} />
       </Routes>
     </BrowserRouter>
   );
