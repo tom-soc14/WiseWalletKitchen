@@ -23,52 +23,25 @@ import { useState } from "react";
 - we render the instruction variable from useState underneath 
 */
 
-function Kitchen() {
+function Kitchen({ weeklyPriceChange }) {
   const [recipe, setRecipe] = useState(recipeDataV2[0]);
   const [recipePrice, setRecipePrice] = useState(recipeDataV2[0].Price[0]);
+  const [selectedValue, setSelectedValue] = useState([0])
 
-  /*
-  The code below is looking at the event.target.value which corresponds to 
-  The Number in Household options 1,2,3,4. However because we are dealing
-  with an array we cannot use those numbers directly as arrays start counting
-  at 0. Because of this we use a switch statement below to change each value
-  down one e.g 1 to 0, 2 to 1 etc, that way the position in the array for the 
-  Price is correct.
-  */
- let selectedValue = 0;
-
-  function updateDayRecipe(event) {
-    setRecipe(recipeDataV2[event.target.dataset.id]);
-    setRecipePrice(recipe.Price[selectedValue]);
-
-    // const selectedRecipe = recipeDataV2[event.target.dataset.id];
-    // setRecipe(selectedRecipe);
-    // updateRecipePrice(event);
-    console.log(selectedValue + "TESTING 2")
-  }
-  
 
   function updateRecipePrice(event) {
-    switch (event.target.value) {
-      case "1":
-        selectedValue = 0;
-        break;
-      case "2":
-        selectedValue = 1;
-        break;
-      case "3":
-        selectedValue = 2;
-        break;
-      case "4":
-        selectedValue = 3;
-        break;
-      default:
-        break;
-    }
-    console.log(selectedValue + "TESTING 3")
+    const selectedValue = parseInt(event.target.value) -1;
+    setSelectedValue(selectedValue);
     setRecipePrice(recipe.Price[selectedValue]);
   }
-
+  function updateDayRecipe(event) {
+    const recipeIndex = parseInt(event.target.dataset.id);
+    setRecipe(recipeDataV2[recipeIndex]);
+    setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
+  }
+  
+  
+  
   //PLAN weeklyPrice function
   //Take in recipe array ✅
   //Loop through recipeData and sum each items price with [i] ✅
@@ -135,7 +108,6 @@ function Kitchen() {
           })}
 
           <h2>Price: £{recipePrice}</h2>
-          <h2>TESTING = {recipe.Price[0]}</h2>
         </div>
         <img
           className="foodImage"
