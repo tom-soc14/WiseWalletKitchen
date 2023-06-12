@@ -1,4 +1,3 @@
-
 import saladRice from "./img/saladRice.jpeg";
 import "./Kitchen.css";
 import recipeData from "./recipeData";
@@ -7,13 +6,14 @@ import { useState } from "react";
 
 // To Do - 08/09/2023
 // Integrate the recipeDataV2 into the Kitchen.js ✅
-// Render a drop down menu with 4 options
-// Change the Total price with each selection of the drop down menu
+// Render a drop down menu with 4 options ✅
+// Change the Total price with each selection of the drop down menu ✅
+// Render a drop down menu with 4 different options ✅
+// 1, 2, 3, 4 people ✅
 
 // To Do - 09/09/2023
-// Render a drop down menu with 4 different options
-// 1, 2, 3, 4 people
 // Have the drop down option update the state of the total price calculator to the index the array
+// Call the updateRecipePrice when the updateDayRecipe function is called
 
 /* Plan
 - on each click of a button, a diferrent recipe in the array should render
@@ -22,45 +22,50 @@ import { useState } from "react";
 - each button needs an id to be able to pass to that function
 - we render the instruction variable from useState underneath 
 */
-console.log(recipeDataV2);
-
 
 function Kitchen() {
   const [recipe, setRecipe] = useState(recipeDataV2[0]);
   const [recipePrice, setRecipePrice] = useState(recipeDataV2[0].Price[0]);
 
+  /*
+  The code below is looking at the event.target.value which corresponds to 
+  The Number in Household options 1,2,3,4. However because we are dealing
+  with an array we cannot use those numbers directly as arrays start counting
+  at 0. Because of this we use a switch statement below to change each value
+  down one e.g 1 to 0, 2 to 1 etc, that way the position in the array for the 
+  Price is correct.
+  */
+ let selectedValue = 0;
+
   function updateDayRecipe(event) {
     setRecipe(recipeDataV2[event.target.dataset.id]);
-  }
+    setRecipePrice(recipe.Price[selectedValue]);
 
-/*
-The code below is looking at the event.target.value which corresponds to 
-The Number in Household options 1,2,3,4. However because we are dealing
-with an array we cannot use those numbers directly as arrays start counting
-at 0. Because of this we use a switch statement below to change each value
-down one e.g 1 to 0, 2 to 1 etc, that way the position in the array for the 
-Price is correct.
-*/
+    // const selectedRecipe = recipeDataV2[event.target.dataset.id];
+    // setRecipe(selectedRecipe);
+    // updateRecipePrice(event);
+    console.log(selectedValue + "TESTING 2")
+  }
+  
 
   function updateRecipePrice(event) {
-
-    let selectedValue;
     switch (event.target.value) {
-        case "1":
-            selectedValue = 0;
-            break;
-        case "2":
-            selectedValue = 1;
-            break;
-        case "3":
-            selectedValue = 2;
-            break;
-        case "4":
-            selectedValue = 3;
-            break;
-        default:
-        break;  
+      case "1":
+        selectedValue = 0;
+        break;
+      case "2":
+        selectedValue = 1;
+        break;
+      case "3":
+        selectedValue = 2;
+        break;
+      case "4":
+        selectedValue = 3;
+        break;
+      default:
+        break;
     }
+    console.log(selectedValue + "TESTING 3")
     setRecipePrice(recipe.Price[selectedValue]);
   }
 
@@ -114,7 +119,6 @@ Price is correct.
       + Create a function with a switch statement that updates the rendered price based on the drop down option selected
       */}
 
-      
       <label>Number in Household:</label>
       <select onChange={updateRecipePrice}>
         <option>1</option>
@@ -131,6 +135,7 @@ Price is correct.
           })}
 
           <h2>Price: £{recipePrice}</h2>
+          <h2>TESTING = {recipe.Price[0]}</h2>
         </div>
         <img
           className="foodImage"
