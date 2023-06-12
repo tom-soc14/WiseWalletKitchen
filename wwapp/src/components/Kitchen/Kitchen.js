@@ -27,12 +27,43 @@ function Kitchen({ weeklyPriceChange }) {
   const [recipe, setRecipe] = useState(recipeDataV2[0]);
   const [recipePrice, setRecipePrice] = useState(recipeDataV2[0].Price[0]);
   const [selectedValue, setSelectedValue] = useState([0])
+  const [recipePlan, setRecipePlan] = useState(recipeDataV2[0].RecipeType);
+
+
+//Create a function that sets all recipes rendered to be one of the 3 options. 
+//This function will be called when the drop down menu is selected
+//It selects the recipes with corresponding plan data field.
+function updateRecipePlan(event) {
+  const recipePlan = event.target.value;
+  setRecipePlan(recipePlan);
+   // Select the corresponding data set based on the selected meal option
+  let selectedRecipeData;
+  switch (recipePlan) {
+    case "Saver Plan":
+      selectedRecipeData = recipeDataV2[0].RecipeType;
+      break;
+    case "Classic Plan":
+      selectedRecipeData = recipeDataV2[8].RecipeType;
+      break;
+    case "Premium Plan":
+      selectedRecipeData = recipeDataV2[15].RecipeType
+      break;
+    default:
+      selectedRecipeData = recipeDataV2[0].RecipeType;
+      break;
+  }
+   // Set the selected recipe data
+  setRecipePlan(selectedRecipeData);
+}
+
 
 
   function updateRecipePrice(event) {
     const selectedValue = parseInt(event.target.value) -1;
     setSelectedValue(selectedValue);
     setRecipePrice(recipe.Price[selectedValue]);
+    console.log("testing 1");
+    console.log(recipeDataV2[0].RecipeType + "testing for recipeType");
   }
   function updateDayRecipe(event) {
     const recipeIndex = parseInt(event.target.dataset.id);
@@ -40,6 +71,7 @@ function Kitchen({ weeklyPriceChange }) {
     setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
   }
   
+
   
   
   //PLAN weeklyPrice function
@@ -98,6 +130,13 @@ function Kitchen({ weeklyPriceChange }) {
         <option>2</option>
         <option>3</option>
         <option>4</option>
+      </select>
+
+      <label>Meal Plan:</label>
+      <select onChange={recipePlan}>
+        <option>Saver</option>
+        <option>Classic</option>
+        <option>Premium</option>
       </select>
 
       <div className="recipeRender">
