@@ -47,7 +47,7 @@ function updateRecipePlan(event) {
     case "Classic Plan":
       selectedRecipeData = recipeDataV2[8].RecipeType;
       break;
-    case "Premium Plan":
+    case "Exclusive Plan":
       selectedRecipeData = recipeDataV2[15].RecipeType
       break;
     default:
@@ -137,10 +137,10 @@ function updateRecipePlan(event) {
       </select>
 
       <label>Meal Plan:</label>
-      <select onChange={recipePlan}>
+      <select onChange={updateRecipePlan}>
         <option>Saver</option>
         <option>Classic</option>
-        <option>Premium</option>
+        <option>Exclusive</option>
       </select>
 
       <div className="recipeRender">
