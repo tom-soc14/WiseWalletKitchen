@@ -474,7 +474,7 @@ let recipeDataV2 = [
   },
   {
     RecipeName: "Chicken Marsala",
-    RecipeID: "2002",
+    RecipeID: "2006",
     RecipeType: "Classic",
     PrepTime: "10 minutes",
     CookingTime: "30 minutes",
@@ -514,8 +514,8 @@ let recipeDataV2 = [
   },
   {
     RecipeName: "Creamy Garlic Shrimp Pasta",
-    RecipeID: "2003",
-    RecipeType: "Seafood",
+    RecipeID: "2007",
+    RecipeType: "Classic",
     PrepTime: "10 minutes",
     CookingTime: "20 minutes",
     Price: [12.0, 14.0, 16.0, 18.0],
