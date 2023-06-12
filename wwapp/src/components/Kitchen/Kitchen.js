@@ -25,7 +25,7 @@ import { useState } from "react";
 console.log(recipeDataV2);
 
 
-function Kitchen({ weeklyPriceChange }) {
+function Kitchen() {
   const [recipe, setRecipe] = useState(recipeDataV2[0]);
   const [recipePrice, setRecipePrice] = useState(recipeDataV2[0].Price[0]);
   const [selectedValue, setSelectedValue] = useState([0])
@@ -64,7 +64,7 @@ function updateDayRecipe(event) {
       totalPriceNum = totalPriceNum + recipeDataV2[i].Price[0];
     }
     let totalPrice = Math.round(totalPriceNum * 100) / 100;
-    weeklyPriceChange(totalPrice);
+    // weeklyPriceChange(totalPrice);
     return "£" + totalPrice;
   }
 
