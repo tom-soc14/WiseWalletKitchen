@@ -33,6 +33,8 @@ function Kitchen({ weeklyPriceChange }) {
 //Create a function that sets all recipes rendered to be one of the 3 options. 
 //This function will be called when the drop down menu is selected
 //It selects the recipes with corresponding plan data field.
+//Tested recipedataV2[0].RecipeType and it work for 0, 8 and 15 ✅
+
 function updateRecipePlan(event) {
   const recipePlan = event.target.value;
   setRecipePlan(recipePlan);
@@ -53,7 +55,7 @@ function updateRecipePlan(event) {
       break;
   }
    // Set the selected recipe data
-  setRecipePlan(selectedRecipeData);
+  setRecipePlan(selectedRecipeData)
 }
 
 
@@ -62,9 +64,11 @@ function updateRecipePlan(event) {
     const selectedValue = parseInt(event.target.value) -1;
     setSelectedValue(selectedValue);
     setRecipePrice(recipe.Price[selectedValue]);
-    console.log("testing 1");
-    console.log(recipeDataV2[0].RecipeType + "testing for recipeType");
+  
   }
+
+
+
   function updateDayRecipe(event) {
     const recipeIndex = parseInt(event.target.dataset.id);
     setRecipe(recipeDataV2[recipeIndex]);
