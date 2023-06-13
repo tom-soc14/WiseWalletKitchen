@@ -1,13 +1,18 @@
 import "./Kitchen.css";
+import DaySelector from './DaySelector.js'
 
-function Kitchen({ recipes, handleRecipeChange, handlePriceChange, dayRecipe, recipePrice,  }) {
+function Kitchen({ handleRecipeChange, dayRecipe }) {
 
 return (
     <div>
        <h1 className="titleHeader">Recipes</h1>
-      <div className="Orange">
-        <p>Your week</p>
-        <button data-id="0" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
+       <p>Your week</p>
+       <div className="Orange">
+       <DaySelector dayRecipe={dayRecipe} handleRecipeChange={handleRecipeChange}/>
+      
+
+       
+        {/* <button data-id="0" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
           M
         </button>
         <button data-id="1" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
@@ -27,16 +32,16 @@ return (
         </button>
         <button data-id="6" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
           S
-        </button>
+        </button> */}
       </div>
 
-  <label>Number in Household:</label>
+  {/* <label>Number in Household:</label>
       <select onChange={(e) => handlePriceChange(e.target.value)}>
         <option>1</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
-      </select>
+      </select> */}
 
       <div className="recipeRender">
         <div className="recipeContent">
@@ -50,7 +55,7 @@ return (
           </>
         )}
 
-          <h2>Price: £{recipePrice}</h2>
+          {/* <h2>Price: £{recipePrice}</h2> */}
         </div>
       </div> 
    
