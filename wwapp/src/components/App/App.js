@@ -12,6 +12,9 @@ import './App.css';
 
 function App() {
 
+
+     <Kitchen />
+
   
   return (
     <BrowserRouter>
