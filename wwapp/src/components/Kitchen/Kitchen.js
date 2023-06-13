@@ -28,6 +28,10 @@ function Kitchen({ weeklyPriceChange }) {
   const [recipe, setRecipe] = useState(recipeDataV2[0]);
   const [recipePrice, setRecipePrice] = useState(recipeDataV2[0].Price[0]);
   const [selectedValue, setSelectedValue] = useState([0])
+
+
+
+
   const [recipePlan, setRecipePlan] = useState(recipeDataV2[0].RecipeType);
 
 
@@ -61,20 +65,23 @@ function updateRecipePlan(event) {
 
 
 
-  function updateRecipePrice(event) {
-    const selectedValue = parseInt(event.target.value) -1;
-    setSelectedValue(selectedValue);
-    setRecipePrice(recipe.Price[selectedValue]);
-  
-  }
+
+function updateRecipePrice(event) {
+  const selectedValue = parseInt(event.target.value) -1;
+  setSelectedValue(selectedValue);
+  setRecipePrice(recipe.Price[selectedValue]);
+}
+
+function updateDayRecipe(event) {
+  const recipeIndex = parseInt(event.target.dataset.id);
+  setRecipe(recipeDataV2[recipeIndex]);
+  setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
+}
 
 
 
-  function updateDayRecipe(event) {
-    const recipeIndex = parseInt(event.target.dataset.id);
-    setRecipe(recipeDataV2[recipeIndex]);
-    setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
-  }
+
+
   
 
   
@@ -87,9 +94,10 @@ function updateRecipePlan(event) {
     let totalPriceNum = 0;
     for (let i = 0; i < 6; i++) {
       // For loop only goes to 6, not whole array
-      totalPriceNum = totalPriceNum + recipeDataV2[i].Price;
+      totalPriceNum = totalPriceNum + recipeDataV2[i].Price[0];
     }
     let totalPrice = Math.round(totalPriceNum * 100) / 100;
+    // weeklyPriceChange(totalPrice);
     return "£" + totalPrice;
   }
 
