@@ -143,13 +143,13 @@ console.log(recipes)
       + Create a function with a switch statement that updates the rendered price based on the drop down option selected
       */}
 
-  {/* <label>Number in Household:</label>
+  <label>Number in Household:</label>
       <select onChange={updateRecipePrice}>
         <option>1</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
-      </select> */}
+      </select>
 
       {/* <label>Meal Plan:</label>
       <select onChange={updateRecipePlan}>
