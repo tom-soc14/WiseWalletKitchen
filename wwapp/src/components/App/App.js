@@ -14,6 +14,8 @@ function App() {
   const [dayRecipe, setDayRecipe] = useState(null);
   const [selectedValue, setSelectedValue] = useState(0);
   const [recipePrice, setRecipePrice] = useState(null);
+  // const recipePrice = recipes?.RecipePrice?.[selectedValue];
+
 
   useEffect(() => {
     function weeklyPrice2() {
@@ -51,7 +53,6 @@ function App() {
   };
  
   // function updateDayRecipe(event) {
-  //   console.log("CLICKED!");
   //   // const recipeIndex = parseInt(event.target.dataset.id);
   //   // setRecipe(recipeDataV2[recipeIndex]);
   //   // setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
@@ -62,25 +63,24 @@ function App() {
   //   setSelectedValue(selectedValue);
   //   setRecipePrice(recipe.Price[selectedValue]);
   // }
+
   const handlePriceChange = (event) => {
+
     const setValue = event;
     const newValue = parseInt(setValue - 1);
     setSelectedValue(newValue);
-    setRecipePrice(dayRecipe.RecipePrice[0])
-    console.log(dayRecipe);
-    console.log(recipePrice);
-    // console.log(newValue + 'newValue');
-    // console.log(selectedValue + 'selectedValue');
-    // handleRecipeChange(event, newValue);
+    // setRecipePrice(recipes.RecipePrice[selectedValue]);
+
   };
 
   useEffect(() => {
     console.log(selectedValue)
+    
   }, [selectedValue])
 
   const handleRecipeChange = (event, newValue) => {
     setDayRecipe(recipes[event]);
-    setRecipePrice(recipes[event].RecipePrice[0]);
+    setRecipePrice(recipes[event].RecipePrice[selectedValue]);
   };
 
   
