@@ -13,6 +13,7 @@ import { createClient } from "@supabase/supabase-js";
 function App() {
 const [weeklyPrice, setWeeklyPrice] = useState('');
 const [recipes, setRecipes] = useState(null);
+const [dayRecipe, setDayRecipe] = useState(null);
 
 
 useEffect(() => {
@@ -48,21 +49,59 @@ const supabase = createClient(supabaseUrl, supabaseKey);
       console.error("Error fetching recipes:", error);
     } else {
       setRecipes(data);
-      // console.log('hello');
     }
   } catch (error) {
     console.error("Error fetching recipes:", error);
   }
 };
 
-// console.log(recipes)
 
-// function allRecipes () {
-//   recipes.map(recipe=> {
-//     recipe.DummyRecipeData.RecipeName;
-//   })
+
+// function updateRecipePrice(event) {
+//   const selectedValue = parseInt(event.target.value) -1;
+//   setSelectedValue(selectedValue);
+//   setRecipePrice(recipe.Price[selectedValue]);
 // }
 
+
+
+/* <SearchBar 
+        filterText={filterText} 
+        inStockOnly={inStockOnly}
+        onFilterTextChange={setFilterText}
+        onInStockOnlyChange={setInStockOnly} />
+
+
+<input 
+  type="text" 
+  value={filterText} 
+  placeholder="Search..." 
+  onChange={(e) => onFilterTextChange(e.target.value)} /> */
+
+
+  // const handleFilterTextChange = (value) => {
+  //   setFilterText(value);
+  // }
+
+
+  //PLAN
+  //
+
+
+  function updateDayRecipe(event) {
+    console.log('CLICKED!')
+    // const recipeIndex = parseInt(event.target.dataset.id);
+    // setRecipe(recipeDataV2[recipeIndex]);
+    // setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
+  }
+
+
+  const handleRecipeChange = (event) => {
+    // setDayRecipe(event.target.dataset.id)
+    console.log('CLICKED!')
+    setDayRecipe(recipes[event])
+    console.log(dayRecipe)
+  }
 
 
   
@@ -71,7 +110,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/kitchen" element={<Kitchen recipes={recipes}/>} /> 
+        <Route path="/kitchen" element={<Kitchen dayRecipe={dayRecipe} handleRecipeChange={handleRecipeChange}/>} /> 
         <Route path="/login" element={<Login />} />
 
         <Route path="/wallet" element={<Wallet weeklyPrice={weeklyPrice}/>} />
@@ -83,7 +122,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     </BrowserRouter>
   );
   
-  }
+}
 export default App;
 
 

@@ -24,7 +24,7 @@ import { useState } from "react";
 */
 
 
-function Kitchen({ recipes }) {
+function Kitchen({ recipes, handleRecipeChange, dayRecipe }) {
   // const [recipe, setRecipe] = useState(recipeDataV2[0]);
   // const [recipePrice, setRecipePrice] = useState(recipeDataV2[0].Price[0]);
   // const [selectedValue, setSelectedValue] = useState([0])
@@ -66,17 +66,6 @@ console.log(recipes)
 
 
 
-// function updateRecipePrice(event) {
-//   const selectedValue = parseInt(event.target.value) -1;
-//   setSelectedValue(selectedValue);
-//   setRecipePrice(recipe.Price[selectedValue]);
-// }
-
-// function updateDayRecipe(event) {
-//   const recipeIndex = parseInt(event.target.dataset.id);
-//   setRecipe(recipeDataV2[recipeIndex]);
-//   setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
-// }
 
 
 
@@ -101,9 +90,14 @@ console.log(recipes)
 //     return "£" + totalPrice;
 //   }
 
+
+
+
+
+
   return (
     <div>
-     {recipes && (
+     {/* {recipes && (
           <>
             {recipes.map((recipe) => (
               <div className="full-recipe-list">
@@ -114,33 +108,33 @@ console.log(recipes)
               </div>
             ))}
           </>
-        )}
-      {/* <h1 className="titleHeader">Recipes</h1>
+        )} */}
+       <h1 className="titleHeader">Recipes</h1>
       <img src={saladRice} alt="salad-rice"></img>
       <div className="Orange">
         <p>Your week</p>
-        <button data-id="0" onClick={updateDayRecipe} className="SpanClass">
+        <button data-id="0" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
           M
         </button>
-        <button data-id="1" onClick={updateDayRecipe} className="SpanClass">
+        <button data-id="1" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
           T
         </button>
-        <button data-id="2" onClick={updateDayRecipe} className="SpanClass">
+        <button data-id="2" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
           W
         </button>
-        <button data-id="3" onClick={updateDayRecipe} className="SpanClass">
+        <button data-id="3" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
           T
         </button>
-        <button data-id="4" onClick={updateDayRecipe} className="SpanClass">
+        <button data-id="4" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
           F
         </button>
-        <button data-id="5" onClick={updateDayRecipe} className="SpanClass">
+        <button data-id="5" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
           S
         </button>
-        <button data-id="6" onClick={updateDayRecipe} className="SpanClass">
+        <button data-id="6" onClick={(e) => handleRecipeChange(e.target.dataset.id)} className="SpanClass">
           S
         </button>
-        <p>Total Weekly Price: {weeklyPrice()}</p>
+        {/* <p>Total Weekly Price: {weeklyPrice()}</p> */}
       </div>
 
       {/* 
@@ -149,37 +143,48 @@ console.log(recipes)
       + Create a function with a switch statement that updates the rendered price based on the drop down option selected
       */}
 
-      {/* <label>Number in Household:</label>
+  {/* <label>Number in Household:</label>
       <select onChange={updateRecipePrice}>
         <option>1</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
-      </select>
+      </select> */}
 
-      <label>Meal Plan:</label>
+      {/* <label>Meal Plan:</label>
       <select onChange={updateRecipePlan}>
         <option>Saver</option>
         <option>Classic</option>
         <option>Premium</option>
-      </select>
+      </select> */}
 
+
+    
+    
+
+    
+      
       <div className="recipeRender">
         <div className="recipeContent">
-          <h2>{recipe.RecipeName}</h2>
-          {recipe.Instructions.map((instruction, index) => {
+        
+        {dayRecipe && (
+          <>
+          <h2>{dayRecipe.RecipeName}</h2>
+          {dayRecipe.Instructions.map((instruction, index) => {
             return <p key={index}>{instruction}</p>;
-          })}
+          })} 
+          </>
+        )}
 
-          <h2>Price: £{recipePrice}</h2>
+          {/* <h2>Price: £{recipePrice}</h2> */}
         </div>
         <img
           className="foodImage"
-          src={recipe.Photo}
-          alt={recipe.PhotoAlt}
+          // src={recipes.Photo}
+          // alt={recipes.PhotoAlt}
         ></img>
-      </div> */} 
-      {/* }*/ }
+      </div> 
+   
     </div>
   );
 }
