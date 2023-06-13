@@ -12,8 +12,10 @@ function App() {
   const [weeklyPrice, setWeeklyPrice] = useState("");
   const [recipes, setRecipes] = useState(null);
   const [dayRecipe, setDayRecipe] = useState(null);
-  const [selectedValue, setSelectedValue] = useState(0);
+  const [selectedValue, setSelectedValue] = useState(null);
   const [recipePrice, setRecipePrice] = useState(null);
+
+  const pricingData = recipes;
 
   useEffect(() => {
     function weeklyPrice2() {
@@ -51,7 +53,7 @@ function App() {
   };
  
   // function updateDayRecipe(event) {
-  //   console.log("CLICKED!");
+  //   console.log("CLICKED");
   //   // const recipeIndex = parseInt(event.target.dataset.id);
   //   // setRecipe(recipeDataV2[recipeIndex]);
   //   // setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
@@ -64,14 +66,15 @@ function App() {
   // }
   const handlePriceChange = (event) => {
     const setValue = event;
-    const newValue = setValue - 1;
+    var newValue = setValue - 1;
     setSelectedValue(newValue);
-    handleRecipeChange(event, newValue);
   };
 
-  const handleRecipeChange = (event, newValue) => {
-    setDayRecipe(recipes[event]);
-    setRecipePrice(recipes[event].RecipePrice[newValue]);
+  const handleRecipeChange = (event) => {
+    if (recipes) {
+      setDayRecipe(recipes[event]);
+      setRecipePrice(recipes[event].Price[selectedValue]);
+    }
   };
 
   
@@ -93,7 +96,7 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
 
-        <Route path="/wallet" element={<Wallet weeklyPrice={weeklyPrice} />} />
+        <Route path="/wallet" element={<Wallet weeklyPrice={weeklyPrice} pricingData={pricingData} />} />
       </Routes>
     </BrowserRouter>
   );
