@@ -24,9 +24,9 @@ import { useState } from "react";
 */
 
 
-function Kitchen({ recipes, handleRecipeChange, dayRecipe }) {
+function Kitchen({ recipes, handleRecipeChange, handlePriceChange, dayRecipe }) {
   // const [recipe, setRecipe] = useState(recipeDataV2[0]);
-  // const [recipePrice, setRecipePrice] = useState(recipeDataV2[0].Price[0]);
+  // 
   // const [selectedValue, setSelectedValue] = useState([0])
 
 console.log(recipes)
@@ -166,7 +166,7 @@ console.log(recipes)
       
       <div className="recipeRender">
         <div className="recipeContent">
-        
+
         {dayRecipe && (
           <>
           <h2>{dayRecipe.RecipeName}</h2>

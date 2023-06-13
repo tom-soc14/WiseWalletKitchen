@@ -57,11 +57,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 
 
-// function updateRecipePrice(event) {
-//   const selectedValue = parseInt(event.target.value) -1;
-//   setSelectedValue(selectedValue);
-//   setRecipePrice(recipe.Price[selectedValue]);
-// }
+
 
 
 
@@ -95,12 +91,22 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     // setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
   }
 
+  // function updateRecipePrice(event) {
+  //   const selectedValue = parseInt(event.target.value) -1;
+//   setSelectedValue(selectedValue);
+//   setRecipePrice(recipe.Price[selectedValue]);
+// }
+
 
   const handleRecipeChange = (event) => {
     // setDayRecipe(event.target.dataset.id)
     console.log('CLICKED!')
     setDayRecipe(recipes[event])
     console.log(dayRecipe)
+  }
+
+  const handlePriceChange = (event) => {
+    console.log('Price Clicked!')
   }
 
 
@@ -110,7 +116,13 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/kitchen" element={<Kitchen dayRecipe={dayRecipe} handleRecipeChange={handleRecipeChange}/>} /> 
+        <Route path="/kitchen" element= {
+        <Kitchen 
+            dayRecipe={dayRecipe} 
+            handleRecipeChange={handleRecipeChange}
+            handlePriceChange={handlePriceChange}
+        />
+        } /> 
         <Route path="/login" element={<Login />} />
 
         <Route path="/wallet" element={<Wallet weeklyPrice={weeklyPrice}/>} />
