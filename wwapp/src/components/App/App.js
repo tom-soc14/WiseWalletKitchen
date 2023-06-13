@@ -64,14 +64,23 @@ function App() {
   // }
   const handlePriceChange = (event) => {
     const setValue = event;
-    const newValue = setValue - 1;
+    const newValue = parseInt(setValue - 1);
     setSelectedValue(newValue);
-    handleRecipeChange(event, newValue);
+    setRecipePrice(dayRecipe.RecipePrice[0])
+    console.log(dayRecipe);
+    console.log(recipePrice);
+    // console.log(newValue + 'newValue');
+    // console.log(selectedValue + 'selectedValue');
+    // handleRecipeChange(event, newValue);
   };
+
+  useEffect(() => {
+    console.log(selectedValue)
+  }, [selectedValue])
 
   const handleRecipeChange = (event, newValue) => {
     setDayRecipe(recipes[event]);
-    setRecipePrice(recipes[event].RecipePrice[newValue]);
+    setRecipePrice(recipes[event].RecipePrice[0]);
   };
 
   
