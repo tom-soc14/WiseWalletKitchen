@@ -9,49 +9,51 @@ const supabaseKey =
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default function API() {
-  //state to store the fetched recipe data
-  const [recipes, setRecipes] = useState(null);
-  const [ingredientUsage, setIngredientUsage] = useState(null);
+    const [recipes, setRecipes] = useState(null);
   
-
-  // fetching recipe data currently on mount (as stated by the [])
-  useEffect(() => {
-    fetchRecipes();
-    fetchIngredientUsage();
-  }, []);
-  //function to fetch from supabase (async)
-  const fetchRecipes = async () => {
-    try {
-      //fetching all information from the DummyRecipeData folder
-      const { data, error } = await supabase
-        .from("DummyRecipeData")
-        .select("*");
-      if (error) {
-        console.error("Error fetching recipes:", error);
-      } else {
-        // console.log("Fetched articles:", data);
-        setRecipes(data);
-      }
-    } catch (error) {
-      console.error("Error fetching articles:", error);
-    }
-  };
-
+    useEffect(() => {
+      fetchRecipes();
+    }, []);
   
-  const fetchIngredientUsage = async () => {
-    try {
-      const {data, error } = await supabase
-      .from("IngredientUsage")
-      .select("*");
-      if (error) {
-        console.log("Error fetching recipes", error);
-      } else {
-        setIngredientUsage(data)
-      }
+    const fetchRecipes = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("IngredientUsage")
+          .select(
+            `
+            *,
+            DummyRecipeData: RecipeId (*),
+            Ingredients: IngredientId (*)
+            `
+          )
+         
+  
+        if (error) {
+          console.error("Error fetching recipes:", error);
+        } else {
+          setRecipes(data);
+          console.log(data);
+        }
       } catch (error) {
-        console.error("Error fetching articles:", error)
+        console.error("Error fetching recipes:", error);
       }
-    }
+    };
+
+  
+//   const fetchIngredientUsage = async () => {
+//     try {
+//       const {data, error } = await supabase
+//       .from("IngredientUsage")
+//       .select("*");
+//       if (error) {
+//         console.log("Error fetching recipes", error);
+//       } else {
+//         setIngredientUsage(data)
+//       }
+//       } catch (error) {
+//         console.error("Error fetching articles:", error)
+//       }
+//     }
     
   
 
@@ -73,7 +75,7 @@ export default function API() {
             ))}
           </>
         )}
-        {ingredientUsage && (
+        {/* {ingredientUsage && (
           <>
             {ingredientUsage.map((ingredient) => (
               <div className="full-ingredient-usage">
@@ -84,7 +86,7 @@ export default function API() {
               </div>
             ))}
           </>
-        )}
+        )} */}
       </div>
     );
   }
