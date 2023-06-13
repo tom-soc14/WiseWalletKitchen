@@ -47,7 +47,7 @@ function updateRecipePlan(event) {
     case "Classic Plan":
       selectedRecipeData = recipeDataV2[8].RecipeType;
       break;
-    case "Exclusive Plan":
+    case "Premium Plan":
       selectedRecipeData = recipeDataV2[15].RecipeType
       break;
     default:
