@@ -5,12 +5,17 @@ import HomePage from "../HomePage/HomePage.js";
 import Kitchen from "../Kitchen/Kitchen.js";
 import Login from '../Login/Login.js';
 import Wallet from "../Wallet/Wallet.js";
+
 import recipeDataV2 from "./recipeDataV2.js";
+
+import API from "../API/API.js";
+
 
 import './App.css';
 
 
 function App() {
+
   const [weeklyPrice, setWeeklyPrice] = useState('');
 
 
@@ -30,13 +35,25 @@ useEffect(() => {
 
 
 
+
+
+
+//      <Kitchen />
+
+  
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/kitchen" element={<Kitchen  />} /> 
         <Route path="/login" element={<Login />} />
+
         <Route path="/wallet" element={<Wallet weeklyPrice={weeklyPrice}/>} />
+
+    
+        <Route path="/API" element={<API />} />
+
       </Routes>
     </BrowserRouter>
   );
