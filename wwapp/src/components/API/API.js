@@ -38,28 +38,16 @@ export default function API() {
     }
   };
 
-  //   const fetchIngredientUsage = async () => {
-  //     try {
-  //       const {data, error } = await supabase
-  //       .from("IngredientUsage")
-  //       .select("*");
-  //       if (error) {
-  //         console.log("Error fetching recipes", error);
-  //       } else {
-  //         setIngredientUsage(data)
-  //       }
-  //       } catch (error) {
-  //         console.error("Error fetching articles:", error)
-  //       }
-  //     }
+
 
   return (
     <div className="recipe-viewer">
       {recipes && (
         <>
+
           {recipes.map((recipe) => (
             <div className="full-recipe-list">
-              <h3>{recipe.RecipeName}</h3>
+              <img src={recipe.Photo} alt={recipe.PhotoAlt} style={{ width: '200px', height: 'auto' }} />
             </div>
           ))}
         </>
@@ -79,3 +67,20 @@ export default function API() {
     </div>
   );
 }
+
+// This is legacy code before we realised how to join the tables in 1 function
+
+//   const fetchIngredientUsage = async () => {
+//     try {
+//       const {data, error } = await supabase
+//       .from("IngredientUsage")
+//       .select("*");
+//       if (error) {
+//         console.log("Error fetching recipes", error);
+//       } else {
+//         setIngredientUsage(data)
+//       }
+//       } catch (error) {
+//         console.error("Error fetching articles:", error)
+//       }
+//     }
