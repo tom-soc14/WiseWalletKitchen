@@ -9,73 +9,62 @@ const supabaseKey =
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default function API() {
-    const [recipes, setRecipes] = useState(null);
-  
-    useEffect(() => {
-      fetchRecipes();
-    }, []);
-  
-    const fetchRecipes = async () => {
-      try {
-        const { data, error } = await supabase
-          .from("IngredientUsage")
-          .select(
-            `
+  const [recipes, setRecipes] = useState(null);
+
+  useEffect(() => {
+    fetchRecipes();
+  }, []);
+
+  const fetchRecipes = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("RecipeData")
+        .select(
+          `
             *,
-            DummyRecipeData: RecipeId (*),
-            Ingredients: IngredientId (*)
+            IngredientUsage: RecipeId (*)
             `
-          )
-         
-  
-        if (error) {
-          console.error("Error fetching recipes:", error);
-        } else {
-          setRecipes(data);
-          console.log(data);
-        }
-      } catch (error) {
+        )
+        .order("RecipeId");
+
+      if (error) {
         console.error("Error fetching recipes:", error);
+      } else {
+        setRecipes(data);
+        console.log(data);
       }
-    };
+    } catch (error) {
+      console.error("Error fetching recipes:", error);
+    }
+  };
 
-  
-//   const fetchIngredientUsage = async () => {
-//     try {
-//       const {data, error } = await supabase
-//       .from("IngredientUsage")
-//       .select("*");
-//       if (error) {
-//         console.log("Error fetching recipes", error);
-//       } else {
-//         setIngredientUsage(data)
-//       }
-//       } catch (error) {
-//         console.error("Error fetching articles:", error)
-//       }
-//     }
-    
-  
+  //   const fetchIngredientUsage = async () => {
+  //     try {
+  //       const {data, error } = await supabase
+  //       .from("IngredientUsage")
+  //       .select("*");
+  //       if (error) {
+  //         console.log("Error fetching recipes", error);
+  //       } else {
+  //         setIngredientUsage(data)
+  //       }
+  //       } catch (error) {
+  //         console.error("Error fetching articles:", error)
+  //       }
+  //     }
 
-    return (
-      <div className="recipe-viewer">
-        {recipes && (
-          <>
-            {recipes.map((recipe) => (
-              <div className="full-recipe-list">
-                <h3>{recipe.RecipeName}</h3>
-                <p>{recipe.RecipeType}</p>
-                <img alt={recipe.PhotoAlt} />
-                <p>{recipe.Vegetarian}</p>
-                <p>{recipe.Vegan}</p>
-                <p>{recipe.GlutenFree}</p>
-                <p>{recipe.LactoseFree}</p>
-                <p>{recipe.Instructions}</p>
-              </div>
-            ))}
-          </>
-        )}
-        {/* {ingredientUsage && (
+  return (
+    <div className="recipe-viewer">
+      {recipes && (
+        <>
+          {recipes.map((recipe) => (
+            <div className="full-recipe-list">
+              <h3>{recipe.RecipeName}</h3>
+            </div>
+          ))}
+        </>
+      )}
+      {/* {ingredientUsage && (
           <>
             {ingredientUsage.map((ingredient) => (
               <div className="full-ingredient-usage">
@@ -87,6 +76,6 @@ export default function API() {
             ))}
           </>
         )} */}
-      </div>
-    );
-  }
+    </div>
+  );
+}
