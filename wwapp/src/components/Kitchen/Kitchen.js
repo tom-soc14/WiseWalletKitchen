@@ -140,7 +140,7 @@ function updateRecipePlan(event) {
       <select onChange={updateRecipePlan}>
         <option>Saver</option>
         <option>Classic</option>
-        <option>Exclusive</option>
+        <option>Premium</option>
       </select>
 
       <div className="recipeRender">

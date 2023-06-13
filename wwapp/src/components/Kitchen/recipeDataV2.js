@@ -561,11 +561,11 @@ let recipeDataV2 = [
   },
 
 
-  // Exclusive Recipes ---------------------------------------------------------------------
+  // Premium Recipes ---------------------------------------------------------------------
   {
     RecipeName: "Grilled Salmon",
     RecipeID: "3001",
-    RecipeType: "Exclusive",
+    RecipeType: "Premium",
     delete: "2",
     PrepTime: "10 minutes",
     CookingTime: "15 minutes",
@@ -612,7 +612,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Lobster Thermidor",
     RecipeID: "3002",
-    RecipeType: "Exclusive",
+    RecipeType: "Premium",
     PrepTime: "20 minutes",
     CookingTime: "30 minutes",
     Price: [30.0, 35.0, 40.0, 45.0],
@@ -672,7 +672,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Truffle Risotto",
     RecipeID: "3003",
-    RecipeType: "Exclusive",
+    RecipeType: "Premium",
     PrepTime: "10 minutes",
     CookingTime: "30 minutes",
     Price: [25.0, 30.0, 35.0, 40.0],
@@ -719,7 +719,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Creme Brulee",
     RecipeID: "3004",
-    RecipeType: "Exclusive",
+    RecipeType: "Premium",
     PrepTime: "15 minutes",
     CookingTime: "1 hour",
     Price: [12.0, 15.0, 18.0, 21.0],
@@ -772,7 +772,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Beef Wellington with Truffle",
     RecipeID: "3005",
-    RecipeType: "Exclusive",
+    RecipeType: "Premium",
     PrepTime: "30 minutes",
     CookingTime: "45 minutes",
     Price: [40.0, 45.0, 50.0, 55.0],
@@ -827,7 +827,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Stuffed Portobello Mushrooms",
     RecipeID: "3002",
-    RecipeType: "Exclusive",
+    RecipeType: "Premium",
     delete: "2",
     PrepTime: "20 minutes",
     CookingTime: "25 minutes",
@@ -882,7 +882,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Quinoa-Stuffed Bell Peppers",
     RecipeID: "3004",
-    RecipeType: "Exclusive",
+    RecipeType: "Premium",
     delete: "2",
     PrepTime: "25 minutes",
     CookingTime: "35 minutes",
