@@ -12,7 +12,7 @@ function App() {
   const [weeklyPrice, setWeeklyPrice] = useState("");
   const [recipes, setRecipes] = useState(null);
   const [dayRecipe, setDayRecipe] = useState(null);
-  const [selectedValue, setSelectedValue] = useState([0]);
+  const [selectedValue, setSelectedValue] = useState(0);
   const [recipePrice, setRecipePrice] = useState(null);
 
   useEffect(() => {
@@ -64,13 +64,14 @@ function App() {
   // }
   const handlePriceChange = (event) => {
     const setValue = event;
-    var newValue = setValue - 1;
+    const newValue = setValue - 1;
     setSelectedValue(newValue);
+    handleRecipeChange(event, newValue);
   };
 
-  const handleRecipeChange = (event) => {
+  const handleRecipeChange = (event, newValue) => {
     setDayRecipe(recipes[event]);
-    setRecipePrice(recipes[event].RecipePrice[selectedValue])
+    setRecipePrice(recipes[event].RecipePrice[newValue]);
   };
 
   
