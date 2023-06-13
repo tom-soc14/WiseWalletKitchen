@@ -9,37 +9,70 @@ const supabaseKey =
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default function API() {
-    const [recipes, setRecipes] = useState(null);
-  
-    useEffect(() => {
-      fetchRecipes();
-    }, []);
-  
-    const fetchRecipes = async () => {
-      try {
-        const { data, error } = await supabase
-          .from("IngredientUsage")
-          .select(
-            `
-            *,
-            DummyRecipeData: RecipeId (*),
-            Ingredients: IngredientId (*)
-            `
-          )
-         
-  
-        if (error) {
-          console.error("Error fetching recipes:", error);
-        } else {
-          setRecipes(data);
-          console.log(data);
-        }
-      } catch (error) {
-        console.error("Error fetching recipes:", error);
-      }
-    };
+  const [recipes, setRecipes] = useState(null);
 
-  
+  useEffect(() => {
+    fetchRecipes();
+  }, []);
+
+  const fetchRecipes = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("RecipeData")
+        .select(
+          `
+            *,
+            IngredientUsage: RecipeId (*)
+            `
+        )
+        .order("RecipeId");
+
+      if (error) {
+        console.error("Error fetching recipes:", error);
+      } else {
+        setRecipes(data);
+        console.log(data);
+      }
+    } catch (error) {
+      console.error("Error fetching recipes:", error);
+    }
+  };
+
+  console.log("just testing!");
+
+  return (
+    <div className="recipe-viewer">
+      {recipes && (
+        <>
+          {recipes.map((recipe) => (
+            <div className="full-recipe-list">
+              <img
+                src={recipe.Photo}
+                alt={recipe.PhotoAlt}
+                style={{ width: "200px", height: "auto" }}
+              />
+            </div>
+          ))}
+        </>
+      )}
+      {/* {ingredientUsage && (
+          <>
+            {ingredientUsage.map((ingredient) => (
+              <div className="full-ingredient-usage">
+                <h3>{ingredient.RecipeID}</h3>
+                <p>{ingredient.id}</p>
+                <p>{ingredient.IngredientID}</p>
+                <p>{ingredient.Amount}</p>
+              </div>
+            ))}
+          </>
+        )} */}
+    </div>
+  );
+}
+
+// This is legacy code before we realised how to join the tables in 1 function
+
 //   const fetchIngredientUsage = async () => {
 //     try {
 //       const {data, error } = await supabase
@@ -54,39 +87,3 @@ export default function API() {
 //         console.error("Error fetching articles:", error)
 //       }
 //     }
-    
-  
-
-    return (
-      <div className="recipe-viewer">
-        {recipes && (
-          <>
-            {recipes.map((recipe) => (
-              <div className="full-recipe-list">
-                <h3>{recipe.RecipeName}</h3>
-                <p>{recipe.RecipeType}</p>
-                <img alt={recipe.PhotoAlt} />
-                <p>{recipe.Vegetarian}</p>
-                <p>{recipe.Vegan}</p>
-                <p>{recipe.GlutenFree}</p>
-                <p>{recipe.LactoseFree}</p>
-                <p>{recipe.Instructions}</p>
-              </div>
-            ))}
-          </>
-        )}
-        {/* {ingredientUsage && (
-          <>
-            {ingredientUsage.map((ingredient) => (
-              <div className="full-ingredient-usage">
-                <h3>{ingredient.RecipeID}</h3>
-                <p>{ingredient.id}</p>
-                <p>{ingredient.IngredientID}</p>
-                <p>{ingredient.Amount}</p>
-              </div>
-            ))}
-          </>
-        )} */}
-      </div>
-    );
-  }
