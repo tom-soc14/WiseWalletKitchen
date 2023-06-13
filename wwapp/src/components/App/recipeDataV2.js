@@ -1,6 +1,6 @@
-import spaghettiBol from "./img/Spaghetti_Bolognese.jpeg";
-import vegetableStir from "./img/Vegetable_Stir_Fry.jpeg";
-import tunaPasta from "./img/Tuna_Pasta.jpeg";
+// import spaghettiBol from "./img/Spaghetti_Bolognese.jpeg";
+// import vegetableStir from "./img/Vegetable_Stir_Fry.jpeg";
+// import tunaPasta from "./img/Tuna_Pasta.jpeg";
 // import salmonSauce from "./img/Salmon_Sauce.jpeg";
 // import mangoSalsa from "./img/mango_salsa.jpeg";
 // import beanRice from "./img/beanRiceBurrito.jpeg";
@@ -29,7 +29,7 @@ let recipeDataV2 = [
     PrepTime: "15 minutes",
     CookingTime: "30 minutes",
     Price: [3.0, 4.5, 6.0, 7.5],
-    Photo: spaghettiBol,
+    Photo: "spaghettiBol",
     PhotoAlt: "Description of PHOTOURL",
     Vegetarian: "False",
     GlutenFree: "False",
@@ -62,7 +62,7 @@ let recipeDataV2 = [
     PrepTime: "10 minutes",
     CookingTime: "15 minutes",
     Price: [4.0, 6.0, 8.0, 10.0],
-    Photo: vegetableStir,
+    Photo: "vegetableStir",
     PhotoAlt: "Description of PHOTOURL",
     Vegetarian: "False",
     GlutenFree: "True",
@@ -95,7 +95,7 @@ let recipeDataV2 = [
     PrepTime: "10 minutes",
     CookingTime: "0 minutes",
     Price: [2.5, 3.5, 4.5, 5.5],
-    Photo: tunaPasta,
+    Photo: "tunaPasta",
     PhotoAlt: "Description of PHOTOURL",
     Vegetarian: "False",
     GlutenFree: "True",
@@ -135,7 +135,7 @@ let recipeDataV2 = [
     Ingredients: [
       {
         Name: "Mixed vegetables",
-        IngredientId: "4",
+        IngredientId: "7",
         Amount: ["500g", "600g", "700g", "800g"],
         Price: [2.5, 3.5, 4.5, 5.5],
       },
@@ -474,7 +474,7 @@ let recipeDataV2 = [
   },
   {
     RecipeName: "Chicken Marsala",
-    RecipeID: "2006",
+    RecipeID: "2002",
     RecipeType: "Classic",
     PrepTime: "10 minutes",
     CookingTime: "30 minutes",
@@ -514,8 +514,8 @@ let recipeDataV2 = [
   },
   {
     RecipeName: "Creamy Garlic Shrimp Pasta",
-    RecipeID: "2007",
-    RecipeType: "Classic",
+    RecipeID: "2003",
+    RecipeType: "Seafood",
     PrepTime: "10 minutes",
     CookingTime: "20 minutes",
     Price: [12.0, 14.0, 16.0, 18.0],
@@ -561,11 +561,11 @@ let recipeDataV2 = [
   },
 
 
-  // Premium Recipes ---------------------------------------------------------------------
+  // Exclusive Recipes ---------------------------------------------------------------------
   {
     RecipeName: "Grilled Salmon",
     RecipeID: "3001",
-    RecipeType: "Premium",
+    RecipeType: "Exclusive",
     delete: "2",
     PrepTime: "10 minutes",
     CookingTime: "15 minutes",
@@ -612,7 +612,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Lobster Thermidor",
     RecipeID: "3002",
-    RecipeType: "Premium",
+    RecipeType: "Exclusive",
     PrepTime: "20 minutes",
     CookingTime: "30 minutes",
     Price: [30.0, 35.0, 40.0, 45.0],
@@ -672,7 +672,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Truffle Risotto",
     RecipeID: "3003",
-    RecipeType: "Premium",
+    RecipeType: "Exclusive",
     PrepTime: "10 minutes",
     CookingTime: "30 minutes",
     Price: [25.0, 30.0, 35.0, 40.0],
@@ -719,7 +719,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Creme Brulee",
     RecipeID: "3004",
-    RecipeType: "Premium",
+    RecipeType: "Exclusive",
     PrepTime: "15 minutes",
     CookingTime: "1 hour",
     Price: [12.0, 15.0, 18.0, 21.0],
@@ -772,7 +772,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Beef Wellington with Truffle",
     RecipeID: "3005",
-    RecipeType: "Premium",
+    RecipeType: "Exclusive",
     PrepTime: "30 minutes",
     CookingTime: "45 minutes",
     Price: [40.0, 45.0, 50.0, 55.0],
@@ -827,7 +827,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Stuffed Portobello Mushrooms",
     RecipeID: "3002",
-    RecipeType: "Premium",
+    RecipeType: "Exclusive",
     delete: "2",
     PrepTime: "20 minutes",
     CookingTime: "25 minutes",
@@ -882,7 +882,7 @@ let recipeDataV2 = [
   {
     RecipeName: "Quinoa-Stuffed Bell Peppers",
     RecipeID: "3004",
-    RecipeType: "Premium",
+    RecipeType: "Exclusive",
     delete: "2",
     PrepTime: "25 minutes",
     CookingTime: "35 minutes",
