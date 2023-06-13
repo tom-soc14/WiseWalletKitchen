@@ -5,6 +5,7 @@ import HomePage from "../HomePage/HomePage.js";
 import Kitchen from "../Kitchen/Kitchen.js";
 import Login from '../Login/Login.js';
 import Wallet from "../Wallet/Wallet.js";
+import NavBar from "../NavBar/NavBar.js";
 
 import recipeDataV2 from "./recipeDataV2.js";
 
@@ -13,7 +14,8 @@ import API from "../API/API.js";
 
 import './App.css';
 
-
+//the browser router was only wrapped in App.js, so the links were not working
+//removed the BrowserRouter component from here and added it to index.js
 function App() {
 
   const [weeklyPrice, setWeeklyPrice] = useState('');
@@ -43,7 +45,8 @@ useEffect(() => {
   
 
   return (
-    <BrowserRouter>
+    <div className="App">
+    <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/kitchen" element={<Kitchen  />} /> 
@@ -55,7 +58,7 @@ useEffect(() => {
         <Route path="/API" element={<API />} />
 
       </Routes>
-    </BrowserRouter>
+    </div>
   );
   
   }
