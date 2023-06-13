@@ -5,10 +5,9 @@ import HomePage from "../HomePage/HomePage.js";
 import Kitchen from "../Kitchen/Kitchen.js";
 import Login from "../Login/Login.js";
 import Wallet from "../Wallet/Wallet.js";
-import recipeDataV2 from "./recipeDataV2.js";
 import { createClient } from "@supabase/supabase-js";
 
-function App() {
+export default function App() {
   const [recipes, setRecipes] = useState(null);
 
 
@@ -31,7 +30,8 @@ function App() {
 
   const fetchRecipes = async () => {
     try {
-      const { data, error } = await supabase.from("RecipeData").select("*");
+      const { data, error } = await supabase
+      .from("RecipeData").select("*");
 
       if (error) {
         console.error("Error fetching recipes:", error);
@@ -42,21 +42,10 @@ function App() {
       console.error("Error fetching recipes:", error);
     }
   };
- 
-  // const handlePriceChange = (event) => {
-  //   const setValue = event;
-  //   var newValue = setValue - 1;
-  //   setSelectedValue(newValue);
-  // };
 
   const handleRecipeChange = (event) => {
-
       setDayRecipe(recipes[event]);
-      // setRecipePrice(recipes[event].Price[selectedValue]);
-    
   };
-
-  
 
   return (
     <BrowserRouter>
@@ -67,9 +56,7 @@ function App() {
           element={
             <Kitchen
               dayRecipe={dayRecipe}
-              // recipePrice={recipePrice}
               handleRecipeChange={handleRecipeChange}
-              // handlePriceChange={handlePriceChange}
             />
           }
         />
@@ -79,8 +66,7 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-}
-export default App;
+};
 
   // const [weeklyPrice, setWeeklyPrice] = useState("");
  // function weeklyPrice2() {
