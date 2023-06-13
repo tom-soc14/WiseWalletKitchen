@@ -24,12 +24,11 @@ import { useState } from "react";
 */
 
 
-function Kitchen({ recipes, handleRecipeChange, handlePriceChange, dayRecipe }) {
+function Kitchen({ recipes, handleRecipeChange, handlePriceChange, dayRecipe, recipePrice,  }) {
   // const [recipe, setRecipe] = useState(recipeDataV2[0]);
   // 
   // const [selectedValue, setSelectedValue] = useState([0])
 
-console.log(recipes)
 
 
   // const [recipePlan, setRecipePlan] = useState(recipeDataV2[0].RecipeType);
@@ -144,7 +143,7 @@ console.log(recipes)
       */}
 
   <label>Number in Household:</label>
-      <select onChange={updateRecipePrice}>
+      <select onChange={(e) => handlePriceChange(e.target.value)}>
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -176,7 +175,7 @@ console.log(recipes)
           </>
         )}
 
-          {/* <h2>Price: £{recipePrice}</h2> */}
+          <h2>Price: £{recipePrice}</h2>
         </div>
         <img
           className="foodImage"
