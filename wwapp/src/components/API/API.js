@@ -38,16 +38,19 @@ export default function API() {
     }
   };
 
-
+  console.log("just testing!");
 
   return (
     <div className="recipe-viewer">
       {recipes && (
         <>
-
           {recipes.map((recipe) => (
             <div className="full-recipe-list">
-              <img src={recipe.Photo} alt={recipe.PhotoAlt} style={{ width: '200px', height: 'auto' }} />
+              <img
+                src={recipe.Photo}
+                alt={recipe.PhotoAlt}
+                style={{ width: "200px", height: "auto" }}
+              />
             </div>
           ))}
         </>
