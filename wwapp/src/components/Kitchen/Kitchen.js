@@ -24,15 +24,15 @@ import { useState } from "react";
 */
 
 
-function Kitchen({ weeklyPriceChange }) {
-  const [recipe, setRecipe] = useState(recipeDataV2[0]);
-  const [recipePrice, setRecipePrice] = useState(recipeDataV2[0].Price[0]);
-  const [selectedValue, setSelectedValue] = useState([0])
+function Kitchen({ recipes }) {
+  // const [recipe, setRecipe] = useState(recipeDataV2[0]);
+  // const [recipePrice, setRecipePrice] = useState(recipeDataV2[0].Price[0]);
+  // const [selectedValue, setSelectedValue] = useState([0])
+
+console.log(recipes)
 
 
-
-
-  const [recipePlan, setRecipePlan] = useState(recipeDataV2[0].RecipeType);
+  // const [recipePlan, setRecipePlan] = useState(recipeDataV2[0].RecipeType);
 
 
 //Create a function that sets all recipes rendered to be one of the 3 options. 
@@ -40,70 +40,82 @@ function Kitchen({ weeklyPriceChange }) {
 //It selects the recipes with corresponding plan data field.
 //Tested recipedataV2[0].RecipeType and it work for 0, 8 and 15 ✅
 
-function updateRecipePlan(event) {
-  const recipePlan = event.target.value;
-  setRecipePlan(recipePlan);
-   // Select the corresponding data set based on the selected meal option
-  let selectedRecipeData;
-  switch (recipePlan) {
-    case "Saver Plan":
-      selectedRecipeData = recipeDataV2[0].RecipeType;
-      break;
-    case "Classic Plan":
-      selectedRecipeData = recipeDataV2[8].RecipeType;
-      break;
-    case "Premium Plan":
-      selectedRecipeData = recipeDataV2[15].RecipeType
-      break;
-    default:
-      selectedRecipeData = recipeDataV2[0].RecipeType;
-      break;
-  }
-   // Set the selected recipe data
-  setRecipePlan(selectedRecipeData)
-}
+// function updateRecipePlan(event) {
+//   const recipePlan = event.target.value;
+//   setRecipePlan(recipePlan);
+//    // Select the corresponding data set based on the selected meal option
+//   let selectedRecipeData;
+//   switch (recipePlan) {
+//     case "Saver Plan":
+//       selectedRecipeData = recipeDataV2[0].RecipeType;
+//       break;
+//     case "Classic Plan":
+//       selectedRecipeData = recipeDataV2[8].RecipeType;
+//       break;
+//     case "Premium Plan":
+//       selectedRecipeData = recipeDataV2[15].RecipeType
+//       break;
+//     default:
+//       selectedRecipeData = recipeDataV2[0].RecipeType;
+//       break;
+//   }
+//    // Set the selected recipe data
+//   setRecipePlan(selectedRecipeData)
+// }
 
 
 
 
-function updateRecipePrice(event) {
-  const selectedValue = parseInt(event.target.value) -1;
-  setSelectedValue(selectedValue);
-  setRecipePrice(recipe.Price[selectedValue]);
-}
+// function updateRecipePrice(event) {
+//   const selectedValue = parseInt(event.target.value) -1;
+//   setSelectedValue(selectedValue);
+//   setRecipePrice(recipe.Price[selectedValue]);
+// }
 
-function updateDayRecipe(event) {
-  const recipeIndex = parseInt(event.target.dataset.id);
-  setRecipe(recipeDataV2[recipeIndex]);
-  setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
-}
-
-
+// function updateDayRecipe(event) {
+//   const recipeIndex = parseInt(event.target.dataset.id);
+//   setRecipe(recipeDataV2[recipeIndex]);
+//   setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
+// }
 
 
 
-  
+
 
   
+
   
-  //PLAN weeklyPrice function
-  //Take in recipe array ✅
-  //Loop through recipeData and sum each items price with [i] ✅
-  //This function will have to be updated eventually for the user Selection ✅
-  function weeklyPrice() {
-    let totalPriceNum = 0;
-    for (let i = 0; i < 6; i++) {
-      // For loop only goes to 6, not whole array
-      totalPriceNum = totalPriceNum + recipeDataV2[i].Price[0];
-    }
-    let totalPrice = Math.round(totalPriceNum * 100) / 100;
-    // weeklyPriceChange(totalPrice);
-    return "£" + totalPrice;
-  }
+  
+//   //PLAN weeklyPrice function
+//   //Take in recipe array ✅
+//   //Loop through recipeData and sum each items price with [i] ✅
+//   //This function will have to be updated eventually for the user Selection ✅
+//   function weeklyPrice() {
+//     let totalPriceNum = 0;
+//     for (let i = 0; i < 6; i++) {
+//       // For loop only goes to 6, not whole array
+//       totalPriceNum = totalPriceNum + recipeDataV2[i].Price[0];
+//     }
+//     let totalPrice = Math.round(totalPriceNum * 100) / 100;
+//     // weeklyPriceChange(totalPrice);
+//     return "£" + totalPrice;
+//   }
 
   return (
     <div>
-      <h1 className="titleHeader">Recipes</h1>
+     {recipes && (
+          <>
+            {recipes.map((recipe) => (
+              <div className="full-recipe-list">
+                <h3>{recipe.RecipeName}</h3>
+                <p>{recipe.RecipeType}</p>
+                <p>{recipe.Instructions}</p>
+                
+              </div>
+            ))}
+          </>
+        )}
+      {/* <h1 className="titleHeader">Recipes</h1>
       <img src={saladRice} alt="salad-rice"></img>
       <div className="Orange">
         <p>Your week</p>
@@ -137,7 +149,7 @@ function updateDayRecipe(event) {
       + Create a function with a switch statement that updates the rendered price based on the drop down option selected
       */}
 
-      <label>Number in Household:</label>
+      {/* <label>Number in Household:</label>
       <select onChange={updateRecipePrice}>
         <option>1</option>
         <option>2</option>
@@ -166,7 +178,8 @@ function updateDayRecipe(event) {
           src={recipe.Photo}
           alt={recipe.PhotoAlt}
         ></img>
-      </div>
+      </div> */} 
+      {/* }*/ }
     </div>
   );
 }
