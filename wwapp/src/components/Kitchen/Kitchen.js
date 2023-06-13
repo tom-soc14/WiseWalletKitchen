@@ -22,7 +22,7 @@ import { useState } from "react";
 - each button needs an id to be able to pass to that function
 - we render the instruction variable from useState underneath 
 */
-console.log(recipeDataV2);
+// console.log(recipeDataV2);
 
 
 function Kitchen() {
