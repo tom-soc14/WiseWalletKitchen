@@ -9,26 +9,17 @@ import recipeDataV2 from "./recipeDataV2.js";
 import { createClient } from "@supabase/supabase-js";
 
 function App() {
-  const [weeklyPrice, setWeeklyPrice] = useState("");
   const [recipes, setRecipes] = useState(null);
+
+
   const [dayRecipe, setDayRecipe] = useState(null);
   const [selectedValue, setSelectedValue] = useState(null);
-  const [recipePrice, setRecipePrice] = useState(null);
+  // const [recipePrice, setRecipePrice] = useState(null);
 
   const pricingData = recipes;
 
   useEffect(() => {
-    function weeklyPrice2() {
-      let totalPriceNum = 0;
-      for (let i = 0; i < 6; i++) {
-        // For loop only goes to 6, not whole array
-        totalPriceNum = totalPriceNum + recipeDataV2[i].Price[0];
-      }
-      let totalPrice = Math.round(totalPriceNum * 100) / 100;
-      setWeeklyPrice(totalPrice);
-      return "£" + totalPrice;
-    }
-    weeklyPrice2();
+   
     fetchRecipes();
   }, []);
 
@@ -52,29 +43,17 @@ function App() {
     }
   };
  
-  // function updateDayRecipe(event) {
-  //   console.log("CLICKED");
-  //   // const recipeIndex = parseInt(event.target.dataset.id);
-  //   // setRecipe(recipeDataV2[recipeIndex]);
-  //   // setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
-  // }
-
-  // function updateRecipePrice(event) {
-  //   const selectedValue = parseInt(event.target.value) -1;
-  //   setSelectedValue(selectedValue);
-  //   setRecipePrice(recipe.Price[selectedValue]);
-  // }
-  const handlePriceChange = (event) => {
-    const setValue = event;
-    var newValue = setValue - 1;
-    setSelectedValue(newValue);
-  };
+  // const handlePriceChange = (event) => {
+  //   const setValue = event;
+  //   var newValue = setValue - 1;
+  //   setSelectedValue(newValue);
+  // };
 
   const handleRecipeChange = (event) => {
-    if (recipes) {
+
       setDayRecipe(recipes[event]);
-      setRecipePrice(recipes[event].Price[selectedValue]);
-    }
+      // setRecipePrice(recipes[event].Price[selectedValue]);
+    
   };
 
   
@@ -88,17 +67,30 @@ function App() {
           element={
             <Kitchen
               dayRecipe={dayRecipe}
-              recipePrice={recipePrice}
+              // recipePrice={recipePrice}
               handleRecipeChange={handleRecipeChange}
-              handlePriceChange={handlePriceChange}
+              // handlePriceChange={handlePriceChange}
             />
           }
         />
         <Route path="/login" element={<Login />} />
 
-        <Route path="/wallet" element={<Wallet weeklyPrice={weeklyPrice} pricingData={pricingData} />} />
+        {/* <Route path="/wallet" element={<Wallet weeklyPrice={weeklyPrice} pricingData={pricingData} />} /> */}
       </Routes>
     </BrowserRouter>
   );
 }
 export default App;
+
+  // const [weeklyPrice, setWeeklyPrice] = useState("");
+ // function weeklyPrice2() {
+    //   let totalPriceNum = 0;
+    //   for (let i = 0; i < 6; i++) {
+    //     // For loop only goes to 6, not whole array
+    //     totalPriceNum = totalPriceNum + recipeDataV2[i].Price[0];
+    //   }
+    //   let totalPrice = Math.round(totalPriceNum * 100) / 100;
+    //   setWeeklyPrice(totalPrice);
+    //   return "£" + totalPrice;
+    // }
+    // weeklyPrice2();
