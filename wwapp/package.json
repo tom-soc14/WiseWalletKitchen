@@ -2,7 +2,9 @@
   "name": "wwapp",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
+    "@canvasjs/react-charts": "^1.0.0",
     "@supabase/auth-ui-react": "^0.4.2",
     "@supabase/auth-ui-shared": "^0.1.6",
     "@supabase/supabase-js": "^2.24.0",
@@ -38,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.12.1"
   }
 }

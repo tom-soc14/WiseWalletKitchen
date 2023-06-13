@@ -1,10 +1,10 @@
-import chickenRice from "./img/chicken_rice.jpeg";
 import spaghettiBol from "./img/Spaghetti_Bolognese.jpeg";
-import salmonSauce from "./img/Salmon_Sauce.jpeg";
 import vegetableStir from "./img/Vegetable_Stir_Fry.jpeg";
-import mangoSalsa from "./img/mango_salsa.jpeg";
-import beanRice from "./img/beanRiceBurrito.jpeg";
 import tunaPasta from "./img/Tuna_Pasta.jpeg";
+// import salmonSauce from "./img/Salmon_Sauce.jpeg";
+// import mangoSalsa from "./img/mango_salsa.jpeg";
+// import beanRice from "./img/beanRiceBurrito.jpeg";
+// import chickenRice from "./img/chicken_rice.jpeg";
 
 //DATA PLAN
 // Get more data with the following credientials:
@@ -474,7 +474,7 @@ let recipeDataV2 = [
   },
   {
     RecipeName: "Chicken Marsala",
-    RecipeID: "2002",
+    RecipeID: "2006",
     RecipeType: "Classic",
     PrepTime: "10 minutes",
     CookingTime: "30 minutes",
@@ -514,8 +514,8 @@ let recipeDataV2 = [
   },
   {
     RecipeName: "Creamy Garlic Shrimp Pasta",
-    RecipeID: "2003",
-    RecipeType: "Seafood",
+    RecipeID: "2007",
+    RecipeType: "Classic",
     PrepTime: "10 minutes",
     CookingTime: "20 minutes",
     Price: [12.0, 14.0, 16.0, 18.0],

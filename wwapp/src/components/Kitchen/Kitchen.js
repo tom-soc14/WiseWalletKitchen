@@ -1,7 +1,7 @@
 import saladRice from "./img/saladRice.jpeg";
 import "./Kitchen.css";
-import recipeData from "./recipeData";
-import recipeDataV2 from "./recipeDataV2";
+
+import recipeDataV2 from "./recipeDataV2.js";
 import { useState } from "react";
 
 // To Do - 08/09/2023
@@ -22,6 +22,7 @@ import { useState } from "react";
 - each button needs an id to be able to pass to that function
 - we render the instruction variable from useState underneath 
 */
+
 
 function Kitchen({ weeklyPriceChange }) {
   const [recipe, setRecipe] = useState(recipeDataV2[0]);
