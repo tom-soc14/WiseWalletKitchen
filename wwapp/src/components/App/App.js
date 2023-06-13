@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import HomePage from "../HomePage/HomePage.js";
 import Kitchen from "../Kitchen/Kitchen.js";

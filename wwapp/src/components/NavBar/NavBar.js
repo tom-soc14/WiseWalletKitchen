@@ -9,13 +9,20 @@ function NavBar() {
   //add className to each link✅
   return (
     <div className="NavBar">
-     <Link className="NavBar_Component" to="/">Homepage</Link>
-      <Link className="NavBar_Component" to="/kitchen">Kitchen</Link>
-      <Link className="NavBar_Component" to="/wallet">Wallet</Link>
-      <Link className="NavBar_Component" to="/login">Login</Link>
+      <div className="DropdownMenu">
+        <button className="Dropbtn">Menu &#9776;</button>
+        <div className="DropdownContent">
+          <Link to="/">Homepage</Link>
+          <Link to="/kitchen">Kitchen</Link>
+          <Link to="/wallet">Wallet</Link>
+          <Link to="/login">Login</Link>
+          </div>
+        </div>
     </div>
   );
 }
+
+
 
 
 
