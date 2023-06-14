@@ -84,17 +84,26 @@ class Graph extends React.Component {
 
     return (
       <div>
-        <button className="graphSavingsButton" onClick={this.handleWeeklySavingsClick}>
+        <button
+          className="graphSavingsButton"
+          onClick={this.handleWeeklySavingsClick}
+        >
           Weekly Savings
         </button>
-        <button className="graphSavingsButton" onClick={this.handleMonthlySavingsClick}>
+        <button
+          className="graphSavingsButton"
+          onClick={this.handleMonthlySavingsClick}
+        >
           Monthly Savings
         </button>
         <p className="userPageSavings">
           {showBarGraph ? "This week you saved:" : "This month you saved:"}
         </p>
         <p className="userPageSavingsNumber">
-          £{showBarGraph ? this.calculateWeeklySavings() : this.calculateMonthlySavings()}
+          £
+          {showBarGraph
+            ? this.calculateWeeklySavings()
+            : this.calculateMonthlySavings()}
         </p>
         {showBarGraph && (
           <CanvasJSChart
@@ -114,4 +123,3 @@ class Graph extends React.Component {
 }
 
 export default Graph;
-

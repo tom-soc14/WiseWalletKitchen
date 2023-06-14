@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import HomePage from "../HomePage/HomePage.js";
 import Kitchen from "../Kitchen/Kitchen.js";
 import Login from "../Login/Login.js";
@@ -9,22 +9,12 @@ import Wallet from "../Wallet/Wallet.js";
 import NavBar from "../NavBar/NavBar.js";
 import { createClient } from "@supabase/supabase-js";
 
-
 export default function App() {
   // State ---------------
   const [recipes, setRecipes] = useState(null);
   const [dayRecipe, setDayRecipe] = useState(null);
-
   const [familySize, setFamilySize] = useState(null);
-
-  const [selectedValue, setSelectedValue] = useState(0);
-  const [recipePrice, setRecipePrice] = useState(null);
-
-//the browser router was only wrapped in App.js, so the links were not working
-//removed the BrowserRouter component from here and added it to index.js
-
-
-
+  const [plan, setPlan] = useState("Saver");
 
   // API -----------------
   const supabaseUrl = "https://vdwwjhldkqhbmwtszcas.supabase.co";
@@ -47,28 +37,32 @@ export default function App() {
     }
   };
 
-
   // useEffects --------------
   useEffect(() => {
     fetchRecipes();
   }, []);
 
-  // useEffect(() => {}, [familySize]);
+  useEffect(() => {}, [familySize]);
+
+  useEffect(() => {}, [plan]);
 
   // handleChange ---------------
   const handleRecipeChange = (selectedValue) => {
     setDayRecipe(recipes[selectedValue]);
-
   };
 
   const handleFamilySize = (selectedValue) => {
     setFamilySize(selectedValue);
   };
 
+  const handlePlanChange = (selectedValue) => {
+    setPlan(selectedValue);
+  };
+
   // render components
   return (
     <div className="App">
-    <NavBar />
+      <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
@@ -84,7 +78,16 @@ export default function App() {
         />
         <Route path="/login" element={<Login />} />
 
-        {/* <Route path="/wallet" element={<Wallet weeklyPrice={weeklyPrice} pricingData={pricingData} />} /> */}
+        <Route
+          path="/wallet"
+          element={
+            <Wallet
+              recipes={recipes}
+              plan={plan}
+              handlePlanChange={handlePlanChange}
+            />
+          }
+        />
       </Routes>
     </div>
   );

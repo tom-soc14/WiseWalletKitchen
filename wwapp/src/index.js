@@ -15,7 +15,7 @@ root.render(
   </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+//the browser router was only wrapped in App.js, so the links were not working
+//removed the BrowserRouter component from here and added it to index.js
+
 
