@@ -1,34 +1,45 @@
-/* Dropdown menu button */ 
-.Dropbtn { 
-    background-color: inherit; 
-    color: rgb(237, 114, 7); 
-    font-size: 16px; 
-    border: none; 
-    cursor: pointer; 
-    float: right; /* align the button to the right */ 
-    margin-right: 20px; /* add some margin to the right */ 
-  } 
-   /* Dropdown menu content */ 
-  .DropdownContent { 
-    display: none; 
-    position: absolute; 
-    background-color: #f8f8f4; 
-    min-width: 60px; 
-    z-index: 1; 
-    right: 0; /* align the content to the right */ 
-  } 
-   /* Show the dropdown menu on hover */ 
-  .DropdownMenu:hover .DropdownContent { 
-    display: block; 
-  } 
-   /* Style the links inside the dropdown menu */ 
-  .DropdownContent a { 
-    color: #f56607; 
-    padding: 6px 3px; 
-    text-decoration: none; 
-    display: block; 
-  } 
-   /* Change color of dropdown links on hover */ 
-  .DropdownContent a:hover { 
-    background-color: #f8f8f4; 
+/*Added CSS*/
+.DropdownMenu {
+  position: relative;
+  float:right;
+  margin-right: 2%;
+  margin-top: 1%;
+}
+
+.DropdownMenu:hover .DropdownContent {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  top: 100%; /* Position the dropdown below the button */
+  right: 0; /* Align the dropdown to the left */
+}
+
+.DropdownContent {
+  display: none;
+}
+
+.DropdownContent.show {
+  display: flex;
+  flex-direction: column;
   }
+
+.Dropbtn {
+  /* Your button styles */
+  background-color: inherit;
+  color: rgb(237, 114, 7);
+  border: none;
+  cursor: pointer;
+  float:right;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.navbar-component {
+  color:rgb(237, 114, 7);
+ text-decoration: none;
+}
