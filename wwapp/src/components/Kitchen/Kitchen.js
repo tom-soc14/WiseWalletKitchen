@@ -63,7 +63,7 @@ function updateRecipePlan(event) {
   setRecipePlan(selectedRecipeData)
 }
 
-
+console.log(recipePlan);
 
 
 function updateRecipePrice(event) {
