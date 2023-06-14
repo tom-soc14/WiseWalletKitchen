@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 export default function RenderPlan({ recipes, plan }) {
   // Filter recipes by plan -------------------
   // let filteredRecipes = recipes.filter(recipe => recipe.RecipeType === plan);

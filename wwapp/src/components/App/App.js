@@ -25,7 +25,15 @@ export default function App() {
 
   const fetchRecipes = async () => {
     try {
-      const { data, error } = await supabase.from("RecipeData").select("*");
+      const { data, error } = await supabase
+      .from("RecipeData")
+        .select(
+          `
+            *,
+            IngredientUsage: RecipeId (*)
+            `
+        )
+        .order("RecipeId");
 
       if (error) {
         console.error("Error fetching recipes:", error);
