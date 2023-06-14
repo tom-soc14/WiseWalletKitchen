@@ -2,28 +2,38 @@ import React from 'react';
 import './HomePage.css';
 import kitchenExample from "./kitchen.jpeg";
 import walletExample from "./wallet.jpeg"
+import HomePageStoryImages from './HomePageStoryImages.js'; 
+import './HomePageImageCarousel.css';
 
 function HomePage() {
 
     return (
         <div className="HomePage">
-        <h1 className='HomePage-title'>Welcome to Wise Wallet Kitchen!</h1>
-        <p className="intro-pitch">We’ve been just where you’re standing now. <br/>Standing in the aisle or even in the queue. 
-        Vouchers in one hand, bank card in the other. Your eyes staring down at your shoes and then darting back up at the ceiling as you process the sums. 
-        Once, twice. You review each and every voucher adding the discounts up. Three times. And a fourth. Now you’re sure. 
-        You don’t have enough this time. Shaking your head, you quickly scan your shopping because some items have to go. <br/>
-        But what do you sacrifice? There’s hardly anything you selected that’s seen as a luxury. 
-        Yes, there is the New York style cheesecake topped with passion fruit. But the kids haven’t had a proper dessert in weeks. <br/>
-        All that’s present are what you would have labelled essentials only six months ago. How soon will it be before you start having to skip meals? 
-        And that’s when you feel that little tug on your arm right between the funny bone and the elbow. 
-        You turn around to find us standing next to you with a big smile and more importantly a plan containing recipes 
-        that will let you shop with more confidence because the ingredients meet your budget. 
-        By making a few small adjustments in what you’re purchasing, you can keep all the items in your cart, 
-        including the cheesecake, and still have enough to throw in a cheeky sweet for yourself. 
-        Victory! Welcome Wise Wallet Kitchen. </p>
+        <h1 className='HomePage-title'>Wise Wallet Kitchen</h1>
+        <HomePageStoryImages />
         <img  className="intro-image" alt="mother and daughter preparing food in kitchen" src="https://images.pexels.com/photos/4259707/pexels-photo-4259707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         <br/>
-        <p className="app-information">App Information</p>
+        <div className="app-information-container">
+        <p className="app-information">
+
+Join us to so we can show you the perfect recipe for your tea tonight, all while saving money and making wise choices for your household. Wise Wallet Kitchen brings you the best of both worlds: a kitchen filled with delicious recipes and a wallet that helps you save and track your expenses.
+<br/><br/>
+Cooking made easy:<br/>
+Explore our collection of delicious recipes for dinner, handpicked to suit your taste buds.
+Each recipe comes with a complete list of ingredients, making it convenient for you to plan your shopping trip.
+We provide the price for the entire meal and the individual ingredients, helping you budget your expenses wisely.
+<br/><br/>
+Tailored plans for every budget:<br/>
+Choose from our three different plans - Saver, Classic, or Premium - based on your budget and preferences.
+Whether you're cooking for one or have a family of four, we've got you covered. Simply let us know the number of people in your household, and we'll provide recipes and ingredients accordingly.
+<br/><br/>
+Save more, spend smarter:<br/>
+With our wallet, you can effortlessly compare your expenses against the UK national average and see how much you're saving.
+Watch your savings grow as you make informed choices and optimise your spending habits.
+We help you track your progress and visualise your future finances.</p>
+        </div>
+
+
         <div className="app-examples">
         <div className="wallet-example">
             <img className="example-images" alt="Wallet page example" src={walletExample}></img>
