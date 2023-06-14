@@ -1,4 +1,4 @@
-export default function RenderPlan({ plan }) {
+export default function RenderPlan({ plan, familySize }) {
 
 
 
@@ -6,6 +6,7 @@ export default function RenderPlan({ plan }) {
   return (
     <div className="recipeContent">
       <h2>{plan}</h2>
+      <p>{familySize}</p>
       <h3>£</h3>
     </div>
   );

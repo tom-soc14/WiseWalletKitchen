@@ -15,6 +15,7 @@ export default function App() {
   const [dayRecipe, setDayRecipe] = useState(null);
   const [familySize, setFamilySize] = useState(null);
   const [plan, setPlan] = useState("Saver");
+  // let recipes=[];
 
   // API -----------------
   const supabaseUrl = "https://vdwwjhldkqhbmwtszcas.supabase.co";
@@ -39,12 +40,15 @@ export default function App() {
         console.error("Error fetching recipes:", error);
       } else {
         setRecipes(data);
+
+        
       }
     } catch (error) {
       console.error("Error fetching recipes:", error);
     }
   };
 
+  console.log("Recipes outside function: ", recipes)
   // useEffects --------------
   useEffect(() => {
     fetchRecipes();
@@ -92,6 +96,9 @@ export default function App() {
             <Wallet
               plan={plan}
               handlePlanChange={handlePlanChange}
+              recipes={recipes}
+              handleFamilySize={handleFamilySize}
+              familySize={familySize}
             />
           }
         />
