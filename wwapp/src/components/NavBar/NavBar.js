@@ -9,6 +9,7 @@ function NavBar() {
   //add className to each link✅
   return (
     <div className="NavBar">
+  
       <div className="DropdownMenu">
         <button className="Dropbtn">Menu &#9776;</button>
         <div className="DropdownContent">
