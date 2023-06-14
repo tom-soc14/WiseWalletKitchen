@@ -6,11 +6,12 @@ import PlanSelector from "./PlanSelector.js";
 import RenderPlan from "./RenderPlan.js";
 import WalletFamilySelector from "./WalletFamilySelector.js";
 
+export const weeklySaverCost=[ 22, 29, 40.50, 49 ]
+export const weeklyClassicCost=[91, 110, 129, 148 ]
+export const weeklyExclusiveCost=[158,183,207, 231 ]
 // render the Wallet page
 export default function Wallet({ handlePlanChange, plan, recipes, handleFamilySize, familySize }) {
-  const weeklySaverCost=[ 22, 29, 40.50, 49 ]
-  const weeklyClassicCost=[91, 110, 129, 148 ]
-  const weeklyExclusiveCost=[158,183,207, 231 ]
+ 
 
   // console.log("RecipePrice: ", recipePrice)
 
@@ -39,9 +40,8 @@ export default function Wallet({ handlePlanChange, plan, recipes, handleFamilySi
           <p className="userPageSavings">This week you saved:</p>
           <PlanSelector handlePlanChange={handlePlanChange} />
           <WalletFamilySelector handleFamilySize={handleFamilySize}/>
-          <RenderPlan plan={plan} familySize={familySize}/>
-          <p className="userPageSavingsNumber">£</p>
-          Congratulations
+          <RenderPlan plan={plan} familySize={familySize} />
+          
         </div>
 
         {/* display graph component */}

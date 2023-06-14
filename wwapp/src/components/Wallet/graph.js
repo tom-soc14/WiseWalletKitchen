@@ -100,7 +100,6 @@ class Graph extends React.Component {
           {showBarGraph ? "This week you saved:" : "This month you saved:"}
         </p>
         <p className="userPageSavingsNumber">
-          £
           {showBarGraph
             ? this.calculateWeeklySavings()
             : this.calculateMonthlySavings()}
