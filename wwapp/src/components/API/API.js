@@ -63,14 +63,8 @@ export default function API() {
           <>
             {recipes.map((recipe) => (
               <div className="full-recipe-list">
-                <h3>{recipe.RecipeName}</h3>
-                <p>{recipe.RecipeType}</p>
-                <img alt={recipe.PhotoAlt} />
-                <p>{recipe.Vegetarian}</p>
-                <p>{recipe.Vegan}</p>
-                <p>{recipe.GlutenFree}</p>
-                <p>{recipe.LactoseFree}</p>
-                <p>{recipe.Instructions}</p>
+                <h3>{recipe.DummyRecipeData.RecipeName}</h3>
+                
               </div>
             ))}
           </>

@@ -45,7 +45,7 @@ import fruitPicture from "./fruitPicture.jpg";
 // }
 
 // render the Wallet page
-function Wallet(props) {
+function Wallet(pricingData) {
 
   const averageWeeklySpend = 107.5 * 4;
   // const weeklySpend = [50, 70, 90, 40]; // Array to store weekly spend values
@@ -63,7 +63,7 @@ function Wallet(props) {
   }
  
   // console.log(props.weeklyPrice +' WALLET');
-  console.log(props)
+  console.log(pricingData)
 
   return (
     <div>
