@@ -11,7 +11,19 @@ export default function App() {
   // State ---------------
   const [recipes, setRecipes] = useState(null);
   const [dayRecipe, setDayRecipe] = useState(null);
+
   const [familySize, setFamilySize] = useState(null);
+
+  const [selectedValue, setSelectedValue] = useState(0);
+  const [recipePrice, setRecipePrice] = useState(null);
+  // const recipePrice = recipes?.RecipePrice?.[selectedValue];
+
+
+  useEffect(() => {
+ 
+    fetchRecipes();
+  }, []);
+
 
   // API -----------------
   const supabaseUrl = "https://vdwwjhldkqhbmwtszcas.supabase.co";
@@ -34,6 +46,7 @@ export default function App() {
     }
   };
 
+
   // useEffects --------------
   useEffect(() => {
     fetchRecipes();
@@ -44,6 +57,7 @@ export default function App() {
   // handleChange ---------------
   const handleRecipeChange = (selectedValue) => {
     setDayRecipe(recipes[selectedValue]);
+
   };
 
   const handleFamilySize = (selectedValue) => {
