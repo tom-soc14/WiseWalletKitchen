@@ -5,33 +5,27 @@ import HomePage from "../HomePage/HomePage.js";
 import Kitchen from "../Kitchen/Kitchen.js";
 import Login from "../Login/Login.js";
 import Wallet from "../Wallet/Wallet.js";
-import recipeDataV2 from "./recipeDataV2.js";
 import { createClient } from "@supabase/supabase-js";
 
-function App() {
-  const [weeklyPrice, setWeeklyPrice] = useState("");
+export default function App() {
+  // State ---------------
   const [recipes, setRecipes] = useState(null);
   const [dayRecipe, setDayRecipe] = useState(null);
+
+  const [familySize, setFamilySize] = useState(null);
+
   const [selectedValue, setSelectedValue] = useState(0);
   const [recipePrice, setRecipePrice] = useState(null);
   // const recipePrice = recipes?.RecipePrice?.[selectedValue];
 
 
   useEffect(() => {
-    function weeklyPrice2() {
-      let totalPriceNum = 0;
-      for (let i = 0; i < 6; i++) {
-        // For loop only goes to 6, not whole array
-        totalPriceNum = totalPriceNum + recipeDataV2[i].Price[0];
-      }
-      let totalPrice = Math.round(totalPriceNum * 100) / 100;
-      setWeeklyPrice(totalPrice);
-      return "£" + totalPrice;
-    }
-    weeklyPrice2();
+ 
     fetchRecipes();
   }, []);
 
+
+  // API -----------------
   const supabaseUrl = "https://vdwwjhldkqhbmwtszcas.supabase.co";
 
   const supabaseKey =
@@ -51,40 +45,26 @@ function App() {
       console.error("Error fetching recipes:", error);
     }
   };
- 
-  // function updateDayRecipe(event) {
-  //   // const recipeIndex = parseInt(event.target.dataset.id);
-  //   // setRecipe(recipeDataV2[recipeIndex]);
-  //   // setRecipePrice(recipeDataV2[recipeIndex].Price[selectedValue]);
-  // }
 
-  // function updateRecipePrice(event) {
-  //   const selectedValue = parseInt(event.target.value) -1;
-  //   setSelectedValue(selectedValue);
-  //   setRecipePrice(recipe.Price[selectedValue]);
-  // }
 
-  const handlePriceChange = (event) => {
-
-    const setValue = event;
-    const newValue = parseInt(setValue - 1);
-    setSelectedValue(newValue);
-    // setRecipePrice(recipes.RecipePrice[selectedValue]);
-
-  };
-
+  // useEffects --------------
   useEffect(() => {
-    console.log(selectedValue)
-    
-  }, [selectedValue])
+    fetchRecipes();
+  }, []);
 
-  const handleRecipeChange = (event, newValue) => {
-    setDayRecipe(recipes[event]);
-    setRecipePrice(recipes[event].RecipePrice[selectedValue]);
+  // useEffect(() => {}, [familySize]);
+
+  // handleChange ---------------
+  const handleRecipeChange = (selectedValue) => {
+    setDayRecipe(recipes[selectedValue]);
+
   };
 
-  
+  const handleFamilySize = (selectedValue) => {
+    setFamilySize(selectedValue);
+  };
 
+  // render components
   return (
     <BrowserRouter>
       <Routes>
@@ -94,17 +74,29 @@ function App() {
           element={
             <Kitchen
               dayRecipe={dayRecipe}
-              recipePrice={recipePrice}
+              familySize={familySize}
               handleRecipeChange={handleRecipeChange}
-              handlePriceChange={handlePriceChange}
+              handleFamilySize={handleFamilySize}
             />
           }
         />
         <Route path="/login" element={<Login />} />
 
-        <Route path="/wallet" element={<Wallet weeklyPrice={weeklyPrice} />} />
+        {/* <Route path="/wallet" element={<Wallet weeklyPrice={weeklyPrice} pricingData={pricingData} />} /> */}
       </Routes>
     </BrowserRouter>
   );
 }
-export default App;
+
+// const [weeklyPrice, setWeeklyPrice] = useState("");
+// function weeklyPrice2() {
+//   let totalPriceNum = 0;
+//   for (let i = 0; i < 6; i++) {
+//     // For loop only goes to 6, not whole array
+//     totalPriceNum = totalPriceNum + recipeDataV2[i].Price[0];
+//   }
+//   let totalPrice = Math.round(totalPriceNum * 100) / 100;
+//   setWeeklyPrice(totalPrice);
+//   return "£" + totalPrice;
+// }
+// weeklyPrice2();
