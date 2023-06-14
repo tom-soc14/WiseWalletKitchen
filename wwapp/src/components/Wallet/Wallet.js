@@ -6,7 +6,7 @@ import PlanSelector from "./PlanSelector.js";
 import RenderPlan from "./RenderPlan.js";
 
 // render the Wallet page
-export default function Wallet({ recipes, handlePlanChange, plan }) {
+export default function Wallet({ handlePlanChange, plan }) {
   // const recipePrice = recipes[0].RecipePrice[0];
 
   // console.log(recipePrice)
@@ -35,7 +35,7 @@ export default function Wallet({ recipes, handlePlanChange, plan }) {
         <div className="userPageInfoContents">
           <p className="userPageSavings">This week you saved:</p>
           <PlanSelector handlePlanChange={handlePlanChange} />
-          <RenderPlan recipes={recipes} plan={plan} />
+          <RenderPlan plan={plan} />
           <p className="userPageSavingsNumber">£</p>
           Congratulations
         </div>

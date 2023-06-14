@@ -1,7 +1,6 @@
-export default function RenderPlan({ recipes, plan }) {
-  // Filter recipes by plan -------------------
-  // let filteredRecipes = recipes.filter(recipe => recipe.RecipeType === plan);
-  // let recipeNames = filteredRecipes.map(recipe => recipe.RecipeName);
+export default function RenderPlan({ plan }) {
+
+
 
   // Render recipe data -------------------
   return (

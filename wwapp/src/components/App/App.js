@@ -90,7 +90,6 @@ export default function App() {
           path="/wallet"
           element={
             <Wallet
-              recipes={recipes}
               plan={plan}
               handlePlanChange={handlePlanChange}
             />
