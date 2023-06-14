@@ -1,14 +1,21 @@
-import React from 'react';
-import './HomePageImageCarousel.css';
+import React from "react";
 
- const ImageWithText = ({ imageSrc, text }) => {
+
+const HomePageImageCarousel = ({ imageSrc, text, onPrev, onNext }) => {
   return (
-    <div style={{ position: 'relative' }}>
-      <img src={imageSrc} alt="example" />
-      <div style={{ position: 'absolute', top: 0, left: 0 }}>
-        <p>{text}</p>
+    <div className="carousel">
+      <div className="carousel-image">
+        <img src={imageSrc} alt="Carousel" />
       </div>
+      <div className="carousel-text">{text}</div>
+      <button className="carousel-arrow carousel-arrow-left" onClick={onPrev}>
+        &lt;
+      </button>
+      <button className="carousel-arrow carousel-arrow-right" onClick={onNext}>
+        &gt;
+      </button>
     </div>
   );
 };
- export default ImageWithText;
+
+export default HomePageImageCarousel;

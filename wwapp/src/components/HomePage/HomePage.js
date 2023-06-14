@@ -3,7 +3,8 @@ import './HomePage.css';
 import kitchenExample from "./kitchen.jpeg";
 import walletExample from "./wallet.jpeg"
 import HomePageStoryImages from './HomePageStoryImages.js'; 
-import './HomePageImageCarousel.css';
+import './HomePageImageCarousel.css'
+
 
 function HomePage() {
 
