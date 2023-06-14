@@ -2,13 +2,14 @@ import React from "react";
 import CanvasJSReact from "@canvasjs/react-charts";
 import "./Wallet.css";
 
+
 const averageWeeklySpend = 107.5 * 4;
 
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const weeklySpend = [50, 70, 90, 40];
 
-class Graph extends React.Component {
+class Graph extends React.Component() {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,8 +55,8 @@ class Graph extends React.Component {
           type: "column",
           dataPoints: [
             { label: "Average weekly spend", y: 107.5 },
-            { label: "Weekly Plan", y: 87.45 },
-            { label: "Money Saved", y: this.calculateWeeklySavings() },
+            { label: "Weekly Plan", y: 150 },
+            { label: "Money Saved", y: 20 },
           ],
         },
       ],

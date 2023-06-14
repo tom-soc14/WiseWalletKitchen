@@ -3,33 +3,34 @@ import "./Wallet.css";
 import Graph from "./graph.js";
 import fruitPicture from "./fruitPicture.jpg";
 import PlanSelector from "./PlanSelector.js";
-import RenderPlan from "./RenderPlan.js";
+
 import WalletFamilySelector from "./WalletFamilySelector.js";
+import BudgetInput from "./BudgetInput.js"
+import {useState} from 'react'
 
 export const weeklySaverCost=[ 22, 29, 40.50, 49 ]
 export const weeklyClassicCost=[91, 110, 129, 148 ]
 export const weeklyExclusiveCost=[158,183,207, 231 ]
 // render the Wallet page
-export default function Wallet({ handlePlanChange, plan, recipes, handleFamilySize, familySize }) {
- 
+export default function Wallet({ handlePlanChange, plan, handleFamilySize, familySize }) {
+ const [budget, setBudget] = useState(0);
 
-  // console.log("RecipePrice: ", recipePrice)
+ let totalCost = 0;
 
-  // const averageWeeklySpend = 107.5 * 4;
-  // const weeklySpend = [50, 70, 90, 40]; // Array to store weekly spend values
+const costs = {
+  Saver: weeklySaverCost,
+  Classic: weeklyClassicCost,
+  Exclusive: weeklyExclusiveCost
+};
+ totalCost = costs[plan][familySize];
 
-  // calculate the user savings
-  // function calculateSavings() {
-  //   // let totalSpend = 0;
-  //   // for (let i = 0; i < weeklySpend.length; i++) {
-  //   //   totalSpend += weeklySpend[i];
-  //   // }
-  //   let userSavings = averageWeeklySpend - props.weeklyPrice;
-  //   let userSavingDecimal = Math.round(userSavings * 100) / 100;
-  //   return userSavingDecimal;
-  // }
+let savings = budget - totalCost
 
-  // console.log(props.weeklyPrice +' WALLET');
+const handleInputChange = (e) => {
+  setBudget(e.target.value)
+}
+
+
 
   return (
     <div>
@@ -37,10 +38,17 @@ export default function Wallet({ handlePlanChange, plan, recipes, handleFamilySi
       <h1 className="userPageTitle">Savings</h1>
       <div className="userPageInfoBox">
         <div className="userPageInfoContents">
-          <p className="userPageSavings">This week you saved:</p>
+          <h1>Enter your budget:</h1>
+          <BudgetInput handleInputChange={handleInputChange}/>
+          <h2>Your budget is £{budget}</h2>
           <PlanSelector handlePlanChange={handlePlanChange} />
+          <h3>Your plan is {plan}</h3>
           <WalletFamilySelector handleFamilySize={handleFamilySize}/>
-          <RenderPlan plan={plan} familySize={familySize} />
+          <h2>Weekly Cost of Plan £{totalCost}</h2>
+          <h1>This week you will saved: £{savings} on this plan</h1>
+
+         
+          
           
         </div>
 
@@ -53,6 +61,7 @@ export default function Wallet({ handlePlanChange, plan, recipes, handleFamilySi
     </div>
   );
 }
+
 
 // // calculate the user savings
 // function calculateSavings() {
