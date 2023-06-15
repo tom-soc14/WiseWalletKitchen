@@ -26,3 +26,19 @@
   text-align: center;
   padding: 10px;
 }
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+

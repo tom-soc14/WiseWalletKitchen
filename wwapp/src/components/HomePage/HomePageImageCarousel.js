@@ -29,7 +29,7 @@ const HomePageImageCarousel = ({ image }) => {
     setIsActive(true);
     const timer = setTimeout(() => {
       setIsActive(false);
-    }, 2500);
+    }, 5000);
 
     return () => {
       clearTimeout(timer);
