@@ -2,7 +2,7 @@ export default function PlanSelector({ handlePlanChange }) {
   const plan = [
     { id: "Saver", name: "Saver" },
     { id: "Classic", name: "Classic" },
-    { id: "Exclusive", name: "Exclusive" },
+    { id: "Premium", name: "Premium" },
   ];
   return (
     <>

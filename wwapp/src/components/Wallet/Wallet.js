@@ -11,7 +11,7 @@ import {useState} from 'react'
 
 export const weeklySaverCost=[ 22, 29, 40.50, 49 ]
 export const weeklyClassicCost=[91, 110, 129, 148 ]
-export const weeklyExclusiveCost=[158,183,207, 231 ]
+export const weeklyPremiumCost=[158,183,207, 231 ]
 // render the Wallet page
 export default function Wallet({
   handlePlanChange, 
@@ -25,7 +25,7 @@ export default function Wallet({
 const costs = {
   Saver: weeklySaverCost,
   Classic: weeklyClassicCost,
-  Exclusive: weeklyExclusiveCost
+  Premium: weeklyPremiumCost
 };
 
 
@@ -107,7 +107,7 @@ const costs = {
           
           
         </div>
-        <WeeklyCostCalculator walletData={walletData} familySize={familySize}/>
+        <WeeklyCostCalculator walletData={walletData} familySize={familySize} plan={plan}/>
 
         {/* display graph component */}
         <div className="userPageInfoGraph">

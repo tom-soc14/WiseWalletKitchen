@@ -6,18 +6,18 @@ import React from "react";
 // let priceSum4 = 0;
 
 
-export default function WeeklyCostCalculator({walletData, familySize}) {
+export default function WeeklyCostCalculator({walletData, familySize, plan}) {
   let priceSum = 0;
     console.log("walletData:", walletData)
     if (walletData && walletData.length > 0) {
       for (let i = 0; i < walletData.length; i++) {
-        if (walletData[i].RecipeType === "Saver") {
+        if (walletData[i].RecipeType === plan) {
           console.log("test of saver:", walletData[i].RecipeType)
   
           for (let j = 0; j < walletData[i].RecipePrice.length; j ++){
             // priceSum += walletData[i].RecipePrice[familySize]
             // console.log("priceSum", priceSum)
-            if (j === familySize){
+            if (j === parseInt(familySize)){
           console.log("test price:", walletData[i].RecipePrice[j]);
           priceSum += walletData[i].RecipePrice[j]
           console.log("priceSum:", priceSum)
