@@ -12,7 +12,7 @@ function HomePage() {
         <div className="HomePage">
         <h1 className='HomePage-title'>Wise Wallet Kitchen</h1>
         <HomePageStoryImages />
-        <img  className="intro-image" alt="mother and daughter preparing food in kitchen" src="https://images.pexels.com/photos/4259707/pexels-photo-4259707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+        {/* <img  className="intro-image" alt="mother and daughter preparing food in kitchen" src="https://images.pexels.com/photos/4259707/pexels-photo-4259707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/> */}
         <br/>
         <div className="app-information-container">
         <p className="app-information">
