@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 // let priceSum1 = 0;
 // let priceSum2 = 0;
@@ -6,7 +7,7 @@ import React from "react";
 // let priceSum4 = 0;
 
 
-export default function WeeklyCostCalculator({walletData, familySize, plan}) {
+export default function WeeklyCostCalculator({walletData, familySize, plan, onCostChange}) {
   let priceSum = 0;
     console.log("walletData:", walletData)
     if (walletData && walletData.length > 0) {
@@ -31,12 +32,14 @@ export default function WeeklyCostCalculator({walletData, familySize, plan}) {
     }
   
   console.log("price sum outside fn:", priceSum)
-  
+  //allows us to use priceSum when calculating the savings in wallet.js
+  useEffect(() => {
+    onCostChange(priceSum);
+  }, [priceSum, onCostChange]);
+
 //   console.log("fn:", WeeklyCostCalculator(walletData))
 
   return (
-    <div className="weekly-cost-calculator">
-    <p>You've spent £{priceSum} this week - test</p>
-    </div>
+    <></>
   )
 };

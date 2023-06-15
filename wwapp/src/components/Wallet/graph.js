@@ -6,7 +6,7 @@ import "./Wallet.css";
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 // const weeklySpend = [50, 70, 90, 40];
 
-function Graph({budget, totalCost, savings,averageWeeklySpend, calculateWeeklySavings}) {
+function Graph({budget, cost, savings,averageWeeklySpend, calculateWeeklySavings}) {
   const [showLineGraph, setShowLineGraph] = useState(false);
   const [showBarGraph, setShowBarGraph] = useState(true);
 
@@ -46,7 +46,7 @@ function Graph({budget, totalCost, savings,averageWeeklySpend, calculateWeeklySa
         type: "column",
         dataPoints: [
           { label: "Average weekly spend", y: averageWeeklySpend },
-          { label: "Weekly Plan", y: totalCost },
+          { label: "Weekly Plan", y: cost },
           { label: "Money Saved", y: calculateWeeklySavings },
         ],
       },
