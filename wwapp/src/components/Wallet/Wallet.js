@@ -14,21 +14,30 @@ export const weeklyExclusiveCost=[158,183,207, 231 ]
 // render the Wallet page
 export default function Wallet({ handlePlanChange, plan, handleFamilySize, familySize }) {
  const [budget, setBudget] = useState(0);
-
- let totalCost = 0;
+ 
 
 const costs = {
   Saver: weeklySaverCost,
   Classic: weeklyClassicCost,
   Exclusive: weeklyExclusiveCost
 };
- totalCost = costs[plan][familySize];
 
-let savings = budget - totalCost
+ const totalCost = costs[plan][familySize];
 
-const handleInputChange = (e) => {
-  setBudget(e.target.value)
-}
+ // average weekly spend for 1,2,3,4 people
+ // source: https://www.nimblefins.co.uk/average-uk-household-cost-food#week
+  const averageWeeklySpendArray = [45, 96, 132, 167];
+  const averageWeeklySpend = averageWeeklySpendArray[familySize];
+
+  const savings = budget - totalCost;
+  const calculateWeeklySavings = Math.round(savings * 100) / 100;
+
+  const handleInputChange = (e) => {
+    setBudget(e.target.value)
+  }
+
+
+
 
   return (
     <div>
@@ -43,11 +52,18 @@ const handleInputChange = (e) => {
           <h3>Your plan is {plan}</h3>
           <WalletFamilySelector handleFamilySize={handleFamilySize}/>
           <h2>Weekly Cost of Plan £{totalCost}</h2>
-          <h1>This week you will saved: £{savings} on this plan</h1>
+          <h1>This week you will save: £{savings} on this plan</h1>
+
+         
+          
+          
         </div>
+
         {/* display graph component */}
         <div className="userPageInfoGraph">
-          <Graph />
+          <Graph budget={budget} totalCost={totalCost} savings={savings} averageWeeklySpend={averageWeeklySpend}
+          calculateWeeklySavings={calculateWeeklySavings}
+          />
         </div>
       </div>
       <img src={fruitPicture} alt="fruit" className="userPageImg" />
