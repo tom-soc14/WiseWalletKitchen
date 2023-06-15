@@ -11,12 +11,15 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export default function API() {
   const [recipes, setRecipes] = useState(null);
 
+  // useEffect hook with empty dependency array to fetch recipes on component mount
   useEffect(() => {
     fetchRecipes();
   }, []);
 
+  // Fetch recipes from Supabase database
   const fetchRecipes = async () => {
     try {
+      // Use Supabase client to query RecipeData table and IngredientUsage relationship
       const { data, error } = await supabase
         .from("RecipeData")
         .select(
@@ -27,9 +30,11 @@ export default function API() {
         )
         .order("RecipeId");
 
+      // Handle any error that occurred during the API call
       if (error) {
         console.error("Error fetching recipes:", error);
       } else {
+        // Update the recipes state with the fetched data
         setRecipes(data);
         console.log(data);
       }
@@ -45,7 +50,7 @@ export default function API() {
       {recipes && (
         <>
           {recipes.map((recipe) => (
-            <div className="full-recipe-list">
+            <div key={recipe.RecipeId} className="full-recipe-list">
               <img
                 src={recipe.Photo}
                 alt={recipe.PhotoAlt}
