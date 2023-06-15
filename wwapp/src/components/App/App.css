@@ -6,11 +6,11 @@
 */
 
 :root {
-	--orange: #E57300;
-	--green: #494900;
-	--lightGreen: #7D7D17;
-	--offWhite: #EBEBD3;
-	--grey: #D9D9D9;
+  --orange: #e57300;
+  --green: #494900;
+  --lightGreen: #7d7d17;
+  --offWhite: #ebebd3;
+  --grey: #d9d9d9;
 }
 
 /* Color variable key */
@@ -22,8 +22,6 @@ var(--offWhite) */
 
 
 
-
-
 /* NavBar CSS -------------------------------------------------------------------- */
 .NavBar {
   /* padding: 20px;
@@ -32,17 +30,26 @@ var(--offWhite) */
   background-color: var(--orange);
   display: flex;
   align-items: center;
- 
+  justify-content: space-between;
 }
 
 .Logo {
-  color: var(--offWhite);
   background-color: var(--green);
-  margin-right: auto;
+  margin-right: 20px;
+  /* round the corners of the div box */
+  border-radius: 30px;
+  height: 70px;
+}
+.Logo > h1 {
+  color: var(--offWhite);
   letter-spacing: 1px;
   font-weight: 300;
+  margin: 0;
 }
-
+.Logo > p {
+  color: var(--offWhite);
+  margin: 0;
+}
 
 /* Dropdown menu button */
 .Dropbtn {
@@ -61,75 +68,127 @@ var(--offWhite) */
   background-color: #939601;
   min-width: 160px;
   z-index: 1;
+  right: 20px; /* align the content to the right */
+}
+/* Show the dropdown menu on hover */
+.DropdownMenu:hover .DropdownContent {
+  display: block;
+  margin-right: 0;
+}
+/* Style the links inside the dropdown menu */
+.DropdownContent a {
+  color: var(--green);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on hover */
+.DropdownContent a:hover {
+  background-color: #f56607;
+}
+/* Dropdown menu button */
+.Dropbtn {
+  background-color: inherit;
+  color: var(--green);
+  font-size: 70px;
+  border: none;
+  cursor: pointer;
+  /* align the button to the right */
+  float: right;
+  /* add some margin to the right */
+  margin-right: 20px;
+}
+/* Dropdown menu content */
+.DropdownContent {
+  display: none;
+  position: absolute;
+  background-color: var(--offWhite);
+  min-width: 160px;
+  z-index: 1;
   right: 0; /* align the content to the right */
 }
 /* Show the dropdown menu on hover */
 .DropdownMenu:hover .DropdownContent {
   display: block;
-  margin-left: auto;
 }
- /* Style the links inside the dropdown menu */
- .DropdownContent a {
-   color: var(--green);
-   padding: 12px 16px;
-   text-decoration: none;
-   display: block;
-  }
-  /* Change color of dropdown links on hover */
-  .DropdownContent a:hover {
-    background-color: #f56607;
-  }
-  /* Dropdown menu button */
-  .Dropbtn {
-    background-color: inherit;
-    color: var(--green);
-    font-size: 70px;
-    border: none;
-    cursor: pointer;
-  /* align the button to the right */
-    float: right;
-  /* add some margin to the right */
-    margin-right: 20px; 
-  }
-  /* Dropdown menu content */
-  .DropdownContent {
-    display: none;
-    position: absolute;
-    background-color: var(--offWhite);
-    min-width: 160px;
-    z-index: 1;
-    right: 0; /* align the content to the right */
-  }
-  /* Show the dropdown menu on hover */
-  .DropdownMenu:hover .DropdownContent {
-    display: block;
-  }
-  /* Style the links inside the dropdown menu */
-  .DropdownContent a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  /* Change color of dropdown links on hover */
-  .DropdownContent a:hover {
-    background-color: #f56607;
-  }
-  
+/* Style the links inside the dropdown menu */
+.DropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on hover */
+.DropdownContent a:hover {
+  background-color: #f56607;
+}
 
 
-  /* Homepage CSS ------------------------------------------------------------------ */
-  
-  
-  /*  */
-  
-  /* LoginPage CSS ----------------------------------------------------------------- */
-  
+
+/* Homepage CSS ------------------------------------------------------------------ */
+
+.app-examples {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  /* height: auto;
+  width: 100%; */
+}
+
+.introText {
+  /* Control all fo the text inside */
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}.introText > h1 {
+/* this is the title ish */
+margin-left: 0%;
+font-size: x-large;
+max-width: 70%
+}.introText > p {
+/* this is the intron paragraph */
+max-width: 70%;
+}
 
 
-  /* Kitchen CSS ----------------------------------------------------------- */
-  
-  
-  
-  /* Wallet CSS ------------------------------------------------------------ */
-  
+.HomePage--FamilyPicture {
+  /* Needs to place image in the center of the width <<<<<<<< */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}.HomePage--FamilyPicture > img {
+  height: 300px;
+  width: auto;
+  border-radius: 30px;
+  /* padding: 2%; */
+}
+
+.HomePage-button-sign-up {
+  background-color: #E57300;
+  border-radius: 8px;
+  padding: 5px 10px 5px 10px;
+}
+
+.HomePage {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.example-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;   
+}
+
+
+/* LoginPage CSS ----------------------------------------------------------------- */
+
+/* Kitchen CSS ----------------------------------------------------------- */
+
+/* Wallet CSS ------------------------------------------------------------ */

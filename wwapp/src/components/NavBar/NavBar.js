@@ -7,11 +7,12 @@ function NavBar() {
   //set up path for each component
   //add className to each link✅
   return (
-    <div>
+    <div className="NavBar">
       <div className="Logo">
         <h1>Wise Wallet Kitchen</h1>
+        <p>Smart Eating and Savings...</p>
       </div>
-      
+
       <div className="DropdownMenu">
         <button className="Dropbtn"> &#9776;</button>
         <div className="DropdownContent">
