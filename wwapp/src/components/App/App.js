@@ -13,7 +13,7 @@ export default function App() {
   // State ---------------
   const [recipes, setRecipes] = useState(null);
   const [dayRecipe, setDayRecipe] = useState(null);
-  const [familySize, setFamilySize] = useState(null);
+  const [familySize, setFamilySize] = useState(3);
   const [plan, setPlan] = useState("Saver");
   const [walletData, setWalletData] = useState(null);
   // let recipes=[];
@@ -97,8 +97,8 @@ export default function App() {
               plan={plan}
               handlePlanChange={handlePlanChange}
               walletData={walletData}
-              handleFamilySize={handleFamilySize}
               familySize={familySize}
+              handleFamilySize={handleFamilySize}
             />
           }
         />

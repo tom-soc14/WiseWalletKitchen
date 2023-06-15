@@ -13,7 +13,12 @@ export const weeklySaverCost=[ 22, 29, 40.50, 49 ]
 export const weeklyClassicCost=[91, 110, 129, 148 ]
 export const weeklyExclusiveCost=[158,183,207, 231 ]
 // render the Wallet page
-export default function Wallet({handlePlanChange, plan, handleFamilySize, familySize }) {
+export default function Wallet({
+  handlePlanChange, 
+  plan, 
+  handleFamilySize, 
+  familySize,
+  walletData }) {
  const [budget, setBudget] = useState(0);
  
 
@@ -102,7 +107,7 @@ const costs = {
           
           
         </div>
-        <WeeklyCostCalculator/>
+        <WeeklyCostCalculator walletData={walletData} familySize={familySize}/>
 
         {/* display graph component */}
         <div className="userPageInfoGraph">
