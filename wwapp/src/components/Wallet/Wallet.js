@@ -1,5 +1,5 @@
 import React from "react";
-import "./Wallet.css";
+// import "./Wallet.css";
 import Graph from "./graph.js";
 import fruitPicture from "./fruitPicture.jpg";
 import PlanSelector from "./PlanSelector.js";
