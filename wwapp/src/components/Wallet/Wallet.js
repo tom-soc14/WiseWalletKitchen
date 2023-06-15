@@ -3,6 +3,7 @@ import "./Wallet.css";
 import Graph from "./graph.js";
 import fruitPicture from "./fruitPicture.jpg";
 import PlanSelector from "./PlanSelector.js";
+import WeeklyCostCalculator from "./WeeklyCostCalculator.js"
 
 import WalletFamilySelector from "./WalletFamilySelector.js";
 import BudgetInput from "./BudgetInput.js"
@@ -12,7 +13,7 @@ export const weeklySaverCost=[ 22, 29, 40.50, 49 ]
 export const weeklyClassicCost=[91, 110, 129, 148 ]
 export const weeklyExclusiveCost=[158,183,207, 231 ]
 // render the Wallet page
-export default function Wallet({ walletData, handlePlanChange, plan, handleFamilySize, familySize }) {
+export default function Wallet({handlePlanChange, plan, handleFamilySize, familySize }) {
  const [budget, setBudget] = useState(0);
  
 
@@ -28,42 +29,42 @@ const costs = {
 //currently only have 7 days worth of data so the total weekly cost would be all of those from the saver menu for example 
 //function needs to take in the name of the plan (can hard code that for now maybe??) extract the price and then add them together 
 
-// walletData && walletData.map(item => console.log("testing from wallet:", item.RecipeType))
-const accessibleWalletData = walletData && walletData.map(item => item)
-console.log("accessibleWalletData:", accessibleWalletData)
-let priceSum1 = 0;
-let priceSum2 = 0;
-let priceSum3 = 0;
-let priceSum4 = 0;
-let priceSum = 0;
+
+
+// console.log("walletData:", walletData)
+// let priceSum1 = 0;
+// let priceSum2 = 0;
+// let priceSum3 = 0;
+// let priceSum4 = 0;
+// let priceSum = 0;
 
 //function to specifically add the 7 days of data we have for the Saver plan 
 //taking in the variable of accessibleWalletData so that we can access this and wait for it to no longer be null
-function weeklySaverCostFromData(accessibleWalletData) {
-  if (accessibleWalletData && accessibleWalletData.length > 0) {
-    for (let i = 0; i < accessibleWalletData.length; i++) {
-      if (accessibleWalletData[i].RecipeType === "Saver") {
-        console.log("test of saver:", accessibleWalletData[i].RecipeType)
+// function weeklySaverCostFromData(walletData) {
+//   if (walletData && walletData.length > 0) {
+//     for (let i = 0; i < walletData.length; i++) {
+//       if (walletData[i].RecipeType === "Saver") {
+//         console.log("test of saver:", walletData[i].RecipeType)
 
-        for (let j = 0; j < accessibleWalletData[i].RecipePrice.length; j ++){
-          priceSum += accessibleWalletData[i].RecipePrice[familySize]
-          console.log("priceSum", priceSum)
-        //   if (j === 3){
-        // console.log("test price:", accessibleWalletData[i].RecipePrice[j]);
-        // priceSum4 += accessibleWalletData[i].RecipePrice[j]
-        // console.log("priceSum:", priceSum4)
-        //   }
-        }
-      }
-    }
+//         for (let j = 0; j < walletData[i].RecipePrice.length; j ++){
+//           priceSum += walletData[i].RecipePrice[familySize]
+//           console.log("priceSum", priceSum)
+//         //   if (j === 3){
+//         // console.log("test price:", accessibleWalletData[i].RecipePrice[j]);
+//         // priceSum4 += accessibleWalletData[i].RecipePrice[j]
+//         // console.log("priceSum:", priceSum4)
+//         //   }
+//         }
+//       }
+//     }
     
-  } else {
-    console.log("No accessible wallet data available.");
-  }
-}
-console.log("price sum outside fn:", priceSum)
-weeklySaverCostFromData(accessibleWalletData);
-console.log("fn:", weeklySaverCostFromData(accessibleWalletData))
+//   } else {
+//     console.log("No accessible wallet data available.");
+//   }
+// }
+// console.log("price sum outside fn:", priceSum)
+// weeklySaverCostFromData(walletData);
+// console.log("fn:", weeklySaverCostFromData(walletData))
 
  const totalCost = costs[plan][familySize];
 
@@ -101,6 +102,7 @@ console.log("fn:", weeklySaverCostFromData(accessibleWalletData))
           
           
         </div>
+        <WeeklyCostCalculator/>
 
         {/* display graph component */}
         <div className="userPageInfoGraph">
