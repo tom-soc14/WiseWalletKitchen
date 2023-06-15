@@ -9,7 +9,7 @@ export default function WalletFamilySelector({ handleFamilySize }) {
     return (
       <>
         <div>
-          <h2>Choose you family size:</h2>
+          <h2>Choose your family size:</h2>
           {size.map((size) => (
             <button
               key={size.id}

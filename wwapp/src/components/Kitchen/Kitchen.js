@@ -2,6 +2,7 @@
 import DaySelector from "./DaySelector.js";
 import RecipeRender from "./RecipeRender.js";
 import FamilySelector from "./FamilySelector.js";
+import fruitPicture from "../Wallet/fruitPicture.jpg";
 
 // Props -----------------------
 export default function Kitchen({
@@ -29,6 +30,9 @@ export default function Kitchen({
           <RecipeRender dayRecipe={dayRecipe} familySize={familySize} />
         </div>
       </div>
+      <footer>
+        <img src={fruitPicture} alt="fruit" className="WalletPageImg" />
+      </footer>
     </>
   );
 }
