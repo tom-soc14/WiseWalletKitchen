@@ -1,5 +1,5 @@
+// import './HomePage.css';
 import React from 'react';
-import './HomePage.css';
 import kitchenExample from "./kitchen.jpeg";
 import walletExample from "./wallet.jpeg"
 
