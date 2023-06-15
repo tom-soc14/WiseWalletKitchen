@@ -135,7 +135,7 @@ let recipeDataV2 = [
     Ingredients: [
       {
         Name: "Mixed vegetables",
-        IngredientId: "7",
+        IngredientId: "4",
         Amount: ["500g", "600g", "700g", "800g"],
         Price: [2.5, 3.5, 4.5, 5.5],
       },
