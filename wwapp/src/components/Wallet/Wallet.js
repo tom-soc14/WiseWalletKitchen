@@ -30,8 +30,6 @@ const handleInputChange = (e) => {
   setBudget(e.target.value)
 }
 
-
-
   return (
     <div>
       {/* <p>{props.weeklyPrice}</p> */}
@@ -46,12 +44,7 @@ const handleInputChange = (e) => {
           <WalletFamilySelector handleFamilySize={handleFamilySize}/>
           <h2>Weekly Cost of Plan £{totalCost}</h2>
           <h1>This week you will saved: £{savings} on this plan</h1>
-
-         
-          
-          
         </div>
-
         {/* display graph component */}
         <div className="userPageInfoGraph">
           <Graph />
