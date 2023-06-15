@@ -10,15 +10,15 @@ function Graph({budget, cost, savings,averageWeeklySpend, calculateWeeklySavings
   const [showLineGraph, setShowLineGraph] = useState(false);
   const [showBarGraph, setShowBarGraph] = useState(true);
 
-  const handleWeeklySavingsClick = () => {
-    setShowLineGraph(false);
-    setShowBarGraph(true);
-  };
+  // const handleWeeklySavingsClick = () => {
+  //   setShowLineGraph(false);
+  //   setShowBarGraph(true);
+  // };
 
-  const handleMonthlySavingsClick = () => {
-    setShowBarGraph(false);
-    setShowLineGraph(true);
-  };
+  // const handleMonthlySavingsClick = () => {
+  //   setShowBarGraph(false);
+  //   setShowLineGraph(true);
+  // };
 
   // const calculateWeeklySavings = () => {
   //   const totalSpend = totalCost;

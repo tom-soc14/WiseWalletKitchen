@@ -85,6 +85,7 @@ export default function App() {
               familySize={familySize}
               handleRecipeChange={handleRecipeChange}
               handleFamilySize={handleFamilySize}
+              handlePlanChange={handlePlanChange}
             />
           }
         />
