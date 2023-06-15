@@ -12,7 +12,7 @@ export const weeklySaverCost=[ 22, 29, 40.50, 49 ]
 export const weeklyClassicCost=[91, 110, 129, 148 ]
 export const weeklyExclusiveCost=[158,183,207, 231 ]
 // render the Wallet page
-export default function Wallet({ handlePlanChange, plan, handleFamilySize, familySize }) {
+export default function Wallet({ walletData, handlePlanChange, plan, handleFamilySize, familySize }) {
  const [budget, setBudget] = useState(0);
  
 
@@ -21,6 +21,49 @@ const costs = {
   Classic: weeklyClassicCost,
   Exclusive: weeklyExclusiveCost
 };
+
+
+//want to extract the cost of the recipe from walletData
+//need to specify which plan is being used 
+//currently only have 7 days worth of data so the total weekly cost would be all of those from the saver menu for example 
+//function needs to take in the name of the plan (can hard code that for now maybe??) extract the price and then add them together 
+
+// walletData && walletData.map(item => console.log("testing from wallet:", item.RecipeType))
+const accessibleWalletData = walletData && walletData.map(item => item)
+console.log("accessibleWalletData:", accessibleWalletData)
+let priceSum1 = 0;
+let priceSum2 = 0;
+let priceSum3 = 0;
+let priceSum4 = 0;
+let priceSum = 0;
+
+//function to specifically add the 7 days of data we have for the Saver plan 
+//taking in the variable of accessibleWalletData so that we can access this and wait for it to no longer be null
+function weeklySaverCostFromData(accessibleWalletData) {
+  if (accessibleWalletData && accessibleWalletData.length > 0) {
+    for (let i = 0; i < accessibleWalletData.length; i++) {
+      if (accessibleWalletData[i].RecipeType === "Saver") {
+        console.log("test of saver:", accessibleWalletData[i].RecipeType)
+
+        for (let j = 0; j < accessibleWalletData[i].RecipePrice.length; j ++){
+          priceSum += accessibleWalletData[i].RecipePrice[familySize]
+          console.log("priceSum", priceSum)
+        //   if (j === 3){
+        // console.log("test price:", accessibleWalletData[i].RecipePrice[j]);
+        // priceSum4 += accessibleWalletData[i].RecipePrice[j]
+        // console.log("priceSum:", priceSum4)
+        //   }
+        }
+      }
+    }
+    
+  } else {
+    console.log("No accessible wallet data available.");
+  }
+}
+console.log("price sum outside fn:", priceSum)
+weeklySaverCostFromData(accessibleWalletData);
+console.log("fn:", weeklySaverCostFromData(accessibleWalletData))
 
  const totalCost = costs[plan][familySize];
 

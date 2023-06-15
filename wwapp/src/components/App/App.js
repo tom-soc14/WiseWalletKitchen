@@ -15,6 +15,7 @@ export default function App() {
   const [dayRecipe, setDayRecipe] = useState(null);
   const [familySize, setFamilySize] = useState(null);
   const [plan, setPlan] = useState("Saver");
+  const [walletData, setWalletData] = useState(null);
   // let recipes=[];
 
   // API -----------------
@@ -40,15 +41,14 @@ export default function App() {
         console.error("Error fetching recipes:", error);
       } else {
         setRecipes(data);
-
-        
+        setWalletData(data);
       }
     } catch (error) {
       console.error("Error fetching recipes:", error);
     }
   };
 
-  console.log("Recipes outside function: ", recipes)
+  // console.log("Recipes outside function: ", recipes)
   // useEffects --------------
   useEffect(() => {
     fetchRecipes();
@@ -96,7 +96,7 @@ export default function App() {
             <Wallet
               plan={plan}
               handlePlanChange={handlePlanChange}
-              recipes={recipes}
+              walletData={walletData}
               handleFamilySize={handleFamilySize}
               familySize={familySize}
             />
