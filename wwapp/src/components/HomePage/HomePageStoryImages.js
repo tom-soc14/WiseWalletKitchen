@@ -4,24 +4,29 @@ import "./HomePageImageCarousel.css";
 
 const images = [
   {
+    id: 0,
     src:
       "https://images.pexels.com/photos/264529/pexels-photo-264529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text:
       "The cost of of living is impacting us all",
   },
   {
+    id: 1,
     src: 'https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     text: 'Having structure to your purchases can help you save',
     },
     {
+      id: 2,
     src: 'https://images.pexels.com/photos/4199116/pexels-photo-4199116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         text: 'Making the right choice is key to saving',
     },
     {
+      id: 3,
     src: 'https://images.pexels.com/photos/4049869/pexels-photo-4049869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     text: 'Our App is designed to help you make that choice',
     },
     {
+      id: 4,
     src: 'https://images.pexels.com/photos/4259707/pexels-photo-4259707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     text: "We'll give you delicious recipes and allow you to save",
        }
@@ -32,7 +37,8 @@ const HomePageStoryImages = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      // setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1 >= images.length) ? images.length - 1 : prevIndex + 1);
     }, 8000);
 
     return () => {
@@ -40,12 +46,18 @@ const HomePageStoryImages = () => {
     };
   }, []);
 
+  function handleReplay() {
+    setCurrentImageIndex(0)
+  }
+
   return (
     <div className="carousel-container">
       <HomePageImageCarousel
         image={images[currentImageIndex]}
         key={currentImageIndex}
+        handleReplay={handleReplay}
       />
+  
     </div>
   );
 };
