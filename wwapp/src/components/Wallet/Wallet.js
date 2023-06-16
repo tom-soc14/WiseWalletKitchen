@@ -1,6 +1,6 @@
 import React from "react";
 import Graph from "./graph.js";
-import fruitPicture from "./fruitPicture.jpg";
+//import fruitPicture from "./fruitPicture.jpg";
 import PlanSelector from "./PlanSelector.js";
 
 import WalletFamilySelector from "./WalletFamilySelector.js";

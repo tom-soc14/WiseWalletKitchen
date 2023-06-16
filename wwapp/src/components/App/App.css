@@ -5,6 +5,16 @@
 - Color (variables)
 */
 
+
+
+
+/* 
+TO DO:
+-Adjust the app NavBar h1 tag logo so text is centered 
+-Correctly display the graph on .WalletPage 
+
+
+*/
 :root {
   --orange: #e57300;
   --green: #494900;
@@ -35,7 +45,12 @@ var(--grey)
   /* padding: 20px;
   text-align: center;  */
   height: 100px;
-  background-color: var(--orange);
+  /* background-color: var(--orange); */
+  background: linear-gradient(
+    to bottom,
+    var(--orange) 0%,
+    #ffa500 100%
+  );
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,20 +58,26 @@ var(--grey)
 
 .Logo {
   background-color: var(--green);
+  display: flex;
+  flex-direction: column;
   margin-right: 20px;
   /* round the corners of the div box */
   border-radius: 30px;
   height: 70px;
+  max-width: 50%;
+  min-width: 300px;
 }
 .Logo > h1 {
   color: var(--offWhite);
   letter-spacing: 1px;
   font-weight: 300;
   margin: 0;
+  margin-left: 10px;
 }
 .Logo > p {
   color: var(--offWhite);
   margin: 0;
+  margin-left: 90px;
 }
 
 /* Dropdown menu button */
