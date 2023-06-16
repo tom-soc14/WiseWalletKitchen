@@ -1,3 +1,4 @@
+
 export default function BudgetInput({handleInputChange}) {
 
     return (

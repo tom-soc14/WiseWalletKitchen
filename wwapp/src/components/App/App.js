@@ -8,13 +8,17 @@ import Login from "../Login/Login.js";
 import Wallet from "../Wallet/Wallet.js";
 import NavBar from "../NavBar/NavBar.js";
 import { createClient } from "@supabase/supabase-js";
+// import { weeklyPlanRecipes } from "../Kitchen/KitchenChildren/WeeklyPlan.js";
 
 export default function App() {
   // State ---------------
   const [recipes, setRecipes] = useState(null);
-  const [dayRecipe, setDayRecipe] = useState(null);
-  const [familySize, setFamilySize] = useState(null);
+  const [familySize, setFamilySize] = useState(3);
   const [plan, setPlan] = useState("Saver");
+  const [walletData, setWalletData] = useState(null);
+  const [weeklyRecipeArray, setWeeklyRecipeArray] = useState([])
+  const [dayRecipe, setDayRecipe] = useState(null);
+
   // let recipes=[];
 
   // API -----------------
@@ -27,7 +31,7 @@ export default function App() {
   const fetchRecipes = async () => {
     try {
       const { data, error } = await supabase
-      .from("RecipeData")
+        .from("RecipeData")
         .select(
           `
             *,
@@ -40,7 +44,7 @@ export default function App() {
         console.error("Error fetching recipes:", error);
       } else {
         setRecipes(data);
-
+        setWalletData(data);
         
       }
     } catch (error) {
@@ -48,7 +52,7 @@ export default function App() {
     }
   };
 
-  console.log("Recipes outside function: ", recipes)
+  // console.log("Recipes outside function: ", recipes)
   // useEffects --------------
   useEffect(() => {
     fetchRecipes();
@@ -60,7 +64,7 @@ export default function App() {
 
   // handleChange ---------------
   const handleRecipeChange = (selectedValue) => {
-    setDayRecipe(recipes[selectedValue]);
+    setDayRecipe(weeklyRecipeArray[selectedValue]);
   };
 
   const handleFamilySize = (selectedValue) => {
@@ -81,10 +85,14 @@ export default function App() {
           path="/kitchen"
           element={
             <Kitchen
+              plan={plan}
+              recipes={recipes}
               dayRecipe={dayRecipe}
               familySize={familySize}
               handleRecipeChange={handleRecipeChange}
               handleFamilySize={handleFamilySize}
+              handlePlanChange={handlePlanChange}
+              setWeeklyRecipeArray={setWeeklyRecipeArray}
             />
           }
         />
@@ -96,9 +104,9 @@ export default function App() {
             <Wallet
               plan={plan}
               handlePlanChange={handlePlanChange}
-              recipes={recipes}
-              handleFamilySize={handleFamilySize}
+              walletData={walletData}
               familySize={familySize}
+              handleFamilySize={handleFamilySize}
             />
           }
         />
