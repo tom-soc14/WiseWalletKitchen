@@ -15,7 +15,7 @@ export default function WalletFamilySelector({ handleFamilySize }) {
               key={size.id}
               data-id={size.id}
               onClick={(e) => handleFamilySize(e.target.dataset.id)}
-              className="SpanClass"
+              className="Button"
             >
               {size.name}
             </button>

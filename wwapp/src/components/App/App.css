@@ -18,7 +18,17 @@
 var(--orange)
 var(--green)
 var(--lightGreen)
-var(--offWhite) */
+var(--offWhite)
+var(--grey) 
+*/
+
+/* Universal Buttons */ 
+.Button {
+  background-color: #ffa500;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 100%;
+}
 
 /* NavBar CSS -------------------------------------------------------------------- */
 .NavBar {
@@ -61,9 +71,9 @@ var(--offWhite) */
 }
 /* Dropdown menu content */
 .DropdownContent {
+  background-color: #939601;
   display: none;
   position: absolute;
-  background-color: #939601;
   min-width: 160px;
   z-index: 1;
   right: 20px; /* align the content to the right */
@@ -121,6 +131,8 @@ var(--offWhite) */
   background-color: #f56607;
 }
 
+/* Footer CSS ------------------------------------------------------------------ */
+
 footer {
   /* Set the image as the footer of the entire screen */
   position: fixed;
@@ -162,16 +174,16 @@ footer {
   max-width: 70%;
 }
 
-.HomePage--FamilyPicture {
+.HomePage--ImageCarousel {
   /* Needs to place image in the center of the width <<<<<<<< */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.HomePage--FamilyPicture > img {
+.HomePage--ImageCarousel > img {
   height: 300px;
   width: auto;
-  border-radius: 30px;
+  border-radius: 30px; 
   /* padding: 2%; */
 }
 
@@ -196,46 +208,68 @@ footer {
 
 /* LoginPage CSS ----------------------------------------------------------------- */
 
-/* Kitchen CSS ----------------------------------------------------------- */
+/* Kitchen CSS ------------------------------------------------------------------- */
 
-/* Wallet CSS ------------------------------------------------------------ */
+/* Wallet CSS -------------------------------------------------------------------- */
 
 .WalletPage {
 }
 
-.WalletPageTitle > h1 {
+.WalletPageTitle {
+display: flex;
+align-items:center;
+justify-content: center;
+height: 150px;
+}.WalletPageTitle > h1 {
+  display: flex;
+align-items:center;
+justify-content: center;
+height: 60px;
+
+  background-color: var(--green);
+  color: var(--offWhite);
+  border-radius: 30px;
+  width: 50%;
 }
 
 .WalletPageInfoBox {
+  background-color: #ffa500;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #ffa500;
   border-radius: 10px;
   padding: 10px;
   margin: 20px;
+  margin-top: 0%;
 }
 
 .WalletPageInfoContents {
-  font-size: small;
   display: flex;
   flex-direction: column;
-  background-color: #ebebd3;
+  background-color: var(--offWhite);
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
+  font-size: small;
 }
 .WalletPageInfoContents > h2 {
-}
-.WalletPageInfoContents > h3 {
+
+}.WalletPageInfoContents > h3 {
   font-weight: bold;
-}
-.WalletPageInfoContents > h4 {
-}
-.WalletPageInfoContents > h5 {
+}.WalletPageInfoContents > h4 {
+
+}.WalletPageInfoContents > h5 {
+
 }
 
 .WalletPageInfoGraph {
   display: flex;
   flex-direction: column;
   margin: 10px;
+}
+.graphSavingsButton {
+background-color: #494900;
+color: var(--offWhite);
+border-radius: 10px;
+padding: 10px;
+margin: 10px;
 }

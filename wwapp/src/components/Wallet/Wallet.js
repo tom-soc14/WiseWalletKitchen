@@ -44,11 +44,17 @@ export default function Wallet({
       <div className="WalletPageInfoBox">
         <div className="WalletPageInfoContents">
           <h2>Enter your budget:</h2>
+
           <BudgetInput handleInputChange={handleInputChange} />
+
           <h3>Your budget is £{budget}</h3>
+
           <PlanSelector handlePlanChange={handlePlanChange} />
+
           <h3>Your plan is {plan}</h3>
+          
           <WalletFamilySelector handleFamilySize={handleFamilySize} />
+          
           <h2>Weekly Cost of Plan £{totalCost}</h2>
           <h2>This week you will save: £{savings}</h2>
           <h5>*Compared to the National Average</h5>
@@ -58,9 +64,12 @@ export default function Wallet({
           <Graph />
         </div>
       </div>
+      {/* Removed the Footer to put it in App.js */}
+      {/* 
       <footer>
         <img src={fruitPicture} alt="fruit" className="WalletPageImg" />
-      </footer>
+      </footer> 
+      */}
     </div>
   );
 }
