@@ -148,15 +148,15 @@ const images = [
   },
   {
     src: 'https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    text: 'Once, twice. You review each and every voucher, adding the discounts up. Three times. And a fourth. Now you’re sure. You don’t have enough to pay for the shopping this time. Shaking your head, you quickly scan your cart to see which items can go.',
+    text: 'Once, twice. You review each and every voucher, adding the up discounts. Three times. And a fourth. Now you’re sure. You don’t have enough to pay for the shopping this time. Shaking your head, you quickly scan your cart to see which items can go.',
     },
     {
     src: 'https://images.pexels.com/photos/4199116/pexels-photo-4199116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        text: 'But what do you sacrifice? There’s hardly anything you selected that identifies as a luxury. Yes, there is the New York style cheesecake topped with passion fruit. But the kids haven’t had a proper dessert in weeks. All that’s present are what you would have labelled as essentials only six months ago. How soon will it be before you start having to skip meals?',
+        text: 'But what do you sacrifice? There’s hardly anything you selected that identifies as a luxury. Yes, there is the New York style cheesecake topped with passion fruit. But the kids haven’t had a proper dessert in weeks. All that’s present are what you would have labelled essentials only six months ago. How soon will it be before you start having to skip meals?',
     },
     {
     src: 'https://images.pexels.com/photos/4049869/pexels-photo-4049869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    text: 'And that’s when you feel that little tug on your arm right between the funny bone and elbow. You turn around to find us standing next to you with a big smile, not with hands out but arms open with one of them holding a plan containing recipes that will let you shop with more confidence because the ingredients meet your budget.',
+    text: 'And that’s when you feel that little tug on your arm right between the funny bone and elbow. You turn around to find us standing next to you with a big smile, not with hands out but arms open. One of them is holding a plan containing recipes that will let you shop with more confidence because the ingredients meet your budget.',
     },
     {
     src: 'https://images.pexels.com/photos/4259707/pexels-photo-4259707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
