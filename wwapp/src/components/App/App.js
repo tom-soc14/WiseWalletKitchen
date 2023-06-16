@@ -13,11 +13,11 @@ import { createClient } from "@supabase/supabase-js";
 export default function App() {
   // State ---------------
   const [recipes, setRecipes] = useState(null);
-  const [dayRecipe, setDayRecipe] = useState(null);
   const [familySize, setFamilySize] = useState(3);
   const [plan, setPlan] = useState("Saver");
   const [walletData, setWalletData] = useState(null);
   const [weeklyRecipeArray, setWeeklyRecipeArray] = useState([])
+  const [dayRecipe, setDayRecipe] = useState(null);
 
   // let recipes=[];
 

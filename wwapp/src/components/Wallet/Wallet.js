@@ -8,7 +8,6 @@ import WalletFamilySelector from "./WalletChildren/WalletFamilySelector.js";
 import BudgetInput from "./WalletChildren/BudgetInput.js";
 import { useState } from "react";
 
-
 // render the Wallet page
 export default function Wallet({
   handlePlanChange,
@@ -17,25 +16,20 @@ export default function Wallet({
   familySize,
   walletData,
 }) {
-
-
-  
   const [budget, setBudget] = useState(0);
   const [cost, setCost] = useState(0);
-
-
 
   // average weekly spend for 1,2,3,4 people
   // source: https://www.nimblefins.co.uk/average-uk-household-cost-food#week
   const averageWeeklySpendArray = [45, 96, 132, 167];
   const averageWeeklySpend = averageWeeklySpendArray[familySize];
-  
+
   //event handler for text input to set the users budget
   const handleInputChange = (e) => {
     setBudget(e.target.value);
   };
 
-  //function to handle the total cost and calculation 
+  //function to handle the total cost and calculation
   const handleCostChange = (newCost) => {
     setCost(newCost);
   };
@@ -61,9 +55,7 @@ export default function Wallet({
         {/* display graph component */}
         <div className="userPageInfoGraph">
           <Graph
-            budget={budget}
             cost={cost}
-            savings={savings}
             averageWeeklySpend={averageWeeklySpend}
             calculateWeeklySavings={calculateWeeklySavings}
           />
@@ -71,11 +63,11 @@ export default function Wallet({
       </div>
       <img src={fruitPicture} alt="fruit" className="userPageImg" />
       <WeeklyCostCalculator
-          walletData={walletData}
-          familySize={familySize}
-          plan={plan}
-          onCostChange={handleCostChange}
-        />
+        walletData={walletData}
+        familySize={familySize}
+        plan={plan}
+        onCostChange={handleCostChange}
+      />
     </div>
   );
 }
@@ -98,48 +90,48 @@ export default function Wallet({
 // export const weeklySaverCost = [22, 29, 40.5, 49];
 // export const weeklyClassicCost = [91, 110, 129, 148];
 // export const weeklyPremiumCost = [158, 183, 207, 231];
-  // const costs = {
-  //   Saver: weeklySaverCost,
-  //   Classic: weeklyClassicCost,
-  //   Premium: weeklyPremiumCost
-  // };
+// const costs = {
+//   Saver: weeklySaverCost,
+//   Classic: weeklyClassicCost,
+//   Premium: weeklyPremiumCost
+// };
 
-  //want to extract the cost of the recipe from walletData
-  //need to specify which plan is being used
-  //currently only have 7 days worth of data so the total weekly cost would be all of those from the saver menu for example
-  //function needs to take in the name of the plan (can hard code that for now maybe??) extract the price and then add them together
+//want to extract the cost of the recipe from walletData
+//need to specify which plan is being used
+//currently only have 7 days worth of data so the total weekly cost would be all of those from the saver menu for example
+//function needs to take in the name of the plan (can hard code that for now maybe??) extract the price and then add them together
 
-  // console.log("walletData:", walletData)
-  // let priceSum1 = 0;
-  // let priceSum2 = 0;
-  // let priceSum3 = 0;
-  // let priceSum4 = 0;
-  // let priceSum = 0;
+// console.log("walletData:", walletData)
+// let priceSum1 = 0;
+// let priceSum2 = 0;
+// let priceSum3 = 0;
+// let priceSum4 = 0;
+// let priceSum = 0;
 
-  //function to specifically add the 7 days of data we have for the Saver plan
-  //taking in the variable of accessibleWalletData so that we can access this and wait for it to no longer be null
-  // function weeklySaverCostFromData(walletData) {
-  //   if (walletData && walletData.length > 0) {
-  //     for (let i = 0; i < walletData.length; i++) {
-  //       if (walletData[i].RecipeType === "Saver") {
-  //         console.log("test of saver:", walletData[i].RecipeType)
+//function to specifically add the 7 days of data we have for the Saver plan
+//taking in the variable of accessibleWalletData so that we can access this and wait for it to no longer be null
+// function weeklySaverCostFromData(walletData) {
+//   if (walletData && walletData.length > 0) {
+//     for (let i = 0; i < walletData.length; i++) {
+//       if (walletData[i].RecipeType === "Saver") {
+//         console.log("test of saver:", walletData[i].RecipeType)
 
-  //         for (let j = 0; j < walletData[i].RecipePrice.length; j ++){
-  //           priceSum += walletData[i].RecipePrice[familySize]
-  //           console.log("priceSum", priceSum)
-  //         //   if (j === 3){
-  //         // console.log("test price:", accessibleWalletData[i].RecipePrice[j]);
-  //         // priceSum4 += accessibleWalletData[i].RecipePrice[j]
-  //         // console.log("priceSum:", priceSum4)
-  //         //   }
-  //         }
-  //       }
-  //     }
+//         for (let j = 0; j < walletData[i].RecipePrice.length; j ++){
+//           priceSum += walletData[i].RecipePrice[familySize]
+//           console.log("priceSum", priceSum)
+//         //   if (j === 3){
+//         // console.log("test price:", accessibleWalletData[i].RecipePrice[j]);
+//         // priceSum4 += accessibleWalletData[i].RecipePrice[j]
+//         // console.log("priceSum:", priceSum4)
+//         //   }
+//         }
+//       }
+//     }
 
-  //   } else {
-  //     console.log("No accessible wallet data available.");
-  //   }
-  // }
-  // console.log("price sum outside fn:", priceSum)
-  // weeklySaverCostFromData(walletData);
-  // console.log("fn:", weeklySaverCostFromData(walletData))
+//   } else {
+//     console.log("No accessible wallet data available.");
+//   }
+// }
+// console.log("price sum outside fn:", priceSum)
+// weeklySaverCostFromData(walletData);
+// console.log("fn:", weeklySaverCostFromData(walletData))
