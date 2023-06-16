@@ -1,8 +1,9 @@
 import "./Kitchen.css";
-import DaySelector from "./DaySelector.js";
-import RecipeRender from "./RecipeRender.js";
-import FamilySelector from "./FamilySelector.js";
-import RecipePlanSelector from "./RecipePlanSelector.js";
+import DaySelector from "./KitchenChildren/DaySelector.js";
+import RecipeRender from "./KitchenChildren/RecipeRender.js";
+import FamilySelector from "./KitchenChildren/FamilySelector.js";
+import RecipePlanSelector from "./KitchenChildren/RecipePlanSelector.js";
+import WeeklyPlan from "./KitchenChildren/WeeklyPlan.js";
 
 // Props -----------------------
 export default function Kitchen({
@@ -10,7 +11,10 @@ export default function Kitchen({
   dayRecipe,
   handleFamilySize,
   familySize,
-  handlePlanChange
+  handlePlanChange,
+  plan, 
+  recipes, 
+  setWeeklyRecipeArray
 }) {
   // Render components -----------------
   return (
@@ -18,7 +22,7 @@ export default function Kitchen({
       <h1 className="titleHeader">Recipes</h1>
       <p>Your week</p>
       <div className="Orange">
-      <RecipePlanSelector handlePlanChange={handlePlanChange}/>
+      <RecipePlanSelector handlePlanChange={handlePlanChange} plan={plan} />
       <div>
         <FamilySelector handleFamilySize={handleFamilySize} />
       </div>
@@ -30,7 +34,8 @@ export default function Kitchen({
       
       <div className="recipeRender">
         <div className="recipeContent">
-          <RecipeRender dayRecipe={dayRecipe} familySize={familySize} />
+          <RecipeRender dayRecipe={dayRecipe} familySize={familySize}/>
+          <WeeklyPlan plan={plan} recipes={recipes} setWeeklyRecipeArray={setWeeklyRecipeArray}/>
         </div>
       </div>
     </>

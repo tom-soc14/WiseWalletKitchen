@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CanvasJSReact from "@canvasjs/react-charts";
-import "./Wallet.css";
+import "../Wallet.css";
 
 // const averageWeeklySpend = 107.5 * 4;
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;

@@ -1,5 +1,10 @@
 // RecipeRender.js
 export default function RecipeRender({ dayRecipe, familySize }) {
+  //we want a fn that takes in day of the week, size of family and the plan type and to render the appropriate data on the page 
+
+
+
+
   // Render recipe data -------------------
   return (
     <div className="recipeContent">

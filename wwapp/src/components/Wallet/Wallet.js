@@ -1,11 +1,11 @@
 import React from "react";
 import "./Wallet.css";
-import Graph from "./graph.js";
+import Graph from "./WalletChildren/graph.js";
 import fruitPicture from "./fruitPicture.jpg";
-import PlanSelector from "./PlanSelector.js";
-import WeeklyCostCalculator from "./WeeklyCostCalculator.js";
-import WalletFamilySelector from "./WalletFamilySelector.js";
-import BudgetInput from "./BudgetInput.js";
+import PlanSelector from "./WalletChildren/PlanSelector.js";
+import WeeklyCostCalculator from "./WalletChildren/WeeklyCostCalculator.js";
+import WalletFamilySelector from "./WalletChildren/WalletFamilySelector.js";
+import BudgetInput from "./WalletChildren/BudgetInput.js";
 import { useState } from "react";
 
 
