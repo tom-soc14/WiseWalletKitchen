@@ -299,20 +299,20 @@ color: var(--offWhite)
 
 .carousel-button-previous {
   position:absolute;
-  top: 50%;
+  top: 45%;
   left: 1%;
   transform: translateY(-50%);
   z-index:1;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 50%;
-  color: white;
+  color: black;
   font-size: xx-large;
 
 }
 
 .carousel-button-next {
   position: absolute; /* Add absolute positioning to the next button */
-  top: 50%; /* Adjust top position to center vertically */
+  top: 45%; /* Adjust top position to center vertically */
   right: 1%; /* Adjust right position as needed */
   transform: translateY(-50%); /* Center vertically using transform */
   z-index: 1; /* Set a higher z-index to overlay the image */
