@@ -1,5 +1,5 @@
-import React from 'react';
-import './HomePage.css';
+// import './HomePage.css';
+import React from "react";
 import kitchenExample from "./kitchen.jpeg";
 import walletExample from "./wallet.jpeg"
 import HomePageStoryImages from './HomePageStoryImages.js'; 
@@ -36,19 +36,28 @@ We help you track your progress and visualise your future finances.</p>
 
 
         <div className="app-examples">
+
         <div className="wallet-example">
-            <img className="example-images" alt="Wallet page example" src={walletExample}></img>
+          <img
+            className="example-images"
+            alt="Wallet page example"
+            src={walletExample}
+          ></img>
         </div>
         <div className="kitchen-example">
-        <img className="example-images" alt="Kitchen page example" src={kitchenExample}></img>
+          <img
+            className="example-images"
+            alt="Kitchen page example"
+            src={kitchenExample}
+          ></img>
         </div>
-        </div>
-        <button className="HomePage-button-sign-up">Sign Up or Login now</button>
-        <br/>
-        </div> )
+      </div>
+      <button className="HomePage-button-sign-up">Sign Up or Login now</button>
+      <br />
+    </div>
+  );
+}
 
-        };
-
-
+        
 
 export default HomePage;

@@ -78,7 +78,9 @@ export default function App() {
   // render components
   return (
     <div className="App">
+      
       <NavBar />
+     
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route

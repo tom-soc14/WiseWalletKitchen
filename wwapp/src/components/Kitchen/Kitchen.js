@@ -1,9 +1,16 @@
+
+// import "./Kitchen.css";
+
+
+
+import fruitPicture from "../Wallet/fruitPicture.jpg";
 import "./Kitchen.css";
 import DaySelector from "./KitchenChildren/DaySelector.js";
 import RecipeRender from "./KitchenChildren/RecipeRender.js";
 import FamilySelector from "./KitchenChildren/FamilySelector.js";
 import RecipePlanSelector from "./KitchenChildren/RecipePlanSelector.js";
 import WeeklyPlan from "./KitchenChildren/WeeklyPlan.js";
+
 
 // Props -----------------------
 export default function Kitchen({
@@ -38,6 +45,9 @@ export default function Kitchen({
           <WeeklyPlan plan={plan} recipes={recipes} setWeeklyRecipeArray={setWeeklyRecipeArray}/>
         </div>
       </div>
+      <footer>
+        <img src={fruitPicture} alt="fruit" className="WalletPageImg" />
+      </footer>
     </>
   );
 }
