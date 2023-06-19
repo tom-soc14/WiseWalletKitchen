@@ -56,7 +56,7 @@ export default function App() {
   // useEffects --------------
   useEffect(() => {
     fetchRecipes();
-}, );
+}, [] );
 
   useEffect(() => {}, [familySize]);
 
