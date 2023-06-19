@@ -167,7 +167,195 @@ footer {
 }
 
 /* Homepage CSS ------------------------------------------------------------------ */
+.HomePage {
+  display: flex;
+  flex-direction: column;
+}
 
+.HomePage-title {
+ display: flex;
+ justify-content: center;
+ font-size: 5vw;
+ 
+
+}
+.Link-button-sign-up {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.Link-about-button {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 10%;
+  
+}
+
+.HomePage-button-sign-up {
+ text-decoration: none;
+  background-color: #e57300;
+  border-radius: 8px;
+  padding: 5px 10px 5px 10px;
+  font-size:x-large;
+}
+
+.about-button {
+text-decoration: none;
+border-radius: 8px;
+height: 4vh;
+font-size: larger;
+padding: 5px 10px 5px 10px;
+background-color: var(--green);
+color: var(--offWhite)
+}
+
+/* 
+.HomePage--ImageCarousel {
+  /* Needs to place image in the center of the width <<<<<<<< */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+} */ 
+/* .HomePage--ImageCarousel > img {
+  height: 300px;
+  width: auto;
+  border-radius: 30px;  */
+  /* padding: 2%; */
+/* } */
+
+
+
+
+/* .introText {
+  /* Control all fo the text inside */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+/* .introText > h1 {
+  /* this is the title ish */
+  /* margin-left: 0%;
+  font-size: x-large;
+  max-width: 70%;
+} */ 
+/* .introText > p { */
+  /* this is the intron paragraph */
+  /* max-width: 70%;
+} */ 
+
+/* .intro-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2%;
+} */
+
+/* Homepage-Carousel CSS ------------------------------------------------------------------ */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  margin-top: 20%;
+
+}
+
+.carousel {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.carousel.active {
+  opacity: 1;
+}
+
+.carousel-image img {
+  width: 98%;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  margin-right: 1%;
+  margin-left: 1%;
+  border-radius: 2.5%;
+
+}
+
+.carousel-buttons {
+  position:absolute;
+  top: 0; /* Adjust top position as needed */
+  left: 0; /* Adjust left position as needed */
+  right: 0; /* Adjust right position as needed */
+  bottom: 0; /* Adjust bottom position as needed */
+
+}
+
+.carousel-button-previous {
+  position:absolute;
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+  z-index:1;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  color: white;
+  font-size: xx-large;
+
+}
+
+.carousel-button-next {
+  position: absolute; /* Add absolute positioning to the next button */
+  top: 50%; /* Adjust top position to center vertically */
+  right: 1%; /* Adjust right position as needed */
+  transform: translateY(-50%); /* Center vertically using transform */
+  z-index: 1; /* Set a higher z-index to overlay the image */
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  color: black;
+  font-size: xx-large;
+}
+
+.carousel-text {
+  background-color: white;
+  color:  black;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5%;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+/* About CSS ------------------------------------------------------------------ */
+.example-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;   
+}
 .app-examples {
   display: flex;
   justify-content: center;
@@ -177,55 +365,6 @@ footer {
   width: 100%; */
 }
 
-.introText {
-  /* Control all fo the text inside */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.introText > h1 {
-  /* this is the title ish */
-  margin-left: 0%;
-  font-size: x-large;
-  max-width: 70%;
-}
-.introText > p {
-  /* this is the intron paragraph */
-  max-width: 70%;
-}
-
-.HomePage--ImageCarousel {
-  /* Needs to place image in the center of the width <<<<<<<< */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.HomePage--ImageCarousel > img {
-  height: 300px;
-  width: auto;
-  border-radius: 30px; 
-  /* padding: 2%; */
-}
-
-.HomePage-button-sign-up {
-  background-color: #e57300;
-  border-radius: 8px;
-  padding: 5px 10px 5px 10px;
-}
-
-.HomePage {
-  display: flex;
-  flex-direction: column;
-}
-
-.example-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-}
 
 /* LoginPage CSS ----------------------------------------------------------------- */
 

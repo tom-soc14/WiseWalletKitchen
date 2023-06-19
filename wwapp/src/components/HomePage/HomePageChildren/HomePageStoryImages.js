@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
 import HomePageImageCarousel from "./HomePageImageCarousel.js";
-import "./HomePageImageCarousel.css";
+
 
 const images = [
   {
     id: 0,
     src:
-      "https://images.pexels.com/photos/264529/pexels-photo-264529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6995201/pexels-photo-6995201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text:
       "The cost of of living is impacting us all",
   },
   {
     id: 1,
-    src: 'https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    src: 'https://images.pexels.com/photos/6964107/pexels-photo-6964107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     text: 'Having structure to your purchases can help you save',
     },
     {
       id: 2,
-    src: 'https://images.pexels.com/photos/4199116/pexels-photo-4199116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    src: 'https://images.pexels.com/photos/732444/pexels-photo-732444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         text: 'Making the right choice is key to saving',
     },
     {
       id: 3,
-    src: 'https://images.pexels.com/photos/4049869/pexels-photo-4049869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    src: 'https://images.pexels.com/photos/4047288/pexels-photo-4047288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     text: 'Our App is designed to help you make that choice',
     },
     {
@@ -46,9 +46,9 @@ const HomePageStoryImages = () => {
     };
   }, []);
 
-  function handleReplay() {
-    setCurrentImageIndex(0)
-  }
+  // function handleReplay() {
+  //   setCurrentImageIndex(0)
+  // }
 
   function handlePreviousImage() {
     if (currentImageIndex<=0) {
@@ -71,7 +71,7 @@ const HomePageStoryImages = () => {
       <HomePageImageCarousel
         image={images[currentImageIndex]}
         key={currentImageIndex}
-        handleReplay={handleReplay}
+        // handleReplay={handleReplay}
         handlePreviousImage={handlePreviousImage}
         handleNextImage={handleNextImage}
       />
