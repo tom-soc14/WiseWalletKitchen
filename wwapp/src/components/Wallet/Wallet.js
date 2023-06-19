@@ -1,33 +1,86 @@
 import React from "react";
-import "./Wallet.css";
-import Graph from "./graph.js";
-import fruitPicture from "./fruitPicture.jpg";
 
-// write a funciton that renders the Wallet page
-// Must include:
-// Variable to take the user data to diplay on the page
-// + User average spending per week vs national average in body => P element
-// + User weekly plan to poopulate the 'savings' graph for the year
-// Header
-// + Header logo with link to HomePage
-// + Header burger menu
-// Body title element
-// + "savings" to be rendered in a green oval box
-// Body elements x2
-// + Body: P element - contains a description of how much the user has saved compared to naitonal average
-// + Body: Graph element - contains data of how much user is saving over the year
-// Lower body
-// + image element to make it look nice
 
-// make the data from the data.json file available to the wallet function as a variable
+import Graph from "./WalletChildren/graph.js";
+import PlanSelector from "./WalletChildren/PlanSelector.js";
+import WeeklyCostCalculator from "./WalletChildren/WeeklyCostCalculator.js";
+import WalletFamilySelector from "./WalletChildren/WalletFamilySelector.js";
+import BudgetInput from "./WalletChildren/BudgetInput.js";
+import { useState } from "react";
 
-// dummy data
-// const averageWeeklySpend = 107.5;
-// const weeklyPlanCost = 87.45;
-// const week1 = 50;
-// const week2 = 70;
-// const week3 = 90;
-// const week4 = 40;
+
+// render the Wallet page
+export default function Wallet({
+  handlePlanChange,
+  plan,
+  handleFamilySize,
+  familySize,
+  walletData
+}) {
+  const [budget, setBudget] = useState(0);
+  const [cost, setCost] = useState(0);
+
+  // average weekly spend for 1,2,3,4 people
+  // source: https://www.nimblefins.co.uk/average-uk-household-cost-food#week
+  const averageWeeklySpendArray = [45, 96, 132, 167];
+  const averageWeeklySpend = averageWeeklySpendArray[familySize];
+
+  //event handler for text input to set the users budget
+  const handleInputChange = (e) => {
+    setBudget(e.target.value);
+  };
+
+  //function to handle the total cost and calculation
+  const handleCostChange = (newCost) => {
+    setCost(newCost);
+  };
+  const savings = budget - cost;
+  const calculateWeeklySavings = Math.round(savings * 100) / 100;
+
+
+  return (
+    <div className="WalletPage">
+      {/* <p>{props.weeklyPrice}</p> */}
+
+      <h1 className="WalletPageTitle">Savings</h1>
+      <div className="WalletPageInfoBox">
+        <div className="WalletPageInfoContents">
+          <h1>Enter your budget:</h1>
+          <BudgetInput handleInputChange={handleInputChange} />
+          <h2>Your budget is £{budget}</h2>
+          <PlanSelector handlePlanChange={handlePlanChange} />
+
+          <h3>Your plan is {plan}</h3>
+          
+          <WalletFamilySelector handleFamilySize={handleFamilySize} />
+          
+          <h2>Weekly Cost of Plan £{cost}</h2>
+          <h2>This week you will save: £{savings}</h2>
+          <h5>*Compared to the National Average</h5>
+
+        </div>
+
+        {/* display graph component */}
+
+        <div className="WalletPageInfoGraph">
+          <Graph
+            cost={cost}
+            averageWeeklySpend={averageWeeklySpend}
+            calculateWeeklySavings={calculateWeeklySavings}
+          />
+        </div>
+      </div>
+    
+      <WeeklyCostCalculator
+        walletData={walletData}
+        familySize={familySize}
+        plan={plan}
+        onCostChange={handleCostChange}
+      />
+
+    </div>
+  );
+}
 
 // // calculate the user savings
 // function calculateSavings() {
@@ -36,7 +89,6 @@ import fruitPicture from "./fruitPicture.jpg";
 //   return userSavingDecimal;
 // }
 
-
 // calculate the monthly savings
 // function calculateMonthlySavings() {
 //   let userSavings = calculateSavings();
@@ -44,55 +96,52 @@ import fruitPicture from "./fruitPicture.jpg";
 //   return monthlySavings;
 // }
 
-// render the Wallet page
-function Wallet(props) {
+//Below has been moved into weeklycostcalculator component and no longer need hard coded data
+// export const weeklySaverCost = [22, 29, 40.5, 49];
+// export const weeklyClassicCost = [91, 110, 129, 148];
+// export const weeklyPremiumCost = [158, 183, 207, 231];
+// const costs = {
+//   Saver: weeklySaverCost,
+//   Classic: weeklyClassicCost,
+//   Premium: weeklyPremiumCost
+// };
 
-  const averageWeeklySpend = 107.5 * 4;
-  // const weeklySpend = [50, 70, 90, 40]; // Array to store weekly spend values
-  
+//want to extract the cost of the recipe from walletData
+//need to specify which plan is being used
+//currently only have 7 days worth of data so the total weekly cost would be all of those from the saver menu for example
+//function needs to take in the name of the plan (can hard code that for now maybe??) extract the price and then add them together
 
-  // calculate the user savings
-  function calculateSavings() {
-    // let totalSpend = 0;
-    // for (let i = 0; i < weeklySpend.length; i++) {
-    //   totalSpend += weeklySpend[i];
-    // }
-    let userSavings = averageWeeklySpend - props.weeklyPrice;
-    let userSavingDecimal = Math.round(userSavings * 100) / 100;
-    return userSavingDecimal;
-  }
- 
-  // console.log(props.weeklyPrice +' WALLET');
-  console.log(props)
+// console.log("walletData:", walletData)
+// let priceSum1 = 0;
+// let priceSum2 = 0;
+// let priceSum3 = 0;
+// let priceSum4 = 0;
+// let priceSum = 0;
 
-  return (
-    <div>
-    <p>{props.weeklyPrice}</p>
-      <h1 className="userPageTitle">Savings</h1>
-      <div className="userPageInfoBox">
-        <div className="userPageInfoContents">
-          <p className="userPageSavings">This week you saved:</p>
-          <p className="userPageSavingsNumber">£{calculateSavings()}</p>
-          Congratulations on your successful month of saving! This month, you
-          have managed to diligently track your expenses and make conscious
-          decisions to prioritize your financial goals. By adhering to a budget
-          and making thoughtful spending choices, you have successfully saved a
-          significant amount of money. This achievement reflects your commitment
-          and discipline towards building a strong financial foundation. With
-          this positive momentum, you are well on your way to achieving even
-          greater savings and financial stability in the future. Keep up the
-          excellent work!
-        </div>
+//function to specifically add the 7 days of data we have for the Saver plan
+//taking in the variable of accessibleWalletData so that we can access this and wait for it to no longer be null
+// function weeklySaverCostFromData(walletData) {
+//   if (walletData && walletData.length > 0) {
+//     for (let i = 0; i < walletData.length; i++) {
+//       if (walletData[i].RecipeType === "Saver") {
+//         console.log("test of saver:", walletData[i].RecipeType)
 
-        {/* display graph component */}
-        <div className="userPageInfoGraph">
-          <Graph />
-        </div>
-      </div>
-      <img src={fruitPicture} alt="fruit" className="userPageImg" />
-    </div>
-  );
-}
+//         for (let j = 0; j < walletData[i].RecipePrice.length; j ++){
+//           priceSum += walletData[i].RecipePrice[familySize]
+//           console.log("priceSum", priceSum)
+//         //   if (j === 3){
+//         // console.log("test price:", accessibleWalletData[i].RecipePrice[j]);
+//         // priceSum4 += accessibleWalletData[i].RecipePrice[j]
+//         // console.log("priceSum:", priceSum4)
+//         //   }
+//         }
+//       }
+//     }
 
-export default Wallet;
-
+//   } else {
+//     console.log("No accessible wallet data available.");
+//   }
+// }
+// console.log("price sum outside fn:", priceSum)
+// weeklySaverCostFromData(walletData);
+// console.log("fn:", weeklySaverCostFromData(walletData))

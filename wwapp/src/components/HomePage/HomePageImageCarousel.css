@@ -1,0 +1,56 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.carousel {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.carousel.active {
+  opacity: 1;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: inline-block;
+
+}
+
+.carousel-text {
+  background-color: white;;
+  color: rgb(9, 135, 173);
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  top: 98%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 5%;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
