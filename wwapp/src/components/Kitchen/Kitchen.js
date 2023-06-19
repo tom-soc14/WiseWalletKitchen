@@ -1,8 +1,3 @@
-
-// import "./Kitchen.css";
-
-
-
 import fruitPicture from "../Wallet/fruitPicture.jpg";
 import "./Kitchen.css";
 import DaySelector from "./KitchenChildren/DaySelector.js";
@@ -24,6 +19,11 @@ export default function Kitchen({
   setWeeklyRecipeArray
 }) {
   // Render components -----------------
+
+
+ 
+  
+
   return (
     <>
       <h1 className="titleHeader">Recipes</h1>
