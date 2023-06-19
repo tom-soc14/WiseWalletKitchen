@@ -54,9 +54,9 @@ export default function App() {
 
   // console.log("Recipes outside function: ", recipes)
   // useEffects --------------
-  // useEffect(() => {
-  //   fetchRecipes();
-  // }, []);
+  useEffect(() => {
+    fetchRecipes();
+  }, []);
 
   useEffect(() => {}, [familySize]);
 

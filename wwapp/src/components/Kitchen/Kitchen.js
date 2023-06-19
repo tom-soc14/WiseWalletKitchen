@@ -45,9 +45,9 @@ export default function Kitchen({
           <WeeklyPlan plan={plan} recipes={recipes} setWeeklyRecipeArray={setWeeklyRecipeArray}/>
         </div>
       </div>
-      <footer>
+      {/* <footer>
         <img src={fruitPicture} alt="fruit" className="WalletPageImg" />
-      </footer>
+      </footer> */}
     </>
   );
 }
