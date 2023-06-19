@@ -17,6 +17,7 @@ function NavBar() {
         <div className="DropdownContent">
 
           <Link className="navbar-component" to="/">Homepage</Link>
+          <Link className="navbar-component" to="/about">About us</Link>
           <Link className="navbar-component" to="/kitchen">Kitchen</Link>
           <Link className="navbar-component" to="/wallet">Wallet</Link>
           <Link className="navbar-component" to="/login">Login</Link>

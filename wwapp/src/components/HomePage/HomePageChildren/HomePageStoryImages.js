@@ -50,12 +50,30 @@ const HomePageStoryImages = () => {
     setCurrentImageIndex(0)
   }
 
+  function handlePreviousImage() {
+    if (currentImageIndex<=0) {
+      setCurrentImageIndex(0)
+    } else {
+    setCurrentImageIndex(currentImageIndex-1)
+  }
+  };
+
+  function handleNextImage() {
+    if  (currentImageIndex>=4) {
+      setCurrentImageIndex(0)
+    } else {
+    setCurrentImageIndex(currentImageIndex+1)
+  }
+}
+
   return (
     <div className="carousel-container">
       <HomePageImageCarousel
         image={images[currentImageIndex]}
         key={currentImageIndex}
         handleReplay={handleReplay}
+        handlePreviousImage={handlePreviousImage}
+        handleNextImage={handleNextImage}
       />
   
     </div>
