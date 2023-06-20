@@ -18,16 +18,34 @@ if (dayRecipe === null) {
         <>
           <h2>{dayRecipe.RecipeName}</h2>
           <h3>{dayRecipe.RecipeType}</h3>
+
           <img src={dayRecipe.Photo} alt={dayRecipe.PhotoAlt} />
+
+          <h3>Preparation time: {dayRecipe.PrepTime}</h3>
+          <h3>Cooking time: {dayRecipe.CookingTime}</h3>
+
+          <br></br>
+
+          <h4>Ingredient List:</h4>
+          {dayRecipe.IngredientUsage.map((ingredient, index)=>{
+            return <ul>
+                      <li key={index}>{ingredient.Amount[familySize]} {ingredient.IngredientName} - Cost £{ingredient.Price[familySize]} </li>
+                  </ul> 
+              })}
+
+          <br></br>
+          
+          <h4>Instructions:</h4>
           {dayRecipe.Instructions.map((instruction, index) => {
             return <p key={index}>{instruction}</p>;
           })}
-          {dayRecipe.IngredientUsage.map((ingredient, index)=>{
-  return <ul>
-<li key={index}>{ingredient.Amount[familySize]} {ingredient.IngredientName} - Cost £{ingredient.Price[familySize]} </li>
-  </ul> 
-})}
-<p>Total Price: £{dayRecipe.RecipePrice[familySize]}</p>
+
+          <br></br>
+
+          <h3>Total Price: £{dayRecipe.RecipePrice[familySize]}</h3>
+
+          <br></br>
+
         </>
       )}
     </div>
