@@ -1,10 +1,11 @@
 import kitchenExample from "./kitchen.jpeg";
-import walletExample from "./wallet.jpeg"
+import walletExample from "./wallet.jpeg";
+import {Link} from "react-router-dom";
 
 function About() {
 
     return(
-        <div>
+        <div className="about-container">
         <div className="app-information-container">
         <p className="app-information">
 
@@ -25,16 +26,16 @@ Watch your savings grow as you make informed choices and optimise your spending 
 We help you track your progress and visualise your future finances.</p>
         </div>
 
-<div className="app-examples">
+<div className="app-examples-container">
 
-<div className="wallet-example">
+<div className="wallet-example-container">
   <img
     className="example-images"
     alt="Wallet page example"
     src={walletExample}
   ></img>
 </div>
-<div className="kitchen-example">
+<div className="kitchen-example-container">
   <img
     className="example-images"
     alt="Kitchen page example"
@@ -42,6 +43,7 @@ We help you track your progress and visualise your future finances.</p>
   ></img>
 </div>
 </div>
+<Link className="Link-button-sign-up" to="/login"><button className="HomePage-button-sign-up">Sign Up Today</button></Link>
 </div>
     )
 }

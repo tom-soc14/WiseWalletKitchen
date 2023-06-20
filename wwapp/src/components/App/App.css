@@ -259,7 +259,8 @@ color: var(--offWhite)
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: auto;
+  width: 100%;
   position: relative;
   margin-top: 20%;
 
@@ -269,6 +270,7 @@ color: var(--offWhite)
   display: flex; 
   flex-direction: column; 
   align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: opacity 3s ease-in-out;
 }
@@ -299,27 +301,45 @@ color: var(--offWhite)
 
 .carousel-button-previous {
   position:absolute;
-  top: 45%;
+  text-decoration: none;
+  top: 43%;
   left: 1%;
   transform: translateY(-50%);
   z-index:1;
-  background-color: rgba(255, 255, 255, 0);
+  background-color:  #9fa5a3a1;
   border-radius: 50%;
-  color: black;
+  color: white;
   font-size: xx-large;
-
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+ 
+}
+.carousel-button-previous:hover {
+  background-color: white;
 }
 
 .carousel-button-next {
-  position: absolute; /* Add absolute positioning to the next button */
-  top: 45%; /* Adjust top position to center vertically */
-  right: 1%; /* Adjust right position as needed */
-  transform: translateY(-50%); /* Center vertically using transform */
-  z-index: 1; /* Set a higher z-index to overlay the image */
-  background-color: rgba(255, 255, 255, 0);
+  position:absolute;
+  text-decoration: none;
+  top: 43%;
+  right: 1%;
+  transform: translateY(-50%);
+  z-index:1;
+  background-color: #9fa5a3a1;
   border-radius: 50%;
-  color: black;
+  color: white;
   font-size: xx-large;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+ 
+}
+
+.carousel-button-next:hover {
+  background-color: white;
 }
 
 .carousel-text {

@@ -24,8 +24,8 @@ const HomePageImageCarousel = ({ image, handlePreviousImage, handleNextImage }) 
       <div className="carousel-image">
         <img src={image.src} alt="Carousel" />
           <div className="carousel-buttons">
-          <button onClick={handlePreviousImage} className="carousel-button-previous">&lt;</button>
-          <button onClick={handleNextImage} className="carousel-button-next">&gt;</button>
+          <button onClick={handlePreviousImage} className="carousel-button-previous">&#8249;</button>
+          <button onClick={handleNextImage} className="carousel-button-next">&#8250;</button>
           {/* <button onClick={handleReplay} className="replay-button">Click here to start over</button> */}
           </div>
       </div>
