@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const HomePageImageCarousel = ({ image, handleReplay }) => {
+const HomePageImageCarousel = ({ image, handlePreviousImage, handleNextImage }) => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -23,12 +23,15 @@ const HomePageImageCarousel = ({ image, handleReplay }) => {
     <div className={`carousel ${isActive ? "active" : ""}`}>
       <div className="carousel-image">
         <img src={image.src} alt="Carousel" />
-          <div className="carousel-text">
-          <p>{image.text}</p>
-          <button onClick={handleReplay}>Click here to start over</button>
+          <div className="carousel-buttons">
+          <button onClick={handlePreviousImage} className="carousel-button-previous">&#8249;</button>
+          <button onClick={handleNextImage} className="carousel-button-next">&#8250;</button>
+          {/* <button onClick={handleReplay} className="replay-button">Click here to start over</button> */}
           </div>
       </div>
-
+      <div className="carousel-text">
+<p>{image.text}</p>
+</div>
     </div>
   );
 };
