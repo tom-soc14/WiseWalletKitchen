@@ -132,5 +132,34 @@ test("Does the day selector render?", () => {
       );
       const WalletRenderTest = screen.getByTestId("walletTest");
       expect(WalletRenderTest).toBeInTheDocument();
+    })
 
+    test("Does the title on wallet page render", () => {
+      render(
+        <MemoryRouter initialEntries={["/wallet"]}>
+          <App />
+        </MemoryRouter>
+      )
+      const savingstitle = screen.getByText('Savings')
+      expect(savingstitle).toBeInTheDocument();
+    })
+
+    // test("Does budget input box render", () => {
+    //   render(
+    //     <MemoryRouter initialEntries={["/wallet"]}>
+    //       <App />
+    //     </MemoryRouter>
+    //   )
+    //   const budgetinputbox = getByType('text')
+    //   expect(budgetinputbox).toBeInTheDocument();
+    // })
+
+    test("Does Enter your budget render", () => {
+      render(
+        <MemoryRouter initialEntries={["/wallet"]}>
+          <App/>
+        </MemoryRouter>
+      )
+        const budget = screen.getByText('Enter your budget:')
+expect(budget).toBeInTheDocument();
     })
