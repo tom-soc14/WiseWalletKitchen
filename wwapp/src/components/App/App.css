@@ -40,6 +40,12 @@ var(--grey)
   border-radius: 100%;
 }
 
+/*Universal font*/
+body {
+  font-family: "Roboto";
+
+}
+
 /* NavBar CSS -------------------------------------------------------------------- */
 .NavBar {
   /* padding: 20px;
