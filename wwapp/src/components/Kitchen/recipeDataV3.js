@@ -625,8 +625,8 @@ let recipeDataV2 = [
       {
         Name: "Lobster tails",
         IngredientId: "32",
-        Amount: ["2", "2", "2", "2"],
-        Price: [5.0, 5.0, 5.0, 5.0],
+        Amount: ["1", "2", "3", "4"],
+        Price: [6.0, 10.0, 14.0, 17.0],
       },
       {
         Name: "Butter",
@@ -644,7 +644,7 @@ let recipeDataV2 = [
         Name: "Dijon mustard",
         IngredientId: "35",
         Amount: ["1 tablespoon", "1 tablespoon", "2 tablespoons", "2 tablespoons"],
-        Price: [6.0, 10.0, 14.0, 17.0],
+        Price: [5.0, 5.0, 5.0, 5.0],
       },
     ],
       Instructions: [
