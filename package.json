@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-google-font-loader": "^1.1.0",
+    "webfontloader": "^1.6.28"
+  }
+}
