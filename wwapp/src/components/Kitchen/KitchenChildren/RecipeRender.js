@@ -4,7 +4,10 @@ export default function RecipeRender({ dayRecipe, familySize }) {
 
 if (dayRecipe === null) {
   return (
-    <h1>Choose your plan and day...</h1>
+    <div className="kitchen-get-started-container">
+    <h1 className="kitchen-get-started-text">Pick your plan, household size and day of the week & start cooking up something wonderful!</h1>
+    <img className="kitchen-get-started-image" src="https://images.pexels.com/photos/4259140/pexels-photo-4259140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="family-cooking-together-in-kitchen"/>
+    </div>
   )
 } else {
 
@@ -13,19 +16,20 @@ if (dayRecipe === null) {
   return (
     <>
 
-    <div className="recipeContent">
+    <div className="Recipe-Container">
       {dayRecipe && (
         <>
-          <h2>{dayRecipe.RecipeName}</h2>
-          <h3>{dayRecipe.RecipeType}</h3>
+          <h2 className="recipe-name">{dayRecipe.RecipeName}</h2>
+          {/* <h3 className="recipe-type">Meal plan: {dayRecipe.RecipeType}</h3> */}
 
           <img src={dayRecipe.Photo} alt={dayRecipe.PhotoAlt} />
-
+<div className="Recipe-Timings-Container">
           <h3>Preparation time: {dayRecipe.PrepTime}</h3>
           <h3>Cooking time: {dayRecipe.CookingTime}</h3>
 
-          <br></br>
-
+          
+</div>
+<div className="Recipe-Ingredients-Container">
           <h4>Ingredient List:</h4>
           {dayRecipe.IngredientUsage.map((ingredient, index)=>{
             return <ul>
@@ -33,18 +37,19 @@ if (dayRecipe === null) {
                   </ul> 
               })}
 
-          <br></br>
-          
+         
+        </div>  
+        <div className="Recipe-Instructions-Container">
           <h4>Instructions:</h4>
           {dayRecipe.Instructions.map((instruction, index) => {
             return <p key={index}>{instruction}</p>;
           })}
-
-          <br></br>
-
+</div>
+          
+<div className="Recipe-Price-Container">
           <h3>Total Price: £{dayRecipe.RecipePrice[familySize]}</h3>
 
-          <br></br>
+          </div>
 
         </>
       )}

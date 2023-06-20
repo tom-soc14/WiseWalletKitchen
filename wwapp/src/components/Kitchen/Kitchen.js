@@ -1,11 +1,9 @@
-import fruitPicture from "../Wallet/fruitPicture.jpg";
 import "./Kitchen.css";
 import DaySelector from "./KitchenChildren/DaySelector.js";
 import RecipeRender from "./KitchenChildren/RecipeRender.js";
 import FamilySelector from "./KitchenChildren/FamilySelector.js";
 import RecipePlanSelector from "./KitchenChildren/RecipePlanSelector.js";
 import WeeklyPlan from "./KitchenChildren/WeeklyPlan.js";
-
 
 // Props -----------------------
 export default function Kitchen({
@@ -14,40 +12,41 @@ export default function Kitchen({
   handleFamilySize,
   familySize,
   handlePlanChange,
-  plan, 
-  recipes, 
-  setWeeklyRecipeArray
+  plan,
+  recipes,
+  setWeeklyRecipeArray,
 }) {
   // Render components -----------------
 
-
- 
-  
-
   return (
     <>
-      <h1 className="titleHeader">Recipes</h1>
-      <p>Your week</p>
-      <div className="Orange">
-      <RecipePlanSelector handlePlanChange={handlePlanChange} plan={plan} />
-      <div>
-        <FamilySelector handleFamilySize={handleFamilySize} />
-      </div>
-        <DaySelector
-          dayRecipe={dayRecipe}
-          handleRecipeChange={handleRecipeChange}
-        />
-      </div>
-      
-      <div className="recipeRender">
-        <div className="recipeContent">
-          <RecipeRender dayRecipe={dayRecipe} familySize={familySize}/>
-          <WeeklyPlan plan={plan} recipes={recipes} setWeeklyRecipeArray={setWeeklyRecipeArray}/>
+      <div className="Kitchen-Container">
+        <div className="Kitchen-Title-Container">
+          <h2 className="Kitchen-Title">Your Kitchen, your recipes...</h2>
         </div>
+        <div className="Kitchen-Household-And-Plan-Container">
+          <RecipePlanSelector handlePlanChange={handlePlanChange} plan={plan} />
+          <div className="Kitchen-Household-Container">
+            <FamilySelector handleFamilySize={handleFamilySize} />
+          </div>
+          </div>
+          
+            <DaySelector
+              dayRecipe={dayRecipe}
+              handleRecipeChange={handleRecipeChange}
+            />
+          
+        
+
+        
+          <RecipeRender dayRecipe={dayRecipe} familySize={familySize} />
+          <WeeklyPlan
+            plan={plan}
+            recipes={recipes}
+            setWeeklyRecipeArray={setWeeklyRecipeArray}
+          />
+        
       </div>
-      {/* <footer>
-        <img src={fruitPicture} alt="fruit" className="WalletPageImg" />
-      </footer> */}
     </>
   );
 }
