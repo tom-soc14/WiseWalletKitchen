@@ -4,11 +4,11 @@ import Kitchen from '../Kitchen/Kitchen';
 import { test, expect } from "@jest/globals";
 import { MemoryRouter, Route } from "react-router-dom";
 
-// test('renders learn react link', () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/Wallet/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
+
+
+  // ----------- Home page Component Tests
+
+
 
 test("renders <h1> title on home page", () => {
   render(
@@ -50,6 +50,10 @@ test("Does image carousel render on the HomePage", () => {
 })
 
 
+  // ----------- Kitchen Component Tests
+
+
+
 test("Does the Kitchen component render?", () => {
   render(
     <MemoryRouter initialEntries={["/kitchen"]}>
@@ -89,3 +93,44 @@ test("Does the day selector render?", () => {
     const recipeplanselectortest = screen.getByTestId("recipeplanselectortest")
     expect(recipeplanselectortest).toBeInTheDocument();
   })
+
+  test("Does the recipe information render?", () => {
+    render(
+      <MemoryRouter initialEntries={["/kitchen"]}>
+        <App />
+      </MemoryRouter>
+    );
+    const recipeRenderTest = screen.getByText("Choose your plan and day...");
+    expect(recipeRenderTest).toBeInTheDocument();
+  })
+
+  // ----------- Login Component Tests
+
+// We need a way to be able to target the Auth component or test this some other way 
+
+  // test("Does the login page render?", () => {
+  //   render(
+  //     <MemoryRouter initialEntries={["/login"]}>
+  //       <App />
+  //     </MemoryRouter>
+  //   );
+  //     const loginRenderTest = screen.
+  //     expect(loginRenderTest).toBeInTheDocument();
+  // })
+
+
+
+
+    // ----------- Wallet Component Tests
+
+
+    test("Does the Wallet page render?", () => {
+      render(
+        <MemoryRouter initialEntries={["/wallet"]}>
+            <App />
+        </MemoryRouter>
+      );
+      const WalletRenderTest = screen.getByTestId("walletTest");
+      expect(WalletRenderTest).toBeInTheDocument();
+
+    })
