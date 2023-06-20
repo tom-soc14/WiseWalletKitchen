@@ -69,3 +69,23 @@ test("Does the day selector render?", () => {
     const daySelectorComponent = screen.getByTestId("daySelectorComponentTest");
     expect(daySelectorComponent).toBeInTheDocument();
   })
+
+  test("Does family selector buttons render?", () => {
+    render(
+      <MemoryRouter initialEntries={["/kitchen"]}>
+        <App />
+      </MemoryRouter>
+    );
+    const familyselectortest = screen.getByTestId("familyselectortest")
+    expect(familyselectortest).toBeInTheDocument();
+  })
+
+  test("Does recipe plan selector buttons render?", () => {
+    render(
+      <MemoryRouter initialEntries={["/kitchen"]}>
+        <App />
+      </MemoryRouter>
+    );
+    const recipeplanselectortest = screen.getByTestId("recipeplanselectortest")
+    expect(recipeplanselectortest).toBeInTheDocument();
+  })
