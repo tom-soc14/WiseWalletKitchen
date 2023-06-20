@@ -11,7 +11,7 @@ if (dayRecipe === null) {
 
   // Render recipe data -------------------
   return (
-    <>
+    <div data-testid="recipeRenderTest">
 
     <div className="recipeContent">
       {dayRecipe && (
@@ -63,7 +63,7 @@ if (dayRecipe === null) {
   
        <p></p>
     </div>
-    </>
+    </div>
   );
 }
 }

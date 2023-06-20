@@ -20,7 +20,7 @@ const HomePageImageCarousel = ({ image, handlePreviousImage, handleNextImage }) 
   
 
   return (
-    <div className={`carousel ${isActive ? "active" : ""}`}>
+    <div data-testid="imagecarouseltest" className={`carousel ${isActive ? "active" : ""}`}>
       <div className="carousel-image">
         <img src={image.src} alt="Carousel" />
           <div className="carousel-buttons">

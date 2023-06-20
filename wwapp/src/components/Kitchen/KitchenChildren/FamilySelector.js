@@ -7,8 +7,7 @@ export default function FamilySelector({ handleFamilySize }) {
     { id: "3", name: "4" },
   ];
   return (
-    <>
-      <div>
+      <div data-testid="familyselectortest">
         <h3>Choose you family size:</h3>
         {size.map((size) => (
           <button
@@ -21,6 +20,5 @@ export default function FamilySelector({ handleFamilySize }) {
           </button>
         ))}
       </div>
-    </>
   );
 }

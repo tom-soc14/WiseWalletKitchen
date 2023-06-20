@@ -5,8 +5,7 @@ export default function PlanSelector({ handlePlanChange }) {
     { id: "Premium", name: "Premium" },
   ];
   return (
-    <>
-      <div>
+      <div data-testid = "planSelectorTest">
         {plan.map((plan) => (
           <button
             key={plan.id}
@@ -18,6 +17,5 @@ export default function PlanSelector({ handlePlanChange }) {
           </button>
         ))}
       </div>
-    </>
   );
 }

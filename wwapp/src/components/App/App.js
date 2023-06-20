@@ -17,7 +17,7 @@ export default function App() {
   const [familySize, setFamilySize] = useState(3);
   const [plan, setPlan] = useState("Saver");
   const [walletData, setWalletData] = useState(null);
-  const [weeklyRecipeArray, setWeeklyRecipeArray] = useState([])
+  const [weeklyRecipeArray, setWeeklyRecipeArray] = useState([]);
   const [dayRecipe, setDayRecipe] = useState(null);
 
   // let recipes=[];
@@ -46,7 +46,6 @@ export default function App() {
       } else {
         setRecipes(data);
         setWalletData(data);
-        
       }
     } catch (error) {
       console.error("Error fetching recipes:", error);
@@ -57,6 +56,7 @@ export default function App() {
   // useEffects --------------
   useEffect(() => {
     fetchRecipes();
+    //eslint-disable-next-line
   }, []);
 
   useEffect(() => {}, [familySize]);
@@ -79,9 +79,8 @@ export default function App() {
   // render components
   return (
     <div className="App">
-      
-      <NavBar />
-     
+      <NavBar  />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />

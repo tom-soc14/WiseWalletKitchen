@@ -1,4 +1,4 @@
-import fruitPicture from "../Wallet/fruitPicture.jpg";
+// import fruitPicture from "../Wallet/fruitPicture.jpg";
 import "./Kitchen.css";
 import DaySelector from "./KitchenChildren/DaySelector.js";
 import RecipeRender from "./KitchenChildren/RecipeRender.js";
@@ -25,7 +25,7 @@ export default function Kitchen({
   
 
   return (
-    <>
+    <div data-testid="kitchenComponentTest">
       <h1 className="titleHeader">Recipes</h1>
       <p>Your week</p>
       <div className="Orange">
@@ -48,6 +48,6 @@ export default function Kitchen({
       {/* <footer>
         <img src={fruitPicture} alt="fruit" className="WalletPageImg" />
       </footer> */}
-    </>
+    </div>
   );
 }

@@ -5,8 +5,7 @@ export default function RecipePlanSelector({ handlePlanChange }) {
     { id: "Premium", name: "Premium" },
   ];
   return (
-    <>
-      <div>
+      <div data-testid="recipeplanselectortest">
         {plan.map((plan) => (
           <button
             key={plan.id}
@@ -18,6 +17,5 @@ export default function RecipePlanSelector({ handlePlanChange }) {
           </button>
         ))}
       </div>
-    </>
   );
 }
