@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
-import {test, expect} from "@jest/globals";
-import { MemoryRouter } from 'react-router-dom';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import { test, expect } from "@jest/globals";
+import { MemoryRouter } from "react-router-dom";
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -9,25 +9,41 @@ import { MemoryRouter } from 'react-router-dom';
 //   expect(linkElement).toBeInTheDocument();
 // });
 
-
-
-test('renders <h1> title on home page', () => {
+test("renders <h1> title on home page", () => {
   render(
-    <MemoryRouter initalEntries={['/']}>
-        <App />
-   </MemoryRouter>
+    <MemoryRouter initalEntries={["/"]}>
+      <App />
+    </MemoryRouter>
   );
   const titleElement = screen.getByText("Welcome to Wise Wallet Kitchen");
   expect(titleElement).toBeInTheDocument();
 });
 
-test('Sign up button on Home Page', () => {
+test("Sign up button on Home Page", () => {
   render(
-    <MemoryRouter initalEntries={['/']}>
-        <App />
-   </MemoryRouter>
+    <MemoryRouter initalEntries={["/"]}>
+      <App />
+    </MemoryRouter>
   );
-  const signUpButton = screen.getByTestId('signUpBtn');
+  const signUpButton = screen.getByTestId("signUpBtn");
   expect(signUpButton).toBeInTheDocument();
 });
 
+test("Does the Navbar render on the HomePage", () => {
+  render(
+    <MemoryRouter initialEntries={["/"]}>
+      <App />
+    </MemoryRouter>
+  );
+  const navbarrender = screen.getByTestId("navbartest");
+  expect(navbarrender).toBeInTheDocument();
+});
+
+test("Does image carousel render on the HomePage", () => {
+  render(
+    <MemoryRouter initialEntries={["/"]}>
+      <App />
+    </MemoryRouter>
+  ); const imagecarousel = screen.getByTestId("imagecarouseltest");
+  expect(imagecarousel).toBeInTheDocument();
+})
