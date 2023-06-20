@@ -1,7 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
+import Kitchen from '../Kitchen/Kitchen';
 import { test, expect } from "@jest/globals";
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter, Route } from "react-router-dom";
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -47,3 +48,24 @@ test("Does image carousel render on the HomePage", () => {
   ); const imagecarousel = screen.getByTestId("imagecarouseltest");
   expect(imagecarousel).toBeInTheDocument();
 })
+
+
+test("Does the Kitchen component render?", () => {
+  render(
+    <MemoryRouter initialEntries={["/kitchen"]}>
+      <App />
+    </MemoryRouter>
+  );
+  const kitchenComponent = screen.getByTestId("kitchenComponentTest");
+  expect(kitchenComponent).toBeInTheDocument();
+})
+
+test("Does the day selector render?", () => {
+  render(
+    <MemoryRouter initialEntries={["/kitchen"]}>
+      <App />
+    </MemoryRouter>
+  );
+    const daySelectorComponent = screen.getByTestId("daySelectorComponentTest");
+    expect(daySelectorComponent).toBeInTheDocument();
+  })

@@ -12,8 +12,8 @@ export default function DaySelector({ handleRecipeChange }) {
 
   // Renders the button Mon to Fri
   return (
-    <>
-      <div className="Orange">
+    <div data-testid="daySelectorComponentTest">
+      <div  className="Orange">
         <h3>Choose you day of the week</h3>
         {days.map((day) => (
           <button
@@ -26,6 +26,6 @@ export default function DaySelector({ handleRecipeChange }) {
           </button>
         ))}
       </div>
-    </>
+    </div>
   );
 }
