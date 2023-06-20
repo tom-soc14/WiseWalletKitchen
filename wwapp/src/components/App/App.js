@@ -57,6 +57,7 @@ export default function App() {
   // useEffects --------------
   useEffect(() => {
     fetchRecipes();
+     //eslint-disable-next-line
 }, [] );
 
   useEffect(() => {}, [familySize]);
