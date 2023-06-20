@@ -12,7 +12,7 @@ export default function PlanSelector({ handlePlanChange }) {
             key={plan.id}
             data-id={plan.id}
             onClick={(e) => handlePlanChange(e.target.dataset.id)}
-            className="Button"
+            className="Button wallet-plan-button"
           >
             {plan.name}
           </button>

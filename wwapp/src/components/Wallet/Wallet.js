@@ -45,30 +45,30 @@ export default function Wallet({
       <h1 className="WalletPageTitle">Savings</h1>
       <div className="WalletPageInfoBox">
         <div className="WalletPageInfoContents">
-          <h1>Enter your budget:</h1>
+          <h1 className="wallet-info-text">Enter your budget:</h1>
           <BudgetInput handleInputChange={handleInputChange} />
-          <h2>Your budget is £{budget}</h2>
+          <h2 className="wallet-info-text">Your budget is £{budget}</h2>
           <PlanSelector handlePlanChange={handlePlanChange} />
 
-          <h3>Your plan is {plan}</h3>
+          <h3 className="wallet-info-text">Your plan is {plan}</h3>
           
           <WalletFamilySelector handleFamilySize={handleFamilySize} />
           
-          <h2>Weekly Cost of Plan £{cost}</h2>
-          <h2>This week you will save: £{savings}</h2>
-          <h5>*Compared to the National Average</h5>
+          <h2 className="wallet-info-text">Weekly Cost of Plan £{cost}</h2>
+          <h2 className="wallet-info-text">This week you will save: £{savings}</h2>
+          <h5 className="wallet-info-text">*Compared to the National Average</h5>
 
         </div>
 
         {/* display graph component */}
 
-        <div className="WalletPageInfoGraph">
+        {/* <div className="WalletPageInfoGraph"> */}
           <Graph
             cost={cost}
             averageWeeklySpend={averageWeeklySpend}
             calculateWeeklySavings={calculateWeeklySavings}
           />
-        </div>
+        {/* </div> */}
       </div>
     
       <WeeklyCostCalculator
