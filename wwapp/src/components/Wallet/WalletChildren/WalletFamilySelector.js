@@ -7,8 +7,7 @@ export default function WalletFamilySelector({ handleFamilySize }) {
       { id: "3", name: "4" },
     ];
     return (
-      <>
-        <div>
+        <div data-testid="walletFamilySelectorTest">
           <h2>Choose your family size:</h2>
           {size.map((size) => (
             <button
@@ -21,7 +20,6 @@ export default function WalletFamilySelector({ handleFamilySize }) {
             </button>
           ))}
         </div>
-      </>
     );
   }
   

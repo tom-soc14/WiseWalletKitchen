@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { getByRole, render, screen } from "@testing-library/react";
 import App from "./App";
 import Kitchen from '../Kitchen/Kitchen';
 import { test, expect } from "@jest/globals";
@@ -123,6 +123,7 @@ test("Does the day selector render?", () => {
 
     // ----------- Wallet Component Tests
 
+    //These tests are only working because we commented out the graph, this package is somehow causing an issue in testing.
 
     test("Does the Wallet page render?", () => {
       render(
@@ -150,7 +151,7 @@ test("Does the day selector render?", () => {
     //       <App />
     //     </MemoryRouter>
     //   )
-    //   const budgetinputbox = getByType('text')
+    //   const budgetinputbox = getByRole('input');
     //   expect(budgetinputbox).toBeInTheDocument();
     // })
 
@@ -161,5 +162,25 @@ test("Does the day selector render?", () => {
         </MemoryRouter>
       )
         const budget = screen.getByText('Enter your budget:')
-expect(budget).toBeInTheDocument();
+        expect(budget).toBeInTheDocument();
+    })
+
+    test("Does the plan selector render?", () => {
+      render(
+        <MemoryRouter initialEntries={["/wallet"]}>
+          <App />
+        </MemoryRouter>
+      )
+      const planSelector = screen.getByTestId('planSelectorTest');
+      expect(planSelector).toBeInTheDocument();
+    })
+
+    test ("Does the Wallet family selector render?", () => {
+      render(
+        <MemoryRouter initialEntries={["/Wallet"]}>
+          <App />
+        </MemoryRouter>
+      )
+      const familySelector = screen.getByTestId('walletFamilySelectorTest');
+      expect(familySelector).toBeInTheDocument();
     })
