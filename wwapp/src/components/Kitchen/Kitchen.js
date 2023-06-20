@@ -1,4 +1,4 @@
-import fruitPicture from "../Wallet/fruitPicture.jpg";
+// import fruitPicture from "../Wallet/fruitPicture.jpg";
 import "./Kitchen.css";
 import DaySelector from "./KitchenChildren/DaySelector.js";
 import RecipeRender from "./KitchenChildren/RecipeRender.js";
