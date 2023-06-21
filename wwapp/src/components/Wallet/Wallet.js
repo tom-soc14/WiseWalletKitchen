@@ -1,6 +1,6 @@
 import React from "react";
 
-// import Graph from "./WalletChildren/graph.js";
+import Graph from "./WalletChildren/graph.js";
 import PlanSelector from "./WalletChildren/PlanSelector.js";
 import WeeklyCostCalculator from "./WalletChildren/WeeklyCostCalculator.js";
 import WalletFamilySelector from "./WalletChildren/WalletFamilySelector.js";

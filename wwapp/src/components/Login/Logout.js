@@ -1,8 +1,8 @@
 import React from "react";
 import "./Login.css";
-// import { useState, useEffect } from "react";
-// import { createClient } from "@supabase/supabase-js";
-// import { Auth } from "@supabase/auth-ui-react";
+import { useState, useEffect } from "react";
+import { createClient } from "@supabase/supabase-js";
+import { Auth } from "@supabase/auth-ui-react";
 // import { ThemeSupa } from "@supabase/auth-ui-shared";
 import {supabase} from "./Login.js"
 
@@ -17,17 +17,15 @@ export default function Logout() {
       try {
         await supabase.auth.signOut();
         // Perform any additional logic or state updates after successful logout
-        console.log("testing to see if Logout is running!")
+        console.log("Log out was successful...!")
       } catch (error) {
         console.error("Error logging out:", error);
       }
     };
 
+    //NEW - removed button and called function everytime
+    handleLogout()
 
-    return (
-      <div>
-        {/* Your component JSX */}
-        <button onClick={handleLogout}>Log Out</button>
-      </div>
-    );
+
+    return ;
   }
