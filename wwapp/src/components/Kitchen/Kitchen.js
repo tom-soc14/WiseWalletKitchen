@@ -39,10 +39,6 @@ export default function Kitchen({
               dayRecipe={dayRecipe}
               handleRecipeChange={handleRecipeChange}
             />
-          
-        
-
-        
           <RecipeRender dayRecipe={dayRecipe} familySize={familySize} />
           <WeeklyPlan
             plan={plan}
