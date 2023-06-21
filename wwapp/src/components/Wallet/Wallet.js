@@ -61,14 +61,11 @@ export default function Wallet({
         </div>
 
         {/* display graph component */}
-
-        {/* <div className="WalletPageInfoGraph"> */}
           <Graph
             cost={cost}
             averageWeeklySpend={averageWeeklySpend}
             calculateWeeklySavings={calculateWeeklySavings}
           />
-        {/* </div> */}
       </div>
     
       <WeeklyCostCalculator

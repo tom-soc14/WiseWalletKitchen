@@ -406,77 +406,112 @@ color: var(--offWhite)
   margin-right: 1%;
   margin-left: 1%;
   margin-bottom: 20%;
+  margin-top: 5%;
 }
 
 .WalletPageTitle {
 display: flex;
-align-items:center;
+align-self: center;
 justify-content: center;
-height: 150px;
+height: 25%;
+background-color: var(--green);
+color: var(--offWhite);
+font-weight: 500;
+border-radius: 30px;
+width: 50%;
+padding: 0.3%;
 }
 
-.WalletPageTitle > h1 {
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  height: 60px;
-  background-color: var(--green);
-  color: var(--offWhite);
-  border-radius: 30px;
-  width: 50%;
-}
 
 .WalletPageInfoBox {
   background-color: #ffa500;
   display: flex;
-  
-  flex-flow: row wrap;
+  flex-flow:row wrap;
   justify-content: center;
   align-items: center;
-  /* height: 50%;
-  width: 50%; */
+  align-content: stretch;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 106, 0, 0.291);
+}
 
+/*media settings for .WalletPageInfoBox*/
+@media (max-width: 1063px) {
+  .WalletPageInfoBox {
+    display: flex;
+    flex-direction: column !important;
+  }
 }
 
 .canvasjs-chart-canvas {
   display: flex;
   position: relative !important;
-  border: 1px solid #860b0b;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--offWhite) !important;
 }
 
 .graph-container {
+  position: relative;
+  top: 0;
+  bottom: 0;
   display:flex;
   flex:1; 
   align-items: center;
   justify-content: center;
   margin-top: 1%;
+  min-height: 100%;
+  width: 90%;
+  height: 100%;
 }
 .canvasjs-chart-container {
   display: flex;
-  /* width: 90%; */
   margin-bottom: 1%;
-  
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.5%;
+  padding-top: 1.5%;
+  background-color: var(--offWhite);
+  border-radius: 10px;
+  border: 1px solid var(--green);
 }
 
-
+.canvasjs-chart-canvas:first-child {
+  display: flex;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
 /*Make 2nd invisible child of graph not display (so it doesn't create empty space to the right*/
 .canvasjs-chart-canvas:nth-child(2) {
   display:none;
 }
 
-
 .WalletPageInfoContents {
   display: flex;
   flex-direction: column;
   background-color: var(--offWhite);
-  border: 1px solid #860b0b;
+  border: 1px solid var(--green);
   border-radius: 10px;
   font-size: small;
-  width:92.5%;
-  margin-top: 1%;
-  margin-bottom: 1%;  
+  height: 70%;
+  width:50%;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
+/*media settings for .WalletPageInfoContents*/
+@media (max-width: 1063px) {
+  .WalletPageInfoContents {
+    display: flex;
+    width: 80%; 
+  }
+}
+
 .WalletPageInfoContents > h1 {
 }.WalletPageInfoContents > h2 {
 }.WalletPageInfoContents > h3 {
@@ -484,15 +519,29 @@ height: 150px;
 }.WalletPageInfoContents > h4 {
 }.WalletPageInfoContents > h5 {
 }
+
+/*text inside .WalletPageInfoContents*/
 .wallet-info-text {
-  margin-left: 2%;
-  margin-right: 5%;
-  /* margin-bottom: 5%; */
+  text-align: center;
 }
+.wallet-info-text:last-child {
+  text-align: left;
+  margin-left: 5%;
+}
+
 .wallet-budget-input {
   margin-left: 3%;
   margin-bottom: 1%;
   margin-top: none;
+  border-radius: 7px;
+  border: 1px solid var(--green);
+}
+.wallet-budget-input-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
 
 .wallet-plan-button:focus {
@@ -500,22 +549,21 @@ height: 150px;
   color: var(--offWhite);
 }
 
+.wallet-familySize-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wallet-plan-buttons-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .wallet-familySize-button:focus {
   background-color: var(--green);
   color: var(--offWhite);
 }
-
-.Button:visited{
-  background-color: pink;
-}
-.WalletPageInfoGraph {
-  display: flex;
-  flex:1;
-}
-.graphSavingsButton {
-background-color: #494900;
-color: var(--offWhite);
-border-radius: 10px;
-/* padding: 10px; */
-/* margin: 10px; */
+.Button {
+  border: 1px solid #494900a3;
 }

@@ -10,6 +10,7 @@ export default function WalletFamilySelector({ handleFamilySize }) {
       <>
         <div>
           <h2 className="wallet-info-text">Choose your family size:</h2>
+          <div className="wallet-familySize-button-div">
           {size.map((size) => (
             <button
               key={size.id}
@@ -20,6 +21,7 @@ export default function WalletFamilySelector({ handleFamilySize }) {
               {size.name}
             </button>
           ))}
+          </div>
         </div>
       </>
     );

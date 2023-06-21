@@ -1,28 +1,13 @@
 import CanvasJSReact from "@canvasjs/react-charts";
 import "../Wallet.css";
-import { useEffect, useRef } from "react";
 
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 function Graph({cost, averageWeeklySpend, calculateWeeklySavings}) {
 
-  const chartRef = useRef(null);
-
-  useEffect(() => {
-    const updateChartDimensions = () => {
-      if (chartRef.current) {
-        chartRef.current.render();
-      }
-    };
-
-    window.addEventListener("resize", updateChartDimensions);
-    return () => {
-      window.removeEventListener("resize", updateChartDimensions);
-    };
-  }, []);
-
-
   const weeklySavingsOptions = {
+      backgroundColor:  '#ebebd3'
+    ,
     title: {
       text: "Weekly Savings Chart",
     },
@@ -37,21 +22,19 @@ function Graph({cost, averageWeeklySpend, calculateWeeklySavings}) {
           { label: "Weekly Plan", y: cost },
           { label: "Money Saved", y: calculateWeeklySavings },
         ],
-      },
+      }
     ],
+    // maintainAspectRatio: false,
+    // responsive: true
+    
   };
   
   return (
     <div className="graph-container">
-     
         <CanvasJSChart 
-          // options={options}
           options={weeklySavingsOptions}
-          containerProps={{ width: "90vw", height: "80vh", display: "flex", justifyContent: "center", alignItems: "center"}}
-          onRef={(chart) => (chartRef.current = chart)}
-
+          containerProps={{ maxHeight:"500px", width: "90%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center",alignSelf: "center"}}
         />
-
     </div>
   );
 }
