@@ -54,7 +54,7 @@ export default function RecipeRender({ dayRecipe, familySize }) {
               </div>
 
               <div className="Recipe-Price-Container" >
-                <h3>Total Price: £{dayRecipe.RecipePrice[familySize]}</h3>
+                <h3>Total Price: £{dayRecipe.RecipePrice[familySize].toFixed(2)}</h3>
               </div>
             </>
           )}
