@@ -13,12 +13,10 @@ export default function FamilySelector({ handleFamilySize }) {
   return (
     <>
       <div className="recipe-household-container">
-        <div className="recipe-household-text">
-         
-        </div>
+        <div className="recipe-household-text"></div>
         <div className="recipe-household-dropdown-container">
-          <select onChange={handleChange} className="recipe-household-dropdown">
-            <option disabled selected value="">
+          <select onChange={handleChange} className="recipe-household-dropdown" defaultValue="">
+            <option value="" disabled>
               Select household
             </option>
             {size.map((size) => (

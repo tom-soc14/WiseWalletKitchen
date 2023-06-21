@@ -14,9 +14,9 @@ export default function DaySelector({ handleRecipeChange }) {
   return (
     <>
       <div className="day-selector-container">
-      <div className="day-selector-text">
+      {/* <div className="day-selector-text">
         <p>Which day are you cooking...</p>
-        </div>
+        </div> */}
         <div className="day-selector-buttons-container">
         {days.map((day) => (
           <button
