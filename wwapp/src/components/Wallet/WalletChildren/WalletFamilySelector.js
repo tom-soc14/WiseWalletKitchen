@@ -9,17 +9,19 @@ export default function WalletFamilySelector({ handleFamilySize }) {
     return (
       <>
         <div>
-          <h2>Choose your family size:</h2>
+          <h2 className="wallet-info-text">Choose your family size:</h2>
+          <div className="wallet-familySize-button-div">
           {size.map((size) => (
             <button
               key={size.id}
               data-id={size.id}
               onClick={(e) => handleFamilySize(e.target.dataset.id)}
-              className="Button"
+              className="Button wallet-familySize-button"
             >
               {size.name}
             </button>
           ))}
+          </div>
         </div>
       </>
     );

@@ -6,6 +6,8 @@ const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 function Graph({cost, averageWeeklySpend, calculateWeeklySavings}) {
 
   const weeklySavingsOptions = {
+      backgroundColor:  '#ebebd3'
+    ,
     title: {
       text: "Weekly Savings Chart",
     },
@@ -20,24 +22,19 @@ function Graph({cost, averageWeeklySpend, calculateWeeklySavings}) {
           { label: "Weekly Plan", y: cost },
           { label: "Money Saved", y: calculateWeeklySavings },
         ],
-      },
+      }
     ],
+    // maintainAspectRatio: false,
+    // responsive: true
+    
   };
-
+  
   return (
-    <div>
-     
-        <CanvasJSChart
+    <div className="graph-container">
+        <CanvasJSChart 
           options={weeklySavingsOptions}
-          containerProps={{ width: "100%", height: "100%" }}
+          containerProps={{ maxHeight:"500px", width: "90%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center",alignSelf: "center"}}
         />
-
-      {/* {showLineGraph && (
-        <CanvasJSChart
-          options={0}
-          containerProps={{ width: "100%", height: "100%" }}
-        />
-      )} */}
     </div>
   );
 }
