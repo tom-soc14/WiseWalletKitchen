@@ -8,22 +8,25 @@ import Login from "../Login/Login.js";
 import Wallet from "../Wallet/Wallet.js";
 import NavBar from "../NavBar/NavBar.js";
 import About from "../About/About.js";
-import Footer from "../Footer/Footer.js";
+import Logout from "../Login/Logout.js";
 import { createClient } from "@supabase/supabase-js";
 // import { weeklyPlanRecipes } from "../Kitchen/KitchenChildren/WeeklyPlan.js";
 
 export default function App() {
-  // State ---------------
+  // State ---------------------------------------------------------------------------
   const [recipes, setRecipes] = useState(null);
   const [familySize, setFamilySize] = useState(3);
   const [plan, setPlan] = useState("Saver");
   const [walletData, setWalletData] = useState(null);
   const [weeklyRecipeArray, setWeeklyRecipeArray] = useState([]);
   const [dayRecipe, setDayRecipe] = useState(null);
+  //NEW - Login Access ---------------------------------------------------------------
+  const [logInAccess, setLogInAccess] = useState(false);
 
   // let recipes=[];
 
-  // API -----------------
+  
+  // API -----------------------------------------------------------------------------
   const supabaseUrl = "https://vdwwjhldkqhbmwtszcas.supabase.co";
 
   const supabaseKey =
@@ -51,20 +54,31 @@ export default function App() {
     } catch (error) {
       console.error("Error fetching recipes:", error);
     }
-  };
+  }; 
+
+  //NEW - Login Access ---------------------------------------------------------------
+  // - set boolean statement for navbar rendering logIN ✅
+  // - set boolean statement for navbar rendering logOUT ✅
+  // - call logout func when logout is passed from NavBar ✅
+  // - Console to check logout being called 🔗
+  function handleLogIn() {
+    setLogInAccess(true);
+  }
+  function handleLogOut() {
+    Logout();
+    setLogInAccess(false);
+    console.log("Logout being called.");
+  }
 
   // console.log("Recipes outside function: ", recipes)
-  // useEffects --------------
+  // useEffects ----------------------------------------------------------------------
   useEffect(() => {
     fetchRecipes();
-    //eslint-disable-next-line
   }, []);
-
   useEffect(() => {}, [familySize]);
-
   useEffect(() => {}, [plan]);
 
-  // handleChange ---------------
+  // handleChange --------------------------------------------------------------------
   const handleRecipeChange = (selectedValue) => {
     setDayRecipe(weeklyRecipeArray[selectedValue]);
   };
@@ -77,12 +91,11 @@ export default function App() {
     setPlan(selectedValue);
   };
 
-  // render components
+  // render components ---------------------------------------------------------------
   return (
     <div className="App">
-
-      <NavBar />
-
+      {/* NEW - Hand props down to login: logInAccess=boolean / handleLogOut=function */}
+      <NavBar logInAccess={logInAccess} handleLogOut={handleLogOut} />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -102,7 +115,9 @@ export default function App() {
             />
           }
         />
-        <Route path="/login" element={<Login />} />
+
+        {/* NEW - Hand props down to login so LogIn func can be called above  */}
+        <Route path="/login" element={<Login handleLogIn={handleLogIn} />} />
 
         <Route
           path="/wallet"
@@ -117,7 +132,6 @@ export default function App() {
           }
         />
       </Routes>
-      <Footer />
     </div>
   );
 }
