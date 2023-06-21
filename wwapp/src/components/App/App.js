@@ -82,7 +82,7 @@ export default function App() {
     <div className="App">
       
       <NavBar />
-      <Footer />
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
@@ -116,6 +116,7 @@ export default function App() {
           }
         />
       </Routes>
+      <Footer />
     </div>
   );
 }
