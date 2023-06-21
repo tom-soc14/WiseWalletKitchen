@@ -166,6 +166,27 @@ footer {
   object-position: center; */
 }
 
+/*styling for GitHub links to our profiles*/
+.github-profile {
+  text-decoration: none;
+  color: white;
+}
+
+.inside-footer-container{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.github-links-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* Homepage CSS ------------------------------------------------------------------ */
 .HomePage {
   display: flex;
