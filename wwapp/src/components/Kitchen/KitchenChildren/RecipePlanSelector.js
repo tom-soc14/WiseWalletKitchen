@@ -10,8 +10,8 @@ export default function RecipePlanSelector({ handlePlanChange }) {
   };
 
   return (
-    <>
-      <div className="recipe-plan-selector-container">
+   
+      <div className="recipe-plan-selector-container" data-testid="recipeplanselectortest">
         <div className="recipe-plan-dropdown-container">
           <select onChange={handleChange} className="recipe-plan-dropdown" defaultValue="">
             <option value="" disabled>
@@ -25,6 +25,5 @@ export default function RecipePlanSelector({ handlePlanChange }) {
           </select>
         </div>
       </div>
-    </>
   );
 }

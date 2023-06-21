@@ -12,8 +12,8 @@ export default function DaySelector({ handleRecipeChange }) {
 
   // Renders the button Mon to Fri
   return (
-    <>
-      <div className="day-selector-container">
+  
+      <div className="day-selector-container" data-testid="daySelectorComponentTest">
       {/* <div className="day-selector-text">
         <p>Which day are you cooking...</p>
         </div> */}
@@ -28,8 +28,7 @@ export default function DaySelector({ handleRecipeChange }) {
             {day.name}
           </button>
         ))}
-        </div>
       </div>
-    </>
+   </div>
   );
 }

@@ -19,8 +19,8 @@ export default function RecipeRender({ dayRecipe, familySize }) {
   } else {
     // Render recipe data -------------------
     return (
-      <>
-        <div className="Recipe-Container">
+   
+        <div className="Recipe-Container" data-testid="recipeRenderTest">
           {dayRecipe && (
             <>
             <div className="recipe-name-container">
@@ -53,23 +53,15 @@ export default function RecipeRender({ dayRecipe, familySize }) {
                 })}
               </div>
 
-              <div className="Recipe-Price-Container">
+              <div className="Recipe-Price-Container" >
                 <h3>Total Price: £{dayRecipe.RecipePrice[familySize]}</h3>
               </div>
             </>
           )}
         </div>
-        {/* <div className='ingredientContent'>
-      {dayRecipe && (
-        <>
-{dayRecipe.IngredientUsage.map((ingredient, index)=>{
-  return <p key={index}>{ingredient}</p>
-})}
-</>
-      )}
-      
-    </div> */}
-      </>
+       
+    
     );
   }
 }
+

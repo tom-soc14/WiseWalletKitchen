@@ -1,8 +1,8 @@
 import React from "react";
 import "./Login.css";
-import { useState, useEffect } from "react";
-import { createClient } from "@supabase/supabase-js";
-import { Auth } from "@supabase/auth-ui-react";
+// import { useState, useEffect } from "react";
+// import { createClient } from "@supabase/supabase-js";
+// import { Auth } from "@supabase/auth-ui-react";
 // import { ThemeSupa } from "@supabase/auth-ui-shared";
 import {supabase} from "./Login.js"
 

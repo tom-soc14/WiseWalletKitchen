@@ -6,7 +6,7 @@ function NavBar() {
   //set up path for each component:white_check_mark:
   //add className to each link:white_check_mark:
   return (
-    <div className="NavBar">
+    <div data-testid="navbartest" className="NavBar">
       <div className="Logo">
         <h1>Wise Wallet Kitchen</h1>
         <p>Smart Eating and Savings...</p>

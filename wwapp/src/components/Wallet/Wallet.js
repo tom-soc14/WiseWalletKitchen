@@ -1,13 +1,11 @@
 import React from "react";
 
-
-import Graph from "./WalletChildren/graph.js";
+// import Graph from "./WalletChildren/graph.js";
 import PlanSelector from "./WalletChildren/PlanSelector.js";
 import WeeklyCostCalculator from "./WalletChildren/WeeklyCostCalculator.js";
 import WalletFamilySelector from "./WalletChildren/WalletFamilySelector.js";
 import BudgetInput from "./WalletChildren/BudgetInput.js";
 import { useState } from "react";
-
 
 // render the Wallet page
 export default function Wallet({
@@ -15,7 +13,7 @@ export default function Wallet({
   plan,
   handleFamilySize,
   familySize,
-  walletData
+  walletData,
 }) {
   const [budget, setBudget] = useState(0);
   const [cost, setCost] = useState(0);
@@ -37,12 +35,11 @@ export default function Wallet({
   const savings = budget - cost;
   const calculateWeeklySavings = Math.round(savings * 100) / 100;
 
-
   return (
-    <div className="WalletPage">
+    <div data-testid="walletTest" className="WalletPage">
       {/* <p>{props.weeklyPrice}</p> */}
 
-      <h1 className="WalletPageTitle">Savings</h1>
+      <h1 data-testid="savingstitle" className="WalletPageTitle">Savings</h1>
       <div className="WalletPageInfoBox">
         <div className="WalletPageInfoContents">
           <h1 className="wallet-info-text">Enter your budget:</h1>
@@ -74,7 +71,6 @@ export default function Wallet({
         plan={plan}
         onCostChange={handleCostChange}
       />
-
     </div>
   );
 }

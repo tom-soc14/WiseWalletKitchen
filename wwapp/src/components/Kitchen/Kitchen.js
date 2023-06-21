@@ -1,3 +1,7 @@
+
+
+
+
 import "./Kitchen.css";
 import DaySelector from "./KitchenChildren/DaySelector.js";
 import RecipeRender from "./KitchenChildren/RecipeRender.js";
@@ -19,8 +23,8 @@ export default function Kitchen({
   // Render components -----------------
 
   return (
-    <>
-      <div className="Kitchen-Container">
+    
+      <div className="Kitchen-Container" data-testid="kitchenComponentTest">
         <div className="Kitchen-Title-Container">
           <h2 className="Kitchen-Title">Your Kitchen, your recipes...</h2>
         </div>
@@ -47,6 +51,5 @@ export default function Kitchen({
           />
         
       </div>
-    </>
   );
 }
