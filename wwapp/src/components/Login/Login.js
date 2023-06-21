@@ -30,6 +30,7 @@ export default function Login() {
 
   if (!session) {
     return <Auth supabaseClient={supabase} />;
+    
   } else {
     //TO DO - write a timeout once login that takes you to the Kitchen page
     console.log("testing 2 to see if Login is running!")

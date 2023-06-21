@@ -8,6 +8,7 @@ import Login from "../Login/Login.js";
 import Wallet from "../Wallet/Wallet.js";
 import NavBar from "../NavBar/NavBar.js";
 import About from "../About/About.js";
+import Footer from "../Footer/Footer.js";
 import { createClient } from "@supabase/supabase-js";
 // import { weeklyPlanRecipes } from "../Kitchen/KitchenChildren/WeeklyPlan.js";
 
@@ -79,7 +80,9 @@ export default function App() {
   // render components
   return (
     <div className="App">
-      <NavBar  />
+
+      <NavBar />
+
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -114,6 +117,7 @@ export default function App() {
           }
         />
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,24 +1,32 @@
 export default function FamilySelector({ handleFamilySize }) {
-  // Identify different plan buttons
   const size = [
     { id: "0", name: "1" },
     { id: "1", name: "2" },
     { id: "2", name: "3" },
     { id: "3", name: "4" },
   ];
+
+  const handleChange = (e) => {
+    handleFamilySize(e.target.value);
+  };
+
   return (
-      <div data-testid="familyselectortest">
-        <h3>Choose you family size:</h3>
-        {size.map((size) => (
-          <button
-            key={size.id}
-            data-id={size.id}
-            onClick={(e) => handleFamilySize(e.target.dataset.id)}
-            className="SpanClass"
-          >
-            {size.name}
-          </button>
-        ))}
+  
+      <div className="recipe-household-container" data-testid="familyselectortest">
+        <div className="recipe-household-text"></div>
+        <div className="recipe-household-dropdown-container">
+          <select onChange={handleChange} className="recipe-household-dropdown" defaultValue="">
+            <option value="" disabled>
+              Select household
+            </option>
+            {size.map((size) => (
+              <option key={size.id} value={size.id}>
+                {size.name}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
+     
   );
 }
