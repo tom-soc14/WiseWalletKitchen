@@ -2,8 +2,38 @@
  background-image: url("https://images.pexels.com/photos/5965942/pexels-photo-5965942.jpeg?auto=compress&cs=tinysrgb&w=1600");
 } */
 
+.LoginPage {
+    border-style: solid;
+    border-color: rgb(128, 7, 7);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./LoginPage-Peaches.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.LoginForm {
+    border-style: solid;
+    border-color: black;
+    
+    max-width: 40%;
+
+}
+.c-jTXIoq-jjTuOt-gap-small:nth-child(1)  {
+    display: none;
+background-color: orange;
+}
+.supabase-auth-ui_ui-divider {
+    display: none !important;
+}
+.supabase-auth-ui_ui-container {
+    display: none ;
+}
+
 .supabase-auth-ui_ui-button {
     background-color: white !important;
     width: 50%;
-    
 }
+.supabase-auth-ui_ui-container {
+    display: none;
+    }
