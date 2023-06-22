@@ -6,8 +6,8 @@ html, body, #root, .App {
     height: 100%;
 }
 .LoginPage {
-    border-style: solid;
-    border-color: pink;
+    /* border-style: solid; */
+    /* border-color: pink; */
     display:flex;
     align-items: center;
     justify-content: center;
@@ -35,14 +35,15 @@ html, body, #root, .App {
     border-color: #ffa500 !important;
     border-radius: 20px !important;
     border-width: thin !important;
-    
-    
+    background: #ebebd3 !important;   
 }
-#email, #password > input {
+/* #email, #password > input {
     background: #ebebd3 !important;
-}
-supabase-auth-ui_ui-container > button {
-    background-color: black !important;
+} */
+.supabase-auth-ui_ui-container > button {
+    /* background-color: black !important; */
+    font-weight: 900 !important;
+    text-shadow: 2px 1px 1px #000000;
 }
 .supabase-auth-ui_ui-button {
     border-color: #ffa500 !important;
