@@ -14,7 +14,7 @@ html, body, #root, .App {
     height: 100%;
     /* width: 100%;
     margin: 10%; */
-    font-family: 'Montserrat', sans-serif;
+   
 }
 .LoginForm-image {
     display: flex;
@@ -26,12 +26,43 @@ html, body, #root, .App {
     justify-content: flex-end;
 }
 .LoginForm {
-    border-style: solid;
-    border-color: black;
     max-width: 70%;
     max-height: 40%;
     margin-right: 5%;
+    font-weight: 700 !important;
 }
+#email, #password {
+    border-color: #ffa500 !important;
+    border-radius: 20px !important;
+    border-width: thin !important;
+    
+    
+}
+#email, #password > input {
+    background: #ebebd3 !important;
+}
+supabase-auth-ui_ui-container > button {
+    background-color: black !important;
+}
+.supabase-auth-ui_ui-button {
+    border-color: #ffa500 !important;
+    border-radius: 20px !important;
+    border-width: thin !important;
+    background-color: #7d7d17 !important;
+    color: #ebebd3 !important;
+    font-weight: 500 !important;
+    height: 35px !important;
+}
+/* #password {
+    border-color: #ffa500 !important;
+    border-radius: 20px;
+    border-width: thin;
+}
+.supabase-auth-ui_ui-button {
+    border-color: #ffa500!important;
+    border-radius: 20px !important;
+    border-width: thin;
+} */
 .c-jTXIoq-jjTuOt-gap-small:nth-child(1)  {
     display: none;
 background-color: orange;
@@ -41,11 +72,6 @@ background-color: orange;
 }
 .supabase-auth-ui_ui-container {
     display: none ;
-}
-
-.supabase-auth-ui_ui-button {
-    background-color: white !important;
-    width: 50%;
 }
 .supabase-auth-ui_ui-container {
     display: none;
