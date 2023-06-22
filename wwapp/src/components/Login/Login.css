@@ -14,6 +14,7 @@ html, body, #root, .App {
     height: 100%;
     /* width: 100%;
     margin: 10%; */
+    font-family: 'Montserrat', sans-serif;
 }
 .LoginForm-image {
     display: flex;
@@ -27,8 +28,9 @@ html, body, #root, .App {
 .LoginForm {
     border-style: solid;
     border-color: black;
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 70%;
+    max-height: 40%;
+    margin-right: 5%;
 }
 .c-jTXIoq-jjTuOt-gap-small:nth-child(1)  {
     display: none;
