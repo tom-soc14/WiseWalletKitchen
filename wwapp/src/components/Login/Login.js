@@ -55,7 +55,7 @@ export default function Login({ handleLogIn }) {
   if (!session) {
     return <div className="LoginPage">
     <div className="LoginForm-image">
-    <div>
+    <div className="LoginForm">
       <Auth supabaseClient={supabase} />
       </div>
     </div>

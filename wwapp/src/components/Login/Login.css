@@ -2,22 +2,33 @@
  background-image: url("https://images.pexels.com/photos/5965942/pexels-photo-5965942.jpeg?auto=compress&cs=tinysrgb&w=1600");
 } */
 
+html, body, #root, .App {
+    height: 100%;
+}
 .LoginPage {
     border-style: solid;
-    border-color: rgb(128, 7, 7);
+    border-color: pink;
     display:flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    /* width: 100%;
+    margin: 10%; */
+}
+.LoginForm-image {
+    display: flex;
     background-image: url(./LoginPage-Peaches.jpeg);
     background-size: cover;
     background-position: center;
+    width:90%;
+    height: 90%;
+    justify-content: flex-end;
 }
 .LoginForm {
     border-style: solid;
     border-color: black;
-    
-    max-width: 40%;
-
+    max-width: 50%;
+    max-height: 50%;
 }
 .c-jTXIoq-jjTuOt-gap-small:nth-child(1)  {
     display: none;
