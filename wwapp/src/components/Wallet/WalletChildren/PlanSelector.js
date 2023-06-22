@@ -5,19 +5,18 @@ export default function PlanSelector({ handlePlanChange }) {
     { id: "Premium", name: "Premium" },
   ];
   return (
-    <>
-      <div>
+  
+      <div className="wallet-plan-buttons-div" data-testid = "planSelectorTest">
         {plan.map((plan) => (
           <button
             key={plan.id}
             data-id={plan.id}
             onClick={(e) => handlePlanChange(e.target.dataset.id)}
-            className="Button"
+            className="Button wallet-plan-button"
           >
             {plan.name}
           </button>
         ))}
       </div>
-    </>
   );
 }

@@ -4,20 +4,26 @@ export default function RecipePlanSelector({ handlePlanChange }) {
     { id: "Classic", name: "Classic" },
     { id: "Premium", name: "Premium" },
   ];
+
+  const handleChange = (e) => {
+    handlePlanChange(e.target.value);
+  };
+
   return (
-    <>
-      <div>
-        {plan.map((plan) => (
-          <button
-            key={plan.id}
-            data-id={plan.id}
-            onClick={(e) => handlePlanChange(e.target.dataset.id)}
-            className="SpanClass"
-          >
-            {plan.name}
-          </button>
-        ))}
+   
+      <div className="recipe-plan-selector-container" data-testid="recipeplanselectortest">
+        <div className="recipe-plan-dropdown-container">
+          <select onChange={handleChange} className="recipe-plan-dropdown" defaultValue="">
+            <option value="" disabled>
+              Select plan
+            </option>
+            {plan.map((plan) => (
+              <option key={plan.id} value={plan.id}>
+                {plan.name}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
-    </>
   );
 }

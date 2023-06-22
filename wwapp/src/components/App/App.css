@@ -5,9 +5,6 @@
 - Color (variables)
 */
 
-
-
-
 /* 
 TO DO:
 -Adjust the app NavBar h1 tag logo so text is centered 
@@ -32,7 +29,7 @@ var(--offWhite)
 var(--grey) 
 */
 
-/* Universal Buttons */ 
+/* Universal Buttons */
 .Button {
   background-color: #ffa500;
   padding: 10px;
@@ -40,17 +37,18 @@ var(--grey)
   border-radius: 100%;
 }
 
+/*Universal font*/
+* {
+  font-family: "Roboto";
+}
+
 /* NavBar CSS -------------------------------------------------------------------- */
 .NavBar {
   /* padding: 20px;
   text-align: center;  */
-  height: 100px;
+  height: 7.75vh;
   /* background-color: var(--orange); */
-  background: linear-gradient(
-    to bottom,
-    var(--orange) 0%,
-    #ffa500 100%
-  );
+  background: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,15 +61,16 @@ var(--grey)
   margin-right: 20px;
   /* round the corners of the div box */
   border-radius: 30px;
-  height: 70px;
+  height: 6vh;
   max-width: 50%;
   min-width: 300px;
 }
 .Logo > h1 {
   color: var(--offWhite);
+  font-size: large;
   letter-spacing: 1px;
   font-weight: 300;
-  margin: 0;
+  margin: 2%;
   margin-left: 10px;
 }
 .Logo > p {
@@ -160,10 +159,32 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 15vh;
-    /* Apply stretching and cropping to the image */
-  object-fit: cover;
-  object-position: center;
+  background-color: #494900;
+  height: 6vh;
+  /* Apply stretching and cropping to the image */
+  /* object-fit: scale-down;
+  object-position: center; */
+}
+
+/*styling for GitHub links to our profiles*/
+.github-profile {
+  text-decoration: none;
+  color: white;
+}
+
+.inside-footer-container{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.github-links-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Homepage CSS ------------------------------------------------------------------ */
@@ -173,11 +194,9 @@ footer {
 }
 
 .HomePage-title {
- display: flex;
- justify-content: center;
- font-size: 5vw;
- 
-
+  display: flex;
+  justify-content: center;
+  font-size: 5vw;
 }
 .Link-button-sign-up {
   display: flex;
@@ -190,61 +209,57 @@ footer {
   justify-content: center;
   text-decoration: none;
   margin-bottom: 10%;
-  
 }
 
 .HomePage-button-sign-up {
- text-decoration: none;
+  text-decoration: none;
   background-color: #e57300;
   border-radius: 8px;
   padding: 5px 10px 5px 10px;
-  font-size:x-large;
+  font-size: x-large;
 }
 
 .about-button {
-text-decoration: none;
-border-radius: 8px;
-height: 4vh;
-font-size: larger;
-padding: 5px 10px 5px 10px;
-background-color: var(--green);
-color: var(--offWhite)
+  text-decoration: none;
+  border-radius: 8px;
+  height: 4vh;
+  font-size: larger;
+  padding: 5px 10px 5px 10px;
+  background-color: var(--green);
+  color: var(--offWhite);
 }
 
 /* 
 .HomePage--ImageCarousel {
   /* Needs to place image in the center of the width <<<<<<<< */
-  /* display: flex;
+/* display: flex;
   justify-content: center;
   align-items: center;
-} */ 
+} */
 /* .HomePage--ImageCarousel > img {
   height: 300px;
   width: auto;
   border-radius: 30px;  */
-  /* padding: 2%; */
+/* padding: 2%; */
 /* } */
-
-
-
 
 /* .introText {
   /* Control all fo the text inside */
-  /* display: flex;
+/* display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 } */
 /* .introText > h1 {
   /* this is the title ish */
-  /* margin-left: 0%;
+/* margin-left: 0%;
   font-size: x-large;
   max-width: 70%;
-} */ 
+} */
 /* .introText > p { */
-  /* this is the intron paragraph */
-  /* max-width: 70%;
-} */ 
+/* this is the intron paragraph */
+/* max-width: 70%;
+} */
 
 /* .intro-image {
     display: flex;
@@ -263,12 +278,11 @@ color: var(--offWhite)
   width: 100%;
   position: relative;
   margin-top: 20%;
-
 }
 
 .carousel {
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -287,46 +301,23 @@ color: var(--offWhite)
   margin-right: 1%;
   margin-left: 1%;
   border-radius: 2.5%;
-
 }
 
 .carousel-buttons {
-  position:absolute;
+  position: absolute;
   top: 0; /* Adjust top position as needed */
   left: 0; /* Adjust left position as needed */
   right: 0; /* Adjust right position as needed */
   bottom: 0; /* Adjust bottom position as needed */
-
 }
 
 .carousel-button-previous {
-  position:absolute;
+  position: absolute;
   text-decoration: none;
   top: 43%;
   left: 1%;
   transform: translateY(-50%);
-  z-index:1;
-  background-color:  #9fa5a3a1;
-  border-radius: 50%;
-  color: white;
-  font-size: xx-large;
-  padding: 8px 16px;
-  border: none;
-  cursor: pointer;
-  display: inline-block;
- 
-}
-.carousel-button-previous:hover {
-  background-color: white;
-}
-
-.carousel-button-next {
-  position:absolute;
-  text-decoration: none;
-  top: 43%;
-  right: 1%;
-  transform: translateY(-50%);
-  z-index:1;
+  z-index: 1;
   background-color: #9fa5a3a1;
   border-radius: 50%;
   color: white;
@@ -335,7 +326,26 @@ color: var(--offWhite)
   border: none;
   cursor: pointer;
   display: inline-block;
- 
+}
+.carousel-button-previous:hover {
+  background-color: white;
+}
+
+.carousel-button-next {
+  position: absolute;
+  text-decoration: none;
+  top: 43%;
+  right: 1%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: #9fa5a3a1;
+  border-radius: 50%;
+  color: white;
+  font-size: xx-large;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .carousel-button-next:hover {
@@ -344,7 +354,7 @@ color: var(--offWhite)
 
 .carousel-text {
   background-color: white;
-  color:  black;
+  color: black;
   text-align: center;
   padding: 10px;
   border-radius: 5%;
@@ -365,16 +375,13 @@ color: var(--offWhite)
   }
 }
 
-
-
-
 /* About CSS ------------------------------------------------------------------ */
 .example-images {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;   
+  height: auto;
 }
 .app-examples {
   display: flex;
@@ -385,71 +392,439 @@ color: var(--offWhite)
   width: 100%; */
 }
 
-
 /* LoginPage CSS ----------------------------------------------------------------- */
 
 /* Kitchen CSS ------------------------------------------------------------------- */
+.Kitchen-Container {
+}
 
+.Kitchen-Title-Container {
+ display:flex;
+ justify-content:center;
+}
+
+.Kitchen-Title {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--offWhite);
+  padding-left:3%;
+  padding-right:3%;
+  padding-top:2%;
+  padding-bottom:2%;
+  height: 10%;
+  font-size: large;
+  font-weight: lighter;
+  margin:2%;
+  background-color: var(--green);
+  border-radius: 15%;
+  width:auto;
+ 
+}
+
+
+.Kitchen-Household-And-Plan-Container {
+  background-color:var(--orange);
+  display:flex;
+  justify-content:space-between;
+  padding-left:5%;
+  padding-right:5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+}
+
+.recipe-plan-selector-container{
+display:flex;
+flex-direction:row;
+}
+
+
+
+.recipe-plan-dropdown-container {
+  display:inline-flex;
+  align-items:center;
+  
+ 
+}
+
+.recipe-plan-dropdown {
+  padding:5%;
+  border-radius:5%;
+  display:flex;
+  border:none;
+  align-items:center;
+  justify-content:center;
+  background-color: #EBEBD3;
+  color: #000;
+  height:100%;
+  outline: none;
+  
+  
+  
+}
+
+
+.recipe-household-container {
+  display:flex;
+  
+  
+  }
+  
+ 
+  
+  .recipe-household-dropdown-container {
+    display: inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  .recipe-household-dropdown {
+    padding:5%;
+  border-radius:5%;
+  border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color: #EBEBD3;
+  color: #000;
+  height:100%;
+  outline: none;
+  }
+
+  .recipe-household-dropdown:hover, .dropbtn:focus {
+    /* background-color: var(--green); */
+  }
+
+.day-selector-container{
+  
+background-color: var(--green);
+color: var(--offWhite);
+height:min-content;
+
+}
+
+.day-selector-text{
+display:flex;
+justify-content: center;
+
+}
+.day-selector-buttons-container {
+display: flex;
+justify-content: center;
+height:min-content;
+
+}
+.day-button {
+  display:flex;
+  justify-content:center;
+  background-color: #EBEBD3;
+  padding:2%;
+  margin:1.5%;
+  width:10%;
+  border-radius: 100%;
+}
+
+
+/* .recipe-household-button{ 
+  background-color: #EBEBD3;
+  padding:2%;
+  margin:1.5%;
+  font-size:large;
+  padding:1%;
+  border-radius: 100%;
+  width:25%;
+  height: 25%;
+  width:50%;
+} 
+   */
+
+.kitchen-get-started-container{
+
+}
+
+.kitchen-get-started-text {
+  display:inline-flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.kitchen-get-started-image {
+  display:flex;
+  width:100%;
+  height:auto;
+}
+
+.Recipe-Container {
+  display:flex;
+  flex-direction: column;
+  position:fixed;
+  width:100vw;
+  height:150vh;
+
+}
+
+
+.Recipe-Timings-Container {
+  display:flex;
+  justify-content: space-between;
+ margin-left: 10%;
+ margin-right:10%;
+  font-size:small;
+  height:auto
+}
+
+.Recipe-Timings-Container h4{
+ margin-top:1%;
+ margin-bottom: 1%;
+}
+
+.recipe-name-container {
+  display:flex;
+  justify-content: center;
+  height:fit-content;
+}
+.recipe-name{
+  display:flex;
+  justify-content:center;
+  font-size:large;
+
+}
+
+.recipe-image-container {
+  display: flex;
+  justify-content:center;
+}
+
+.recipe-image {
+  display:flex;
+  justify-content:center;
+  border-radius:5%;
+  margin-right:2%;
+  margin-left:2%;
+  width:96vw;
+  max-width:max-content;
+  height: 25vh;
+  object-fit: cover;
+  
+}
+
+.recipe-ingredients-container {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  padding:none;
+
+}
+
+.recipe-ingredients-container ul {
+  list-style-type:circle;
+  padding: 0;
+  margin: 0; /* Add this line to remove the default margin */
+}
+
+.recipe-ingredients-container li {
+  padding: 0;
+  margin: 0; /* Add this line to remove the default margin */
+  line-height: 1.5; /* Adjust the line height to control the spacing between list items */
+}
+
+.recipe-instructions-container {
+  display:inline-block;
+  padding-left: 4%;
+  padding-right:4%;
+  margin:none;
+  line-height:1;
+}
+
+.recipe-instructions-container h3{
+ margin-top:2.5%;
+ margin-bottom:2.5%;
+}
+
+.recipe-instructions-container p{
+  margin-top:2.5%;
+  margin-bottom:2.5%;
+ }
+
+ .Recipe-Price-Container {
+  display:flex;
+
+ }
 /* Wallet CSS -------------------------------------------------------------------- */
 
 .WalletPage {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 20%;
+  margin-top: 5%;
 }
 
 .WalletPageTitle {
-display: flex;
-align-items:center;
-justify-content: center;
-height: 150px;
-}.WalletPageTitle > h1 {
-  display: flex;
-align-items:center;
-justify-content: center;
-height: 60px;
 
-  background-color: var(--green);
-  color: var(--offWhite);
-  border-radius: 30px;
-  width: 50%;
+display: flex;
+align-self: center;
+justify-content: center;
+height: 25%;
+background-color: var(--green);
+color: var(--offWhite);
+font-weight: 500;
+border-radius: 30px;
+width: 50%;
+padding: 0.3%;
+
 }
+
 
 .WalletPageInfoBox {
   background-color: #ffa500;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  height: 100%;
+  overflow: hidden;
   border-radius: 10px;
-  padding: 10px;
-  margin: 20px;
-  margin-top: 0%;
+  border: 1px solid rgba(255, 106, 0, 0.291);
+}
+
+/*media settings for .WalletPageInfoBox*/
+@media (max-width: 1063px) {
+  .WalletPageInfoBox {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+
+.canvasjs-chart-canvas {
+  display: flex;
+  position: relative !important;
+  width: 100%;
+  height: 100%;
+  background-color: var(--offWhite) !important;
+}
+
+.graph-container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  display:flex;
+  flex:1; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+  min-height: 100%;
+  width: 90%;
+  height: 100%;
+}
+.canvasjs-chart-container {
+  display: flex;
+  margin-bottom: 1%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.5%;
+  padding-top: 1.5%;
+  background-color: var(--offWhite);
+  border-radius: 10px;
+  border: 1px solid var(--green);
+}
+
+.canvasjs-chart-canvas:first-child {
+  display: flex;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+/*Make 2nd invisible child of graph not display (so it doesn't create empty space to the right*/
+.canvasjs-chart-canvas:nth-child(2) {
+  display:none;
 }
 
 .WalletPageInfoContents {
   display: flex;
   flex-direction: column;
   background-color: var(--offWhite);
+  border: 1px solid var(--green);
   border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
   font-size: small;
+  height: 70%;
+  width:50%;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
-.WalletPageInfoContents > h2 {
+/*media settings for .WalletPageInfoContents*/
+@media (max-width: 1063px) {
+  .WalletPageInfoContents {
+    display: flex;
+    width: 80%; 
+  }
+}
 
+
+.WalletPageInfoContents > h1 {
+}.WalletPageInfoContents > h2 {
 }.WalletPageInfoContents > h3 {
   font-weight: bold;
 }.WalletPageInfoContents > h4 {
-
 }.WalletPageInfoContents > h5 {
+}
+
+/*text inside .WalletPageInfoContents*/
+.wallet-info-text {
+  text-align: center;
+}
+.wallet-info-text:last-child {
+  text-align: left;
+  margin-left: 5%;
 
 }
 
-.WalletPageInfoGraph {
+.wallet-budget-input {
+  margin-left: 3%;
+  margin-bottom: 1%;
+  margin-top: none;
+  border-radius: 7px;
+  border: 1px solid var(--green);
+}
+.wallet-budget-input-div {
   display: flex;
-  flex-direction: column;
-  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
-.graphSavingsButton {
-background-color: #494900;
-color: var(--offWhite);
-border-radius: 10px;
-padding: 10px;
-margin: 10px;
+
+
+
+
+.wallet-plan-button:focus {
+  background-color: var(--green);
+  color: var(--offWhite);
+}
+
+.wallet-familySize-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wallet-plan-buttons-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wallet-familySize-button:focus {
+  background-color: var(--green);
+  color: var(--offWhite);
+}
+.Button {
+  border: 1px solid #494900a3;
+
 }
