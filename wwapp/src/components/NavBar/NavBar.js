@@ -1,5 +1,5 @@
-
 import { Link } from "react-router-dom";
+import Owl from './WWK_Logo_Large.png';
 
 function NavBar({logInAccess, handleLogOut}) {
   //add a link for each component in the navbar:white_check_mark:
@@ -14,8 +14,7 @@ function NavBar({logInAccess, handleLogOut}) {
   return (
     <div className="NavBar">
       <div className="Logo">
-        <h1>Wise Wallet Kitchen</h1>
-        <p>Smart Eating and Savings...</p>
+        <img src={Owl} alt="Owl in chefs hat"></img>
       </div>
 
       <div className="DropdownMenu">

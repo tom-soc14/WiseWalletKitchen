@@ -18,6 +18,7 @@ TO DO:
   --lightGreen: #7d7d17;
   --offWhite: #ebebd3;
   --grey: #d9d9d9;
+  --offBlack: ##333333;
 }
 
 /* Color variable key */
@@ -26,7 +27,8 @@ var(--orange)
 var(--green)
 var(--lightGreen)
 var(--offWhite)
-var(--grey) 
+var(--grey)
+var(--offBlack) 
 */
 
 /* Universal Buttons */
@@ -39,7 +41,7 @@ var(--grey)
 
 /*Universal font*/
 * {
-  font-family: "Roboto";
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* NavBar CSS -------------------------------------------------------------------- */
@@ -55,15 +57,10 @@ var(--grey)
 }
 
 .Logo {
-  background-color: var(--green);
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
-  /* round the corners of the div box */
-  border-radius: 30px;
-  height: 6vh;
+  height: 10vh;
   max-width: 50%;
-  min-width: 300px;
 }
 .Logo > h1 {
   color: var(--offWhite);
@@ -117,7 +114,7 @@ var(--grey)
 /* Dropdown menu button */
 .Dropbtn {
   background-color: inherit;
-  color: var(--green);
+  color: var(--offWhite);
   font-size: 70px;
   border: none;
   cursor: pointer;
@@ -194,9 +191,12 @@ footer {
 }
 
 .HomePage-title {
+  color: var(--offBlack);
   display: flex;
   justify-content: center;
   font-size: 5vw;
+  padding: 2%;
+  opacity: 85%;
 }
 .Link-button-sign-up {
   display: flex;
@@ -213,7 +213,7 @@ footer {
 
 .HomePage-button-sign-up {
   text-decoration: none;
-  background-color: #e57300;
+  background-image: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%); 
   border-radius: 8px;
   padding: 5px 10px 5px 10px;
   font-size: x-large;
@@ -277,7 +277,7 @@ footer {
   height: auto;
   width: 100%;
   position: relative;
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 .carousel {
@@ -294,12 +294,12 @@ footer {
 }
 
 .carousel-image img {
-  width: 98%;
+  width: 92%;
   height: auto;
   position: relative;
   display: inline-block;
-  margin-right: 1%;
-  margin-left: 1%;
+  margin-right: 4%;
+  margin-left: 4%;
   border-radius: 2.5%;
 }
 
