@@ -9,7 +9,7 @@ import Wallet from "../Wallet/Wallet.js";
 import NavBar from "../NavBar/NavBar.js";
 import About from "../About/About.js";
 import Logout from "../Login/Logout.js";
-import Footer from "../Footer/Footer.js";
+// import Footer from "../Footer/Footer.js";
 import { createClient } from "@supabase/supabase-js";
 // import { weeklyPlanRecipes } from "../Kitchen/KitchenChildren/WeeklyPlan.js";
 
