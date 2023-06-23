@@ -18,6 +18,7 @@ export default function Wallet({
   const [budget, setBudget] = useState(0);
   const [cost, setCost] = useState(0);
 
+
   // average weekly spend for 1,2,3,4 people
   // source: https://www.nimblefins.co.uk/average-uk-household-cost-food#week
   const averageWeeklySpendArray = [45, 96, 132, 167];
@@ -33,6 +34,9 @@ export default function Wallet({
     setCost(newCost);
   };
   const savings = budget - cost;
+
+ 
+ 
   const calculateWeeklySavings = Math.round(savings * 100) / 100;
 
   return (
@@ -52,7 +56,9 @@ export default function Wallet({
           <WalletFamilySelector handleFamilySize={handleFamilySize} />
           
           <h2 className="wallet-info-text">Weekly Cost of Plan £{cost.toFixed(2)}</h2>
-          <h2 className="wallet-info-text">This week you will save: £{savings.toFixed(2)}</h2>
+          { savings >= 0 ? <h2 className="wallet-info-text">This week you will save: £{savings.toFixed(2)}</h2> : <h2 className="wallet-info-text">This week will cost you: £{savings.toFixed(2)}</h2> }
+          {/* {savedMoney && <h2 className="wallet-info-text">This week you will save: £{savings.toFixed(2)}</h2>} */}
+          {/* {!savedMoney && <h2 className="wallet-info-text">This week will cost you: £{savings.toFixed(2)}</h2>} */}
           <h5 className="wallet-info-text">*Compared to the National Average</h5>
 
         </div>
