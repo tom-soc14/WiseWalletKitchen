@@ -15,7 +15,7 @@ export default function RecipePlanSelector({ handlePlanChange }) {
         <div className="recipe-plan-dropdown-container">
           <select onChange={handleChange} className="recipe-plan-dropdown" defaultValue="">
             <option value="" disabled>
-              Select plan
+              Plan
             </option>
             {plan.map((plan) => (
               <option key={plan.id} value={plan.id}>

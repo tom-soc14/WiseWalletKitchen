@@ -432,30 +432,32 @@ footer {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: var(--offWhite);
+  color: var(--offBlack);
   padding-left:3%;
   padding-right:3%;
   padding-top:2%;
-  padding-bottom:2%;
+  padding-bottom:5%;
   height: 10%;
-  font-size: large;
-  font-weight: lighter;
+  font-size: 5vw;
   margin:2%;
-  background-color: var(--green);
   border-radius: 15%;
   width:auto;
+  opacity:85%;
  
 }
 
 
 .Kitchen-Household-And-Plan-Container {
-  background-color:var(--orange);
+  background: linear-gradient(to bottom, var(--orange) 0%, #FFA500 100%);
   display:flex;
-  justify-content:space-between;
+  justify-content:space-around;
   padding-left:5%;
   padding-right:5%;
   padding-top: 1%;
   padding-bottom: 1%;
+  margin: 10px 10px 10px 10px;
+  border-radius: 20px;
+  height:min-content
 
 }
 
@@ -469,13 +471,14 @@ flex-direction:row;
 .recipe-plan-dropdown-container {
   display:inline-flex;
   align-items:center;
+  height:min-content;
   
  
 }
 
 .recipe-plan-dropdown {
   padding:5%;
-  border-radius:5%;
+  border-radius:5px;
   display:flex;
   border:none;
   align-items:center;
@@ -484,8 +487,7 @@ flex-direction:row;
   color: #000;
   height:100%;
   outline: none;
-  
-  
+  text-align: center;
   
 }
 
@@ -506,7 +508,7 @@ flex-direction:row;
   
   .recipe-household-dropdown {
     padding:5%;
-  border-radius:5%;
+  border-radius:5px;
   border:none;
   display:flex;
   align-items:center;
@@ -515,6 +517,7 @@ flex-direction:row;
   color: #000;
   height:100%;
   outline: none;
+  text-align: center;
   }
 
   .recipe-household-dropdown:hover, .dropbtn:focus {
@@ -523,10 +526,11 @@ flex-direction:row;
 
 .day-selector-container{
   
-background-color: var(--green);
+background-color: var(--lightGreen);
 color: var(--offWhite);
 height:min-content;
-
+margin: 10px 10px 10px 10px;
+border-radius: 30px;
 }
 
 .day-selector-text{
@@ -540,6 +544,7 @@ justify-content: center;
 height:min-content;
 
 }
+
 .day-button {
   display:flex;
   justify-content:center;
