@@ -39,7 +39,7 @@ var(--grey)
 
 /*Universal font*/
 * {
-  font-family: "Roboto";
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* NavBar CSS -------------------------------------------------------------------- */
