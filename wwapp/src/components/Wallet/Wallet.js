@@ -51,8 +51,8 @@ export default function Wallet({
           
           <WalletFamilySelector handleFamilySize={handleFamilySize} />
           
-          <h2 className="wallet-info-text">Weekly Cost of Plan £{cost}</h2>
-          <h2 className="wallet-info-text">This week you will save: £{savings}</h2>
+          <h2 className="wallet-info-text">Weekly Cost of Plan £{cost.toFixed(2)}</h2>
+          <h2 className="wallet-info-text">This week you will save: £{savings.toFixed(2)}</h2>
           <h5 className="wallet-info-text">*Compared to the National Average</h5>
 
         </div>

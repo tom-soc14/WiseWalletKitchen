@@ -53,7 +53,13 @@ export default function Login({ handleLogIn }) {
 
 
   if (!session) {
-    return <Auth supabaseClient={supabase} />;
+    return <div className="LoginPage">
+    <div className="LoginForm-image">
+    <div className="LoginForm">
+      <Auth supabaseClient={supabase} />
+      </div>
+    </div>
+  </div>;
   } else {
     console.log("log in was successful...");
     return (
