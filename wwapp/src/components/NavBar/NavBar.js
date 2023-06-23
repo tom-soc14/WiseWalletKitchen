@@ -14,7 +14,7 @@ function NavBar({logInAccess, handleLogOut}) {
   return (
     <div className="NavBar">
       <Link className="Logo" to="/">
-        <img src={Owl} alt="Owl in chefs hat"></img>
+        <img className="owlImage" src={Owl} alt="Owl in chefs hat"></img>
         </Link>
 
       <div className="DropdownMenu">
