@@ -25,7 +25,6 @@ export default function App() {
 
   // let recipes=[];
 
-  
   // API -----------------------------------------------------------------------------
   const supabaseUrl = "https://vdwwjhldkqhbmwtszcas.supabase.co";
 
@@ -54,7 +53,7 @@ export default function App() {
     } catch (error) {
       console.error("Error fetching recipes:", error);
     }
-  }; 
+  };
 
   //NEW - Login Access ---------------------------------------------------------------
   // - set boolean statement for navbar rendering logIN ✅
@@ -69,11 +68,12 @@ export default function App() {
     setLogInAccess(false);
     console.log("Logout being called.");
   }
-
+  useEffect(() => {}, [logInAccess]);
   // console.log("Recipes outside function: ", recipes)
   // useEffects ----------------------------------------------------------------------
   useEffect(() => {
     fetchRecipes();
+    // eslint-disable-next-line
   }, []);
   useEffect(() => {}, [familySize]);
   useEffect(() => {}, [plan]);

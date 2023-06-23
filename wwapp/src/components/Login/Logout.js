@@ -1,13 +1,13 @@
-import { useEffect } from "react";
+
 import "./Login.css";
 // import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { supabase } from "./Login.js";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 
 
 // TO DO - Research the following function, the move into burger menu ??
 export default function Logout() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
