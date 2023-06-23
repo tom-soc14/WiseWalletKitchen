@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import HomePageImageCarousel from "./HomePageImageCarousel.js";
 
+
 const images = [
   {
     id: 0,
     src:
-      "https://images.pexels.com/photos/264529/pexels-photo-264529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6995201/pexels-photo-6995201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     text:
       "The cost of of living is impacting us all",
   },
@@ -16,12 +17,12 @@ const images = [
     },
     {
       id: 2,
-    src: 'https://images.pexels.com/photos/4047288/pexels-photo-4047288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    src: 'https://images.pexels.com/photos/732444/pexels-photo-732444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         text: 'Making the right choice is key to saving',
     },
     {
       id: 3,
-    src: 'https://images.pexels.com/photos/4049869/pexels-photo-4049869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    src: 'https://images.pexels.com/photos/4047288/pexels-photo-4047288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     text: 'Our App is designed to help you make that choice',
     },
     {

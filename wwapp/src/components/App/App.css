@@ -93,16 +93,7 @@ var(--offBlack)
   }
 }
 
-/* Dropdown menu button */
-.Dropbtn {
-  background-color: inherit;
-  color: 494900;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  float: right; /* align the button to the right */
-  margin-right: 20px; /* add some margin to the right */
-}
+
 /* Dropdown menu content */
 .DropdownContent {
   background-color: #939601;
@@ -137,6 +128,23 @@ var(--offBlack)
   /* add some margin to the right */
   margin-right: 20px;
 }
+
+@media (max-width: 415px)   {
+  .Dropbtn {
+    background-color: inherit;
+    color: var(--offWhite);
+    font-size: 5vh;
+    border: none;
+    cursor: pointer;
+    /* align the button to the right */
+    float: right;
+    /* add some margin to the right */
+    margin-right: 20px;
+    }
+  }
+  
+
+
 /* Dropdown menu content */
 .DropdownContent {
   display: none;

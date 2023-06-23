@@ -17,7 +17,9 @@ function NavBar({logInAccess, handleLogOut}) {
         <img className="owlImage" src={Owl} alt="Owl in chefs hat"></img>
         </Link>
 
+
       <div className="DropdownMenu">
+      {/* &#9776; code is for the burger menu icon */}
         <button className="Dropbtn"> &#9776;</button>
         <div className="DropdownContent">
 
