@@ -29,8 +29,8 @@ export default function App() {
   // API -----------------------------------------------------------------------------
   const supabaseUrl = "https://vdwwjhldkqhbmwtszcas.supabase.co";
 
-  const supabaseKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZkd3dqaGxka3FoYm13dHN6Y2FzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODYxNTA4MjYsImV4cCI6MjAwMTcyNjgyNn0.5ATbh7xJDjVK57XPGsJmkwxps0fV0iyoOCRvUU2VMlc";
+  const supabaseKey = process.env.REACT_APP_DB_KEY;
+
   const supabase = createClient(supabaseUrl, supabaseKey);
 
   const fetchRecipes = async () => {
