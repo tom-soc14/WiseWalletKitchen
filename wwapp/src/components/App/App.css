@@ -496,7 +496,7 @@ flex-direction:row;
 
   
   .recipe-household-dropdown {
-    padding:5%;
+  padding:5%;
   border-radius:5px;
   border:none;
   display: flex;
@@ -534,18 +534,21 @@ height:min-content;
 
 }
 
-.day-button {
+ .day-button {
   display:flex;
   justify-content:center;
-  background-color: #EBEBD3;
+  background-color:var(--offWhite);
   padding:2%;
-  margin:1.5%;
-  width:10%;
+  margin:1%;
   border-radius: 100%;
-}
+  width:10%;
+  font-size: 1.75vh;
+  color: var(--offBlack);
+  border: 1px solid var(--offBlack);
+} 
 
 
-/* .recipe-household-button{ 
+.recipe-household-button{ 
   background-color: #EBEBD3;
   padding:2%;
   margin:1.5%;
@@ -556,7 +559,7 @@ height:min-content;
   height: 25%;
   width:50%;
 } 
-   */
+  
 
 .kitchen-get-started-container{
 
