@@ -13,22 +13,22 @@ export default function DaySelector({ handleRecipeChange }) {
   // Renders the button Mon to Fri
   return (
   
-      <div className="day-selector-container" data-testid="daySelectorComponentTest">
-      {/* <div className="day-selector-text">
-        <p>Which day are you cooking...</p>
-        </div> */}
-        <div className="day-selector-buttons-container">
-        {days.map((day) => (
-          <button
-            key={day.id}
-            data-id={day.id}
-            onClick={(e) => handleRecipeChange(e.target.dataset.id)}
-            className="day-button"
+  
+
+        <div className="day-selector-buttons-container" data-testid="daySelectorComponentTest">
+
+         {days.map((day) => (
+            <button
+              key={day.id}
+              data-id={day.id}
+              onClick={(e) => handleRecipeChange(e.target.dataset.id)}
+              className="day-button"
           >
-            {day.name}
+            {day.name}  
           </button>
         ))}
+
       </div>
-   </div>
+
   );
 }

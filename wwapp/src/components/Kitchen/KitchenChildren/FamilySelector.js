@@ -14,11 +14,9 @@ export default function FamilySelector({ handleFamilySize }) {
   
       <div data-testid="familyselectortest">
 
-          <select onChange={handleChange} className="recipe-household-dropdown" defaultValue="">
-          
-            <option value="" disabled>
-              Household
-            </option>
+          <select onChange={handleChange} className="recipe-plan-dropdown" defaultValue="">
+
+            <option value="" disabled>Household</option>
               {size.map((size) => (
                <option key={size.id} value={size.id}>
                  {size.name}

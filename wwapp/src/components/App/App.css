@@ -212,7 +212,7 @@ footer {
   flex-direction: column;
 }
 
-.HomePage-title {
+.Generic-Title {
   color: var(--offBlack);
   display: flex;
   justify-content: center;
@@ -420,31 +420,13 @@ footer {
 /* LoginPage CSS ----------------------------------------------------------------- */
 
 /* Kitchen CSS ------------------------------------------------------------------- */
-.Kitchen-Container {
-}
+
 
 .Kitchen-Title-Container {
  display:flex;
  justify-content:center;
 }
 
-.Kitchen-Title {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--offBlack);
-  padding-left:3%;
-  padding-right:3%;
-  padding-top:2%;
-  padding-bottom:5%;
-  height: 10%;
-  font-size: 5vw;
-  margin:2%;
-  border-radius: 15%;
-  width:auto;
-  opacity:85%;
- 
-}
 
 
 .Kitchen-Household-And-Plan-Container {
@@ -462,39 +444,9 @@ footer {
 }
 
 .recipe-plan-dropdown {
-  /* padding:5%;
-  border-radius:5px;
-  display:flex;
-  border:none;
-  align-items:center;
-  justify-content:center;
-  background-color: #EBEBD3;
-  color: #000;
-  height:100%;
-  outline: none;
-  text-align: center; */
-
-  display:flex;
-  justify-content:center;
-  background-color:var(--offWhite);
-  padding:2%;
-  margin:2%;
-  font-size: 1.5vh;
-  color: var(--offBlack);
+  padding:8%;
   border-radius:5px;
   border: none;
-  text-align: center;
-  
-}
-
-
- 
-
-  
-  .recipe-household-dropdown {
-  padding:5%;
-  border-radius:5px;
-  border:none;
   display: flex;
   align-items:center;
   justify-content:center;
@@ -503,31 +455,46 @@ footer {
   height:100%;
   outline: none;
   text-align: center;
+  font-size: 2.75vh;
+ 
   }
+
+  @media (max-width: 415px) {
+  .recipe-plan-dropdown {
+  padding:2%;
+  border-radius:5px;
+  border: none;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  background-color: #EBEBD3;
+  color: #000;
+  height:100%;
+  outline: none;
+  text-align: center;
+  font-size: 1.65vh;
+
+  }
+}
+
+
 
   .recipe-household-dropdown:hover, .dropbtn:focus {
     /* background-color: var(--green); */
   }
 
-.day-selector-container{
-  
-background-color: var(--lightGreen);
-color: var(--offWhite);
-height:min-content;
-margin: 10px 10px 10px 10px;
-border-radius: 30px;
-}
 
-.day-selector-text{
-display:flex;
-justify-content: center;
 
-}
 .day-selector-buttons-container {
-display: flex;
-justify-content: center;
-height:min-content;
-
+  background-color: var(--lightGreen);
+  color: var(--offWhite);
+  display: flex;
+  justify-content: center;
+  height:min-content;
+  height:min-content;
+  margin: 10px 10px 10px 10px;
+  border-radius: 30px;
+  
 }
 
  .day-button {
@@ -568,9 +535,12 @@ height:min-content;
 }
 
 .kitchen-get-started-image {
-  display:flex;
-  width:100%;
-  height:auto;
+  width: 92%;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  margin: 4%;
+  border-radius: 2.5%;
 }
 
 .Recipe-Container {
