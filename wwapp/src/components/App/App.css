@@ -468,13 +468,13 @@ flex-direction:row;
 
 
 
-.recipe-plan-dropdown-container {
+/* .recipe-plan-dropdown-container {
   display:inline-flex;
   align-items:center;
   height:min-content;
   
  
-}
+} */
 
 .recipe-plan-dropdown {
   padding:5%;
@@ -492,25 +492,14 @@ flex-direction:row;
 }
 
 
-.recipe-household-container {
-  display:flex;
-  
-  
-  }
-  
  
-  
-  .recipe-household-dropdown-container {
-    display: inline-flex;
-    align-items:center;
-    justify-content:center;
-  }
+
   
   .recipe-household-dropdown {
     padding:5%;
   border-radius:5px;
   border:none;
-  display:flex;
+  display: flex;
   align-items:center;
   justify-content:center;
   background-color: #EBEBD3;
