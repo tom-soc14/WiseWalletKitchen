@@ -174,7 +174,7 @@ var(--offBlack)
 
 footer {
   /* Set the image as the footer of the entire screen */
-  position: fixed;
+ 
   bottom: 0;
   left: 0;
   width: 100%;
