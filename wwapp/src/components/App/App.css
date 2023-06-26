@@ -479,13 +479,6 @@ footer {
 }
 
 
-
-  .recipe-household-dropdown:hover, .dropbtn:focus {
-    /* background-color: var(--green); */
-  }
-
-
-
 .day-selector-buttons-container {
   background-color: var(--lightGreen);
   color: var(--offWhite);
@@ -523,11 +516,6 @@ footer {
   height: 25%;
   width:50%;
 } 
-  
-
-.kitchen-get-started-container{
-
-}
 
 .kitchen-get-started-text {
   display:inline-flex;
@@ -757,13 +745,8 @@ padding: 0.3%;
   }
 }
 
-
-.WalletPageInfoContents > h1 {
-}.WalletPageInfoContents > h2 {
-}.WalletPageInfoContents > h3 {
+.WalletPageInfoContents > h3 {
   font-weight: bold;
-}.WalletPageInfoContents > h4 {
-}.WalletPageInfoContents > h5 {
 }
 
 /*text inside .WalletPageInfoContents*/
