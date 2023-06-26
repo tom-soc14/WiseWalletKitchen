@@ -172,21 +172,50 @@ var(--offBlack)
 
 /* Footer CSS ------------------------------------------------------------------ */
 
-footer {
+.footer-container {
   /* Set the image as the footer of the entire screen */
  
-  bottom: 0;
-  left: 0;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  background-color: #494900;
-  height: 6vh;
-  /* Apply stretching and cropping to the image */
-  /* object-fit: scale-down;
-  object-position: center; */
+  background-color: #d9d9d9;
+  /* background-image: url(../Footer/Footer-Image.jpg); */
+  height: 20%;
+ 
+}
+.footer-content {
+  display: flex;
+  justify-content: space;
+  align-items: center;
+}
+.footer-links {
+  padding: 0%
+}.footer-link-text {
+  
+}
+.owl-image-container {
+background-color: #e57300;
+border-radius: 40%;
+height:70%
+}
+.owl-logo {
+  height: 50px;
+}
+.social-media-icon-box {
+  display:flex;
+  align-items: center;
+  
+  margin-right: 50%;
+  height: 100%;
+}
+.social-media-icon {
+  height: 50%;
+  margin: 5%;
+
 }
 
 /*styling for GitHub links to our profiles*/
-.github-profile {
+/* .github-profile {
   text-decoration: none;
   color: white;
 }
@@ -204,7 +233,7 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
 /* Homepage CSS ------------------------------------------------------------------ */
 .HomePage {

@@ -1,32 +1,34 @@
+import WWK_Logo_Large from '../NavBar/WWK_Logo_Large.png'
 import owlLogo from "./owl-tiny.png";
+import Pinterest_Icon from "./Pinterest_Icon.png";
+import Twitter_Icon from "./Twitter_Icon.png";
+import YouTube_Icon from "./YouTube_Icon.png";
 
 function Footer() {
   return (
     <div className="footer-container">
-      <footer>
-        <div className="footer-content">
-          <div className="owl-image">
-            <img className="owl-logo" src={owlLogo} alt="logo" />
-          </div>
-          <div className="footer-links">
-            <h1>Contact Us</h1>
-            <h1>Our Team</h1>
-          </div>
- <div className="social-media-buttons">
-    <img src="" alt="pinterest button"/>
-
-    <img src="" alt="twitter button" />
-    <img src="" alt="youtube button"/>
- </div>
-          
+      <div className="footer-content">
+    
+        <div className="owl-image-container">
+          <img className="owl-logo" src={WWK_Logo_Large} alt="logo" />
         </div>
-      </footer>
+        <div className="footer-links">
+          <div id="footer-link-text">Contact Us</div>
+          <div id="footer-link-text">Our Team</div>
+        </div>
+      </div>
+        <div className="social-media-icon-box">
+          <img className="social-media-icon" src={Pinterest_Icon} alt="pinterest button" />
+
+          <img className="social-media-icon" src={Twitter_Icon} alt="twitter button" />
+
+          <img className="social-media-icon" src={YouTube_Icon} alt="youtube button" />
+        </div>
     </div>
   );
 }
 
 export default Footer;
-
 
 /* <div className="github-links-container">
             Created by:
