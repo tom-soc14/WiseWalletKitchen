@@ -23,6 +23,7 @@ export default function DaySelector({ handleRecipeChange }) {
               data-id={day.id}
               onClick={(e) => handleRecipeChange(e.target.dataset.id)}
               className="day-button"
+              aria-label="select-which-day-of-the-week"
           >
             {day.name}  
           </button>

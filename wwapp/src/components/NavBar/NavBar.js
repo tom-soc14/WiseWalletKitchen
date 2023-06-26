@@ -20,7 +20,7 @@ function NavBar({logInAccess, handleLogOut}) {
 
       <div className="DropdownMenu">
       {/* &#9776; code is for the burger menu icon */}
-        <button className="Dropbtn"> &#9776;</button>
+        <button className="Dropbtn" aria-label="dropdown-nav-menu"> &#9776;</button>
         <div className="DropdownContent">
 
 {/* NEW - Render conditional statements for login ✅ */}
