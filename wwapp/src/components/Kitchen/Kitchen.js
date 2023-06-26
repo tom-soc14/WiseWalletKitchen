@@ -26,14 +26,16 @@ export default function Kitchen({
     
       <div className="Kitchen-Container" data-testid="kitchenComponentTest">
         <div className="Kitchen-Title-Container">
-          <h2 className="Kitchen-Title">Your Kitchen, your recipes...</h2>
+          <h2 className="Generic-Title">Your Kitchen, your recipes...</h2>
         </div>
+
         <div className="Kitchen-Household-And-Plan-Container">
+
           <RecipePlanSelector handlePlanChange={handlePlanChange} plan={plan} />
-          <div className="Kitchen-Household-Container">
-            <FamilySelector handleFamilySize={handleFamilySize} />
-          </div>
-          </div>
+          
+          <FamilySelector handleFamilySize={handleFamilySize} />
+
+        </div>
           
             <DaySelector
               dayRecipe={dayRecipe}

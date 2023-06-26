@@ -11,6 +11,7 @@ import About from "../About/About.js";
 import Logout from "../Login/Logout.js";
 // import Footer from "../Footer/Footer.js";
 import { createClient } from "@supabase/supabase-js";
+
 // import { weeklyPlanRecipes } from "../Kitchen/KitchenChildren/WeeklyPlan.js";
 
 export default function App() {
@@ -26,13 +27,14 @@ export default function App() {
 
   // let recipes=[];
 
-  
   // API -----------------------------------------------------------------------------
-  const supabaseUrl = "https://vdwwjhldkqhbmwtszcas.supabase.co";
 
-  const supabaseKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZkd3dqaGxka3FoYm13dHN6Y2FzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODYxNTA4MjYsImV4cCI6MjAwMTcyNjgyNn0.5ATbh7xJDjVK57XPGsJmkwxps0fV0iyoOCRvUU2VMlc";
-  const supabase = createClient(supabaseUrl, supabaseKey);
+  const supabaseUrl = process.env.REACT_APP_DB_URL;
+
+  const supabaseKey = process.env.REACT_APP_DB_KEY;  
+  
+   const supabase = createClient(supabaseUrl, supabaseKey);
+
 
   const fetchRecipes = async () => {
     try {
@@ -55,7 +57,7 @@ export default function App() {
     } catch (error) {
       console.error("Error fetching recipes:", error);
     }
-  }; 
+  };
 
   //NEW - Login Access ---------------------------------------------------------------
   // - set boolean statement for navbar rendering logIN ✅
@@ -70,11 +72,12 @@ export default function App() {
     setLogInAccess(false);
     console.log("Logout being called.");
   }
-
+  useEffect(() => {}, [logInAccess]);
   // console.log("Recipes outside function: ", recipes)
   // useEffects ----------------------------------------------------------------------
   useEffect(() => {
     fetchRecipes();
+
     //eslint-disable-next-line
   }, []);
   useEffect(() => {}, [familySize]);
