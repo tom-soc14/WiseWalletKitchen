@@ -218,7 +218,8 @@ footer {
   opacity: 85%;
 }
 
-.Homepage-Title, .Slogan {
+.Homepage-Title,
+.Slogan {
   color: var(--offBlack);
   display: flex;
   justify-content: center;
@@ -253,8 +254,6 @@ footer {
     margin-bottom: 0%;
   }
 }
-
-
 
 .Link-button-sign-up {
   display: flex;
@@ -361,7 +360,7 @@ footer {
   display: inline-block;
   margin-right: 4%;
   margin-left: 4%;
-  border-radius: 2.5%;
+  border-radius: 10px;
 }
 
 .carousel-buttons {
@@ -529,6 +528,22 @@ footer {
   color: var(--offBlack);
   border: 1px solid var(--lightGreen);
   box-shadow: 0 0 4px 0 gray, 0 0 5px 0 gray;
+}
+
+@media (min-width: 800px) {
+  .day-button {
+    display: flex;
+    justify-content: center;
+    background-color: var(--offWhite);
+    padding: 2%;
+    margin: 1%;
+    border-radius: 100%;
+    /* width: 10%; */
+    font-size: 2vh;
+    color: var(--offBlack);
+    border: 1px solid var(--lightGreen);
+    box-shadow: 0 0 4px 0 gray, 0 0 5px 0 gray;
+  }
 }
 
 .day-button:focus {

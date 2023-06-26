@@ -43,7 +43,7 @@ export default function Wallet({
     <div data-testid="walletTest" className="WalletPage">
       {/* <p>{props.weeklyPrice}</p> */}
 
-      <h1 data-testid="savingstitle" className="Generic-Title">Savings</h1>
+      <h1 data-testid="savingstitle" className="Generic-Title">Your Wallet, your savings...</h1>
       <div className="WalletPageInfoBox">
         <div className="WalletPageInfoContents">
           <h1 className="wallet-info-text">Enter your budget:</h1>
