@@ -786,7 +786,7 @@ footer {
 
 
 .wallet-plan-button:focus {
-  background-color: var(--green);
+  background-color: var(--lightGreen);
   color: var(--offWhite);
 }
 
@@ -802,10 +802,10 @@ footer {
   align-items: center;
 }
 .wallet-familySize-button:focus {
-  background-color: var(--green);
+  background-color: var(--lightGreen);
   color: var(--offWhite);
 }
 .Button {
-  border: 1px solid #494900a3;
+  border: 1px solid var(--lightGreen);
 
 }
