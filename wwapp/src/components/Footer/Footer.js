@@ -1,5 +1,4 @@
-import WWK_Logo_Large from '../NavBar/WWK_Logo_Large.png'
-import owlLogo from "./owl-tiny.png";
+import Footer_Owl from "./Footer_Owl.png"
 import Pinterest_Icon from "./Pinterest_Icon.png";
 import Twitter_Icon from "./Twitter_Icon.png";
 import YouTube_Icon from "./YouTube_Icon.png";
@@ -10,19 +9,20 @@ function Footer() {
       <div className="footer-content">
     
         <div className="owl-image-container">
-          <img className="owl-logo" src={WWK_Logo_Large} alt="logo" />
+          <img className="owl-logo" src={Footer_Owl} alt="logo" />
         </div>
         <div className="footer-links">
           <div id="footer-link-text">Contact Us</div>
           <div id="footer-link-text">Our Team</div>
         </div>
-      </div>
+        </div>
         <div className="social-media-icon-box">
           <img className="social-media-icon" src={Pinterest_Icon} alt="pinterest button" />
 
           <img className="social-media-icon" src={Twitter_Icon} alt="twitter button" />
 
           <img className="social-media-icon" src={YouTube_Icon} alt="youtube button" />
+        
         </div>
     </div>
   );

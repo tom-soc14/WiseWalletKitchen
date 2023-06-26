@@ -176,41 +176,67 @@ var(--offBlack)
   /* Set the image as the footer of the entire screen */
  
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
+  bottom: 0;
   background-color: #d9d9d9;
-  /* background-image: url(../Footer/Footer-Image.jpg); */
-  height: 20%;
+  background-image: url(../Footer/Footer-Image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y:10%;
+  /* background-position-x:80%; */
+  height: 15%;
+  margin-bottom: 0;
+  margin-top: 25%;
+ 
  
 }
 .footer-content {
+  margin-right:auto;
   display: flex;
-  justify-content: space;
+  justify-content: space-between;
   align-items: center;
+  padding-left: 2%;
+ 
+  width: 32%;
+
 }
 .footer-links {
-  padding: 0%
-}.footer-link-text {
-  
+font-size: 2.5vw;
 }
+.footer-link-text {
+
+}
+
 .owl-image-container {
+display:flex;
+align-items: center;
+justify-content: center;
 background-color: #e57300;
-border-radius: 40%;
-height:70%
+border-radius: 60%;
+height:70%;
+
+
 }
 .owl-logo {
-  height: 50px;
+  height: 80%;
+ 
 }
 .social-media-icon-box {
   display:flex;
   align-items: center;
-  
-  margin-right: 50%;
+  justify-content:center;
   height: 100%;
+  margin-right: 5%;
+ 
+  
 }
 .social-media-icon {
-  height: 50%;
-  margin: 5%;
+  height: 30%;
+  padding:2%;
+ 
+
+  
 
 }
 
