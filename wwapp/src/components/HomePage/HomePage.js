@@ -9,7 +9,8 @@ function HomePage() {
 
     return (
         <div className="HomePage">
-          <h1 className='Generic-Title'>Welcome to Wise Wallet Kitchen</h1>
+          <h1 className='Homepage-Title'>Wise Wallet Kitchen</h1>
+          <p className='Slogan'>Smart Eating & Savings</p>
 
           <HomePageStoryImages />
      

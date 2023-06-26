@@ -213,10 +213,48 @@ footer {
   color: var(--offBlack);
   display: flex;
   justify-content: center;
-  font-size: 5vw;
+  /* font-size: 5vw; */
   padding: 2%;
   opacity: 85%;
 }
+
+.Homepage-Title, .Slogan {
+  color: var(--offBlack);
+  display: flex;
+  justify-content: center;
+  opacity: 85%;
+  margin-bottom: 0%;
+}
+
+@media (min-width: 956px) {
+  .Generic-Title {
+    color: var(--offBlack);
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+    padding: 2%;
+    opacity: 85%;
+  }
+  .Homepage-Title {
+    color: var(--offBlack);
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+    opacity: 85%;
+    margin-bottom: 0%;
+  }
+
+  .Slogan {
+    color: var(--offBlack);
+    display: flex;
+    justify-content: center;
+    font-size: 2vw;
+    opacity: 85%;
+    margin-bottom: 0%;
+  }
+}
+
+
 
 .Link-button-sign-up {
   display: flex;
@@ -235,7 +273,7 @@ footer {
   text-decoration: none;
   background-image: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%);
   color: var(--offBlack);
-  text-shadow: 1px 1px 1px var(--offBlack);
+  /* text-shadow: 1px 1px 1px var(--offBlack); */
   border-radius: 8px;
   padding: 5px 10px 5px 10px;
   font-size: x-large;
@@ -249,7 +287,7 @@ footer {
   padding: 5px 10px 5px 10px;
   background-color: var(--lightGreen);
   color: var(--grey);
-  text-shadow: 1px 1px 1px var(--grey);
+  /* text-shadow: 1px 1px 1px var(--grey); */
 }
 
 /* 
@@ -452,7 +490,7 @@ footer {
   font-size: 2.75vh;
 }
 
-@media (max-width: 415px) {
+@media (max-width: 956px) {
   .recipe-plan-dropdown {
     padding: 2%;
     border-radius: 5px;
@@ -490,11 +528,17 @@ footer {
   font-size: 1.5vh;
   color: var(--offBlack);
   border: 1px solid var(--lightGreen);
+  box-shadow: 0 0 4px 0 gray, 0 0 5px 0 gray;
 }
 
 .day-button:focus {
   background-color: var(--lightGreen);
   color: var(--offWhite);
+  box-shadow: none;
+}
+
+.day-button:hover {
+  box-shadow: 0 0 8px 0 gray, 0 0 10px 0 gray;
 }
 
 .recipe-household-button {
@@ -555,7 +599,7 @@ footer {
 .recipe-name {
   display: flex;
   justify-content: center;
-  font-size: large;
+  /* font-size: large; */
 }
 
 .recipe-image-container {
@@ -576,7 +620,7 @@ footer {
 }
 
 /* add a media query which keeps the recipe image the same width & height */
-@media (max-width: 415px) {
+@media (max-width: 956px) {
   .recipe-image {
     display: flex;
     justify-content: center;
