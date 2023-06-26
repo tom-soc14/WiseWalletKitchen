@@ -43,7 +43,7 @@ export default function Wallet({
     <div data-testid="walletTest" className="WalletPage">
       {/* <p>{props.weeklyPrice}</p> */}
 
-      <h1 data-testid="savingstitle" className="WalletPageTitle">Savings</h1>
+      <h1 data-testid="savingstitle" className="Generic-Title">Savings</h1>
       <div className="WalletPageInfoBox">
         <div className="WalletPageInfoContents">
           <h1 className="wallet-info-text">Enter your budget:</h1>
@@ -55,11 +55,11 @@ export default function Wallet({
           
           <WalletFamilySelector handleFamilySize={handleFamilySize} />
           
-          <h2 className="wallet-info-text">Weekly Cost of Plan £{cost.toFixed(2)}</h2>
-          { savings >= 0 ? <h2 className="wallet-info-text">This week you will save: £{savings.toFixed(2)}</h2> : <h2 className="wallet-info-text">This week will cost you: £{savings.toFixed(2)}</h2> }
+          <h3 className="wallet-info-text">Weekly Cost of Plan £{cost.toFixed(2)}</h3>
+          { savings >= 0 ? <h3 className="wallet-info-text">This week you will save: £{savings.toFixed(2)}</h3> : <h3 className="wallet-info-text">This week will cost you: £{savings.toFixed(2)}</h3> }
           {/* {savedMoney && <h2 className="wallet-info-text">This week you will save: £{savings.toFixed(2)}</h2>} */}
           {/* {!savedMoney && <h2 className="wallet-info-text">This week will cost you: £{savings.toFixed(2)}</h2>} */}
-          <h5 className="wallet-info-text">*Compared to the National Average</h5>
+          
 
         </div>
 

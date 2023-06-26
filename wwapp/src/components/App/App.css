@@ -15,7 +15,8 @@ TO DO:
 :root {
   --orange: #e57300;
   --green: #494900;
-  --lightGreen: #7d7d17;
+  /* --lightGreen: #7d7d17; */
+  --lightGreen: #175714;
   --offWhite: #ebebd3;
   --grey: #d9d9d9;
   --offBlack: #333333;
@@ -487,7 +488,7 @@ footer {
 
 
 .day-selector-buttons-container {
-  background-color: var(--lightGreen);
+  /* background-color: var(--lightGreen); */
   color: var(--offWhite);
   display: flex;
   justify-content: center;
@@ -508,9 +509,13 @@ footer {
   width:10%;
   font-size: 1.5vh;
   color: var(--offBlack);
-  border: 1px solid var(--offBlack);
+  border: 1px solid var(--lightGreen);
 } 
 
+.day-button:focus {
+  background-color: var(--lightGreen);
+  color: var(--offWhite);
+}
 
 .recipe-household-button{ 
   background-color: #EBEBD3;
@@ -652,24 +657,10 @@ footer {
   margin-top: 5%;
 }
 
-.WalletPageTitle {
-
-display: flex;
-align-self: center;
-justify-content: center;
-height: 25%;
-background-color: var(--green);
-color: var(--offWhite);
-font-weight: 500;
-border-radius: 30px;
-width: 50%;
-padding: 0.3%;
-
-}
 
 
 .WalletPageInfoBox {
-  background-color: #ffa500;
+
   display: flex;
   flex-flow:row wrap;
   justify-content: center;
@@ -678,7 +669,7 @@ padding: 0.3%;
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
-  border: 1px solid rgba(255, 106, 0, 0.291);
+  margin-bottom: 1%;
 }
 
 /*media settings for .WalletPageInfoBox*/
