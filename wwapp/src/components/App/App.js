@@ -27,11 +27,13 @@ export default function App() {
   // let recipes=[];
 
   // API -----------------------------------------------------------------------------
+
   const supabaseUrl = process.env.REACT_APP_DB_URL;
 
   const supabaseKey = process.env.REACT_APP_DB_KEY;  
   
-    const supabase = createClient(supabaseUrl, supabaseKey);
+   const supabase = createClient(supabaseUrl, supabaseKey);
+
 
   const fetchRecipes = async () => {
     try {

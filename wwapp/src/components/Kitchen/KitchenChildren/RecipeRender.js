@@ -4,16 +4,18 @@ export default function RecipeRender({ dayRecipe, familySize }) {
 
   if (dayRecipe === null) {
     return (
-      <div className="kitchen-get-started-container">
-        <h1 className="kitchen-get-started-text">
-          Pick your plan, household size and day of the week & start cooking up
-          something wonderful!
+      <div>
+        <h1 className="Generic-Title">
+          Choose your options above
         </h1>
         <img
           className="kitchen-get-started-image"
           src="https://images.pexels.com/photos/4259140/pexels-photo-4259140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="family-cooking-together-in-kitchen"
         />
+        <h1 className="Generic-Title">
+        For the right recipe for the right price
+        </h1>
       </div>
     );
   } else {
