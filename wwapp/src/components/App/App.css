@@ -105,7 +105,7 @@ var(--offBlack)
 }
 /* Show the dropdown menu on hover */
 
-* Style the links inside the dropdown menu */
+/* Style the links inside the dropdown menu */
 .DropdownContent a {
   color: var(--green);
   padding: 12px 16px;
