@@ -220,6 +220,7 @@ footer {
   padding: 2%;
   opacity: 85%;
 }
+
 .Link-button-sign-up {
   display: flex;
   justify-content: center;
@@ -546,8 +547,11 @@ footer {
 .Recipe-Container {
   display:flex;
   flex-direction: column;
- 
- 
+
+  /* position:fixed; */
+  width:100vw;
+  height:150vh;
+
 }
 
 
