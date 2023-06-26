@@ -10,6 +10,7 @@ import NavBar from "../NavBar/NavBar.js";
 import About from "../About/About.js";
 import Logout from "../Login/Logout.js";
 import { createClient } from "@supabase/supabase-js";
+
 // import { weeklyPlanRecipes } from "../Kitchen/KitchenChildren/WeeklyPlan.js";
 
 export default function App() {
@@ -26,11 +27,11 @@ export default function App() {
   // let recipes=[];
 
   // API -----------------------------------------------------------------------------
-  const supabaseUrl = "https://vdwwjhldkqhbmwtszcas.supabase.co";
+  const supabaseUrl = process.env.REACT_APP_DB_URL;
 
-  const supabaseKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZkd3dqaGxka3FoYm13dHN6Y2FzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODYxNTA4MjYsImV4cCI6MjAwMTcyNjgyNn0.5ATbh7xJDjVK57XPGsJmkwxps0fV0iyoOCRvUU2VMlc";
-  const supabase = createClient(supabaseUrl, supabaseKey);
+  const supabaseKey = process.env.REACT_APP_DB_KEY;  
+  
+    const supabase = createClient(supabaseUrl, supabaseKey);
 
   const fetchRecipes = async () => {
     try {
