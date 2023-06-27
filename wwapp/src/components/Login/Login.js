@@ -64,7 +64,7 @@ export default function Login({ handleLogIn }) {
   } else {
     console.log("log in was successful...");
     return (
-      <div>
+      <div className="login-container">
         <div className="Generic-TitleLogin">Logged in! Redirecting to Kitchen...</div>
         <img src={owl} className="owlImageLogin" alt="owl logo"></img>
       </div>

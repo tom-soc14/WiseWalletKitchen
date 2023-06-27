@@ -1,8 +1,10 @@
 import Footer_Owl from "./Footer_Owl.png";
-import Pinterest_Icon from "./Pinterest_Icon.png";
-import Twitter_Icon from "./Twitter_Icon.png";
-import YouTube_Icon from "./YouTube_Icon.png";
-
+// import Pinterest_Icon from "./Pinterest_Icon.png";
+// import Twitter_Icon from "./Twitter_Icon.png";
+// import YouTube_Icon from "./YouTube_Icon.png";
+import Orange_Pinterest from "./Orange_Pinterest.png";
+import Orange_Youtube from "./Orange_Youtube.png";
+import Orange_Twitter from "./Orange_Twitter.png"
 function Footer() {
   return (
     <div className="footer-container">
@@ -24,7 +26,7 @@ function Footer() {
       <div className="social-media-icon-box">
         <img
           className="social-media-icon"
-          src={Pinterest_Icon}
+          src={Orange_Pinterest}
           alt="pinterest button"
           onClick={() => {
             window.open("https://www.pinterest.com", "_blank");
@@ -33,7 +35,7 @@ function Footer() {
 
         <img
           className="social-media-icon"
-          src={Twitter_Icon}
+          src={Orange_Twitter}
           alt="twitter button"
           onClick={() => {
             window.open("https://www.twitter.com", "_blank");
@@ -42,7 +44,7 @@ function Footer() {
 
         <img
           className="social-media-icon"
-          src={YouTube_Icon}
+          src={Orange_Youtube}
           alt="youtube button"
           onClick={() => {
             window.open("https://www.youtube.com", "_blank");
