@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import AboutImageCarousel from "./AboutImageCarousel.js";
-import exampleGraph from "./exampleGraph.jpeg";
-import exampleRecipe from "./exampleRecipe.jpeg";
-import exampleBudgetFilledIn from "./exampleBudgetFilledIn.jpeg";
+import budget from './budget.jpeg';
+import graph from './graph.jpeg';
+import recipe from './recipe.jpeg';
 import Owl from "../../NavBar/WWK_Logo_Large.png";
 
 const images = [
@@ -13,17 +13,17 @@ const images = [
   },
   {
     id: 1,
-    src: exampleBudgetFilledIn,
+    src: recipe,
     text: "Dive into our curated dinner recipes, tailored to your palate, complete with ingredients and budget-friendly pricing.",
   },
   {
     id: 2,
-    src: exampleGraph,
+    src: budget,
     text: "Personalised options for any budget: Select from our Saver, Classic, or Premium plans to suit your preferences and finances. ",
   },
   {
     id: 3,
-    src: exampleRecipe,
+    src: graph,
     text: "Watch your savings grow as you make informed choices. We help you track your progress and visualise your future finances.",
   },
 ];
