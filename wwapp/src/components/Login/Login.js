@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { createClient } from "@supabase/supabase-js";
 import { Auth } from "@supabase/auth-ui-react";
+import owl from '../NavBar/WWK_Logo_Large.png';
 // import { ThemeSupa } from "@supabase/auth-ui-shared";
 
 export const supabase = createClient(
-  "https://vdwwjhldkqhbmwtszcas.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZkd3dqaGxka3FoYm13dHN6Y2FzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODYxNTA4MjYsImV4cCI6MjAwMTcyNjgyNn0.5ATbh7xJDjVK57XPGsJmkwxps0fV0iyoOCRvUU2VMlc"
+  process.env.REACT_APP_DB_URL,
+  process.env.REACT_APP_DB_KEY
 );
 
 // Login Function -----------------------------------------------------------
@@ -39,7 +40,7 @@ export default function Login({ handleLogIn }) {
       handleLogIn();
       // Redirect to homepage after a short delay
       const redirectTimeout = setTimeout(() => {
-        navigate("/");
+        navigate("/kitchen");
       }, 3000);
       return () => {
         clearTimeout(redirectTimeout);
@@ -64,7 +65,8 @@ export default function Login({ handleLogIn }) {
     console.log("log in was successful...");
     return (
       <div>
-        <div>Logged in! Redirecting to homepage...</div>
+        <div className="Generic-TitleLogin">Logged in! Redirecting to Kitchen...</div>
+        <img src={owl} className="owlImageLogin" alt="owl logo"></img>
       </div>
     );
   }
