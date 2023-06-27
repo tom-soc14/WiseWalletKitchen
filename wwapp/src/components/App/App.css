@@ -45,6 +45,8 @@ var(--offBlack)
   font-family: "Montserrat", sans-serif;
 }
 
+
+
 /* NavBar CSS -------------------------------------------------------------------- */
 .NavBar {
   /* padding: 20px;
@@ -76,7 +78,6 @@ var(--offBlack)
   padding-top: 1.5%;
 }
 
-
 .Logo {
   display: flex;
   flex-direction: column;
@@ -95,15 +96,12 @@ var(--offBlack)
   }
 }
 
-
 .owlImageLogin {
   max-width: 100%;
   max-height: 95%;
   padding-top: 1.5%;
   margin-top: 25%;
 }
-
-
 
 /* Dropdown menu content */
 .DropdownContent {
@@ -115,7 +113,6 @@ var(--offBlack)
   right: 20px; /* align the content to the right */
 }
 /* Show the dropdown menu on hover */
-
 
 /* Style the links inside the dropdown menu */
 .DropdownContent a {
@@ -171,12 +168,12 @@ var(--offBlack)
 }
 
 @media (max-width: 415px) {
-.DropdownMenu .DropdownContent {
-  display: none;
-}
+  .DropdownMenu .DropdownContent {
+    display: none;
+  }
 
-.DropdownMenu.clicked .DropdownContent {
-  display: block;
+  .DropdownMenu.clicked .DropdownContent {
+    display: block;
   }
 }
 
@@ -196,7 +193,7 @@ var(--offBlack)
 
 .footer-container {
   /* Set the image as the footer of the entire screen */
- 
+
   display: flex;
   justify-content: center;
   width: 100%;
@@ -205,59 +202,46 @@ var(--offBlack)
   background-image: url(../Footer/Footer-Image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y:10%;
+  background-position-y: 10%;
   /* background-position-x:80%; */
   height: 15%;
   margin-bottom: 0;
   margin-top: 25%;
- 
- 
 }
 .footer-content {
-  margin-right:auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 2%;
- 
-  width: 32%;
 
+  width: 32%;
 }
 .footer-links {
-font-size: 2.5vw;
+  font-size: 2.5vw;
 }
 
-
 .owl-image-container {
-display:flex;
-align-items: center;
-justify-content: center;
-background: linear-gradient(to bottom, var(--orange) 0%, #FFA500 100%);
-border-radius: 60%;
-height:70%;
-
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%);
+  border-radius: 60%;
+  height: 70%;
 }
 .owl-logo {
   height: 80%;
- 
 }
 .social-media-icon-box {
-  display:flex;
+  display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   height: 100%;
   margin-right: 5%;
- 
-  
 }
 .social-media-icon {
   height: 30%;
-  padding:2%;
- 
-
-  
-
+  padding: 2%;
 }
 
 /*styling for GitHub links to our profiles*/
@@ -315,7 +299,6 @@ height:70%;
     opacity: 85%;
   }
 
-
   .Homepage-Title {
     color: var(--offBlack);
     display: flex;
@@ -335,7 +318,6 @@ height:70%;
   }
 }
 
-
 .Generic-TitleLogin {
   color: var(--offBlack);
   display: flex;
@@ -344,7 +326,6 @@ height:70%;
   padding: 2%;
   opacity: 85%;
   margin-top: 10%;
-
 }
 
 .Link-button-sign-up {
@@ -898,13 +879,9 @@ height:70%;
   }
 }
 
-
-
 .WalletPageInfoContents > h3 {
   font-weight: bold;
 }
-
-
 
 /*text inside .WalletPageInfoContents*/
 .wallet-info-text {
