@@ -17,6 +17,7 @@ export default function WalletFamilySelector({ handleFamilySize }) {
               data-id={size.id}
               onClick={(e) => handleFamilySize(e.target.dataset.id)}
               className="Button wallet-familySize-button"
+              aria-label="choose-family-size"
             >
               {size.name}
             </button>
