@@ -1,5 +1,5 @@
 import "./OurTeamPage.css"
-import MaryBerryHOTTT from './MaryBerryHOTTT.jpg'
+import MaryBerryHOTTT from './TeamPhotos/MaryBerryHOTTT.jpg'
 import HeadshotNick from './TeamPhotos/Headshot-Nick2.png'
 import HeadshotKatie from './TeamPhotos/Headshot-Katie.png'
 import HeadshotBianca from './TeamPhotos/Headshot-Bianca.png'
