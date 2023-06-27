@@ -11,6 +11,7 @@ import About from "../About/About.js";
 import Logout from "../Login/Logout.js";
 import Footer from "../Footer/Footer.js";
 import { createClient } from "@supabase/supabase-js";
+import { useNavigate } from "react-router-dom";
 
 // import { weeklyPlanRecipes } from "../Kitchen/KitchenChildren/WeeklyPlan.js";
 
@@ -26,6 +27,8 @@ export default function App() {
   const [logInAccess, setLogInAccess] = useState(false);
 
   // let recipes=[];
+
+  const navigate = useNavigate();
 
   // API -----------------------------------------------------------------------------
 
@@ -68,8 +71,10 @@ export default function App() {
     setLogInAccess(true);
   }
   function handleLogOut() {
-    Logout();
+    // Logout();
     setLogInAccess(false);
+    supabase.auth.signOut();
+    navigate("/");
     console.log("Logout being called.");
   }
   useEffect(() => {}, [logInAccess]);

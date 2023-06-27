@@ -32,7 +32,7 @@ function NavBar({logInAccess, handleLogOut}) {
           {logInAccess && <Link to="/kitchen">Kitchen</Link>}
           {logInAccess && <Link to="/wallet">Wallet</Link>}
           {!logInAccess && <Link to="/login">Login</Link>}
-          {logInAccess && <Link onClick={handleLogOutClick}>Logout</Link>}
+          {logInAccess && <Link onClick={handleLogOutClick} to="/login">Logout</Link>}
           </div>
 
         </div>
