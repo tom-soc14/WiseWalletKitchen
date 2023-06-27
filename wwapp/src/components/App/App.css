@@ -316,6 +316,8 @@ height:70%;
     padding: 2%;
     opacity: 85%;
   }
+
+
   .Homepage-Title {
     color: var(--offBlack);
     display: flex;
@@ -333,6 +335,8 @@ height:70%;
     opacity: 85%;
     margin-bottom: 0%;
   }
+}
+
 
 .Generic-TitleLogin {
   color: var(--offBlack);
