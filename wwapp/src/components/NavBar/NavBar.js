@@ -27,11 +27,11 @@ function NavBar({logInAccess, handleLogOut}) {
 {/* NEW - Render conditional statements for logIN ✅ */}
 {/* NEW - Render conditional statement with Access to Wallet ✅ */}
 {/* NEW - Render conditional statement with Access to Wallet ✅ */}
-          <Link className="navbar-component" to="/">Homepage</Link>
-          <Link className="navbar-component" to="/about">About us</Link>
-          {logInAccess && <Link className="navbar-component" to="/kitchen">Kitchen</Link>}
-          {logInAccess && <Link className="navbar-component" to="/wallet">Wallet</Link>}
-          {!logInAccess && <Link className="navbar-component" to="/login">Login</Link>}
+          <Link  to="/">Homepage</Link>
+          <Link  to="/about">About us</Link>
+          {logInAccess && <Link to="/kitchen">Kitchen</Link>}
+          {logInAccess && <Link to="/wallet">Wallet</Link>}
+          {!logInAccess && <Link to="/login">Login</Link>}
           {logInAccess && <Link onClick={handleLogOutClick}>Logout</Link>}
           </div>
 
