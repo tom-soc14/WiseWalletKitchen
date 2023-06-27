@@ -1,4 +1,4 @@
-import Footer_Owl from "./Footer_Owl.png"
+import Footer_Owl from "./Footer_Owl.png";
 import Pinterest_Icon from "./Pinterest_Icon.png";
 import Twitter_Icon from "./Twitter_Icon.png";
 import YouTube_Icon from "./YouTube_Icon.png";
@@ -7,23 +7,48 @@ function Footer() {
   return (
     <div className="footer-container">
       <div className="footer-content">
-    
         <div className="owl-image-container">
           <img className="owl-logo" src={Footer_Owl} alt="logo" />
         </div>
         <div className="footer-links">
-          <div id="footer-link-text">Contact Us</div>
+          <a
+            id="footer-link-text"
+            href="mailto:info@wisewalletkitchen.com?body=Hi there, I want to just let you know your site is awesome!"
+          >
+            Contact Us
+          </a>
+          {/* Below is going to be a Link *** */}
           <div id="footer-link-text">Our Team</div>
         </div>
-        </div>
-        <div className="social-media-icon-box">
-          <img className="social-media-icon" src={Pinterest_Icon} alt="pinterest button" />
+      </div>
+      <div className="social-media-icon-box">
+        <img
+          className="social-media-icon"
+          src={Pinterest_Icon}
+          alt="pinterest button"
+          onClick={() => {
+            window.open("https://www.pinterest.com", "_blank");
+          }}
+        />
 
-          <img className="social-media-icon" src={Twitter_Icon} alt="twitter button" />
+        <img
+          className="social-media-icon"
+          src={Twitter_Icon}
+          alt="twitter button"
+          onClick={() => {
+            window.open("https://www.twitter.com", "_blank");
+          }}
+        />
 
-          <img className="social-media-icon" src={YouTube_Icon} alt="youtube button" />
-        
-        </div>
+        <img
+          className="social-media-icon"
+          src={YouTube_Icon}
+          alt="youtube button"
+          onClick={() => {
+            window.open("https://www.youtube.com", "_blank");
+          }}
+        />
+      </div>
     </div>
   );
 }
