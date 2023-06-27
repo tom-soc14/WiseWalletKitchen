@@ -212,7 +212,7 @@ font-size: 2.5vw;
 display:flex;
 align-items: center;
 justify-content: center;
-background-color: #e57300;
+background: linear-gradient(to bottom, var(--orange) 0%, #FFA500 100%);
 border-radius: 60%;
 height:70%;
 
