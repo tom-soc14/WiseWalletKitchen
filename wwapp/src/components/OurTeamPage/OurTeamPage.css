@@ -1,0 +1,96 @@
+
+.AboutUsPage-contents {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+.AboutUs-upperbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* .AboutUs-lowerbox {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+
+.column {
+   
+    width: 350px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Display the columns below each other instead of side by side on small screens */
+  /* @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  } */
+  
+  /* Add some shadows to create a card effect */
+  .card {
+    width: 80%;
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2);
+    margin: 5% ;
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card > img {
+    width:100%;
+    border-top-right-radius: 10% ;
+    border-top-left-radius: 10% ;
+  }
+  .card :hover {
+    box-shadow: 0 8px 15px 0 rgba(195, 99, 26, 0.33);
+    border-radius: 15px;
+  }
+  
+  /* Some left and right padding inside the container */
+  .container {
+    padding: 5% ;
+    
+  }
+  
+  /* Clear floats */
+  /* .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  } */
+  .row{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    border-radius: 15px;
+    outline: 0;
+    display: inline-block;
+    padding: 10%;
+    color: #000;
+    background: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }

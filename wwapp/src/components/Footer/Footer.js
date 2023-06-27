@@ -4,7 +4,9 @@ import Footer_Owl from "./Footer_Owl.png";
 // import YouTube_Icon from "./YouTube_Icon.png";
 import Orange_Pinterest from "./Orange_Pinterest.png";
 import Orange_Youtube from "./Orange_Youtube.png";
-import Orange_Twitter from "./Orange_Twitter.png"
+import Orange_Twitter from "./Orange_Twitter.png";
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <div className="footer-container">
@@ -20,7 +22,7 @@ function Footer() {
             Contact Us
           </a>
           {/* Below is going to be a Link *** */}
-          <div id="footer-link-text">Our Team</div>
+          <Link id="footer-link-text" to="/ourteampage">Our Team</Link>
         </div>
       </div>
       <div className="social-media-icon-box">
