@@ -9,7 +9,7 @@ function About() {
     <div className="about-container">
       <AboutStoryImages />
       <Link className="Link-button-sign-up" to="/login">
-        <button className="HomePage-button-sign-up">Sign Up Today</button>
+        <button className="HomePage-button-sign-up" aria-label="sign-up-button">Sign Up Today</button>
       </Link>
     </div>
   );

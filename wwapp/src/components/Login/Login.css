@@ -33,7 +33,7 @@ html, body, #root, .App {
 }
 #email, #password {
     border-color: #ffa500 !important;
-    border-radius: 20px !important;
+    border-radius: px !important;
     border-width: thin !important;
     background: #ebebd3 !important;   
 }
@@ -49,7 +49,7 @@ html, body, #root, .App {
     border-color: #ffa500 !important;
     border-radius: 20px !important;
     border-width: thin !important;
-    background-color: #7d7d17 !important;
+    background-color: #175714 !important;
     color: #ebebd3 !important;
     font-weight: 500 !important;
     height: 35px !important;
