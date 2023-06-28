@@ -11,13 +11,63 @@ function OurTeamPage() {
   return (
     <div className="AboutUsPage-contents">
       <div className="AboutUs-upperbox">
-        <title>Welcome to the Wise Wallet Kitchen Team page...</title>
-        <h1>In this project we used...</h1>
-        <p>number of Github commits</p>
-        <p>the software we used</p>
-        <p>the number of programmes we used</p>
-        <p>the lines of code we produced</p>
-      </div>
+                <h1>Welcome to the Wise Wallet Kitchen Team page...</h1>
+                <h2>In this project we used</h2>
+                <p>174 commits to main and 204 commits in all</p>
+                <p>the programs we used</p>
+                <p>the lines of code we produced</p>
+                  <p>
+                    <img
+                      src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E'
+                      alt="JavaScript"
+                    />
+                    <img
+                      src='https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white'
+                      alt="CSS3"
+                    />
+                    <img
+                      src='https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB'
+                      alt="React"
+                    />
+                    <img
+                      src='https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white'
+                      alt="JSON"
+                    />
+                    <img
+                      src='https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white'
+                      alt="VSCode"
+                    />
+                    <img
+                      src='https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white'
+                      alt="Figma"
+                    />
+                    <img
+                      src='https://img.shields.io/badge/Canva-%2300C4CC.svg?&style=for-the-badge&logo=Canva&logoColor=white'
+                      alt="Canva"
+                    />
+                    <img
+                      src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'
+                      alt="GitHub"
+                    />
+                   
+               
+                  
+                  <img
+                    src='https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white'
+                    alt="Jest"
+                  />
+                  <img
+                    src='https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white'
+                    alt="Node.js"
+                  />
+                  <img
+                    src='https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=Playwright&logoColor=white'
+                    alt="Playwright"
+                  />
+                  
+                </p>
+        </div>
+      
 
       <div className="AboutUs-lowerbox">
         <div className="row">
@@ -127,28 +177,11 @@ function OurTeamPage() {
           </div>
         </div>
 
-        {/* <div className="OurTeam-contents">
-            <div className="OurTeam-Box">
-                <p>Katie</p>
-            </div>
-            <div className="OurTeam-Box">
-                <p>Nick</p>
-            </div>
-            <div className="OurTeam-Box">
-                <p>Tom</p>
-            </div>
-            <div className="OurTeam-Box">
-                <p>Bianca</p>
-            </div>
-            <div className="OurTeam-Box">
-                <p>Will</p>
-            </div>
-            <div className="OurTeam-Box">
-                <p>Jason</p>
-            </div>
-        </div> */}
+       
+        </div>
       </div>
-    </div>
+      
+   
   );
 }
 
