@@ -149,11 +149,11 @@ function OurTeamPage() {
                 <p className="title">Chief Whip & big brain</p>
                 <p>
                   With a strong background in supplying lighting technology to
-                  the construction industry, I’ve witnessed the transformative
+                  the construction industry, Ive witnessed the transformative
                   power of technology first-hand, igniting my passion for being
                   a change catalyst. My true passion lies in coding, which led
-                  me to enrol in the School of Code’s intensive bootcamp. There,
-                  I honed my problem-solving skills and discovered coding’s
+                  me to enrol in the School of Codes intensive bootcamp. There,
+                  I honed my problem-solving skills and discovered codings
                   ability to drive innovation. Now, driven to make a tangible
                   impact, I actively participate in tech meetups, and eager to
                   support newcomers in navigating the dynamic and ever-evolving
