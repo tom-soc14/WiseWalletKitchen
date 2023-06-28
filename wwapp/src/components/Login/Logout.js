@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 // TO DO - Research the following function, the move into burger menu ??
 export default function Logout() {
-  const navigate = useNavigate();
+
 
   const handleLogout = async () => {
     try {
@@ -24,11 +24,12 @@ export default function Logout() {
     }
   };
 
-  useEffect(() => {
-    handleLogout().then(() => {
-      navigate("/");
-    });
-  }, []);
+  // useEffect(() => {
+  //   handleLogout().then(() => {
+  //     navigate("/");
+  //   });
+  // eslint-disable-next-line
+  // }, []);
   
 
   
