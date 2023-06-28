@@ -23,12 +23,6 @@ export default function Logout() {
     }
   };
 
-  // useEffect(() => {
-  //   handleLogout().then(() => {
-  //     navigate("/");
-  //   });
-  // }, []);
-  
 
   
   //NEW - removed button and called function everytime

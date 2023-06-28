@@ -1,5 +1,4 @@
 import "./OurTeamPage.css";
-
 import HeadshotNick from "./TeamPhotos/Headshot-Nick2.png";
 import HeadshotKatie from "./TeamPhotos/Headshot-Katie.png";
 import HeadshotBianca from "./TeamPhotos/Headshot-Bianca.png";
