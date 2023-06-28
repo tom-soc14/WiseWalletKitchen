@@ -20,6 +20,7 @@ export default function BudgetInput({ handleInputChange }) {
           onChange={validateInput}
           maxLength={3}
           aria-label="textbox-to-enter-budget"
+          placeholder="£0"
         />
         <br />
       </div>

@@ -27,6 +27,9 @@ const AboutImageCarousel = ({
       data-testid="aboutimagecarouseltest"
       className={`carousel ${isActive ? "active" : ""}`}
     >
+    <div className="carousel-text">
+        <p className="Slogan">{image.text}</p>
+      </div>
       <div className="carousel-image">
         <img src={image.src} alt="Carousel" />
         <div className="carousel-buttons">
@@ -47,9 +50,7 @@ const AboutImageCarousel = ({
           {/* <button onClick={handleReplay} className="replay-button">Click here to start over</button> */}
         </div>
       </div>
-      <div className="carousel-text">
-        <p>{image.text}</p>
-      </div>
+      
     </div>
   );
 };

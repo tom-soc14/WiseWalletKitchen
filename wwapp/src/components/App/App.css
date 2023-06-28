@@ -22,7 +22,8 @@ TO DO:
   --offBlack: #333333;
 }
 
-/* Color variable key */
+
+  /* Color variable key */
 /* Use:
 var(--orange)
 var(--green)
@@ -44,6 +45,8 @@ var(--offBlack)
 * {
   font-family: "Montserrat", sans-serif;
 }
+
+
 
 /* NavBar CSS -------------------------------------------------------------------- */
 .NavBar {
@@ -76,7 +79,6 @@ var(--offBlack)
   padding-top: 1.5%;
 }
 
-
 .Logo {
   display: flex;
   flex-direction: column;
@@ -95,12 +97,30 @@ var(--offBlack)
   }
 }
 
-
 .owlImageLogin {
   max-width: 100%;
   max-height: 95%;
   padding-top: 1.5%;
   margin-top: 25%;
+}
+
+/* Dropdown menu content */
+.DropdownContent {
+  background-color: #939601;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  right: 20px; /* align the content to the right */
+}
+/* Show the dropdown menu on hover */
+
+/* Style the links inside the dropdown menu */
+.DropdownContent a {
+  color: var(--green);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 /* Change color of dropdown links on hover */
@@ -164,12 +184,12 @@ var(--offBlack)
 }
 
 @media (max-width: 415px) {
-.DropdownMenu .DropdownContent {
-  display: none;
-}
+  .DropdownMenu .DropdownContent {
+    display: none;
+  }
 
-.DropdownMenu.clicked .DropdownContent {
-  display: block;
+  .DropdownMenu.clicked .DropdownContent {
+    display: block;
   }
 }
 
@@ -185,11 +205,14 @@ var(--offBlack)
   background-color: #f56607;
 }
 
+
+
 /* Footer CSS ------------------------------------------------------------------ */
 
 .footer-container {
   /* Set the image as the footer of the entire screen */
- 
+
+  margin-top: 34%;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -198,60 +221,113 @@ var(--offBlack)
   background-image: url(../Footer/Footer-Image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y:10%;
+  background-position-y: 10%;
   /* background-position-x:80%; */
-  height: 15%;
+  height: 8%;
   margin-bottom: 0;
-  margin-top: 25%;
- 
- 
 }
+
 .footer-content {
-  margin-right:auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 2%;
- 
+
+  width: 28%;
+}
+@media (min-width: 500px) {
+    .footer-content {
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 2%;
+      width: 20%;
+    }
+
+    .footer-container {
+      /* Set the image as the footer of the entire screen */
+      margin-top: 20%;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      bottom: 0;
+      background-color: #d9d9d9;
+      background-image: url(../Footer/Footer-Image.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: 10%;
+      /* background-position-x:80%; */
+      height: 8%;
+      margin-bottom: 0;
+    
+    }
+  
+}
+
+@media (min-width: 900px) {
+  .footer-content {
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    width: 10%;
+  }
+
+  .footer-container {
+    /* Set the image as the footer of the entire screen */
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    background-color: #d9d9d9;
+    background-image: url(../Footer/Footer-Image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 10%;
+    /* background-position-x:80%; */
+    height: 8%;
+    margin-bottom: 0;
+  }
   width: 32%;
-
 }
+
 .footer-links {
-font-size: 2.5vw;
+  font-size: small;
 }
-.footer-link-text {
 
+#footer-link-text {
+  text-decoration: none;
+  color: black;
 }
 
 .owl-image-container {
-display:flex;
-align-items: center;
-justify-content: center;
-background: linear-gradient(to bottom, var(--orange) 0%, #FFA500 100%);
-border-radius: 60%;
-height:70%;
-
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%);
+  border-radius: 60%;
+  height: 50%;
 }
+
 .owl-logo {
   height: 80%;
- 
 }
 .social-media-icon-box {
-  display:flex;
+  display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   height: 100%;
-  margin-right: 5%;
- 
-  
+
+  margin-right: 12%;
 }
 .social-media-icon {
-  height: 30%;
-  padding:2%;
- 
-
-  
+  height: 40%;
+  padding-left: 15%;
+  padding-right: 2%;
 
 }
 
@@ -280,6 +356,7 @@ height:70%;
 .HomePage {
   display: flex;
   flex-direction: column;
+  
 }
 
 .Generic-Title {
@@ -309,7 +386,9 @@ height:70%;
     padding: 2%;
     opacity: 85%;
   }
+
 }
+
   .Homepage-Title {
     color: var(--offBlack);
     display: flex;
@@ -327,6 +406,8 @@ height:70%;
     opacity: 85%;
     margin-bottom: 0%;
   }
+}
+
 
 .Generic-TitleLogin {
   color: var(--offBlack);
@@ -336,8 +417,8 @@ height:70%;
   padding: 2%;
   opacity: 85%;
   margin-top: 10%;
-
 }
+
 
 .Link-button-sign-up {
   display: flex;
@@ -360,6 +441,7 @@ height:70%;
   border-radius: 8px;
   padding: 5px 10px 5px 10px;
   font-size: x-large;
+  box-shadow: 5px 7px 14px #989692
 }
 
 .about-button {
@@ -368,8 +450,9 @@ height:70%;
   /* height: 4vh; */
   font-size: larger;
   padding: 5px 10px 5px 10px;
-  background-color: var(--lightGreen);
+  background-image: linear-gradient(to bottom, var(--lightGreen) 0%, green 100%);
   color: var(--grey);
+  box-shadow:  5px 7px 14px #989692
   /* text-shadow: 1px 1px 1px var(--grey); */
 }
 
@@ -536,8 +619,38 @@ height:70%;
   width: 100%; */
 }
 
-/* LoginPage CSS ----------------------------------------------------------------- */
+@media (min-width: 956px) {
+  .example-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120vw;
+  }
+  .app-examples {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    /* height: auto;
+    width: 100%; */
+  }
+}
 
+/* LoginPage CSS ----------------------------------------------------------------- */
+.login-container {
+height: 63%;
+}
+
+.Generic-TitleLogin {
+  color: var(--offBlack);
+  display: flex;
+  justify-content: center;
+  font-size: 5vw;
+  padding: 2%;
+  opacity: 85%;
+  margin-top: 10%;
+}
 /* Kitchen CSS ------------------------------------------------------------------- */
 
 .Kitchen-Title-Container {
@@ -611,7 +724,7 @@ height:70%;
   font-size: 1.5vh;
   color: var(--offBlack);
   border: 1px solid var(--lightGreen);
-  box-shadow: 0 0 4px 0 gray, 0 0 5px 0 gray;
+  box-shadow: 3px 4px 4px 0 rgb(170, 172, 168);
 }
 
 @media (min-width: 800px) {
@@ -633,11 +746,11 @@ height:70%;
 .day-button:focus {
   background-color: var(--lightGreen);
   color: var(--offWhite);
-  box-shadow: none;
+  box-shadow: 1px 1px 0px 0 gray
 }
 
 .day-button:hover {
-  box-shadow: 0 0 8px 0 gray, 0 0 10px 0 gray;
+  box-shadow: 1px 1px 0px 0 gray
 }
 
 .recipe-household-button {
@@ -673,7 +786,8 @@ height:70%;
 
   /* position:fixed; */
   width: 100vw;
-  height: 150vh;
+  /* below removed due to huge margin *** */
+  /* height: 150vh; */
 }
 
 .Recipe-Timings-Container {
@@ -872,16 +986,8 @@ height:70%;
   }
 }
 
-.WalletPageInfoContents > h1 {
-}
-.WalletPageInfoContents > h2 {
-}
 .WalletPageInfoContents > h3 {
   font-weight: bold;
-}
-.WalletPageInfoContents > h4 {
-}
-.WalletPageInfoContents > h5 {
 }
 
 /*text inside .WalletPageInfoContents*/
