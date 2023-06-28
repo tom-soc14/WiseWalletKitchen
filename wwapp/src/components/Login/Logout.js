@@ -4,13 +4,12 @@ import "./Login.css";
 // import { Auth } from "@supabase/auth-ui-react";
 // import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { supabase } from "./Login.js";
-import { useNavigate } from "react-router";
-import { useEffect } from "react";
+
 
 
 // TO DO - Research the following function, the move into burger menu ??
 export default function Logout() {
-  const navigate = useNavigate();
+
 
   const handleLogout = async () => {
     try {
@@ -24,11 +23,11 @@ export default function Logout() {
     }
   };
 
-  useEffect(() => {
-    handleLogout().then(() => {
-      navigate("/");
-    });
-  }, []);
+  // useEffect(() => {
+  //   handleLogout().then(() => {
+  //     navigate("/");
+  //   });
+  // }, []);
   
 
   
