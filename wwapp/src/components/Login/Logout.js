@@ -5,6 +5,7 @@ import "./Login.css";
 // import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { supabase } from "./Login.js";
 import { useNavigate } from "react-router";
+import { useEffect } from "react";
 
 
 // TO DO - Research the following function, the move into burger menu ??
@@ -18,11 +19,17 @@ export default function Logout() {
       // Perform any additional logic or state updates after successful logout
       console.log("Log out was successful...!");
       // Navigate back to the HomePage
-      navigate("/");
     } catch (error) {
       console.error("Error logging out:", error);
     }
   };
+
+  useEffect(() => {
+    handleLogout().then(() => {
+      navigate("/");
+    });
+  }, []);
+  
 
   
   //NEW - removed button and called function everytime
