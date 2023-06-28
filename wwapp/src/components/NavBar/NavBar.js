@@ -20,19 +20,19 @@ function NavBar({logInAccess, handleLogOut}) {
 
       <div className="DropdownMenu">
       {/* &#9776; code is for the burger menu icon */}
-        <button className="Dropbtn"> &#9776;</button>
+        <button className="Dropbtn" aria-label="dropdown-nav-menu"> &#9776;</button>
         <div className="DropdownContent">
 
 {/* NEW - Render conditional statements for login ✅ */}
 {/* NEW - Render conditional statements for logIN ✅ */}
 {/* NEW - Render conditional statement with Access to Wallet ✅ */}
 {/* NEW - Render conditional statement with Access to Wallet ✅ */}
-          <Link className="navbar-component" to="/">Homepage</Link>
-          <Link className="navbar-component" to="/about">About us</Link>
-          {logInAccess && <Link className="navbar-component" to="/kitchen">Kitchen</Link>}
-          {logInAccess && <Link className="navbar-component" to="/wallet">Wallet</Link>}
-          {!logInAccess && <Link className="navbar-component" to="/login">Login</Link>}
-          {logInAccess && <Link onClick={handleLogOutClick}>Logout</Link>}
+          <Link  to="/">Homepage</Link>
+          <Link  to="/about">About us</Link>
+          {logInAccess && <Link to="/kitchen">Kitchen</Link>}
+          {logInAccess && <Link to="/wallet">Wallet</Link>}
+          {!logInAccess && <Link to="/login">Login</Link>}
+          {logInAccess && <Link onClick={handleLogOutClick} to="/login">Logout</Link>}
           </div>
 
         </div>

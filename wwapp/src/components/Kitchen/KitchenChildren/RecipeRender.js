@@ -28,8 +28,8 @@ export default function RecipeRender({ dayRecipe, familySize }) {
             <div className="recipe-name-container">
               <h2 className="recipe-name">{dayRecipe.RecipeName}</h2></div>
               <div className="Recipe-Timings-Container">
-                <h4>Prep: {dayRecipe.PrepTime}</h4>
-                <h4>Cooking: {dayRecipe.CookingTime}</h4>
+                <h3>Prep: {dayRecipe.PrepTime}</h3>
+                <h3>Cooking: {dayRecipe.CookingTime}</h3>
               </div>
               {/* <h3 className="recipe-type">Meal plan: {dayRecipe.RecipeType}</h3> */}
               <div className="recipe-image-container">

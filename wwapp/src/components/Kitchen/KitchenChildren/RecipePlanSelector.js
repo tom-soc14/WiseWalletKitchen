@@ -10,19 +10,22 @@ export default function RecipePlanSelector({ handlePlanChange }) {
   };
 
   return (
-   
-      <div data-testid="recipeplanselectortest">
-       
-          <select onChange={handleChange} className="recipe-plan-dropdown" defaultValue="">
-            <option value="" disabled>
-              Plan
-            </option>
-            {plan.map((plan) => (
-              <option key={plan.id} value={plan.id}>
-                {plan.name}
-              </option>
-            ))}
-          </select>
-        </div>
+    <div data-testid="recipeplanselectortest">
+      <select
+        onChange={handleChange}
+        className="recipe-plan-dropdown"
+        defaultValue=""
+        aria-label="pick-your-recipe-plan"
+      >
+        <option value="" disabled>
+          Plan
+        </option>
+        {plan.map((plan) => (
+          <option key={plan.id} value={plan.id}>
+            {plan.name}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 }

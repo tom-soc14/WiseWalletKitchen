@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from "react";
 import AboutImageCarousel from "./AboutImageCarousel.js";
-import exampleGraph from "./exampleGraph.jpeg";
-import exampleRecipe from "./exampleRecipe.jpeg";
-import exampleBudgetFilledIn from "./exampleBudgetFilledIn.jpeg";
+import budget from './budget.jpeg';
+import graph from './graph.jpeg';
+import recipe from './recipe.jpeg';
+import Owl from "../../NavBar/WWK_Logo_Large.png";
 
 const images = [
   {
     id: 0,
-    src: exampleRecipe,
-    text: "Join us to so we can show you the perfect recipe for your tea tonight, all while saving money and making wise choices for your household. Wise Wallet Kitchen brings you the best of both worlds: a kitchen filled with delicious recipes and a wallet that helps you save and track your expenses.",
+    src: Owl,
+    text: "Uncover the ultimate budget recipe, saving money and making wise choices, with Wise Wallet Kitchen — a deliciously frugal kitchen solution.",
   },
   {
     id: 1,
-    src: exampleBudgetFilledIn,
-    text: "Cooking made easy: Explore our collection of delicious recipes for dinner, handpicked to suit your taste buds. Each recipe comes with a complete list of ingredients, making it convenient for you to plan your shopping trip. We provide the price for the entire meal and the individual ingredients, helping you budget your expenses wisely.",
+    src: recipe,
+    text: "Dive into our curated dinner recipes, tailored to your palate, complete with ingredients and budget-friendly pricing.",
   },
   {
     id: 2,
-    src: exampleGraph,
-    text: "Tailored plans for every budget: Choose from our three different plans - Saver, Classic, or Premium - based on your budget and preferences. Whether you're cooking for one or have a family of four, we've got you covered. Simply let us know the number of people in your household, and we'll provide recipes and ingredients accordingly.",
+    src: budget,
+    text: "Personalised options for any budget: Select from our Saver, Classic, or Premium plans to suit your preferences and finances. ",
   },
   {
     id: 3,
-    src: exampleGraph,
-    text: "Save more, spend smarter: With our wallet, you can effortlessly compare your expenses against the UK national average and see how much you're saving. Watch your savings grow as you make informed choices and optimise your spending habits. We help you track your progress and visualise your future finances.",
+    src: graph,
+    text: "Watch your savings grow as you make informed choices. We help you track your progress and visualise your future finances.",
   },
 ];
 

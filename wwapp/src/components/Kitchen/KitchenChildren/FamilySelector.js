@@ -11,22 +11,22 @@ export default function FamilySelector({ handleFamilySize }) {
   };
 
   return (
-  
-      <div data-testid="familyselectortest">
-
-          <select onChange={handleChange} className="recipe-plan-dropdown" defaultValue="">
-
-            <option value="" disabled>Household</option>
-              {size.map((size) => (
-               <option key={size.id} value={size.id}>
-                 {size.name}
-              </option>
-            ))}
-
-          </select>
-
-      </div>
-
-     
+    <div data-testid="familyselectortest">
+      <select
+        onChange={handleChange}
+        className="recipe-plan-dropdown"
+        defaultValue=""
+        aria-label="select-people-in-household"
+      >
+        <option value="" disabled>
+          Household
+        </option>
+        {size.map((size) => (
+          <option key={size.id} value={size.id}>
+            {size.name}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 }

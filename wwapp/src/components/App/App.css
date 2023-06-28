@@ -15,13 +15,15 @@ TO DO:
 :root {
   --orange: #e57300;
   --green: #494900;
-  --lightGreen: #7d7d17;
+  /* --lightGreen: #7d7d17; */
+  --lightGreen: #175714;
   --offWhite: #ebebd3;
   --grey: #d9d9d9;
   --offBlack: #333333;
 }
 
-/* Color variable key */
+
+  /* Color variable key */
 /* Use:
 var(--orange)
 var(--green)
@@ -41,16 +43,18 @@ var(--offBlack)
 
 /*Universal font*/
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
+
+
 /* NavBar CSS -------------------------------------------------------------------- */
-.NavBar  {
+.NavBar {
   /* padding: 20px;
   text-align: center;  */
   height: 17.75vh;
   /* background-color: var(--orange); */
-  background: linear-gradient(to bottom, var(--orange) 0%, #FFA500 100%);
+  background: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,7 +66,7 @@ var(--offBlack)
     text-align: center;  */
     height: 9vh;
     /* background-color: var(--orange); */
-    background: linear-gradient(to bottom, var(--orange) 0%, #FFA500 100%);
+    background: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -93,6 +97,12 @@ var(--offBlack)
   }
 }
 
+.owlImageLogin {
+  max-width: 100%;
+  max-height: 95%;
+  padding-top: 1.5%;
+  margin-top: 25%;
+}
 
 /* Dropdown menu content */
 .DropdownContent {
@@ -112,6 +122,7 @@ var(--offBlack)
   text-decoration: none;
   display: block;
 }
+
 /* Change color of dropdown links on hover */
 .DropdownContent a:hover {
   background-color: #f56607;
@@ -129,7 +140,7 @@ var(--offBlack)
   margin-right: 20px;
 }
 
-@media (max-width: 415px)   {
+@media (max-width: 415px) {
   .Dropbtn {
     background-color: inherit;
     color: var(--offWhite);
@@ -140,24 +151,48 @@ var(--offBlack)
     float: right;
     /* add some margin to the right */
     margin-right: 20px;
-    }
   }
-  
-
+}
 
 /* Dropdown menu content */
+
+
+@media (max-width: 415px){
 .DropdownContent {
   display: none;
   position: absolute;
   background-color: var(--offWhite);
   min-width: 160px;
   z-index: 1;
-  right: 0; /* align the content to the right */
+  top: 30%;
+  right: 0;
 }
+}
+.DropdownContent {
+  display: none;
+  position: absolute;
+  background-color: var(--offWhite);
+  min-width: 160px;
+  z-index: 1;
+  top: 11%;
+  right: 0;
+}
+
 /* Show the dropdown menu on hover */
 .DropdownMenu:hover .DropdownContent {
   display: block;
 }
+
+@media (max-width: 415px) {
+  .DropdownMenu .DropdownContent {
+    display: none;
+  }
+
+  .DropdownMenu.clicked .DropdownContent {
+    display: block;
+  }
+}
+
 /* Style the links inside the dropdown menu */
 .DropdownContent a {
   color: black;
@@ -170,29 +205,140 @@ var(--offBlack)
   background-color: #f56607;
 }
 
+
+
 /* Footer CSS ------------------------------------------------------------------ */
 
-footer {
+.footer-container {
   /* Set the image as the footer of the entire screen */
-  position: fixed;
-  bottom: 0;
-  left: 0;
+
+  margin-top: 34%;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  background-color: #494900;
-  height: 6vh;
-  /* Apply stretching and cropping to the image */
-  /* object-fit: scale-down;
-  object-position: center; */
+  bottom: 0;
+  background-color: #d9d9d9;
+  background-image: url(../Footer/Footer-Image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 10%;
+  /* background-position-x:80%; */
+  height: 8%;
+  margin-bottom: 0;
+}
+
+.footer-content {
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2%;
+
+  width: 28%;
+}
+@media (min-width: 500px) {
+    .footer-content {
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 2%;
+      width: 20%;
+    }
+
+    .footer-container {
+      /* Set the image as the footer of the entire screen */
+      margin-top: 20%;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      bottom: 0;
+      background-color: #d9d9d9;
+      background-image: url(../Footer/Footer-Image.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: 10%;
+      /* background-position-x:80%; */
+      height: 8%;
+      margin-bottom: 0;
+    
+    }
+  
+}
+
+@media (min-width: 900px) {
+  .footer-content {
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    width: 10%;
+  }
+
+  .footer-container {
+    /* Set the image as the footer of the entire screen */
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    background-color: #d9d9d9;
+    background-image: url(../Footer/Footer-Image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 10%;
+    /* background-position-x:80%; */
+    height: 8%;
+    margin-bottom: 0;
+  }
+  width: 32%;
+}
+
+.footer-links {
+  font-size: small;
+}
+
+#footer-link-text {
+  text-decoration: none;
+  color: black;
+}
+
+.owl-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%);
+  border-radius: 60%;
+  height: 50%;
+}
+
+.owl-logo {
+  height: 80%;
+}
+.social-media-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  margin-right: 12%;
+}
+.social-media-icon {
+  height: 40%;
+  padding-left: 15%;
+  padding-right: 2%;
+
 }
 
 /*styling for GitHub links to our profiles*/
-.github-profile {
+/* .github-profile {
   text-decoration: none;
   color: white;
 }
 
-.inside-footer-container{
-  display:flex;
+.inside-footer-container {
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -204,22 +350,75 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
 /* Homepage CSS ------------------------------------------------------------------ */
 .HomePage {
   display: flex;
   flex-direction: column;
+  
 }
 
 .Generic-Title {
   color: var(--offBlack);
   display: flex;
   justify-content: center;
-  font-size: 5vw;
+  /* font-size: 5vw; */
   padding: 2%;
   opacity: 85%;
 }
+
+.Homepage-Title,
+.Slogan {
+  color: var(--offBlack);
+  display: flex;
+  justify-content: center;
+  opacity: 85%;
+  margin-bottom: 0%;
+}
+
+@media (min-width: 956px) {
+  .Generic-Title {
+    color: var(--offBlack);
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+    padding: 2%;
+    opacity: 85%;
+  }
+
+}
+
+  .Homepage-Title {
+    color: var(--offBlack);
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+    opacity: 85%;
+    margin-bottom: 0%;
+  }
+
+  .Slogan {
+    color: var(--offBlack);
+    display: flex;
+    justify-content: center;
+    font-size: 2vw;
+    opacity: 85%;
+    margin-bottom: 0%;
+  }
+
+
+
+.Generic-TitleLogin {
+  color: var(--offBlack);
+  display: flex;
+  justify-content: center;
+  font-size: 5vw;
+  padding: 2%;
+  opacity: 85%;
+  margin-top: 10%;
+}
+
 
 .Link-button-sign-up {
   display: flex;
@@ -236,23 +435,25 @@ footer {
 
 .HomePage-button-sign-up {
   text-decoration: none;
-  background-image: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%); 
+  background-image: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%);
   color: var(--offBlack);
-  text-shadow: 1px 1px 1px var(--offBlack);
+  /* text-shadow: 1px 1px 1px var(--offBlack); */
   border-radius: 8px;
   padding: 5px 10px 5px 10px;
   font-size: x-large;
+  box-shadow: 5px 7px 14px #989692
 }
 
 .about-button {
   text-decoration: none;
   border-radius: 8px;
-  height: 4vh;
+  /* height: 4vh; */
   font-size: larger;
   padding: 5px 10px 5px 10px;
-  background-color: var(--lightGreen);
+  background-image: linear-gradient(to bottom, var(--lightGreen) 0%, green 100%);
   color: var(--grey);
-  text-shadow: 1px 1px 1px var(--grey);
+  box-shadow:  5px 7px 14px #989692
+  /* text-shadow: 1px 1px 1px var(--grey); */
 }
 
 /* 
@@ -326,7 +527,7 @@ footer {
   display: inline-block;
   margin-right: 4%;
   margin-left: 4%;
-  border-radius: 2.5%;
+  border-radius: 10px;
 }
 
 .carousel-buttons {
@@ -418,107 +619,157 @@ footer {
   width: 100%; */
 }
 
-/* LoginPage CSS ----------------------------------------------------------------- */
-
-/* Kitchen CSS ------------------------------------------------------------------- */
-
-
-.Kitchen-Title-Container {
- display:flex;
- justify-content:center;
+@media (min-width: 956px) {
+  .example-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120vw;
+  }
+  .app-examples {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    /* height: auto;
+    width: 100%; */
+  }
 }
 
+/* LoginPage CSS ----------------------------------------------------------------- */
+.login-container {
+height: 63%;
+}
 
+.Generic-TitleLogin {
+  color: var(--offBlack);
+  display: flex;
+  justify-content: center;
+  font-size: 5vw;
+  padding: 2%;
+  opacity: 85%;
+  margin-top: 10%;
+}
+/* Kitchen CSS ------------------------------------------------------------------- */
+
+.Kitchen-Title-Container {
+  display: flex;
+  justify-content: center;
+}
 
 .Kitchen-Household-And-Plan-Container {
-  background: linear-gradient(to bottom, var(--orange) 0%, #FFA500 100%);
-  display:flex;
-  justify-content:space-around;
-  padding-left:5%;
-  padding-right:5%;
+  background: linear-gradient(to bottom, var(--orange) 0%, #ffa500 100%);
+  display: flex;
+  justify-content: space-around;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-top: 1%;
   padding-bottom: 1%;
   margin: 10px 10px 10px 10px;
   border-radius: 20px;
-  height:min-content
-
+  height: min-content;
 }
 
 .recipe-plan-dropdown {
-  padding:8%;
-  border-radius:5px;
+  padding: 8%;
+  border-radius: 5px;
   border: none;
   display: flex;
-  align-items:center;
-  justify-content:center;
-  background-color: #EBEBD3;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebebd3;
   color: #000;
-  height:100%;
+  height: 100%;
   outline: none;
   text-align: center;
   font-size: 2.75vh;
- 
-  }
+}
 
-  @media (max-width: 415px) {
+@media (max-width: 956px) {
   .recipe-plan-dropdown {
-  padding:2%;
-  border-radius:5px;
-  border: none;
-  display: flex;
-  align-items:center;
-  justify-content:center;
-  background-color: #EBEBD3;
-  color: #000;
-  height:100%;
-  outline: none;
-  text-align: center;
-  font-size: 1.65vh;
-
+    padding: 2%;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebd3;
+    color: #000;
+    height: 100%;
+    outline: none;
+    text-align: center;
+    font-size: 1.65vh;
   }
 }
 
 
 .day-selector-buttons-container {
-  background-color: var(--lightGreen);
   color: var(--offWhite);
   display: flex;
   justify-content: center;
-  height:min-content;
-  height:min-content;
+  height: min-content;
+  height: min-content;
   margin: 10px 10px 10px 10px;
   border-radius: 30px;
-  
 }
 
- .day-button {
-  display:flex;
-  justify-content:center;
-  background-color:var(--offWhite);
-  padding:2%;
-  margin:1%;
+.day-button {
+  display: flex;
+  justify-content: center;
+  background-color: var(--offWhite);
+  padding: 2%;
+  margin: 1%;
   border-radius: 100%;
-  width:10%;
+  width: 10%;
   font-size: 1.5vh;
   color: var(--offBlack);
-  border: 1px solid var(--offBlack);
-} 
+  border: 1px solid var(--lightGreen);
+  box-shadow: 3px 4px 4px 0 rgb(170, 172, 168);
+}
+
+@media (min-width: 800px) {
+  .day-button {
+    display: flex;
+    justify-content: center;
+    background-color: var(--offWhite);
+    padding: 2%;
+    margin: 1%;
+    border-radius: 100%;
+    /* width: 10%; */
+    font-size: 2vh;
+    color: var(--offBlack);
+    border: 1px solid var(--lightGreen);
+    box-shadow: 0 0 4px 0 gray, 0 0 5px 0 gray;
+  }
+}
 
 
-.recipe-household-button{ 
-  background-color: #EBEBD3;
-  padding:2%;
-  margin:1.5%;
-  font-size:large;
-  padding:1%;
+.day-button:focus {
+  background-color: var(--lightGreen);
+  color: var(--offWhite);
+  box-shadow: 1px 1px 0px 0 gray
+}
+
+.day-button:hover {
+  box-shadow: 1px 1px 0px 0 gray
+}
+
+.recipe-household-button {
+  background-color: #ebebd3;
+  padding: 2%;
+  margin: 1.5%;
+  font-size: large;
+  padding: 1%;
   border-radius: 100%;
-  width:25%;
+  width: 25%;
   height: 25%;
-  width:50%;
-} 
+  width: 50%;
+}
+
 
 .kitchen-get-started-text {
-  display:inline-flex;
+  display: inline-flex;
   justify-content: center;
   text-align: center;
 }
@@ -529,74 +780,85 @@ footer {
   position: relative;
   display: inline-block;
   margin: 4%;
-  border-radius: 2.5%;
+  border-radius: 15px;
 }
 
 .Recipe-Container {
-  display:flex;
+  display: flex;
   flex-direction: column;
 
   /* position:fixed; */
-  width:100vw;
-  height:150vh;
-
+  width: 100vw;
+  /* below removed due to huge margin *** */
+  /* height: 150vh; */
 }
-
 
 .Recipe-Timings-Container {
-  display:flex;
+  display: flex;
   justify-content: space-between;
- margin-left: 10%;
- margin-right:10%;
-  font-size:small;
-  height:auto
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: small;
+  height: auto;
 }
 
-.Recipe-Timings-Container h4{
- margin-top:1%;
- margin-bottom: 1%;
+.Recipe-Timings-Container h4 {
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .recipe-name-container {
-  display:flex;
+  display: flex;
   justify-content: center;
-  height:fit-content;
+  height: fit-content;
 }
-.recipe-name{
-  display:flex;
-  justify-content:center;
-  font-size:large;
-
+.recipe-name {
+  display: flex;
+  justify-content: center;
+  /* font-size: large; */
 }
 
 .recipe-image-container {
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 
 .recipe-image {
-  display:flex;
-  justify-content:center;
-  border-radius:5%;
-  margin-right:2%;
-  margin-left:2%;
-  width:96vw;
-  max-width:max-content;
-  height: 25vh;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  margin-right: 2%;
+  margin-left: 2%;
+  width: 126vw;
+  max-width: max-content;
+  height: 55vh;
   object-fit: cover;
-  
+}
+
+/* add a media query which keeps the recipe image the same width & height */
+@media (max-width: 956px) {
+  .recipe-image {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 91vw;
+    height: 20vh;
+    max-width: max-content;
+    object-fit: cover;
+  }
 }
 
 .recipe-ingredients-container {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  align-items:center;
-  padding:none;
-
+  align-items: center;
+  padding: none;
 }
 
 .recipe-ingredients-container ul {
-  list-style-type:circle;
+  list-style-type: circle;
   padding: 0;
   margin: 0; /* Add this line to remove the default margin */
 }
@@ -608,27 +870,26 @@ footer {
 }
 
 .recipe-instructions-container {
-  display:inline-block;
+  display: inline-block;
   padding-left: 4%;
-  padding-right:4%;
-  margin:none;
-  line-height:1;
+  padding-right: 4%;
+  margin: none;
+  line-height: 1;
 }
 
-.recipe-instructions-container h3{
- margin-top:2.5%;
- margin-bottom:2.5%;
+.recipe-instructions-container h3 {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
 }
 
-.recipe-instructions-container p{
-  margin-top:2.5%;
-  margin-bottom:2.5%;
- }
+.recipe-instructions-container p {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
 
- .Recipe-Price-Container {
-  display:flex;
-
- }
+.Recipe-Price-Container {
+  display: flex;
+}
 /* Wallet CSS -------------------------------------------------------------------- */
 
 .WalletPage {
@@ -640,33 +901,16 @@ footer {
   margin-top: 5%;
 }
 
-.WalletPageTitle {
-
-display: flex;
-align-self: center;
-justify-content: center;
-height: 25%;
-background-color: var(--green);
-color: var(--offWhite);
-font-weight: 500;
-border-radius: 30px;
-width: 50%;
-padding: 0.3%;
-
-}
-
-
 .WalletPageInfoBox {
-  background-color: #ffa500;
   display: flex;
-  flex-flow:row wrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   align-content: stretch;
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
-  border: 1px solid rgba(255, 106, 0, 0.291);
+  margin-bottom: 1%;
 }
 
 /*media settings for .WalletPageInfoBox*/
@@ -689,8 +933,8 @@ padding: 0.3%;
   position: relative;
   top: 0;
   bottom: 0;
-  display:flex;
-  flex:1; 
+  display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
   margin-top: 1%;
@@ -720,7 +964,7 @@ padding: 0.3%;
 }
 /*Make 2nd invisible child of graph not display (so it doesn't create empty space to the right*/
 .canvasjs-chart-canvas:nth-child(2) {
-  display:none;
+  display: none;
 }
 
 .WalletPageInfoContents {
@@ -731,7 +975,7 @@ padding: 0.3%;
   border-radius: 10px;
   font-size: small;
   height: 70%;
-  width:50%;
+  width: 50%;
   margin-right: 2%;
   margin-left: 2%;
   margin-bottom: 2%;
@@ -741,7 +985,7 @@ padding: 0.3%;
 @media (max-width: 1063px) {
   .WalletPageInfoContents {
     display: flex;
-    width: 80%; 
+    width: 80%;
   }
 }
 
@@ -754,9 +998,7 @@ padding: 0.3%;
   text-align: center;
 }
 .wallet-info-text:last-child {
-  text-align: left;
-  margin-left: 5%;
-
+  text-align: center;
 }
 
 .wallet-budget-input {
@@ -774,11 +1016,8 @@ padding: 0.3%;
   margin-top: 1%;
 }
 
-
-
-
 .wallet-plan-button:focus {
-  background-color: var(--green);
+  background-color: var(--lightGreen);
   color: var(--offWhite);
 }
 
@@ -788,16 +1027,15 @@ padding: 0.3%;
   align-items: center;
 }
 
-.wallet-plan-buttons-div{
+.wallet-plan-buttons-div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .wallet-familySize-button:focus {
-  background-color: var(--green);
+  background-color: var(--lightGreen);
   color: var(--offWhite);
 }
 .Button {
-  border: 1px solid #494900a3;
-
+  border: 1px solid var(--lightGreen);
 }

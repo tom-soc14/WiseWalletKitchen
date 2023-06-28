@@ -13,6 +13,7 @@ export default function PlanSelector({ handlePlanChange }) {
             data-id={plan.id}
             onClick={(e) => handlePlanChange(e.target.dataset.id)}
             className="Button wallet-plan-button"
+            aria-label="select-recipe-plan"
           >
             {plan.name}
           </button>

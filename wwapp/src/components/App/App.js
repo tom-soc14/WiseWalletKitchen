@@ -9,8 +9,10 @@ import Wallet from "../Wallet/Wallet.js";
 import NavBar from "../NavBar/NavBar.js";
 import About from "../About/About.js";
 import Logout from "../Login/Logout.js";
-// import Footer from "../Footer/Footer.js";
+import OurTeamPage from '../OurTeamPage/OurTeamPage.js'
+import Footer from "../Footer/Footer.js";
 import { createClient } from "@supabase/supabase-js";
+import { useNavigate } from "react-router-dom";
 
 // import { weeklyPlanRecipes } from "../Kitchen/KitchenChildren/WeeklyPlan.js";
 
@@ -18,7 +20,7 @@ export default function App() {
   // State ---------------------------------------------------------------------------
   const [recipes, setRecipes] = useState(null);
   const [familySize, setFamilySize] = useState(3);
-  const [plan, setPlan] = useState("Saver");
+  const [plan, setPlan] = useState(null);
   const [walletData, setWalletData] = useState(null);
   const [weeklyRecipeArray, setWeeklyRecipeArray] = useState([]);
   const [dayRecipe, setDayRecipe] = useState(null);
@@ -26,6 +28,8 @@ export default function App() {
   const [logInAccess, setLogInAccess] = useState(false);
 
   // let recipes=[];
+
+  const navigate = useNavigate();
 
   // API -----------------------------------------------------------------------------
 
@@ -68,8 +72,10 @@ export default function App() {
     setLogInAccess(true);
   }
   function handleLogOut() {
-    Logout();
+    // Logout();
     setLogInAccess(false);
+    supabase.auth.signOut();
+    navigate("/");
     console.log("Logout being called.");
   }
   useEffect(() => {}, [logInAccess]);
@@ -136,7 +142,9 @@ export default function App() {
             />
           }
         />
+        <Route path="/ourteampage" element={<OurTeamPage/>} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

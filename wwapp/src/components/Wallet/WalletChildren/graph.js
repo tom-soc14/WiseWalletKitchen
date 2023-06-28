@@ -10,6 +10,9 @@ function Graph({cost, averageWeeklySpend, calculateWeeklySavings}) {
     ,
     title: {
       text: "Weekly Savings Chart",
+      fontSize: 20,
+      fontFamily: "Montserrat",
+      fontWeight: "bold"
     },
     axisY: {
       minimum: 0,
@@ -18,7 +21,7 @@ function Graph({cost, averageWeeklySpend, calculateWeeklySavings}) {
       {
         type: "column",
         dataPoints: [
-          { label: "Average weekly spend", y: averageWeeklySpend },
+          { label: "Average Spend", y: averageWeeklySpend },
           { label: "Weekly Plan", y: cost },
           { label: "Money Saved", y: calculateWeeklySavings },
         ],
