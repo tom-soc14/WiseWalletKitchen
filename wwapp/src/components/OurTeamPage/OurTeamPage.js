@@ -10,63 +10,59 @@ function OurTeamPage() {
   return (
     <div className="AboutUsPage-contents">
       <div className="AboutUs-upperbox">
-                <h1>Welcome to the Wise Wallet Kitchen Team page...</h1>
-                <h2>In this project we used</h2>
-                <p>174 commits to main and 204 commits in all</p>
-                <p>the programs we used</p>
-                <p>the lines of code we produced</p>
-                  <p>
-                    <img
-                      src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E'
-                      alt="JavaScript"
-                    />
-                    <img
-                      src='https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white'
-                      alt="CSS3"
-                    />
-                    <img
-                      src='https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB'
-                      alt="React"
-                    />
-                    <img
-                      src='https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white'
-                      alt="JSON"
-                    />
-                    <img
-                      src='https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white'
-                      alt="VSCode"
-                    />
-                    <img
-                      src='https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white'
-                      alt="Figma"
-                    />
-                    <img
-                      src='https://img.shields.io/badge/Canva-%2300C4CC.svg?&style=for-the-badge&logo=Canva&logoColor=white'
-                      alt="Canva"
-                    />
-                    <img
-                      src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'
-                      alt="GitHub"
-                    />
-                   
-               
-                  
-                  <img
-                    src='https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white'
-                    alt="Jest"
-                  />
-                  <img
-                    src='https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white'
-                    alt="Node.js"
-                  />
-                  <img
-                    src='https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=Playwright&logoColor=white'
-                    alt="Playwright"
-                  />
-                  
-                </p>
-        </div>
-      
+        <h1>Welcome to the Wise Wallet Kitchen Team page...</h1>
+        <h2>In this project we used</h2>
+        <p>174 commits to main and 204 commits in all</p>
+        <p>the programs we used</p>
+        <p>the lines of code we produced</p>
+        <p>
+          <img
+            src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
+            alt="JavaScript"
+          />
+          <img
+            src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+            alt="CSS3"
+          />
+          <img
+            src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+            alt="React"
+          />
+          <img
+            src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white"
+            alt="JSON"
+          />
+          <img
+            src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"
+            alt="VSCode"
+          />
+          <img
+            src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"
+            alt="Figma"
+          />
+          <img
+            src="https://img.shields.io/badge/Canva-%2300C4CC.svg?&style=for-the-badge&logo=Canva&logoColor=white"
+            alt="Canva"
+          />
+          <img
+            src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+            alt="GitHub"
+          />
+
+          <img
+            src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"
+            alt="Jest"
+          />
+          <img
+            src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"
+            alt="Node.js"
+          />
+          <img
+            src="https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=Playwright&logoColor=white"
+            alt="Playwright"
+          />
+        </p>
+      </div>
 
       <div className="AboutUs-lowerbox">
         <div className="row">
@@ -149,10 +145,21 @@ function OurTeamPage() {
             <div className="card">
               <img src={HeadshotJason} alt="Jason" />
               <div className="container">
-                <h2>Jason Donehue</h2>
+                <h2>Jason Donoghue</h2>
                 <p className="title">Chief Whip & big brain</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>example@example.com</p>
+                <p>
+                  With a strong background in supplying lighting technology to
+                  the construction industry, I’ve witnessed the transformative
+                  power of technology first-hand, igniting my passion for being
+                  a change catalyst. My true passion lies in coding, which led
+                  me to enrol in the School of Code’s intensive bootcamp. There,
+                  I honed my problem-solving skills and discovered coding’s
+                  ability to drive innovation. Now, driven to make a tangible
+                  impact, I actively participate in tech meetups, and eager to
+                  support newcomers in navigating the dynamic and ever-evolving
+                  field of technology.
+                </p>
+                <p>jason5donoghue@gmail.com</p>
                 <p>
                   <button className="button">Contact</button>
                 </p>
@@ -175,12 +182,8 @@ function OurTeamPage() {
             </div>
           </div>
         </div>
-
-       
-        </div>
       </div>
-      
-   
+    </div>
   );
 }
 
