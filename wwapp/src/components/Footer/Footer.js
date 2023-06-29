@@ -17,7 +17,7 @@ function Footer() {
         <div className="footer-links">
           <a
             id="footer-link-text"
-            href="mailto:info@wisewalletkitchen.com?body=Hi there, I want to just let you know your site is awesome!"
+            href="mailto:wisewalletkitchen@gmail.com?body=Hi there, I want to just let you know your site is awesome!"
           >
             Contact Us
           </a>
