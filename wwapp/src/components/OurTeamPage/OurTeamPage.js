@@ -13,8 +13,10 @@ function OurTeamPage() {
                 <h1>Welcome to the Wise Wallet Kitchen Team page...</h1>
                 <h2>In this project we used</h2>
                 <p>174 commits to main and 204 commits in all</p>
-                <p>the programs we used</p>
-                <p>the lines of code we produced</p>
+                <p>The lines of code we produced</p>
+                <p>181 Trello tasks completed</p>
+                <p>The programs we used:</p>
+                
                   <p>
                     <img
                       src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E'
@@ -55,14 +57,7 @@ function OurTeamPage() {
                     src='https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white'
                     alt="Jest"
                   />
-                  <img
-                    src='https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white'
-                    alt="Node.js"
-                  />
-                  <img
-                    src='https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=Playwright&logoColor=white'
-                    alt="Playwright"
-                  />
+                 
                   
                 </p>
         </div>
@@ -79,17 +74,7 @@ function OurTeamPage() {
                 <p>Electrician with a passion for mountain sports.</p>
                 <p>nvalente.electrics@gmail.com</p>
                 <p>
-                  <button
-                    className="button"
-                    onClick={() => {
-                      window.open(
-                        "mailto:nvalente.electrics@gmail.com",
-                        "_Hey Nick, Just wanted to say I really enjoyed the site"
-                      );
-                    }}
-                  >
-                    Contact
-                  </button>
+                <a className="github" href="https://github.com/Ice-and-Rock" target="_blank" rel="noreferrer"><button className="button">GitHub Profile</button></a>
                 </p>
               </div>
             </div>
@@ -105,7 +90,8 @@ function OurTeamPage() {
                 as I wanted to put my analytical and problem solving skills into practice.</p>
                 <p>bianca.g.buha@gmail.com</p>
                 <p>
-                  <button className="button">Contact</button>
+                <a className="github" href="https://github.com/bianca-g-b" target="_blank" rel="noreferrer"><button className="button">GitHub Profile</button></a>
+
                 </p>
               </div>
             </div>
@@ -119,14 +105,9 @@ function OurTeamPage() {
                 <p className="title">Master of Code Puppets & Top Critic</p>
                 <p>I’ve been working in technical support for both the public transport and education sector for the past few years now. 
                 I wanted a way to upskill my knowledge from these areas, so I decided to join the School of Code.</p>
-                <p>tomswapp@example.com</p>
+                <p>tcgs@protonmail.com</p>
                 <p>
-                  <button
-                    className="button"
-                    href="mailto:nvalente.electrics@gmail.com?body=Hi there, I want to just let you know your site is awesome!"
-                  >
-                    Contact
-                  </button>
+                <a className="github" href="https://github.com/tom-soc14" target="_blank" rel="noreferrer"><button className="button">GitHub Profile</button></a>
                 </p>
               </div>
             </div>
@@ -143,7 +124,7 @@ function OurTeamPage() {
                 the move into tech to scale up the reach of those I can help.</p>
                 <p>s.k.smith@live.co.uk</p>
                 <p>
-                  <button className="button">Contact</button>
+                <a className="github" href="https://github.com/Ksmi23" target="_blank" rel="noreferrer"><button className="button">GitHub Profile</button></a>
                 </p>
               </div>
             </div>
@@ -167,7 +148,7 @@ function OurTeamPage() {
                   field of technology.</p>
                 <p>jason5donoghue@gmail.com</p>
                 <p>
-                  <button className="button">Contact</button>
+                <a className="github" href="https://github.com/Jason5D" target="_blank" rel="noreferrer"><button className="button">GitHub Profile</button></a>
                 </p>
               </div>
             </div>
@@ -183,7 +164,7 @@ function OurTeamPage() {
                 technical acumen but also offered the chance to infuse my passion for storytelling in the tech industry.</p>
                 <p>will2code0024@gmail.com</p>
                 <p>
-                  <button className="button">Contact</button>
+                <a className="github" href="https://github.com/wbrowning01" target="_blank" rel="noreferrer"><button className="button">GitHub Profile</button></a>
                 </p>
               </div>
             </div>
