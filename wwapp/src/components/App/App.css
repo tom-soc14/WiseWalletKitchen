@@ -303,7 +303,7 @@ var(--offBlack)
 
 }
 
-#footer-link-text {
+.footer-link-text {
   text-decoration: none;
   color: black;
 }
