@@ -13,10 +13,11 @@ function OurTeamPage() {
                 <h1>Welcome to the Wise Wallet Kitchen Team page...</h1>
                 <h2>In this project we used</h2>
                 <p>174 commits to main and 204 commits in all</p>
+
                 <p>The lines of code we produced</p>
                 <p>181 Trello tasks completed</p>
                 <p>The programs we used:</p>
-                
+              
                   <p>
                     <img
                       src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E'
@@ -57,8 +58,7 @@ function OurTeamPage() {
                     src='https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white'
                     alt="Jest"
                   />
-                 
-                  
+
                 </p>
         </div>
       

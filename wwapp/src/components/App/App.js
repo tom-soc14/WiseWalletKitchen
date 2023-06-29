@@ -24,7 +24,7 @@ export default function App() {
   const [weeklyRecipeArray, setWeeklyRecipeArray] = useState([]);
   const [dayRecipe, setDayRecipe] = useState(null);
   //NEW - Login Access ---------------------------------------------------------------
-  const [logInAccess, setLogInAccess] = useState(false);
+  const [logInAccess, setLogInAccess] = useState(false); 
 
   // let recipes=[];
 
