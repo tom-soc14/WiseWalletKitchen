@@ -100,9 +100,10 @@ function OurTeamPage() {
               <img src={HeadshotBianca} alt="Bianca" />
               <div className="container">
                 <h2>Bianca Buha</h2>
-                <p className="title">The true mastermind</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>example@example.com</p>
+                <p className="title">A true mastermind</p>
+                <p>With a background in theatre acting, I decided to start a career in software development, 
+                as I wanted to put my analytical and problem solving skills into practice.</p>
+                <p>bianca.g.buha@gmail.com</p>
                 <p>
                   <button className="button">Contact</button>
                 </p>
@@ -115,8 +116,9 @@ function OurTeamPage() {
               <img src={SpongeBob} alt="Tom" />
               <div className="container">
                 <h2>Tom Swapp</h2>
-                <p className="title">Delete Master & Top Critic</p>
-                <p>The knower of all API knowledge and wild theories</p>
+                <p className="title">Master of Code Puppets & Top Critic</p>
+                <p>I’ve been working in technical support for both the public transport and education sector for the past few years now. 
+                I wanted a way to upskill my knowledge from these areas, so I decided to join the School of Code.</p>
                 <p>tomswapp@example.com</p>
                 <p>
                   <button
@@ -136,8 +138,10 @@ function OurTeamPage() {
               <div className="container">
                 <h2>Katie Smith</h2>
                 <p className="title">CEO &amp; Founder</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>example@example.com</p>
+                <p>As a medical doctor, I've always been passionate about making a difference working 
+                clinically through COVID. I realized that we all only get one life. So I decided to make 
+                the move into tech to scale up the reach of those I can help.</p>
+                <p>s.k.smith@live.co.uk</p>
                 <p>
                   <button className="button">Contact</button>
                 </p>
@@ -150,9 +154,18 @@ function OurTeamPage() {
               <img src={HeadshotJason} alt="Jason" />
               <div className="container">
                 <h2>Jason Donehue</h2>
-                <p className="title">Chief Whip & big brain</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>example@example.com</p>
+                <p className="title">Chief Whip & big chess brain.</p>
+                <p> With a strong background in supplying lighting technology to
+                  the construction industry, Ive witnessed the transformative
+                  power of technology first-hand, igniting my passion for being
+                  a change catalyst. My true passion lies in coding, which led
+                  me to enrol in the School of Codes intensive bootcamp. There,
+                  I honed my problem-solving skills and discovered codings
+                  ability to drive innovation. Now, driven to make a tangible
+                  impact, I actively participate in tech meetups, and eager to
+                  support newcomers in navigating the dynamic and ever-evolving
+                  field of technology.</p>
+                <p>jason5donoghue@gmail.com</p>
                 <p>
                   <button className="button">Contact</button>
                 </p>
@@ -165,9 +178,10 @@ function OurTeamPage() {
               <img src={HeadshotWill} alt="Will" />
               <div className="container">
                 <h2>Will Browning</h2>
-                <p className="title">Leader & freedom fighter</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>example@example.com</p>
+                <p className="title">Coding for the revolution, my people.</p>
+                <p>I have a background in writing and performance. School of Code not only provided an opportunity to upskill my 
+                technical acumen but also offered the chance to infuse my passion for storytelling in the tech industry.</p>
+                <p>will2code0024@gmail.com</p>
                 <p>
                   <button className="button">Contact</button>
                 </p>
