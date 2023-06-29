@@ -13,8 +13,8 @@ function OurTeamPage() {
                 <h1>Welcome to the Wise Wallet Kitchen Team page...</h1>
                 <h2>In this project we used</h2>
                 <p>174 commits to main and 204 commits in all</p>
-                <p>the programs we used</p>
                 <p>the lines of code we produced</p>
+                <p>the programs we used</p>
                   <p>
                     <img
                       src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E'
@@ -55,15 +55,7 @@ function OurTeamPage() {
                     src='https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white'
                     alt="Jest"
                   />
-                  <img
-                    src='https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white'
-                    alt="Node.js"
-                  />
-                  <img
-                    src='https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=Playwright&logoColor=white'
-                    alt="Playwright"
-                  />
-                  
+                
                 </p>
         </div>
       

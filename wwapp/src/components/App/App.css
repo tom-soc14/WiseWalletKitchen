@@ -970,7 +970,7 @@ height: 63%;
 .WalletPageInfoContents {
   display: flex;
   flex-direction: column;
-  background-color: var(--offWhite);
+  background: linear-gradient(to bottom, var(--offWhite) 0%, #edd4a5 100%);
   border: 1px solid var(--green);
   border-radius: 10px;
   font-size: small;
