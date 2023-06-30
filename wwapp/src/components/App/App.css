@@ -282,15 +282,19 @@ var(--offBlack)
     /* background-position-x:80%; */
     height: 8%;
     margin-bottom: 0;
+    
   }
-  width: 32%;
+  
 }
 
 .footer-links {
-  font-size: small;
+  display: flex;
+  flex-direction: column;
+  font-size: x-small;
+
 }
 
-#footer-link-text {
+.footer-link-text {
   text-decoration: none;
   color: black;
 }
@@ -585,6 +589,11 @@ var(--offBlack)
 }
 
 /* About CSS ------------------------------------------------------------------ */
+.about-container {
+
+  height: 75%;
+}
+
 .example-images {
   display: flex;
   justify-content: center;
