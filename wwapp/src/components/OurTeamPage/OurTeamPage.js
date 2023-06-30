@@ -14,9 +14,11 @@ function OurTeamPage() {
         <h2>In this project we used</h2>
         <p>174 commits to main and 204 commits in all</p>
 
+
         <p>The lines of code we produced</p>
         <p>181 Trello tasks completed</p>
         <p>The programs we used:</p>
+
 
         <p>
           <img
@@ -56,6 +58,7 @@ function OurTeamPage() {
             src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"
             alt="Jest"
           />
+
         </p>
       </div>
 
@@ -168,7 +171,9 @@ function OurTeamPage() {
               <img src={HeadshotJason} alt="Jason" />
               <div className="container">
                 <h2>Jason Donoghue</h2>
+
                 <p className="title">Chief Whip & big chess brain.</p>
+
                 <p>
                   {" "}
                   With a strong background in supplying lighting technology to
