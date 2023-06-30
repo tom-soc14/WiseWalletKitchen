@@ -156,42 +156,33 @@ var(--offBlack)
 
 /* Dropdown menu content */
 
+.DropdownContent {
+  display: none;
+  position: absolute;
+  background-color: var(--offWhite);
+  min-width: 160px;
+  z-index: 1;
+  top: 17.7%;
+  right: 0;
+}
 
 @media (max-width: 415px){
-.DropdownContent {
-  display: none;
-  position: absolute;
-  background-color: var(--offWhite);
-  min-width: 160px;
-  z-index: 1;
-  top: 30%;
-  right: 0;
-}
-}
-.DropdownContent {
-  display: none;
-  position: absolute;
-  background-color: var(--offWhite);
-  min-width: 160px;
-  z-index: 1;
-  top: 11%;
-  right: 0;
-}
+  .DropdownContent {
+    display: none;
+    position: absolute;
+    background-color: var(--offWhite);
+    min-width: 160px;
+    z-index: 1;
+    top: 9%;
+    right: 0;
+  }
+  }
 
 /* Show the dropdown menu on hover */
 .DropdownMenu:hover .DropdownContent {
   display: block;
 }
 
-@media (max-width: 415px) {
-  .DropdownMenu .DropdownContent {
-    display: none;
-  }
-
-  .DropdownMenu.clicked .DropdownContent {
-    display: block;
-  }
-}
 
 /* Style the links inside the dropdown menu */
 .DropdownContent a {
@@ -291,15 +282,19 @@ var(--offBlack)
     /* background-position-x:80%; */
     height: 8%;
     margin-bottom: 0;
+    
   }
-  width: 32%;
+  
 }
 
 .footer-links {
-  font-size: small;
+  display: flex;
+  flex-direction: column;
+  font-size: x-small;
+
 }
 
-#footer-link-text {
+.footer-link-text {
   text-decoration: none;
   color: black;
 }
@@ -368,15 +363,6 @@ var(--offBlack)
   opacity: 85%;
 }
 
-.Homepage-Title,
-.Slogan {
-  color: var(--offBlack);
-  display: flex;
-  justify-content: center;
-  opacity: 85%;
-  margin-bottom: 0%;
-}
-
 @media (min-width: 956px) {
   .Generic-Title {
     color: var(--offBlack);
@@ -402,7 +388,7 @@ var(--offBlack)
     color: var(--offBlack);
     display: flex;
     justify-content: center;
-    font-size: 2vw;
+    font-size: 3.75vw;
     opacity: 85%;
     margin-bottom: 0%;
   }
@@ -603,6 +589,11 @@ var(--offBlack)
 }
 
 /* About CSS ------------------------------------------------------------------ */
+.about-container {
+
+  height: 75%;
+}
+
 .example-images {
   display: flex;
   justify-content: center;
@@ -970,7 +961,7 @@ height: 63%;
 .WalletPageInfoContents {
   display: flex;
   flex-direction: column;
-  background-color: var(--offWhite);
+  background: linear-gradient(to bottom, var(--offWhite) 0%, #edd4a5 100%);
   border: 1px solid var(--green);
   border-radius: 10px;
   font-size: small;

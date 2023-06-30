@@ -16,13 +16,15 @@ function Footer() {
         </div>
         <div className="footer-links">
           <a
-            id="footer-link-text"
-            href="mailto:info@wisewalletkitchen.com?body=Hi there, I want to just let you know your site is awesome!"
+            className="footer-link-text"
+            id="footer-link-text-email"
+            aria-label="send an email to us"
+            href="mailto:wisewalletkitchen@gmail.com?body=Hi there, I want to just let you know your site is awesome!"
           >
             Contact Us
           </a>
           {/* Below is going to be a Link *** */}
-          <Link id="footer-link-text" to="/ourteampage">Our Team</Link>
+          <Link className="footer-link-text" to="/ourteampage" id="footer-link-text-visit-our-team" aria-label="visit our team page">Our Team</Link>
         </div>
       </div>
       <div className="social-media-icon-box">
@@ -30,6 +32,7 @@ function Footer() {
           className="social-media-icon"
           src={Orange_Pinterest}
           alt="pinterest button"
+          aria-label="Visit Pinterest"
           onClick={() => {
             window.open("https://www.pinterest.com", "_blank");
           }}
@@ -39,6 +42,7 @@ function Footer() {
           className="social-media-icon"
           src={Orange_Twitter}
           alt="twitter button"
+          aria-label="Visit Twitter"
           onClick={() => {
             window.open("https://www.twitter.com", "_blank");
           }}
@@ -48,6 +52,7 @@ function Footer() {
           className="social-media-icon"
           src={Orange_Youtube}
           alt="youtube button"
+          aria-label="Visit Youtube"
           onClick={() => {
             window.open("https://www.youtube.com", "_blank");
           }}
