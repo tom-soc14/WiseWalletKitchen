@@ -28,7 +28,7 @@ const AboutImageCarousel = ({
       className={`carousel ${isActive ? "active" : ""}`}
     >
     <div className="carousel-text">
-        <p className="Slogan">{image.text}</p>
+        <p className="carousel-slogan">{image.text}</p>
       </div>
       <div className="carousel-image">
         <img src={image.src} alt="Carousel" />
