@@ -14,6 +14,8 @@ import { createClient } from "@supabase/supabase-js";
 import { useNavigate } from "react-router-dom";
 import { Auth } from "@supabase/auth-ui-react";
 import owl from '../NavBar/WWK_Logo_Large.png';
+import NavbarPublic from "../NavbarPublic/NavbarPublic.js";
+
 
 // import { weeklyPlanRecipes } from "../Kitchen/KitchenChildren/WeeklyPlan.js";
 
@@ -158,69 +160,119 @@ export default function App() {
  
  
   if (!session) {
-    return <div className="LoginPage">
+    return <div className="App">
+    
+    <NavbarPublic/>
+    <Routes>
+    <Route path="/login" element={<div className="LoginPage">
     <div className="LoginForm-image">
-    <div className="LoginForm">
-      <Auth supabaseClient={supabase} />
+    <div className="LoginForm"><Auth supabaseClient={supabase} />
+      </div></div></div>}
+    />
+    <Route path="/" element={<HomePage />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/ourteampage" element={<OurTeamPage/>} />
+    
+      {/* <Auth supabaseClient={supabase} /> */}
+      </Routes>
+      <Footer/>
       </div>
-    </div>
-  </div>;
+  //   </div>
+
   } else {
     // console.log("log in was successful...");
     return (
-      <div className="login-container">
-        {/* <div className="Generic-TitleLogin">Logged in! Redirecting to Kitchen...</div>
-        <img src={owl} className="owlImageLogin" alt="owl logo"></img> */}
-        <h1>Hello world!</h1>
-      </div>
+      <div className="App">
+      {/* NEW - Hand props down to login: logInAccess=boolean / handleLogOut=function */}
+      <NavBar logInAccess={logInAccess} handleLogOut={handleLogOut} />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route
+          path="/kitchen"
+          element={
+            <Kitchen
+              plan={plan}
+              recipes={recipes}
+              dayRecipe={dayRecipe}
+              familySize={familySize}
+              handleRecipeChange={handleRecipeChange}
+              handleFamilySize={handleFamilySize}
+              handlePlanChange={handlePlanChange}
+              setWeeklyRecipeArray={setWeeklyRecipeArray}
+            />
+          }
+        />
+
+        {/* NEW - Hand props down to login so LogIn func can be called above  */}
+        {/* <Route path="/login" element={<Login handleLogIn={handleLogIn} />} /> */}
+
+        <Route
+          path="/wallet"
+          element={
+            <Wallet
+              plan={plan}
+              handlePlanChange={handlePlanChange}
+              walletData={walletData}
+              familySize={familySize}
+              handleFamilySize={handleFamilySize}
+            />
+          }
+        />
+        <Route path="/ourteampage" element={<OurTeamPage/>} />
+      </Routes>
+      <Footer/>
+    </div>
+      
     );
   }
 }
 
  
   // return (
-  //   <div className="App">
-  //     {/* NEW - Hand props down to login: logInAccess=boolean / handleLogOut=function */}
-  //     <NavBar logInAccess={logInAccess} handleLogOut={handleLogOut} />
+    // <div className="App">
+    //   {/* NEW - Hand props down to login: logInAccess=boolean / handleLogOut=function */}
+    //   <NavBar logInAccess={logInAccess} handleLogOut={handleLogOut} />
 
-  //     <Routes>
-  //       <Route path="/" element={<HomePage />} />
-  //       <Route path="/about" element={<About />} />
-  //       <Route
-  //         path="/kitchen"
-  //         element={
-  //           <Kitchen
-  //             plan={plan}
-  //             recipes={recipes}
-  //             dayRecipe={dayRecipe}
-  //             familySize={familySize}
-  //             handleRecipeChange={handleRecipeChange}
-  //             handleFamilySize={handleFamilySize}
-  //             handlePlanChange={handlePlanChange}
-  //             setWeeklyRecipeArray={setWeeklyRecipeArray}
-  //           />
-  //         }
-  //       />
+    //   <Routes>
+    //     <Route path="/" element={<HomePage />} />
+    //     <Route path="/about" element={<About />} />
+    //     <Route
+    //       path="/kitchen"
+    //       element={
+    //         <Kitchen
+    //           plan={plan}
+    //           recipes={recipes}
+    //           dayRecipe={dayRecipe}
+    //           familySize={familySize}
+    //           handleRecipeChange={handleRecipeChange}
+    //           handleFamilySize={handleFamilySize}
+    //           handlePlanChange={handlePlanChange}
+    //           setWeeklyRecipeArray={setWeeklyRecipeArray}
+    //         />
+    //       }
+    //     />
 
-  //       {/* NEW - Hand props down to login so LogIn func can be called above  */}
-  //       <Route path="/login" element={<Login handleLogIn={handleLogIn} />} />
+    //     {/* NEW - Hand props down to login so LogIn func can be called above  */}
+    //     <Route path="/login" element={<Login handleLogIn={handleLogIn} />} />
 
-  //       <Route
-  //         path="/wallet"
-  //         element={
-  //           <Wallet
-  //             plan={plan}
-  //             handlePlanChange={handlePlanChange}
-  //             walletData={walletData}
-  //             familySize={familySize}
-  //             handleFamilySize={handleFamilySize}
-  //           />
-  //         }
-  //       />
-  //       <Route path="/ourteampage" element={<OurTeamPage/>} />
-  //     </Routes>
-  //     <Footer/>
-  //   </div>
+    //     <Route
+    //       path="/wallet"
+    //       element={
+    //         <Wallet
+    //           plan={plan}
+    //           handlePlanChange={handlePlanChange}
+    //           walletData={walletData}
+    //           familySize={familySize}
+    //           handleFamilySize={handleFamilySize}
+    //         />
+    //       }
+    //     />
+    //     <Route path="/ourteampage" element={<OurTeamPage/>} />
+    //   </Routes>
+    //   <Footer/>
+    // </div>
   // );
 
 

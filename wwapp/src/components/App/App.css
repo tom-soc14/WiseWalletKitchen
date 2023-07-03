@@ -677,6 +677,82 @@ height: 63%;
   opacity: 85%;
   margin-top: 10%;
 }
+
+html, body, #root, .App {
+  height: 100%;
+}
+.LoginPage {
+  /* border-style: solid; */
+  /* border-color: pink; */
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* width: 100%;
+  margin: 10%; */
+ 
+}
+.LoginForm-image {
+  display: flex;
+  background-image: url("../Login/LoginPage-Peaches.jpeg");
+  background-size: cover;
+  background-position: center;
+  width:90%;
+  height: 90%;
+  justify-content: flex-end;
+}
+.LoginForm {
+  max-width: 70%;
+  max-height: 40%;
+  margin-right: 5%;
+  font-weight: 700 !important;
+}
+#email, #password {
+  border-color: #ffa500 !important;
+  border-radius: px !important;
+  border-width: thin !important;
+  background: #ebebd3 !important;   
+}
+/* #email, #password > input {
+  background: #ebebd3 !important;
+} */
+.supabase-auth-ui_ui-container > button {
+  /* background-color: black !important; */
+  font-weight: 900 !important;
+  text-shadow: 2px 1px 1px #000000;
+}
+.supabase-auth-ui_ui-button {
+  border-color: #ffa500 !important;
+  border-radius: 20px !important;
+  border-width: thin !important;
+  background-color: #175714 !important;
+  color: #ebebd3 !important;
+  font-weight: 500 !important;
+  height: 35px !important;
+}
+/* #password {
+  border-color: #ffa500 !important;
+  border-radius: 20px;
+  border-width: thin;
+}
+.supabase-auth-ui_ui-button {
+  border-color: #ffa500!important;
+  border-radius: 20px !important;
+  border-width: thin;
+} */
+.c-jTXIoq-jjTuOt-gap-small:nth-child(1)  {
+  display: none;
+background-color: orange;
+}
+.supabase-auth-ui_ui-divider {
+  display: none !important;
+}
+.supabase-auth-ui_ui-container {
+  display: none ;
+}
+.supabase-auth-ui_ui-container {
+  display: none;
+  }
 /* Kitchen CSS ------------------------------------------------------------------- */
 
 .Kitchen-Title-Container {
