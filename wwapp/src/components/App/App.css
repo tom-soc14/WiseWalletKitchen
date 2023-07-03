@@ -405,6 +405,7 @@ var(--offBlack)
   display: flex;
   justify-content: center;
   text-decoration: none;
+  margin-bottom: auto;
 }
 
 .Link-about-button {
@@ -422,7 +423,8 @@ var(--offBlack)
   border-radius: 8px;
   padding: 5px 10px 5px 10px;
   font-size: x-large;
-  box-shadow: 5px 7px 14px #989692
+  box-shadow: 5px 7px 14px #989692;
+  margin-bottom: auto;
 }
 
 .about-button {
@@ -486,6 +488,7 @@ var(--offBlack)
   width: 100%;
   position: relative;
   margin-top: 5%;
+  margin-bottom: auto;
   
 }
 /* @media (min-width: 415px) {
@@ -510,6 +513,7 @@ var(--offBlack)
 
 .carousel.active {
   opacity: 1;
+
 }
 .carousel-slogan {
   color: var(--offBlack);
@@ -528,6 +532,20 @@ var(--offBlack)
   margin-right: 4%;
   margin-left: 4%;
   border-radius: 10px;
+  margin-bottom: 25%;
+}
+
+@media (min-width: 956px) {
+  .carousel-image img {
+    width: 92%;
+    height: 50%;
+    /* position: relative; */
+    display: inline-block;
+    margin-right: 4%;
+    margin-left: 4%;
+    border-radius: 10px;
+    margin-bottom: 10%;
+  }
 }
 
 .carousel-buttons {
@@ -606,7 +624,8 @@ var(--offBlack)
 .about-container {
 display: flex;
 flex-direction: column;
-  height: 100%;
+  height: auto;
+  margin-bottom: auto;
 }
 
 .example-images {
