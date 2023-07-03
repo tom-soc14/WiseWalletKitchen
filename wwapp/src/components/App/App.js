@@ -75,6 +75,7 @@ export default function App() {
     setLogInAccess(false);
     supabase.auth.signOut();
     navigate("/");
+    localStorage.clear();
     console.log("Logout being called.");
   }
   useEffect(() => {}, [logInAccess]);
