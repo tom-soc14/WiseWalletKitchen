@@ -116,12 +116,7 @@ var(--offBlack)
 /* Show the dropdown menu on hover */
 
 /* Style the links inside the dropdown menu */
-.DropdownContent a {
-  color: var(--green);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+
 
 /* Change color of dropdown links on hover */
 .DropdownContent a:hover {
@@ -162,7 +157,7 @@ var(--offBlack)
   background-color: var(--offWhite);
   min-width: 160px;
   z-index: 1;
-  top: 17.7%;
+  top: 12.5%;
   right: 0;
 }
 
@@ -491,7 +486,18 @@ var(--offBlack)
   width: 100%;
   position: relative;
   margin-top: 5%;
+  
 }
+/* @media (min-width: 415px) {
+  .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 50%;
+  position: relative;
+  margin-top: 5%;
+}} */
 
 .carousel {
   display: flex;
@@ -505,11 +511,19 @@ var(--offBlack)
 .carousel.active {
   opacity: 1;
 }
+.carousel-slogan {
+  color: var(--offBlack);
+  display: flex;
+  justify-content: center;
+  font-size: 3.4vw;
+  opacity: 85%;
+  margin-bottom: 0%;
+}
 
 .carousel-image img {
   width: 92%;
-  height: auto;
-  position: relative;
+  height: 50%;
+  /* position: relative; */
   display: inline-block;
   margin-right: 4%;
   margin-left: 4%;
@@ -590,8 +604,9 @@ var(--offBlack)
 
 /* About CSS ------------------------------------------------------------------ */
 .about-container {
-
-  height: 75%;
+display: flex;
+flex-direction: column;
+  height: 100%;
 }
 
 .example-images {

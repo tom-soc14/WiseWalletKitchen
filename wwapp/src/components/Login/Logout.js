@@ -14,7 +14,6 @@ export default function Logout() {
   const handleLogout = async () => {
     try {
       await supabase.auth.signOut();
-      
       // Perform any additional logic or state updates after successful logout
       console.log("Log out was successful...!");
       // Navigate back to the HomePage

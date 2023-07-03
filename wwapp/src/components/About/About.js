@@ -7,10 +7,12 @@ import AboutStoryImages from "./AboutChildren/AboutStoryImages.js";
 function About() {
   return (
     <div className="about-container">
-    <h2 className="Homepage-Title">About us</h2>
+      <h2 className="Homepage-Title">About us</h2>
       <AboutStoryImages />
       <Link className="Link-button-sign-up" to="/login">
-        <button className="HomePage-button-sign-up" aria-label="sign-up-button">Sign Up Today</button>
+        <button className="HomePage-button-sign-up" aria-label="sign-up-button">
+          Sign Up Today
+        </button>
       </Link>
     </div>
   );
