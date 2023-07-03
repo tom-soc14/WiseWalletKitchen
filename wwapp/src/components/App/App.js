@@ -25,6 +25,7 @@ export default function App() {
   const [dayRecipe, setDayRecipe] = useState(null);
   //NEW - Login Access ---------------------------------------------------------------
   const [logInAccess, setLogInAccess] = useState(false); 
+  // const [session, setSession] = useState(null);
 
   // let recipes=[];
 
@@ -128,7 +129,7 @@ export default function App() {
         />
 
         {/* NEW - Hand props down to login so LogIn func can be called above  */}
-        <Route path="/login" element={<Login handleLogIn={handleLogIn} />} />
+        <Route path="/login" element={<Login handleLogIn={handleLogIn} session={session} setSession={setSession} />} />
 
         <Route
           path="/wallet"

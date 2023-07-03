@@ -26,12 +26,13 @@ export default function Login({ handleLogIn }) {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
-      console.log("login session reset data. Test 1 ✅")
+     
     });
 
     return () => subscription.unsubscribe();
+    
   }, []);
-
+  console.log(session +' testing here');
 
   // Timeout and also handleLogin props for NavBar ---------------------------
   useEffect(() => {
@@ -44,7 +45,7 @@ export default function Login({ handleLogIn }) {
       }, 3000);
       return () => {
         clearTimeout(redirectTimeout);
-        console.log("login session reset data. Test 2 ✅")
+        // console.log("login session reset data. Test 2 ✅")
       };
     } else {
     }
